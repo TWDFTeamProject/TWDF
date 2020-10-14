@@ -166,6 +166,10 @@ header{
         width: 100%;
         height: 100px;
         // position: relative;
+        @media (max-width: 1200px) {
+            height: 50px;
+        }
+        
         
         .TWDFLogo{
             margin: 10px;
@@ -187,7 +191,7 @@ header{
                 display: flex;
                 align-items: center;
                 position: relative;
-                @media (max-width: 1199.98px) {
+                @media (max-width: 1200px) {
                     margin-right: 20px;
                 }
                 
@@ -195,7 +199,7 @@ header{
                     width: 42px;
                     height: 47px;
                     margin-right: 12px;
-                    @media (max-width: 1199.98px) {
+                    @media (max-width: 1200px) {
                         width: 21px;
                         height: 23.5px;
                         margin-right: 6px;
@@ -206,14 +210,14 @@ header{
                         font-size: smaller;
                         font-weight: lighter;
                         margin-bottom: unset;
-                        @media (max-width: 1199.98px) {
+                        @media (max-width: 1200px) {
                             font-size: xx-small;
                         }
 
                     }
                     .NavTextCh{
                         margin-bottom: 4.6px;
-                        @media (max-width: 1199.98px) {
+                        @media (max-width: 1200px) {
                             margin-bottom: 0;
                         }
                     }
@@ -286,7 +290,7 @@ header{
             cursor: pointer;
             text-decoration: unset;
             margin-right: 38px;
-            @media (max-width: 1199.98px) {
+            @media (max-width: 1200px) {
                 font-size: 15px;
                 width: 64px;
                 height: 32px;
@@ -297,7 +301,6 @@ header{
     }
 
     /* -------------------------RWD手機導覽列-------------------------------------- */
-
     .navbar-light{
         @include EllipseColor;
         position: relative;
@@ -334,22 +337,23 @@ header{
     }
     /* ---------------------------------------------------------------------------- */
 
-
-    
-
     .banner{
         width: 100vw;
         // background-image: url(/Banner/BannerBackground-opacity0.6.png);
         // background-size: cover;
         position: relative;
         margin-bottom: 940px;
+        @media (max-width: 1200px) {
+            margin-bottom: 600px;
+        }
+
 
         .content{
             width: 1154px;
             height: 720px;
             border: 12px solid rgb(251, 250, 252);
             border-radius: 100.88px;
-            margin: auto;
+            // margin: auto;
             display: flex;
             flex-direction: column;
             margin-top: 120px;
@@ -359,24 +363,50 @@ header{
             left: 50%;
             transform: translate( - 50% , 0);
 
-            // Bootstrap Inti
+            // Bootstrap Initi
             padding: unset;
+
+            @media (max-width: 1200px) {
+                margin-top: 60px;
+                width: 860px;
+                height: 480px;
+                border: 6px solid rgb(251, 250, 252);
+                border-radius: 36px;
+            }
+
+            
 
             .ContentTop{
                 width: 100%;
                 height: 65px;
                 border-bottom: 12px solid rgb(251, 250, 252);
+                @media (max-width: 1200px) {
+                    height: 32px;
+                    border-bottom: 6px solid rgb(251, 250, 252);
+                }
                 .ContentTopPoints{
                     display: flex;
                     flex-direction: row;
                     margin-left: 52px;
                     margin-top: 18px;
+                    @media (max-width: 1200px) {
+                        margin-left: 26px;
+                        margin-top: 9px;
+                        margin-bottom: 9px;
+                    }
                     .ContentTopPoint{
                         width: 23px;
                         height: 20px;
                         border-radius: 9.5px;
                         background-color: white;
                         margin-right: 20px;
+                        @media (max-width: 1200px) {
+                            width: 11.5px;
+                            height: 10px;
+                            border-radius: 4.75px;
+                            margin-right: 10px;
+
+                        }
                     }
                 }
             }
@@ -385,6 +415,12 @@ header{
                 color: white;
                 margin-top: 51px;
                 margin-left: 51px;
+                font-size: 40px;
+                @media (max-width: 1200px) {
+                    margin-top: 34px;
+                    margin-left: 34px;
+                    font-size: 26px;
+                }
             }
 
             .ContentBottom{
@@ -397,12 +433,21 @@ header{
                 .TWDFTitleTop{
                     font-size: 100px;
                     margin-top: 36px;
+
+                    @media (max-width: 1200px) {
+                        font-size: 66px;
+                        margin-top: 24px;
+                    }
                 }
 
                 .TWDFTitleBottom{
                     @include OratorStdSlanted;
                     font-size: 36px;
                     margin-top: 34px;
+                    @media (max-width: 1200px) {
+                        font-size: 24px;
+                        margin-top: 22.6px;
+                    }
                 }
 
                 /* ------搜尋區塊-- */
@@ -418,6 +463,15 @@ header{
                     margin-bottom: 10px;
                     margin-top: 80px;
                     padding-left: 29px;
+                    @media (max-width: 1200px) {
+                        width: 366px;
+                        height: 28px;
+                        border: .5px solid white;
+                        border-radius: 32px;
+                        margin-bottom: 6px;
+                        margin-top: 54px;
+                        padding-left: 29px;
+                    }
 
                     // .SearchingLogo{
                     //     // width: 21px;
@@ -461,8 +515,19 @@ header{
 
         .Scrollpart{
             position: relative;
-            top: 900px;
-            height: 100px;
+            top: 32%;
+            // height: 100px;
+            @media (max-width: 1799.98px) {
+                // top: 860px;
+                // height: 0px;
+            }
+            @media (max-width: 1599.98px) {
+                // top: 900px;
+                // height: 100px;
+            }
+            @media (max-width: 1200px) {
+                top: 33%;
+            }
 
             a{
                 position: absolute;
@@ -476,6 +541,10 @@ header{
                 text-decoration: none;
                 transition: opacity .3s;
                 padding-top: 40px;
+                @media (max-width: 1200px) {
+                    left: 48%;
+                    padding-top: 24px;
+                }
 
                 :hover{
                     opacity: .5;
@@ -491,6 +560,11 @@ header{
                     border: 2px solid #fff;
                     border-radius: 50px;
                     box-sizing: border-box;
+                    @media (max-width: 1200px) {
+                        left: 56%;
+                        width: 16px;
+                        height: 24px;
+                    }
                 }
 
                 span::before{
@@ -506,6 +580,13 @@ header{
                     -webkit-animation: scrollball 2s infinite;
                     animation: scrollball 2s infinite;
                     box-sizing: border-box;
+                    @media (max-width: 1200px) {
+                        top: 2px;
+                        width: 4px;
+                        height: 4px;
+                        margin-left: -2px;
+
+                    }
                 }
     
             }
@@ -523,15 +604,19 @@ main{
     flex-direction: column;
     align-items: center;
 
-
-
     .Section1{
         margin-top: 220px;
+        @media (max-width: 1200px) {
+            margin-top: 110px;
+        }
         .OurTeam{
             .OurTeamText{
                 color: white;
                 padding-left: 44px;
                 margin-right: 210px;
+                @media (max-width: 1200px) {
+                    margin-right: 100px;
+                }
 
                 .OurTeamTextTitle{
                     font-size: 32px;
@@ -553,6 +638,11 @@ main{
             margin-top: 101px;
 
             .col{
+                img{
+                    @media (max-width: 1200px) {
+                        width: 86%;
+                    }
+                }
                 .TeamMemberImgText{
                     margin-top: 19px;
                     color: white;
@@ -560,10 +650,19 @@ main{
                         font-size: 22px;
                         margin-left: 33px;
                         margin-bottom: 17px;
+                        @media (max-width: 1200px) {
+                            font-size: 18px;
+                            margin-left: 20px;
+                            margin-bottom: 6px;
+                        }
                     }
                     p{
                         font-size: 16px;
                         margin-left: 19px;
+                        @media (max-width: 1200px) {
+                            font-size: 14px;
+                            margin-left: 8px;
+                        }
                     }
                 }
             }
@@ -610,6 +709,9 @@ main{
                     
                             img{
                                 max-width: 100%;
+                                @media (max-width: 1200px) {
+                                    width: 520px;
+                                }
                             }
                         }
                         /*每個圖片各延遲X秒*/
