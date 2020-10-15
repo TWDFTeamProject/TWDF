@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
     <!-- Google Font similar Orator Std Slanted  -->
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="TWDF.css">
@@ -333,7 +335,7 @@
                     </div> -->
     
                 </div>
-                <div class="Scrollpart">
+                <div class="Scrollpart d-none d-md-block">
                     <a href="#Section1"><span></span>Scroll</a>
                 </div>
             </div>
@@ -352,7 +354,7 @@
 
 
         <div id="Section1" class="Section1 container">
-            <div class="OurTeam row justify-content-center">
+            <div class="OurTeam row justify-content-lg-center">
                 <div class="OurTeamText col">
                     <div class="OurTeamTextTitle">
                         程式人團隊 | Our Team
@@ -369,12 +371,16 @@
                     <img src="OurTeam/CloudPCLogo.png" alt="">
                 </div>
             </div>
-            <div class="TeamMemberImg row  row-cols-2 row-cols-md-5">
+            <div class="TeamMemberImg row row-cols-5">
                 <div class="col">
                     <img src="OurTeam/team-1.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">陳鋐原</div>
                         <p>企劃 Project Planner</p>
+                        <div class="d-md-none">
+                            <p>企劃</p>
+                            <p>Project Planner</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
@@ -382,6 +388,10 @@
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">陳姿評</div>
                         <p>企劃 Project Planner</p>
+                        <div class="d-md-none">
+                            <p>企劃</p>
+                            <p>Project Planner</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
@@ -389,6 +399,10 @@
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">賴科榜</div>
                         <p>工程師 Engineer</p>
+                        <div class="d-md-none">
+                            <p>工程師</p>
+                            <p>Engineer</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
@@ -396,6 +410,10 @@
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">趙品昇</div>
                         <p>工程師 Engineer</p>
+                        <div class="d-md-none">
+                            <p>工程師</p>
+                            <p>Engineer</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
@@ -403,6 +421,10 @@
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">李佩珊</div>
                         <p>設計師 Designer</p>
+                        <div class="d-md-none">
+                            <p>設計師</p>
+                            <p>Designer</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -521,7 +543,8 @@
                     <div class="TabExplainArea row row-cols-1 row-cols-md-2">
                         <div class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-1.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-1.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick1.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -536,7 +559,8 @@
                         </div>
                         <div class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-2.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-2.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick2.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -552,7 +576,8 @@
                         </div>
                         <div class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-3.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-3.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick3.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -568,7 +593,8 @@
                         </div>
                         <div class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-4.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-4.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick4.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -598,7 +624,7 @@
                         <div class="ToBeAPartStepBackLine"></div>
                         <div class="ToBeAPartStepContent">
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">01</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">01</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step1.png" alt="">
@@ -612,7 +638,7 @@
                                 免費註冊，登入會員即可成為程式人論壇的一員
                             </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">02</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">02</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step2.png" alt="">
@@ -627,7 +653,7 @@
                                 <br>例 : 開始自學程式語言，該如何提升自己的能力呢?
                             </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">03</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">03</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step3.png" alt="">
@@ -642,7 +668,7 @@
                                 <br>選擇你想學習的內容，訂定學習目標
                             </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">04</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">04</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step4.png" alt="">
@@ -658,7 +684,7 @@
                                 <br>或是透過發案形式能更快解決問題
                             </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">05</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">05</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step5.png" alt="">
@@ -762,7 +788,8 @@
 
     <!-- wow.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
 
     <!--Start Btn onclick change background color -->
@@ -794,6 +821,13 @@
 
     </script>
 
+    <!-- hover to change IMG -->
+    <script>
+
+
+
+    </script>
+
     <!-- On Scroll Change IMG -->
     <!-- <script>
 
@@ -817,6 +851,12 @@
     object.addEventListener ("scroll", onScrollHandler);
 
     </script> -->
+
+
+    <!-- AOS INI -->
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>
