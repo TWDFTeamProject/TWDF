@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        .box_1 {
+            width: 100px;
+            height: 50px;
+            background-color: brown;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box_2 {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(71, 165, 42);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .XX_signin_box {
+            width: 100%;
+            padding-bottom: 10px;
+            height: auto;
+            /* background-color: blanchedalmond; */
+            margin: auto;
+        }
+
+        .XX_account {
+            font-size: 18px;
+            padding-top: 10px;
+            margin-left: 10px;
+            color: white;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .XX_account input {
+            width: 85%;
+            margin-left: 10px;
+            /* border: 1px solid black; */
+            border-radius: 10px;
+            
+        }
+
+        .XX_password {
+            font-size: 18px;
+            margin-left: 10px;
+            padding-top: 10px;
+            margin-top: 30px;
+
+            color: white;
+
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .XX_password input {
+            width: 85%;
+            margin-left: 10px;
+            /* border: 1px solid black; */
+            border-radius: 10px;
+        }
+
+        .XX_but_bar {
+            /* background-color: brown; */
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .XX_bar_remember {
+            color: white;
+        }
+        .XX_bar_remember:hover{
+            color: blue;
+        }
+
+        .XX_bar_forget {
+            color: white;
+        }
+
+        .XX_bar_forget:hover{
+            color: blue;
+        }
+
+        .XX_bar_noaccount {
+            color: white;
+        }
+
+        .XX_bar_noaccount:hover{
+            color: blue;
+        }
+
+        .XX_bar_new {
+            color: white;
+        }
+
+        .XX_bar_new:hover{
+            color: blue;
+        }
+
+        .XX_sign_in {
+            width: 90%;
+            height: 36px;
+            letter-spacing: 2px;
+            background-color: blueviolet;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .XX_other_title{
+            text-align: center;
+            color: white;
+            letter-spacing: 3px;
+            
+        }
+
+        .XX_other_sign_bar {
+            width: 100%;
+            height: 70px;
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .XX_sign_fb {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+        .XX_sign_google {
+            width: 60px;
+            height: 60px;
+            margin: 0px 30px;
+            background-color: rgb(255, 153, 0);
+            border-radius: 50%;
+
+        }
+
+        .XX_sign_apple {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50%;
+        }
+
+        .XX_precautions_title{
+            text-align: center;
+            color: rgb(255, 29, 29);
+            letter-spacing: 3px;
+            
+        }
+
+        .XX_precautions {
+            width: 90%;
+            color: rgb(255, 209, 209);
+            margin: auto;
+
+        }
+
+        /* --------視窗基本設定---------------- */
+
+        .modal-header {
+            border-bottom: 0;
+            padding: 1rem 0rem 0rem 1rem;
+            color: white;
+        }
+        .close{
+            color: red;
+        }
+        .close :hover{
+            color: yellow;
+        }
+
+        .modal-header .close {
+            padding: 1rem 2rem;
+            margin: -1rem -1rem -1rem auto;
+        }
+        .modal-footer {
+            border-top: 0;
+            padding: 0rem 0rem 1rem 1rem;
+            color: white;
+        }
+
+        .style_hr_t{
+            width: 90%;
+            margin: auto;
+            margin: 20px;
+            background-color: white;
+        }
+        .style_hr_d{
+            
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+
+        /* --------背景顏色------- */
+
+        .bg-1 {
+            background-color: rgba(0, 0, 0, 0.781);
+        }
+
+        .bg-2 {
+            background-color: blue;
+        }
+
+        .bg-3 {
+            background-color: red;
+        }
+
+        .bg-4 {
+            background-color: yellow;
+        }
+
+        .bg-5 {
+            background-color: green;
+        }
+
+        .bg-6 {
+            background-color: rgb(201, 198, 194);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Button trigger modal -->
+    <div class="box_1" data-toggle="modal" data-target="#member_form_1">Hello world</div>
+    <div class="modal fade" id="member_form_1" tabindex="-1" role="dialog" aria-labelledby="member_form_1Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-1 ">
+                    <h5 class="modal-title" id="member_form_1Label">會員登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-1 ">
+                    <div class="XX_signin_box">
+                        <div class="XX_account">帳號<input type="text"></div>
+                        <div class="XX_password">密碼<input type="text"></div>
+                        <div class="XX_but_bar">
+                            <div class="XX_bar_remember"><input type="checkbox" name="" id=""> 記住我</div>
+                            <div class="XX_bar_forget">忘記密碼</div>
+                            <div class="XX_bar_noaccount">沒有帳號</div>
+                            <div class="XX_bar_new">創建新帳號</div>
+
+                        </div>
+                        <div class="XX_sign_in">登入</div>
+                        <hr class="style_hr_t">
+                        <div class="XX_other_title"><h5>其他登入方式</h5></div>
+                        <div class="XX_other_sign_bar">
+                            <div class="XX_sign_fb"></div>
+                            <div class="XX_sign_google"></div>
+                            <div class="XX_sign_apple"></div>
+                        </div>
+                        <hr class="style_hr_d">
+                    </div>
+                </div>
+                <div class="modal-footer bg-1 ">
+                    <div class="XX_precautions">
+                        <div class="XX_precautions_title"><h5>注意事項</h5></div>
+                        通過點擊下面的按鈕切換動態視窗呈現。
+                        它將從頁面頂部向下滑動並淡入。
+                        通過點擊下面的按鈕切換動態視窗呈現。
+                        它將從頁面頂部向下滑動並淡入。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+</body>
+
+</html>
