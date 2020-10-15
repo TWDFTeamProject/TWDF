@@ -336,7 +336,7 @@
                     </div>
                     <div class="mainbox-r">
                         <!-- 這裡是資源共享的學院電子書區塊 -->
-                        <div class="section p-5" id="mainbox_books">
+                        <!-- <div class="section p-5" id="mainbox_books">
 
                             <h2>學院電子書 > Assembly </h2>
                             </pr>
@@ -501,7 +501,7 @@
                             </ul>
                         </div>
                         <!-- 這裡是資源共享的工具套件區塊 -->
-                        <div class="section p-5" id="mainbox_Tools">
+                        <!-- <div class="section p-5" id="mainbox_Tools">
                             <h2>工具套件</h2>
                             </pr>
                             <h3> Programming Tools</h3>
@@ -535,7 +535,7 @@
 
                         </div>
                         <!-- 這裡是資源共享的相關學習視頻區塊 -->
-                        <div class="section p-5" id="mainbox_Videos">
+                        <!-- <div class="section p-5" id="mainbox_Videos">
                             <h2>相關學習視頻</h2>
                             </pr>
                             <h3> Programming videos</h3>
@@ -654,8 +654,8 @@
                                     et unde
                                     nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
                                 </li>
-                            </ul>
-                        </div>
+                            </ul> 
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -715,9 +715,161 @@
 
         var mainbox_detail_nodisplay = document.querySelector(".mainbox_detail_nodisplay")
         var ebook = document.querySelector("#ebook")
+        var mainbox_r = document.querySelector(".mainbox-r")
+        
+        //顯示此頁面會出現第一篇文章的預設
+        book()
 
         ebook.onclick = function () {
             mainbox_detail_nodisplay.classList.toggle("mainbox_detail_nodisplay")
+            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_books">
+
+<h2>學院電子書 > Assembly </h2>
+</pr>
+<h5> Ebooks > Assembly</h5>
+<ul>
+    <li>
+        <a href="https://www.tenlong.com.tw/products/9789862803486">
+            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        </a>
+        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+    </li>
+    <li>
+        <a
+            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        This book is intended for beginners who would like to learn the basics of Assembly
+        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        brief introduction to assembly, common arithmetic instructions, character and string input
+        and display routines, flow controls including conditional and looping statements, stack, and
+        procedures.
+    </li>
+    <li>
+        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+    </li>
+
+</ul>
+<h2>學院電子書 > C languages </h2>
+</pr>
+<h5> Ebooks > C languages</h5>
+<ul>
+    <li>
+        <a href="https://www.tenlong.com.tw/products/9789862803486">
+            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        </a>
+        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+    </li>
+    <li>
+        <a
+            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        This book is intended for beginners who would like to learn the basics of Assembly
+        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        brief introduction to assembly, common arithmetic instructions, character and string input
+        and display routines, flow controls including conditional and looping statements, stack, and
+        procedures.
+    </li>
+    <li>
+        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+    </li>
+
+</ul>
+
+<h2 class="pt-5">學院電子書 > JavaScript</h2>
+</pr>
+<h5> Ebooks > JavaScript</h5>
+<ul>
+    <li>
+        <a href="http://eloquentjavascript.net/">
+            <h5 class="pt-5">Eloquent JavaScript</h5>
+        </a>
+        一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
+        章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
+    </li>
+    <li>
+        <a href="https://www.oreilly.com/">
+            <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
+        </a>
+        一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
+
+    </li>
+    <li>
+        <a href="https://www.oreilly.com/">
+            <h5 class="pt-5">Programming JavaScript Applications</h5>
+        </a>
+        一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
+    </li>
+    <li>
+        <a href="https://www.codewars.com/">
+            <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
+        </a>
+        透過闖關的方式練成 JavaScript
+        達人，網站在註冊的時候，會先讓你選擇程式語言，
+        如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
+        你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
+        註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
+        每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
+
+    </li>
+    <li>
+        <a href="https://exploringjs.com/">
+            <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript</h5>
+        </a>
+        一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        完整補充 ECMAScript 6 的重要觀念與特性。
+
+    </li>
+    <li>
+        <a href="http://liubin.org/promises-book/">
+            <h5 class="pt-5">ECMAScript 6 入门</h5>
+        </a>
+        一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
+        內容也相當完整。此書為簡體中文
+
+    </li>
+    <li>
+        <a href="http://liubin.org/promises-book/">
+            <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
+        </a>
+        一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        完整補充 ECMAScript 6 的重要觀念與特性。
+
+    </li>
+    <li>
+        <a href="https://www.tenlong.com.tw/products/9789862764411">
+            <h5 class="pt-5">JavaScript 大全, 6/e
+                (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
+        </a>
+        從最基礎的 JavaScript
+        語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
+
+    </li>
+    <li>
+        <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
+            <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
+        </a>僅 164 頁，闡述所有 JavaScript
+        的優良部分，適合進階的 JavaScript 開發人員閱讀。
+
+    </li>
+
+</ul>
+</div>`
         }
 
         //左列工具點擊後出現下方區塊
@@ -726,6 +878,39 @@
 
         tools.onclick = function () {
             tools_nodisplay.classList.toggle("tools_nodisplay")
+            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Tools">
+                    <h2>工具套件</h2>
+                    </pr>
+                    <h3> Programming Tools</h3>
+
+                    <div class="d-flex pt-5 p-2">
+                        <img class="mr-3" src="05-link icon/tools/vscode-logo.png" height=100 width=100>
+                        <span class="text-align-center">
+                            <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
+                            <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
+                                版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
+                    </div>
+                    <div class="d-flex p-2">
+                        <img class="mr-3" src="05-link icon/tools/aws.png" height=100 width=100>
+                        <span class="text-align-center">
+                            <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
+                            <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
+                    </div>
+                    <div class="d-flex p-2">
+                        <img class="mr-3" src="05-link icon/tools/aws.png" height=100 width=100>
+                        <span class="text-align-center">
+                            <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
+                            <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
+                    </div>
+                    <div class="d-flex pt-5 p-2">
+                        <img class="mr-3" src="05-link icon/tools/vscode-logo.png" height=100 width=100>
+                        <span class="text-align-center">
+                            <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
+                            <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
+                                版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
+                    </div>
+
+                </div>`
         }
         //左列視頻點擊後出現下方區塊
         var video_nodisplay = document.querySelector(".video_nodisplay")
@@ -733,6 +918,36 @@
 
         video.onclick = function () {
             video_nodisplay.classList.toggle("video_nodisplay")
+            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Videos">
+                    <h2>相關學習視頻</h2>
+                    </pr>
+                    <h3> Programming videos</h3>
+                    <div class="d-flex align-items-center pt-5 p-2">
+                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <span>
+                            <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center pt-5 p-2">
+                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <span>
+                            <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center pt-5 p-2">
+                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <span>
+                            <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+                        </span>
+                    </div>
+
+                </div>`
         }
 
         //左列論壇點擊後出現下方區塊
@@ -741,6 +956,42 @@
 
         forum.onclick = function () {
             forum_nodisplay.classList.toggle("forum_nodisplay")
+            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Forums">
+                    <h2>其他論壇</h2>
+                    </pr>
+                    <h3> Other Forums</h3>
+                    <ul>
+                        <li>
+                            <h5 class="pt-5 p-2">PROGRAMMING BOOK NAME</h5>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque aperiam consectetur nam
+                            ipsa veritatis omnis ipsam optio quod magni? Dolorem a quaerat consequatur voluptate
+                            doloremque. Quis consectetur corrupti dignissimos.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae magni, unde distinctio
+                            rem doloremque, ullam alias ducimus doloribus quaerat atque odio facere amet quos soluta
+                            repudiandae aliquid, optio quisquam.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Minus eveniet tempore exercitationem rem dolores! Doloribus sed quos
+                            ducimus veniam consectetur accusamus rerum nemo, odit reprehenderit accusantium repudiandae
+                            dolorum, rem inventore.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Aliquam, tenetur alias? Delectus, velit id. Molestias hic perferendis, odio tempora ut
+                            ab dolore veritatis repudiandae? Fugiat voluptatem sapiente similique beatae laudantium.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nisi in debitis, quasi voluptatibus doloremque iste quos officiis itaque, quam et unde
+                            nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
+                        </li>
+                    </ul>
+
+                </div>`
         }
 
         //左列資源點擊後出現下方區塊
@@ -749,6 +1000,192 @@
 
         info.onclick = function () {
             info_nodisplay.classList.toggle("info_nodisplay")
+            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Infor">
+                    <h2>相關資源</h2>
+                    </pr>
+                    <h3> Other Information</h3>
+                    <ul>
+                        <li>
+                            <h5 class="pt-5 p-2">PROGRAMMING BOOK NAME</h5>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque aperiam consectetur nam
+                            ipsa veritatis omnis ipsam optio quod magni? Dolorem a quaerat consequatur voluptate
+                            doloremque. Quis consectetur corrupti dignissimos.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae magni, unde distinctio
+                            rem doloremque, ullam alias ducimus doloribus quaerat atque odio facere amet quos soluta
+                            repudiandae aliquid, optio quisquam.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Minus eveniet tempore exercitationem rem dolores! Doloribus sed quos
+                            ducimus veniam consectetur accusamus rerum nemo, odit reprehenderit accusantium repudiandae
+                            dolorum, rem inventore.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Aliquam, tenetur alias? Delectus, velit id. Molestias hic perferendis, odio tempora ut
+                            ab dolore veritatis repudiandae? Fugiat voluptatem sapiente similique beatae laudantium.
+                        </li>
+                        <li>
+                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nisi in debitis, quasi voluptatibus doloremque iste quos officiis itaque, quam et unde
+                            nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
+                        </li>
+                    </ul>
+                </div>`
+        }
+
+        function book(){
+            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_books">
+
+<h2>學院電子書 > Assembly </h2>
+</pr>
+<h5> Ebooks > Assembly</h5>
+<ul>
+    <li>
+        <a href="https://www.tenlong.com.tw/products/9789862803486">
+            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        </a>
+        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+    </li>
+    <li>
+        <a
+            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        This book is intended for beginners who would like to learn the basics of Assembly
+        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        brief introduction to assembly, common arithmetic instructions, character and string input
+        and display routines, flow controls including conditional and looping statements, stack, and
+        procedures.
+    </li>
+    <li>
+        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+    </li>
+
+</ul>
+<h2>學院電子書 > C languages </h2>
+</pr>
+<h5> Ebooks > C languages</h5>
+<ul>
+    <li>
+        <a href="https://www.tenlong.com.tw/products/9789862803486">
+            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        </a>
+        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+    </li>
+    <li>
+        <a
+            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        This book is intended for beginners who would like to learn the basics of Assembly
+        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        brief introduction to assembly, common arithmetic instructions, character and string input
+        and display routines, flow controls including conditional and looping statements, stack, and
+        procedures.
+    </li>
+    <li>
+        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+                Assembly Programming</h5>
+        </a>
+        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+    </li>
+
+</ul>
+
+<h2 class="pt-5">學院電子書 > JavaScript</h2>
+</pr>
+<h5> Ebooks > JavaScript</h5>
+<ul>
+    <li>
+        <a href="http://eloquentjavascript.net/">
+            <h5 class="pt-5">Eloquent JavaScript</h5>
+        </a>
+        一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
+        章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
+    </li>
+    <li>
+        <a href="https://www.oreilly.com/">
+            <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
+        </a>
+        一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
+
+    </li>
+    <li>
+        <a href="https://www.oreilly.com/">
+            <h5 class="pt-5">Programming JavaScript Applications</h5>
+        </a>
+        一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
+    </li>
+    <li>
+        <a href="https://www.codewars.com/">
+            <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
+        </a>
+        透過闖關的方式練成 JavaScript
+        達人，網站在註冊的時候，會先讓你選擇程式語言，
+        如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
+        你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
+        註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
+        每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
+
+    </li>
+    <li>
+        <a href="https://exploringjs.com/">
+            <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript</h5>
+        </a>
+        一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        完整補充 ECMAScript 6 的重要觀念與特性。
+
+    </li>
+    <li>
+        <a href="http://liubin.org/promises-book/">
+            <h5 class="pt-5">ECMAScript 6 入门</h5>
+        </a>
+        一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
+        內容也相當完整。此書為簡體中文
+
+    </li>
+    <li>
+        <a href="http://liubin.org/promises-book/">
+            <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
+        </a>
+        一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        完整補充 ECMAScript 6 的重要觀念與特性。
+
+    </li>
+    <li>
+        <a href="https://www.tenlong.com.tw/products/9789862764411">
+            <h5 class="pt-5">JavaScript 大全, 6/e
+                (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
+        </a>
+        從最基礎的 JavaScript
+        語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
+
+    </li>
+    <li>
+        <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
+            <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
+        </a>僅 164 頁，闡述所有 JavaScript
+        的優良部分，適合進階的 JavaScript 開發人員閱讀。
+
+    </li>
+
+</ul>
+</div>`
         }
 
 
