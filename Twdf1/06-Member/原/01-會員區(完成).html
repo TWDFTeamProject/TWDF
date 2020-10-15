@@ -44,7 +44,15 @@
 
         .content-l {
             width: 20%;
-            height: 1000px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+
+            height: auto;
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -o-radial-gradient(circle, #002f55, #001027);
+            background: -moz-radial-gradient(circle, #002f55, #001027);
+            background: radial-gradient(circle, #002f55, #001027);
             /* background-color: cornflowerblue; */
             display: flex;
             flex-direction: column;
@@ -77,30 +85,38 @@
         .namebox {
             width: 60%;
             height: 20%;
-            font-size: 24px;
+            font-size: 30px;
+            letter-spacing: 3px;
             /* background-color: darkgray; */
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: rgb(252, 238, 192);
+            font-weight: bolder;
+            /* text-decoration:underline */
         }
 
         .listbox {
             width: 80%;
             height: 60%;
-            background-color: rgb(228, 212, 212);
+            
             display: flex;
+            border-radius: 10px;
             flex-direction: column;
             margin-top: 10PX;
-            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+            opacity: 0.9;
             /* flex-wrap: wrap; */
             /* justify-content: space-around; */
         }
 
         .projectbox {
-            width: 80%;
-            height: 10%;
+            width: 70%;
+            height: 50px;
             margin: 10px;
+            color: white;
+            border-radius: 10px;
             /* background-color: rgb(110, 98, 216); */
             margin: auto;
             font-size: 18px;
@@ -109,7 +125,20 @@
             align-items: center;
             justify-content: center;
             border-bottom: 2px solid black;
+            background-color: #899798;
+            opacity: 0.9;
             /* margin: auto; */
+        }
+        .projectbox:hover{
+            transition: 1s;
+            background-color: #E07C64;
+            opacity: 1;
+            border: double;
+            /* background: -webkit-radial-gradient(circle, #a9c5a9, #5a92a3);
+            background: -o-radial-gradient(circle, #a9c5a9, #5a92a3);
+            background: -moz-radial-gradient(circle, #a9c5a9, #5a92a3);
+            background: radial-gradient(circle, #a9c5a9, #5a92a3); */
+            color: rgb(48, 23, 23);
         }
 
 
@@ -142,7 +171,6 @@
             margin: auto;
             margin-top: 20px;
             position: relative;
-            
             box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
 
 
@@ -162,7 +190,6 @@
             width: 100%;
             height: 50%;
             /* background-color: rgb(152, 189, 89); */
-
             position: relative;
         }
 
