@@ -784,6 +784,9 @@ main{
                 .TWDF-IntroYouCanText{
                     color: white;
                     padding-right: 0px;
+                    @media (max-width: 768px) {
+                        margin-top: 460px;
+                    }
 
                     .TWDF-IntroYouCanTitile{
                         font-size: 32px;
@@ -923,6 +926,9 @@ main{
             .TabExplain{
                 padding-top: 101px;
                 padding-bottom: 191px;
+                @media (max-width: 768px) {
+                    padding-bottom: 80px;
+                }
                 .TabExplainTitleArea{
                     margin-left: 95px;
                     margin-bottom: 120px;
@@ -962,9 +968,9 @@ main{
                         text-decoration: none;
                         color: black;
                         cursor: pointer;
-                        // @media (max-width: 1200px) {
-                        
-                        // }
+                        @media (max-width: 768px) {
+                            margin-bottom: 46px;
+                        }
                         &:hover{
                             .TabExplainBlockIMG{
                                 .img-display{
@@ -1155,6 +1161,9 @@ main{
                 .ToBeAPartGetStart{
                     margin-top: 109px;
                     padding-bottom: 244px;
+                    @media (max-width: 768px) {
+                        padding-bottom: 122px;
+                    }
 
                     .ToBeAPartGetStartText{
                         font-size: 32px;
@@ -1168,10 +1177,16 @@ main{
                         background: black;
                         text-decoration: unset;
                         
-                        
                         font-size: 43px;
                         text-align: center;
                         margin-top: 44px;
+                        @media (max-width: 768px) {
+                            font-size: 28px;
+                            width: 166px;
+                            height: 68px;
+                            line-height: 68px;
+                        }
+
                     }
                 }
             }
@@ -1233,8 +1248,8 @@ footer{
             .FooterRowL{
                 margin-top: 97px;
                 padding-left: 75px;
-                @media (max-width: 767.98px) {
-                    margin-top: 20px;
+                @media (max-width: 768px) {
+                    margin-top: 38px;
                     padding-left: 0;
                     padding-right: 0;
                 }

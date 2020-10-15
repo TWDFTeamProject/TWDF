@@ -819,6 +819,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
   padding-right: 0px;
 }
 
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
+    margin-top: 460px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
   font-size: 32px;
   margin-left: 12px;
@@ -984,6 +990,12 @@ main .Section3 .Section3Background .TabExplain {
   padding-bottom: 191px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .TabExplain {
+    padding-bottom: 80px;
+  }
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainTitleArea {
   margin-left: 95px;
   margin-bottom: 120px;
@@ -1034,6 +1046,12 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
   text-decoration: none;
   color: black;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock {
+    margin-bottom: 46px;
+  }
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:hover .TabExplainBlockIMG .img-display {
@@ -1245,6 +1263,12 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
   padding-bottom: 244px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
+    padding-bottom: 122px;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPartGetStartText {
   font-size: 32px;
 }
@@ -1259,6 +1283,15 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPar
   font-size: 43px;
   text-align: center;
   margin-top: 44px;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn {
+    font-size: 28px;
+    width: 166px;
+    height: 68px;
+    line-height: 68px;
+  }
 }
 
 /* ------------------------------頁角-------------------------------------- */
@@ -1278,9 +1311,9 @@ footer .FooterFrame .FooterRow .FooterRowL {
   padding-left: 75px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   footer .FooterFrame .FooterRow .FooterRowL {
-    margin-top: 20px;
+    margin-top: 38px;
     padding-left: 0;
     padding-right: 0;
   }
