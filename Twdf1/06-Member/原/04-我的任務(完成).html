@@ -13,18 +13,17 @@
         * {
             box-sizing: border-box;
         }
-
+        a {
+            text-decoration: none;
+        }
         body {
             margin: 0;
+            text-decoration: none;
         }
 
         /* ------------------------------導覽列---------------------------------------- */
 
-        .navbar {
-            width: 100%;
-            height: 70px;
-            background-color: blueviolet;
-        }
+        
 
         /* ------------------------------主要內容區塊----------------------------------- */
 
@@ -38,25 +37,41 @@
         }
 
 
+        /* ------------------------------主要內容區塊----------------------------------- */
+
+
+        .content {
+            width: 1140px;
+            height: auto;
+            background-color: #E0E0E0;
+            margin: auto;
+            display: flex;
+        }
+
+
         /* ------------------主要內容左邊區塊----------------------- */
 
 
 
         .content-l {
             width: 20%;
-            height: 1000px;
-            background-color: cornflowerblue;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            min-height: 100vh;
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -o-radial-gradient(circle, #002f55, #001027);
+            background: -moz-radial-gradient(circle, #002f55, #001027);
+            background: radial-gradient(circle, #002f55, #001027);
             display: flex;
             flex-direction: column;
-            /* justify-content: center; */
             align-items: center;
         }
 
         .personalbox {
             width: 80%;
-            height: 20%;
+            height: 200px;
             padding-top: 10PX;
-            /* background-color: black; */
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -66,7 +81,7 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background-color: black;
+            background-color: rgb(84, 60, 218);
             margin: auto;
             background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
             background-size: cover;
@@ -77,39 +92,48 @@
         .namebox {
             width: 60%;
             height: 20%;
-            font-size: 24px;
-            /* background-color: darkgray; */
+            font-size: 30px;
+            letter-spacing: 3px;
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: rgb(252, 238, 192);
+            font-weight: bolder;
         }
 
         .listbox {
             width: 80%;
-            height: 60%;
-            background-color: rgb(228, 212, 212);
+            height: 600px;
             display: flex;
+            border-radius: 10px;
             flex-direction: column;
             margin-top: 10PX;
-            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
-            /* flex-wrap: wrap; */
-            /* justify-content: space-around; */
+            opacity: 0.9;
         }
 
         .projectbox {
-            width: 80%;
-            height: 10%;
+            width: 70%;
+            height: 50px;
             margin: 10px;
-            /* background-color: rgb(110, 98, 216); */
+            color: white;
+            border-radius: 10px;
             margin: auto;
             font-size: 18px;
-            /* text-align: center; */
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 2px solid black;
-            /* margin: auto; */
+            /* border-bottom: 2px solid black; */
+            background-color: #899798;
+            opacity: 0.9;
+            text-decoration: none;
+        }
+        .projectbox:hover{
+            transition: 1.5s;
+            background-color: #E07C64;
+            opacity: 1;
+            border: double;
+            color: rgb(48, 23, 23);
         }
 
 
@@ -121,10 +145,6 @@
         .content-r {
             width: 80%;
             height: 100%;
-            background-color: rgb(211, 250, 221);
-            /* display: flex;
-            flex-direction: column; */
-
         }
 
         .project-page {
@@ -138,8 +158,7 @@
         .page-title {
             width: 80%;
             height: 70px;
-            /* margin: 20px; */
-            /* background-color: bisque; */
+            margin: 20px;
             display: flex;
             align-items: center;
             padding-left: 10px;
@@ -451,29 +470,37 @@
 
         /* ---------------頁面切換---------------- */
         .TK_bn_t {
-            width: 30px;
-            height: 30px;
-            margin: 10px;
-            /* background-color: blueviolet; */
-            border: 3px solid black;
-            /* color: white; */
+            width: 34.6px;
+            height: 38px;
+            margin: 10px 5px;
+            border: 1px solid black;
+            border-radius: 5px;
             font-size: 18px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        .TK_bn_t:hover{
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
 
         .TK_bn_d {
-            width: 30px;
-            height: 30px;
-            margin: 10px;
-            /* background-color: blueviolet; */
-            border: 3px solid black;
-            /* color: white; */
+            width: 34.6px;
+            height: 38px;
+            margin: 10px 5px;
+            border: 1px solid black;
+            border-radius: 5px;
             font-size: 18px;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .TK_bn_d:hover{
+            background-color: black;
+            color: white;
+            transition: 1s;
         }
 
         
@@ -483,7 +510,7 @@
         }
 
         .TK_bn_t.TK_active {
-            background-color: rgb(214, 30, 30);
+            /* background-color: rgb(214, 30, 30); */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -491,7 +518,7 @@
         }
 
         .TK_bn_d.TK_active {
-            background-color: rgb(214, 30, 30);
+            /* background-color: rgb(214, 30, 30); */
             display: flex;
             justify-content: center;
             align-items: center;
