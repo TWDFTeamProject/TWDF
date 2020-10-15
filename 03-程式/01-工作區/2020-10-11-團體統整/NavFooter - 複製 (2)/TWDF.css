@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+}
+
+header {
+  /* ------------------------------導覽列---------------------------------------- */
+}
+
+header .navbar {
+  width: 100%;
+  height: 100px;
+}
+
+header .navbar .TWDFLogo {
+  margin: 10px;
+  position: absolute;
+}
+
+header .navbar .NavBtns {
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .NavBtns .NavBtn {
+  color: #cee9e7;
+  text-decoration: unset;
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .navbar .NavBtns .NavBtn .NavIMG {
+  width: 42px;
+  height: 47px;
+  margin-right: 12px;
+}
+
+header .navbar .NavBtns .NavBtn .NavText p {
+  font-size: smaller;
+  font-weight: lighter;
+  margin-bottom: unset;
+}
+
+header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
+  margin-bottom: 4.6px;
+}
+
+header .navbar .NavBtns .NavBtn::before {
+  display: block;
+  content: " ";
+  width: 0%;
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  top: 59px;
+  left: 50%;
+  -webkit-transition: width .5s ease, background-color .5s ease, left .5s ease;
+  transition: width .5s ease, background-color .5s ease, left .5s ease;
+}
+
+header .navbar .NavBtns .NavBtn:hover::before {
+  width: 100%;
+  background: radial-gradient(ellipse, #cc3a00, #2d0d00);
+  left: 0;
+}
+
+header .navbar .NavBtns .NavBtn:first-child {
+  -webkit-animation-name: MyWOW;
+          animation-name: MyWOW;
+  visibility: visible;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes MyWOW {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  82.5% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  87.5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  91.25% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  93.75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes MyWOW {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  82.5% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  87.5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  91.25% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  93.75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+header .navbar .LogIn {
+  color: black;
+  font-size: 31px;
+  width: 128px;
+  height: 64px;
+  background-color: #fcd383;
+  text-align: center;
+  line-height: 64px;
+  cursor: pointer;
+  text-decoration: unset;
+  margin-right: 38px;
+}
+
+/* ------------------------------主要內容區塊----------------------------------- */
+main {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ------------------------------頁角-------------------------------------- */
+footer .FooterFrame .FooterRow {
+  width: 100%;
+  height: 300px;
+  color: white;
+  font-size: 18px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL {
+  margin-top: 97px;
+  padding-left: 75px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL img {
+  width: 66px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title {
+  margin-bottom: 9px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowM {
+  margin-top: 122px;
+  padding-left: 68px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowR {
+  padding-left: 105px;
+  margin-top: 122px;
+}
+
+footer .FooterFrame .CopyrightRow {
+  color: white;
+  margin-top: 107px;
+  margin-bottom: 55px;
+}
+
+/* --------------------------注意事項------------------------------------ */
+/* 高度只是暫定可以自行更動 */
+/* 區塊背景顏色方便辨識 */
+/* 側邊盒子區塊 (content-r-box) 挑整高度,可以改變盒子內間距 */
+/*# sourceMappingURL=TWDF.css.map */

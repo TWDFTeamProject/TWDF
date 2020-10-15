@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
+
+    <style>
+        /* ------------------- */
+        .Task_page {
+            background-color: rgb(201, 198, 194);
+
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0%;
+            z-index: 99;
+        }
+
+        .tk_pag_title {
+            text-align: center;
+            margin-top: 20px;
+            letter-spacing: 10px;
+        }
+
+        .content-l {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            /* position: relative; */
+            /* background-color: cornflowerblue; */
+        }
+
+        .listbox {
+            width: 100%;
+            height: 600px;
+            margin-top: 10px;
+
+            background-color: rgb(228, 212, 212);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 5%
+                /* margin-top: 10PX; */
+                /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+                /* flex-wrap: wrap; */
+                /* justify-content: space-around; */
+        }
+
+        .projectbox {
+            width: 80%;
+            height: 10%;
+            margin: 10px;
+            /* background-color: rgb(110, 98, 216); */
+            margin: auto;
+            font-size: 18px;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            /* margin: auto; */
+        }
+
+        /* ----------中間內容------------ */
+        /* ------搜尋區塊------- */
+        .Searchbox {
+            width: 100%;
+            padding-top: 10px;
+            /* height: 8%; */
+            /* background-color: black; */
+        }
+
+        /* 關鍵字 */
+        .taggroup {
+            height: 40px;
+            display: flex;
+            align-content: center;
+        }
+
+        .tag_title {
+            height: 40px;
+            background-color: chartreuse;
+        }
+
+        .tk_banner {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+
+        /* ------排列順序----- */
+        .Paginationbox {
+            width: 100%;
+            height: 30px;
+            /* background-color: rgb(75, 45, 0); */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .Paginationbox-small {
+            font-size: 24px;
+
+        }
+
+        .Paginationbox-small:hover {
+            color: rgb(79, 65, 160);
+        }
+
+        .Paginationbox-smal>i {
+            /* padding-top: 10px; */
+            margin-top: 20px;
+        }
+
+        .underline {
+            border-bottom: black solid 1px;
+            width: 100%;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+
+        /* ---------任務卡片--------- */
+        .taskcarA {
+            width: 100%;
+            /* height: 400px; */
+            padding: 20px;
+            background-color: rgb(235, 245, 245);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+
+
+        }
+
+        .tk-l {
+            width: 70%;
+            /* height: 90%; */
+            background-color: rgb(252, 224, 133);
+            background-color: whitesmoke;
+
+            margin-bottom: auto;
+
+            
+
+        }
+
+        .tk-title {
+            width: 95%;
+            height: 20%;
+            margin-left: 10px;
+            margin-top: 10px;
+            /* background-color: rgb(252, 255, 248); */
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            border: 2px solid black;
+            background-color: whitesmoke;
+            background-color: rgb(252, 224, 133);
+            border-radius: 10px;
+
+
+        }
+
+        .tk-title h4{
+            margin: 10px;
+        }
+
+        .tk-bar {
+            width: 100%;
+            height: 15%;
+            /* background-color: darkgray; */
+            display: flex;
+            align-items: center;
+        }
+
+        .ps-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 10px;
+        }
+
+        .ps-name {
+            width: 150px;
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-time {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .tk-love {
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-category {
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-label {
+            width: 100%;
+            /* height: 15%; */
+            /* background-color: rgb(252, 165, 165); */
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .labelbox {
+            background-color: teal;
+            color: white;
+            display: inline;
+            margin: 10px;
+            padding: 0 10px;
+            font-size: 18px;
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+        }
+
+        .tk-r {
+            width: 25%;
+            height: 400px;
+            background-color:rgb(255, 254, 254);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: auto;
+        }
+
+        .tk_list_G{
+            width: 90%;
+            height: 80%;
+            background-color:rgb(171, 209, 153);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .tk-see {
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-money {
+            width: 80%;
+            height: 50px;
+            border-radius: 5px;
+            margin-left: 10px;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-day {
+            width: 80%;
+            height: 50px;
+            border-radius: 5px;
+            margin-left: 10px;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-endday {
+            width: 80%;
+            height: 50px;
+            border-radius: 5px;
+            margin-left: 10px;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-buttombar {
+            width: 90%;
+            height: 50px;
+            border-radius: 5px;
+            /* margin-left: 10px; */
+            background-color:rgb(171, 209, 153);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .tk-favorites {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(255, 175, 175);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .takeit {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(223, 88, 88);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .tk-main {
+            width: 100%;
+            min-height: 200px;
+            padding: 0 10px;
+            font-size: 18px;
+            border-top: 2px solid black;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+
+        /* --------收藏按鈕---------- */
+        .qt-buttombar {
+            width: 20%;
+            /* height: 50px; */
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right:10px ;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .qt-favorites {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            /* background: rgb(255, 255, 255); */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .takeit {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(255, 73, 73);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+    
+
+
+        /* -------------右邊區塊-------------- */
+
+        .content-r {
+            width: 100%;
+            margin-top: 10px;
+            flex-direction: column;
+            /* height: 600px; */
+            /* background-color: rgb(255, 255, 255); */
+            /* padding-top: 10px; */
+            /* position: fixed;
+            display: flex; */
+            /* position: sticky;
+            top: 5%; */
+            /* align-content: center; */
+        }
+
+        .ad_task {
+            width: 80%;
+            height: 100px;
+            margin: auto;
+            background-color: indigo;
+        }
+
+        /* ------前五名問題------- */
+
+        .top_five_problem {
+            width: 100%;
+            height: 400px;
+            margin: 10px auto;
+            background-color: rgb(255, 218, 218);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        .tf_p_photo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tf_p_title {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .tf_promblem_G {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            /* background-color: crimson; */
+        }
+
+        .tf_promblem {
+            width: 100%;
+            /* height: 20%; */
+            margin-top: 10px;
+            /* background-color: rgb(235, 250, 237); */
+            display: flex;
+        }
+
+        /* ------前五名答題者------- */
+
+
+
+        .top_five_who {
+            width: 100%;
+            height: 250px;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: rgb(92, 128, 205);
+        }
+
+        .advertising {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: rgb(92, 205, 143);
+        }
+
+
+
+
+
+
+        /* ------設定背景--------- */
+
+        .style_hr {
+            border: 3px solid black;
+        }
+
+        .style_cursor {
+            cursor: unset;
+        }
+
+        .style_img {
+            width: 100%;
+        }
+
+        .style_h {
+            margin: 0;
+        }
+
+        /* ---------四個角------- */
+
+        .style_border_tl {
+            width: 10%;
+            height: 20%;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            /* background-color: black; */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .style_border_tr {
+            width: 10%;
+            height: 20%;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            /* background-color: black; */
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .style_border_bl {
+            width: 10%;
+            height: 20%;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            /* background-color: black; */
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .style_border_br {
+            width: 10%;
+            height: 20%;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            /* background-color: black; */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+
+        /* -----------任務卡片編號--------- */
+        #B_1{
+            background: rgb(255, 255, 255);  
+        }
+        #B_2{
+            background: rgb(255, 255, 255);  
+        }
+        #B_3{
+            background: rgb(255, 255, 255);  
+        }
+        #B_4{
+            background: rgb(255, 255, 255);  
+        }
+        #B_5{
+            background: rgb(255, 255, 255);  
+        }
+        #B_6{
+            background: rgb(255, 255, 255);  
+        }
+        #B_7{
+            background: rgb(255, 255, 255);  
+        }
+
+        /* --------背景顏色------- */
+
+        .bg-1 {
+            background-color: black;
+        }
+
+        .bg-2 {
+            background-color: blue;
+        }
+
+        .bg-3 {
+            background-color: red;
+        }
+
+        .bg-4 {
+            background-color: yellow;
+        }
+
+        .bg-5 {
+            background-color: green;
+        }
+
+        .bg-6 {
+            background-color: rgb(201, 198, 194);
+        }
+
+
+        /* ---------RWD------ */
+    </style>
+
+</head>
+
+
+<body>
+    
+    <header>
+
+        <!-- ---------------------導覽列----------------------- -->
+        <nav class="navbar sticky-top">
+            <div class="TWDFLogo">
+                <img src="Nav-Logo/TWDF-Logo.png" alt="">
+            </div>
+            <div class="NavBtns">
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">城市人論壇</p>
+                        <p class="NavTextEn">Forum</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">作品展示</p>
+                        <p class="NavTextEn">Portfolios</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">案件發佈</p>
+                        <p class="NavTextEn">Post Cases</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">資源共享</p>
+                        <p class="NavTextEn">Resource Sharing</p>
+                    </div>
+                </a>
+                <a id="StartBtn" class="LogIn"><p>Sign In</p></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ---------------------內容----------------------- -->
+    <main>
+        <section class="Task_page">
+            <div class="container ">
+                <div class="row"></div>
+                <div class="tk_pag_title col-md-12">
+                    <h1>論壇討論區</h1>
+                </div>
+            </div>
+    
+            <div class="container ">
+                <div class="row"></div>
+                <div class="col-md-12 ">
+                    <hr class="style_hr">
+                </div>
+            </div>
+    
+            <div class="container ">
+                <div class="row">
+                    
+                    <div class="col-md-9">
+                        <!-- 搜尋框 -->
+                        <div class="Searchbox ">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                    aria-describedby="button-addon2" style="border-right: none;">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: white; "><i
+                                            class="fas fa-search"></i></span>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <!-- tag標籤 -->
+                        <div class="taggroup">
+                            <div class="btn style_cursor">熱門搜尋</div>
+                            <button type="button" class="btn btn-link">名片製作</button>
+                            <button type="button" class="btn btn-link">封面插畫</button>
+                            <button type="button" class="btn btn-link">網頁設計</button>
+                            <button type="button" class="btn btn-link">Logo設計</button>
+                            <button type="button" class="btn btn-link">RWD</button>
+                        </div>
+                        <div class="tk_banner">
+                            <img class="style_img" src="/03-程式/01-工作區/html-ex/會園區子頁/參考/論壇區/論壇Banner_工作區域 1.jpg" alt="">
+                        </div>
+    
+                        <!-- 排列順序列-- -->
+                        <div class="Paginationbox">
+                            <div class="Paginationbox-small">最新上傳
+                                <i class="fas fa-sort-up"></i>
+                            </div>
+                            <div class="Paginationbox-small">最多點評
+                                <i class="fas fa-sort-up"></i></div>
+                            <div class="Paginationbox-small">最高人氣
+                                <i class="fas fa-sort-up"></i></div>
+                        </div>
+                        <div class="underline"></div>
+                        <div class="tk_car_G">
+                            <div class="taskcarA">
+                                <div class="tk-l">
+                                    <div class="tk-title">
+                                        <h4 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h4>
+                                    </div>
+                                    <div class="tk-bar">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">賴小明ilove123456</div>
+                                        <div class="tk-category">前端</div>
+                                        <div class="tk-time">2020/10/6</div>
+                                    </div>
+                                    <div class="tk-label">
+                                        <div class="labelbox">css</div>
+                                        <div class="labelbox">Jacescript</div>  
+                                        <div class="labelbox">Jacescript</div>
+                                        <div class="labelbox">Jacescript</div>
+                                    </div>
+                                    <div class="tk-main">
+                                        <br>1.案件說明：協助網站建置
+                                        <br>2.注意事項：
+                                        <br>(一)具備相關能力或實務經驗
+                                        <br>(二)若有作品集可以提供我方參考佳
+                                        <br>.....點擊查看更多
+                                    </div>
+                                </div>
+                                <div class="tk-r">
+                                    <div class="tk_list_G">
+                                        <div class="tk-see">瀏覽人數:30</div>
+                                        <div class="tk-money">預算金額<br>5K~10K</div>
+                                        <div class="tk-day">發布日期<br>2020/10/19</div>
+                                        <div class="tk-endday">截直日期 <br> 2020/10/31</div>
+                                    </div>
+                                    
+                                    <div class="tk-buttombar">
+                                        <div class="tk-buttombar">
+                                            <div id="B_1" class="tk-favorites"
+                                            onclick="check_B_1();">收藏</div>
+                                            <div class="takeit">接案</div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+    
+                            
+                            <div class="tk_car"></div>
+                            <div class="tk_car"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="content-r">
+                            <div class="ad_task">
+                                我要發問
+                            </div>
+                            <div class="top_five_problem">
+                                <div class="tf_p_photo">
+                                    <img src="/03-程式/01-工作區/html-ex/會園區子頁/參考/論壇區/電燈-01.png" alt="">
+                                </div>
+                                <div class="tf_p_title">
+                                    <h4>Hot! Five QT</h4>
+                                </div>
+                                <div class="tf_promblem_G">
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            請問 windows 如何像 Linux 使用命令方式查詢某個資料夾底下的刪除紀錄
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            NAS 組 RAID10 壞了一軌
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            iTHelp 程式碼區塊用色建議, 是否可改？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            託管網站要落地架在自家Server上該注意什麼？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            AD的作業系統版本可否降級？
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="top_five_who"></div>
+                            <div class="advertising"></div>
+                            <div class="advertising"></div>
+    
+    
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- ---------------------頁角----------------------- -->
+    <footer>
+        <div class="FooterFrame container">
+            <div class="FooterRow row row-cols-3 justify-content-center">
+                <div class="col-5 FooterRowL">
+                    <img src="Nav-Logo/TWDF-Logo.png" alt="">
+                    <div class="FooterTWDF-Title">
+                        程式人論壇 | TWDF
+                    </div>
+                    <p>Taiwan Web Developer Forum</p>
+                </div>
+                <div class="col-4 FooterRowM">
+                    <p>+886 900-31540000</p>
+                    <p>+886 900-31540000</p>
+                    <p>TWDF＠gmail.com</p>
+                    <p>台中市北區崇德路民眾技藝中心</p>
+                </div>
+                <div class="col-3 FooterRowR">
+                    <p>- 論壇討論區</p>
+                    <p>- 成果作品集</p>
+                    <p>- 案件發布區</p>
+                    <p>- 資源共享區</p>
+                </div>
+            </div>
+            <div class="row CopyrightRow justify-content-center">
+                <p>Copyright © 2020 Taiwan Web Developer Forum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        function check_B_1() {
+            var e = document.getElementById("B_1");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_1").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_1").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_B_2() {
+            var e = document.getElementById("B_2");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_2").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_2").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_B_3() {
+            var e = document.getElementById("B_3");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_3").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_3").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_B_4() {
+            var e = document.getElementById("B_4");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_4").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_4").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_B_5() {
+            var e = document.getElementById("B_5");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_5").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_5").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_B_6() {
+            var e = document.getElementById("B_6");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_6").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_6").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_B_7() {
+            var e = document.getElementById("B_7");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_7").style.background = "#ff77ee";
+            } else {
+                document.getElementById("B_7").style.background = "rgb(255, 255, 255)";
+            }
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

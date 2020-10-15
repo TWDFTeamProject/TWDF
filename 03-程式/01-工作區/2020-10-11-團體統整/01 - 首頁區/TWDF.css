@@ -15,6 +15,9 @@ body {
 header {
   /*每個圖片各延遲X秒*/
   /* ------------------------------導覽列---------------------------------------- */
+  /* ---------------------------RWD導覽列---------------------------------------- */
+  /* -------------------------RWD手機導覽列-------------------------------------- */
+  /* ---------------------------------------------------------------------------- */
 }
 
 header .BackgroundIMG {
@@ -53,6 +56,12 @@ header .navbar {
   height: 100px;
 }
 
+@media (max-width: 1200px) {
+  header .navbar {
+    height: 50px;
+  }
+}
+
 header .navbar .TWDFLogo {
   margin: 10px;
   position: absolute;
@@ -85,10 +94,24 @@ header .navbar .NavBtns .NavBtn {
   position: relative;
 }
 
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn {
+    margin-right: 20px;
+  }
+}
+
 header .navbar .NavBtns .NavBtn .NavIMG {
   width: 42px;
   height: 47px;
   margin-right: 12px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn .NavIMG {
+    width: 21px;
+    height: 23.5px;
+    margin-right: 6px;
+  }
 }
 
 header .navbar .NavBtns .NavBtn .NavText p {
@@ -97,8 +120,20 @@ header .navbar .NavBtns .NavBtn .NavText p {
   margin-bottom: unset;
 }
 
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn .NavText p {
+    font-size: xx-small;
+  }
+}
+
 header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
   margin-bottom: 4.6px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
+    margin-bottom: 0;
+  }
 }
 
 header .navbar .NavBtns .NavBtn::before {
@@ -215,10 +250,70 @@ header .navbar .LogIn {
   margin-right: 38px;
 }
 
+@media (max-width: 1200px) {
+  header .navbar .LogIn {
+    font-size: 15px;
+    width: 64px;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+header .navbar-light {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+  position: relative;
+  color: white;
+}
+
+header .navbar-light .navbar-toggler {
+  position: absolute;
+  right: 5%;
+  margin-right: 10px;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item {
+  width: 260px;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link .NavIMG {
+  margin-right: 10px;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link .NavText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 header .banner {
   width: 100vw;
   position: relative;
   margin-bottom: 940px;
+}
+
+@media (max-width: 1200px) {
+  header .banner {
+    margin-bottom: 600px;
+  }
 }
 
 header .banner .content {
@@ -226,7 +321,6 @@ header .banner .content {
   height: 720px;
   border: 12px solid #fbfafc;
   border-radius: 100.88px;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,10 +337,27 @@ header .banner .content {
   padding: unset;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content {
+    margin-top: 60px;
+    width: 860px;
+    height: 480px;
+    border: 6px solid #fbfafc;
+    border-radius: 36px;
+  }
+}
+
 header .banner .content .ContentTop {
   width: 100%;
   height: 65px;
   border-bottom: 12px solid #fbfafc;
+}
+
+@media (max-width: 1200px) {
+  header .banner .content .ContentTop {
+    height: 32px;
+    border-bottom: 6px solid #fbfafc;
+  }
 }
 
 header .banner .content .ContentTop .ContentTopPoints {
@@ -261,6 +372,14 @@ header .banner .content .ContentTop .ContentTopPoints {
   margin-top: 18px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentTop .ContentTopPoints {
+    margin-left: 26px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+}
+
 header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
   width: 23px;
   height: 20px;
@@ -269,10 +388,28 @@ header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
   margin-right: 20px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
+    width: 11.5px;
+    height: 10px;
+    border-radius: 4.75px;
+    margin-right: 10px;
+  }
+}
+
 header .banner .content .ContentMiddle {
   color: white;
   margin-top: 51px;
   margin-left: 51px;
+  font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+  header .banner .content .ContentMiddle {
+    margin-top: 34px;
+    margin-left: 34px;
+    font-size: 26px;
+  }
 }
 
 header .banner .content .ContentBottom {
@@ -286,10 +423,24 @@ header .banner .content .ContentBottom .TWDFTitleTop {
   margin-top: 36px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentBottom .TWDFTitleTop {
+    font-size: 66px;
+    margin-top: 24px;
+  }
+}
+
 header .banner .content .ContentBottom .TWDFTitleBottom {
   font-family: 'Cantarell', sans-serif;
   font-size: 36px;
   margin-top: 34px;
+}
+
+@media (max-width: 1200px) {
+  header .banner .content .ContentBottom .TWDFTitleBottom {
+    font-size: 24px;
+    margin-top: 22.6px;
+  }
 }
 
 header .banner .content .ContentBottom .Searchingbar {
@@ -310,10 +461,27 @@ header .banner .content .ContentBottom .Searchingbar {
   padding-left: 29px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentBottom .Searchingbar {
+    width: 366px;
+    height: 28px;
+    border: .5px solid white;
+    border-radius: 32px;
+    margin-bottom: 6px;
+    margin-top: 54px;
+    padding-left: 29px;
+  }
+}
+
 header .banner .Scrollpart {
   position: relative;
-  top: 900px;
-  height: 100px;
+  top: 32%;
+}
+
+@media (max-width: 1200px) {
+  header .banner .Scrollpart {
+    top: 33%;
+  }
 }
 
 header .banner .Scrollpart a {
@@ -329,6 +497,13 @@ header .banner .Scrollpart a {
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
   padding-top: 40px;
+}
+
+@media (max-width: 1200px) {
+  header .banner .Scrollpart a {
+    left: 48%;
+    padding-top: 24px;
+  }
 }
 
 header .banner .Scrollpart a :hover {
@@ -348,6 +523,14 @@ header .banner .Scrollpart a span {
           box-sizing: border-box;
 }
 
+@media (max-width: 1200px) {
+  header .banner .Scrollpart a span {
+    left: 56%;
+    width: 16px;
+    height: 24px;
+  }
+}
+
 header .banner .Scrollpart a span::before {
   position: absolute;
   top: 9px;
@@ -362,6 +545,15 @@ header .banner .Scrollpart a span::before {
   animation: scrollball 2s infinite;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  header .banner .Scrollpart a span::before {
+    top: 2px;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+  }
 }
 
 /* ------------------------------主要內容區塊----------------------------------- */
@@ -383,10 +575,22 @@ main .Section1 {
   margin-top: 220px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 {
+    margin-top: 110px;
+  }
+}
+
 main .Section1 .OurTeam .OurTeamText {
   color: white;
   padding-left: 44px;
   margin-right: 210px;
+}
+
+@media (max-width: 1200px) {
+  main .Section1 .OurTeam .OurTeamText {
+    margin-right: 100px;
+  }
 }
 
 main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
@@ -411,6 +615,12 @@ main .Section1 .TeamMemberImg {
   margin-top: 101px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TeamMemberImg .col img {
+    width: 86%;
+  }
+}
+
 main .Section1 .TeamMemberImg .col .TeamMemberImgText {
   margin-top: 19px;
   color: white;
@@ -422,9 +632,24 @@ main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
   margin-bottom: 17px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 6px;
+  }
+}
+
 main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
   font-size: 16px;
   margin-left: 19px;
+}
+
+@media (max-width: 1200px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
+    font-size: 14px;
+    margin-left: 8px;
+  }
 }
 
 main .Section1 .TWDF-Intro {
@@ -475,6 +700,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
   max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
+    width: 520px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(1) {
@@ -532,7 +763,7 @@ main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartText p {
   font-size: 24px;
 }
 
-main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartBtn {
+main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
   width: 168px;
   height: 73px;
   line-height: 73px;
@@ -540,10 +771,16 @@ main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartBtn {
   font-weight: bolder;
   border: 1px solid black;
   border-radius: 15px;
-  background-color: #f6ff89;
+  background: #fcd383;
   font-size: 31px;
   text-align: center;
   text-decoration: unset;
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
+    width: 168px;
+  }
 }
 
 main .Section2 {
@@ -798,12 +1035,12 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPar
   font-size: 32px;
 }
 
-main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPartGetStartBtn {
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn {
   width: 224px;
   height: 97px;
   line-height: 97px;
   color: #f4f7f9;
-  background-color: black;
+  background: black;
   text-decoration: unset;
   font-size: 43px;
   text-align: center;
@@ -811,6 +1048,10 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPar
 }
 
 /* ------------------------------頁角-------------------------------------- */
+footer {
+  /* ------------------------------RWD頁角-------------------------------------- */
+}
+
 footer .FooterFrame .FooterRow {
   width: 100%;
   height: 300px;
@@ -823,19 +1064,45 @@ footer .FooterFrame .FooterRow .FooterRowL {
   padding-left: 75px;
 }
 
+@media (max-width: 767.98px) {
+  footer .FooterFrame .FooterRow .FooterRowL {
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 footer .FooterFrame .FooterRow .FooterRowL img {
   width: 66px;
   margin-left: 30px;
   margin-bottom: 10px;
 }
 
+@media (max-width: 767.98px) {
+  footer .FooterFrame .FooterRow .FooterRowL img {
+    margin-left: 0px;
+  }
+}
+
 footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title {
   margin-bottom: 9px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title p {
+  font-family: 'Cantarell', sans-serif;
 }
 
 footer .FooterFrame .FooterRow .FooterRowM {
   margin-top: 122px;
   padding-left: 68px;
+}
+
+@media (max-width: 767.98px) {
+  footer .FooterFrame .FooterRow .FooterRowM {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 footer .FooterFrame .FooterRow .FooterRowR {

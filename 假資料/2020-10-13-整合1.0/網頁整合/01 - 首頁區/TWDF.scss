@@ -1,0 +1,807 @@
+@import "./default";
+@import "./mixin";
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: auto;
+    @include EllipseColor;
+}
+
+// .ChangeBackgroundColor{
+//     background-color: $CircleRedColor !important;
+// }
+
+header{
+
+    .BackgroundIMG{
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /*當圖片數量增加，影片長度需更改，變為Xs*圖片數量*/
+        animation: slider 6s linear forwards infinite;
+
+        img{
+            max-width: 100%;
+        }
+    }
+    /*每個圖片各延遲X秒*/
+    :nth-child(1){
+        animation-delay: 0s;    
+    }
+    :nth-child(2){
+        animation-delay: 1s;
+    }
+    :nth-child(3){
+        animation-delay: 2s;               
+    }
+
+    /* ------------------------------導覽列---------------------------------------- */
+
+    .navbar {
+        width: 100%;
+        height: 100px;
+        // position: relative;
+
+        .TWDFLogo{
+            margin: 10px;
+            position: absolute;
+        }
+        
+        .NavBtns{
+            font-weight: bolder;
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            .NavBtn{
+                color: rgb(206, 233, 231);
+                text-decoration: unset;
+                margin-right: 50px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                
+                .NavIMG{
+                    width: 42px;
+                    height: 47px;
+                    margin-right: 12px;
+                }
+                .NavText{
+                    p{
+                        font-size: smaller;
+                        font-weight: lighter;
+                        margin-bottom: unset;
+                    }
+                    .NavTextCh{
+                        margin-bottom: 4.6px;
+                    }
+                }
+
+                &::before{
+                    display: block;
+                    content: " ";
+                    width: 0%;
+                    height: 12px;
+                    position: absolute;
+                    z-index: 1;
+                    top: 59px;
+                    left: 50%;
+                    transition: width .5s ease, background-color .5s ease, left .5s ease;
+                }
+
+                &:hover::before{
+                    width: 100%;
+                    background: radial-gradient(ellipse,rgb(204 , 58, 0),rgb(45, 13, 0));
+                    left: 0;
+                }
+
+                &:first-child{
+                    
+                    animation-name: MyWOW;
+                    visibility: visible;
+                    animation-duration: 3s;
+                    animation-delay: 1s;
+                    animation-iteration-count: infinite;
+
+                    @keyframes MyWOW{
+                        0% {
+                            transform: scaleX(1);
+                        }
+                        75% {
+                            transform: scaleX(1);
+                        }
+                        82.5%{
+                            transform: scale3d(1.25,.75,1);
+                        }
+                        85%{
+                            transform: scale3d(.75,1.25,1);
+                        }
+                        87.5%{
+                            transform: scale3d(1.15,.85,1);
+                        }
+                        91.25%{
+                            transform: scale3d(.95,1.05,1);
+                        }
+                        93.75%{
+                            transform: scale3d(1.05,.95,1);
+                        }
+                        100%{
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        #StartBtn{
+            color: rgb(0, 0, 0);
+            font-size: 31px;
+            width: 128px;
+            height: 64px;
+            background: rgb(252, 211, 131);
+            text-align: center;
+            line-height: 64px;
+            cursor: pointer;
+            text-decoration: unset;
+            margin-right: 38px;
+        }
+
+    }
+    
+
+    .banner{
+        width: 100vw;
+        // background-image: url(/Banner/BannerBackground-opacity0.6.png);
+        // background-size: cover;
+        position: relative;
+        margin-bottom: 940px;
+
+        .content{
+            width: 1154px;
+            height: 720px;
+            border: 12px solid rgb(251, 250, 252);
+            border-radius: 100.88px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 120px;
+
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            transform: translate( - 50% , 0);
+
+            // Bootstrap Inti
+            padding: unset;
+
+            .ContentTop{
+                width: 100%;
+                height: 65px;
+                border-bottom: 12px solid rgb(251, 250, 252);
+                .ContentTopPoints{
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 52px;
+                    margin-top: 18px;
+                    .ContentTopPoint{
+                        width: 23px;
+                        height: 20px;
+                        border-radius: 9.5px;
+                        background-color: white;
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .ContentMiddle{
+                color: white;
+                margin-top: 51px;
+                margin-left: 51px;
+            }
+
+            .ContentBottom{
+                text-align: center;
+                color: white;
+
+                // position: relative; //For Scroll Down
+
+
+                .TWDFTitleTop{
+                    font-size: 100px;
+                    margin-top: 36px;
+                }
+
+                .TWDFTitleBottom{
+                    @include OratorStdSlanted;
+                    font-size: 36px;
+                    margin-top: 34px;
+                }
+
+                /* ------搜尋區塊-- */
+                .Searchingbar{
+                    width: 545px;
+                    height: 43px;
+                    border: 1px solid white;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin: auto;
+                    margin-bottom: 10px;
+                    margin-top: 80px;
+                    padding-left: 29px;
+
+                    // .SearchingLogo{
+                    //     // width: 21px;
+                    //     position: absolute;
+                    //     right: 10px;
+                    //     // color: white;
+                    // }
+                }
+
+                // .ScrollDown{
+                //     margin-top: 29px;
+                //     display: flex;
+                //     flex-direction: column;
+                //     align-items: center;
+                    
+                //     .ScrollDownLogo{
+                //         width: 22px;
+                //         height: 36px;
+                //         border: 1px solid white;
+                //         border-radius: 11px;
+                //         position: relative;
+
+                //         .ScrollDownLogoCircle{
+                //             width: 5px;
+                //             height: 5px;
+                //             border: 1px solid white;
+                //             border-radius: 50%;
+                //             position: absolute;
+                //             top: 80%;
+                //             left: 50%;
+                //             transform: translate(-50%,-50%);
+                //         }
+                //     }
+                //     .ScrollDownText{
+                //         font-size: xx-small;
+                //         font-weight: lighter;
+                //     }
+                // }
+            }
+        } 
+
+        .Scrollpart{
+            position: relative;
+            top: 900px;
+            height: 100px;
+
+            a{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                z-index: 1;
+                display: inline-block;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                color: #fff;
+                text-decoration: none;
+                transition: opacity .3s;
+                padding-top: 40px;
+
+                :hover{
+                    opacity: .5;
+                }
+
+                span{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 22px;
+                    height: 36px;
+                    margin-left: -11px;
+                    border: 2px solid #fff;
+                    border-radius: 50px;
+                    box-sizing: border-box;
+                }
+
+                span::before{
+                    position: absolute;
+                    top: 9px;
+                    left: 50%;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    margin-left: -3px;
+                    background-color: #fff;
+                    border-radius: 100%;
+                    -webkit-animation: scrollball 2s infinite;
+                    animation: scrollball 2s infinite;
+                    box-sizing: border-box;
+                }
+    
+            }
+        }
+
+    }
+
+}
+
+/* ------------------------------主要內容區塊----------------------------------- */
+main{
+    margin: auto;
+    // width: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    .Section1{
+        margin-top: 220px;
+        .OurTeam{
+            .OurTeamText{
+                color: white;
+                padding-left: 44px;
+                margin-right: 210px;
+
+                .OurTeamTextTitle{
+                    font-size: 32px;
+                    padding-left: 7px;
+                    margin-bottom: 78px;
+                }
+                .OurTeamTextContent{
+                    font-size: 18px;
+                    p{
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+            .OurTeamPCImg{
+                width: 421px;
+            }
+        }
+        .TeamMemberImg{
+            margin-top: 101px;
+
+            .col{
+                .TeamMemberImgText{
+                    margin-top: 19px;
+                    color: white;
+                    .TeamMemberImgTextTitle{
+                        font-size: 22px;
+                        margin-left: 33px;
+                        margin-bottom: 17px;
+                    }
+                    p{
+                        font-size: 16px;
+                        margin-left: 19px;
+                    }
+                }
+            }
+        }
+        .TWDF-Intro{
+            margin-top: 191px;
+
+            .TWDF-IntroForum{
+
+                .TWDF-IntroForumIMG{
+                    width: 523px;
+                    margin-right: 54px;
+                }
+    
+                .TWDF-IntroForumText{
+                    color: white;
+                    .TWDF-IntroForumTitle{
+                        font-size: 32px;
+                        margin-left: 12px;
+                        margin-bottom: 66px;
+                    }
+                    .TWDF-IntroForumContent{
+                        font-size: 18px;
+    
+                    }
+                }
+            }
+
+            .TWDF-IntroYouCan{
+                margin-top: 147px;
+
+                .TWDF-IntroYouCanIMG{
+                    width: 560px;
+                    .TWDF-IntroYouCanIMGS{
+                        .BackgroundIMG{
+                            display: block;
+                            position: absolute;
+                            top:0;
+                            left:0;
+                            opacity: 0;
+                            // filter: alpha(opacity=0);
+                            /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
+                            animation: slider2 5s linear forwards infinite;
+                    
+                            img{
+                                max-width: 100%;
+                            }
+                        }
+                        /*每個圖片各延遲X秒*/
+
+                        :nth-child(1){
+                            animation-delay: 1s;
+                        }
+                        :nth-child(2){
+                            animation-delay: 2s;
+                        }
+                        :nth-child(3){
+                            animation-delay: 3s;
+                        }
+                        :nth-child(4){
+                            animation-delay: 4s;
+                        }
+                    }
+                }
+                .TWDF-IntroYouCanText{
+                    color: white;
+                    padding-right: 0px;
+
+                    .TWDF-IntroYouCanTitile{
+                        font-size: 32px;
+                        margin-left: 12px;
+                        margin-bottom: 74px;
+                        margin-top: 58px;
+                    }
+                    .TWDF-IntroYouCanContent{
+                        font-size: 18px;
+
+                        p{
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+
+            .TWDF-IntroStart{
+                margin-top: 132px;
+                margin-bottom: 63px;
+
+                .TWDF-IntroStartText{
+                    text-align: center;
+                    margin-bottom: 72px;
+
+                    p{
+                        color: white;
+                        font-size: 24px;
+                    }
+                }
+
+                #TWDF-IntroStartBtn{
+                    width: 168px;
+                    height: 73px;
+                    line-height: 73px;
+                    color: black;
+                    font-weight: bolder;
+                    border: 1px solid black;
+                    border-radius: 15px;
+                    background: rgb(252, 211, 131);
+                    font-size: 31px;
+                    text-align: center;
+                    text-decoration: unset;
+                    @media (max-width: 575.98px) { 
+                        width: 168px;
+
+                     }
+                }
+            }
+        }
+    }
+
+    .Section2{
+        background-color: rgb(0, 95, 153);
+        width: 100%;
+
+        .ShowCases{
+            margin-top: 96px;
+            margin-bottom: 164px;
+
+            .ShowCasesText{
+                color: white;
+                
+                .ShowCasesTitleDeco{
+                    @include EllipseColor;
+                    width: 15px;
+                    height: 91px;
+                    margin-right: 14px;
+                }
+                .ShowCasesTitleBlock{
+                    .ShowCasesTitle{
+                        font-size: 32px;
+                        font-weight: bold;
+                    }
+                    .ShowCasesTitleDetails{
+                        font-size: 17px;
+                        font-weight: 100;
+                    }
+                }
+            }
+            .ShowCasesReadMore{
+                a{
+                    color: white;
+                    font-weight: bolder ;
+                    margin-right: 42px;
+                    text-decoration: none;
+                }
+            }
+            .ShowCasesIMG{
+                .col{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .ShowCasesIMG-1{
+                        width: 272px;
+                        height: 362px;
+                        box-shadow: -30px 26px 0px 0px rgba(9,72,104,1);
+
+                    }
+                    .ShowCasesIMG-2{
+                        width: 326px;
+                        height: 440px;
+                        box-shadow: -30px 26px 0px 0px rgba(9,72,104,1);
+                    }
+                    .ShowCasesIMG-3{
+                        width: 272px;
+                        height: 362px;
+                        box-shadow: -30px 26px 0px 0px rgba(9,72,104,1);
+                    }
+                }
+            }
+        }
+    }
+
+    .Section3{
+        @include EllipseColor;
+        width: 100%;
+
+        .Section3Background{
+            background-color: white;
+            max-width: 1140px;
+            margin: auto;
+
+            .TabExplain{
+                padding-top: 101px;
+                padding-bottom: 191px;
+                .TabExplainTitleArea{
+                    margin-left: 95px;
+                    margin-bottom: 120px;
+    
+                    .TabExplainTitleDeco{
+                        @include EllipseColor;
+                        width: 15px;
+                        height: 91px;
+                        margin-right: 14px;
+                    }
+                    .TabExplainTitleBlock{
+                        .TabExplainTitle{
+                            font-size: 32px;
+                            font-weight: bolder;
+                        }
+                        .TabExplainTitleDetails{
+                            font-size: 17px;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+    
+                .TabExplainArea{
+                    margin: 0 87px;
+                    .TabExplainBlock{
+                        display: flex;
+                        margin-bottom: 92px;
+                        width: 100%;
+    
+                    ///// ---1、3-margin-right---/////
+                        .first-child{
+                            margin-right: 83px;
+                        }
+                        .TabExplainblock:nth-child(3){
+                            margin-right: 83px;
+                        }
+                    ///// ---1、3-margin-right---/////
+    
+                        .TabExplainBlockIMG{
+                            margin-right: 22px;
+
+                            img{
+                                width: 149px;
+                            }
+                        }
+                        .TabExplainBlockText{
+                            
+                            .TabExplainBlockTitle{
+                                font-size: 24px;
+                                font-weight: bolder;
+                                margin-bottom: 23px;
+                            }
+                            .TabExplainBlockDetails{
+                                width: 323px;
+                                font-size: 16px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .ToBeAPartOfTWDF{
+                .ToBeAPartTitleArea{
+                    margin-left: 95px;
+                    margin-bottom: 86px;
+    
+                    .ToBeAPartTitleDeco{
+                        @include EllipseColor;
+                        width: 15px;
+                        height: 62px;
+                        margin-right: 14px;
+                    }
+                    .ToBeAPartTitleBlock{
+                        .ToBeAPartTitle{
+    
+                            font-size: 32px;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+
+                .ToBeAPartStep{
+                    position: relative;
+
+                    .ToBeAPartStepBackLine{
+                        width: 12px;
+                        height: calc(100% - 138px);
+                        background-color: rgba(102, 132, 163, 0.5);
+                        margin-left: 303px;
+
+                        position: absolute;
+                        z-index: 0;
+                    }
+                    .ToBeAPartStepContent{
+                        // height: 1024px;
+                        padding-top: 39px;
+
+                        .ToBeAPartStepRow{
+                            display: flex;
+                            align-items: center;
+                            margin-left: 135px;
+
+                            .ToBeAPartStepNumber{
+                                width: 112px;
+                                height: 112px;
+                                border: 10px solid rgb(198, 237, 255);
+                                border-radius: 50%;
+                                text-align: center;
+                                line-height: 92px;
+                                font-size: 44px;
+                                margin-right: 33px;
+                            }
+                            .ToBeAPartStepLinePoint{
+                                width: 57px;
+                                height: 57px;
+                                border-radius: 50%;
+                                background-color: rgba(0, 160, 218, 0.5);
+                                margin-right: 34px;
+                            }
+                            .ToBeAPartStepLogo{
+                                
+                                max-width: 80px;
+                                max-height: 80px;
+                                margin-right: 15px;
+
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .ToBeAPartStepText{
+
+                                .ToBeAPartStepTitle{
+                                    font-size: 30px;
+                                    font-weight: bold;
+                                    margin-left: 20px;
+                                }
+
+                            }
+                        }
+
+                        .ToBeAPartStepDetails{
+                            min-height: 75px;
+                            margin-top: 10px;
+                            margin-left: 380px;
+                            font-size: 22px;
+                        }
+
+                    }
+                }
+
+                .ToBeAPartGetStart{
+                    margin-top: 109px;
+                    padding-bottom: 244px;
+
+                    .ToBeAPartGetStartText{
+                        font-size: 32px;
+                    }
+
+                    #ToBeAPartGetStartBtn{
+                        width: 224px;
+                        height: 97px;
+                        line-height: 97px;
+                        color: rgb(244, 247, 249);
+                        background: black;
+                        text-decoration: unset;
+                        
+                        
+                        font-size: 43px;
+                        text-align: center;
+                        margin-top: 44px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* ------------------------------頁角-------------------------------------- */
+footer{
+    .FooterFrame{
+        .FooterRow {
+            width: 100%;
+            height: 300px;
+            color: white;
+            font-size: 18px;
+    
+            .FooterRowL{
+                margin-top: 97px;
+                padding-left: 75px;
+
+                img{
+                    width: 66px;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                }
+                .FooterTWDF-Title{
+                    margin-bottom: 9px;
+                }
+            }
+            .FooterRowM{
+                // width: 250px;
+                margin-top: 122px;
+                padding-left: 68px;
+            }
+            .FooterRowR{
+                
+                padding-left: 105px;
+                margin-top: 122px;
+
+            }
+        }
+        .CopyrightRow{
+            color: white;
+            margin-top: 107px;
+            margin-bottom: 55px;
+        }
+    }
+}
+
+/* --------------------------注意事項------------------------------------ */
+/* 高度只是暫定可以自行更動 */
+/* 區塊背景顏色方便辨識 */
+/* 側邊盒子區塊 (content-r-box) 挑整高度,可以改變盒子內間距 */

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
+
+    <style>
+        /* ------------------- */
+        .Task_page {
+            background-color: rgb(201, 198, 194);
+
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0%;
+            z-index: 99;
+        }
+
+        .tk_pag_title {
+            text-align: center;
+            margin-top: 20px;
+            letter-spacing: 10px;
+        }
+
+        .content-l {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            /* position: relative; */
+            /* background-color: cornflowerblue; */
+        }
+
+        .listbox {
+            width: 100%;
+            height: 600px;
+            margin-top: 10px;
+
+            background-color: rgb(228, 212, 212);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 5%
+                /* margin-top: 10PX; */
+                /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+                /* flex-wrap: wrap; */
+                /* justify-content: space-around; */
+        }
+
+        .projectbox {
+            width: 80%;
+            height: 10%;
+            margin: 10px;
+            /* background-color: rgb(110, 98, 216); */
+            margin: auto;
+            font-size: 18px;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            /* margin: auto; */
+        }
+
+        /* ----------中間內容------------ */
+        /* ------搜尋區塊------- */
+        .Searchbox {
+            width: 100%;
+            padding-top: 10px;
+            /* height: 8%; */
+            /* background-color: black; */
+        }
+
+        /* 關鍵字 */
+        .taggroup {
+            height: 40px;
+            display: flex;
+            align-content: center;
+        }
+
+        .tag_title {
+            height: 40px;
+            background-color: chartreuse;
+        }
+
+        .tk_banner {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+
+        /* ------排列順序----- */
+        .Paginationbox {
+            width: 100%;
+            height: 30px;
+            /* background-color: rgb(75, 45, 0); */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .Paginationbox-small {
+            font-size: 24px;
+
+        }
+
+        .Paginationbox-small:hover {
+            color: rgb(79, 65, 160);
+        }
+
+        .Paginationbox-smal>i {
+            /* padding-top: 10px; */
+            margin-top: 20px;
+        }
+
+        .underline {
+            border-bottom: black solid 1px;
+            width: 100%;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+
+        /* ---------卡片--------- */
+        .questioncarA {
+            width: 100%;
+            /* height: 200px; */
+            background-color: rgb(29, 182, 187);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .qt-l {
+            width: 100%;
+            margin: 10px;
+            /* height: 80%; */
+            background-color: rgb(225, 241, 241);
+        }
+
+        .qt-bar-a {
+            width: 100%;
+            height: 25%;
+            /* background-color: darkgray; */
+            display: flex;
+            align-items: center;
+
+        }
+
+        .qt-bar {
+            width: 100%;
+            /* background-color: darkgray; */
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+
+        }
+
+        .ps-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .ps-name {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qt-time {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qt-see {
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qt-love {
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qt-category {
+            width: 50px;
+            height: 25px;
+            /* border: 1px dotted black; */
+            /* border-radius: 5px; */
+            margin-right: 10px;
+            color: black;
+            /* background-color: rgba(253, 56, 56, 0.6); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: auto;
+
+        }
+
+        .qt-category:hover {
+            background-color: cadetblue;
+
+        }
+
+        .qt-title {
+            width: 100%;
+            display: inline;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .qt-title h4 {
+            width: 90%;
+            margin: auto;
+            font-weight: bolder;
+        }
+
+        .qt-skill-G {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .qt-skill {
+            background-color: teal;
+            color: white;
+            display: inline;
+            margin: 4px 10px;
+            padding: 0 10px;
+            font-size: 18px;
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+        }
+
+
+        /* --------收藏按鈕---------- */
+        .qt-buttombar {
+            width: 20%;
+            /* height: 50px; */
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right:10px ;
+            /* background-color: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .qt-favorites {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            /* background: rgb(255, 255, 255); */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .takeit {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(255, 73, 73);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+    
+
+
+        /* -------------右邊區塊-------------- */
+
+        .content-r {
+            width: 100%;
+            margin-top: 10px;
+            flex-direction: column;
+            /* height: 600px; */
+            /* background-color: rgb(255, 255, 255); */
+            /* padding-top: 10px; */
+            /* position: fixed;
+            display: flex; */
+            /* position: sticky;
+            top: 5%; */
+            /* align-content: center; */
+        }
+
+        .ad_task {
+            width: 80%;
+            height: 100px;
+            margin: auto;
+            background-color: indigo;
+        }
+
+        /* ------前五名問題------- */
+
+        .top_five_problem {
+            width: 100%;
+            height: 400px;
+            margin: 10px auto;
+            background-color: rgb(255, 218, 218);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        .tf_p_photo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tf_p_title {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .tf_promblem_G {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            /* background-color: crimson; */
+        }
+
+        .tf_promblem {
+            width: 100%;
+            /* height: 20%; */
+            margin-top: 10px;
+            /* background-color: rgb(235, 250, 237); */
+            display: flex;
+        }
+
+        /* ------前五名答題者------- */
+
+
+
+        .top_five_who {
+            width: 100%;
+            height: 250px;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: rgb(92, 128, 205);
+        }
+
+        .advertising {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: rgb(92, 205, 143);
+        }
+
+
+
+
+
+
+        /* ------設定背景--------- */
+
+        .style_hr {
+            border: 3px solid black;
+        }
+
+        .style_cursor {
+            cursor: unset;
+        }
+
+        .style_img {
+            width: 100%;
+        }
+
+        .style_h {
+            margin: 0;
+        }
+
+        /* ---------四個角------- */
+
+        .style_border_tl {
+            width: 10%;
+            height: 20%;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            /* background-color: black; */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .style_border_tr {
+            width: 10%;
+            height: 20%;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            /* background-color: black; */
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .style_border_bl {
+            width: 10%;
+            height: 20%;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            /* background-color: black; */
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .style_border_br {
+            width: 10%;
+            height: 20%;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            /* background-color: black; */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+
+        /* -----------卡片--------- */
+        #A_1{
+            background: rgb(255, 255, 255);  
+        }
+        #A_2{
+            background: rgb(255, 255, 255);  
+        }
+        #A_3{
+            background: rgb(255, 255, 255);  
+        }
+        #A_4{
+            background: rgb(255, 255, 255);  
+        }
+        #A_5{
+            background: rgb(255, 255, 255);  
+        }
+        #A_6{
+            background: rgb(255, 255, 255);  
+        }
+        #A_7{
+            background: rgb(255, 255, 255);  
+        }
+
+        /* --------背景顏色------- */
+
+        .bg-1 {
+            background-color: black;
+        }
+
+        .bg-2 {
+            background-color: blue;
+        }
+
+        .bg-3 {
+            background-color: red;
+        }
+
+        .bg-4 {
+            background-color: yellow;
+        }
+
+        .bg-5 {
+            background-color: green;
+        }
+
+        .bg-6 {
+            background-color: rgb(201, 198, 194);
+        }
+
+
+        /* ---------RWD------ */
+    </style>
+
+</head>
+
+
+<body>
+    
+    <header>
+
+        <!-- ---------------------導覽列----------------------- -->
+        <nav class="d-none d-md-block navbar sticky-top">
+            <a class="TWDFLogo" href="../01 - 首頁區/首頁區.html">
+                <img src="Nav-Logo/TWDF-Logo.png" alt="">
+            </a>
+            <div class="NavBtns">
+                <a class="NavBtn" href="../02-論壇區/02-論壇區.html">
+                    <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">城市人論壇</p>
+                        <p class="NavTextEn">Forum</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="../03-作品展示/03-作品展示區.html">
+                    <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">作品展示</p>
+                        <p class="NavTextEn">Portfolios</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="../04 -案件發表區/03-任務發佈區.html">
+                    <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">案件發佈</p>
+                        <p class="NavTextEn">Post Cases</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="../05-資源分享區/05-資源分享區.html">
+                    <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">資源共享</p>
+                        <p class="NavTextEn">Resource Sharing</p>
+                    </div>
+                </a>
+                <a id="StartBtn" class="LogIn"><p>Sign In</p></a>
+            </div>
+        </nav>
+
+        <!-- -------------------手機導覽列--------------------- -->
+
+        <nav class="d-block d-md-none navbar navbar-dark navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="mr-2" src="Nav-Logo/TWDF-Logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                程式人
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav align-items-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                        <div class="NavText">
+                            <p class="NavTextCh">城市人論壇</p>
+                            <p class="NavTextEn">Forum</p>
+                        </div><span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                        <div class="NavText">
+                            <p class="NavTextCh">作品展示</p>
+                            <p class="NavTextEn">Portfolios</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                        <div class="NavText">
+                            <p class="NavTextCh">案件發佈</p>
+                            <p class="NavTextEn">Post Cases</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                        <div class="NavText">
+                            <p class="NavTextCh">資源共享</p>
+                            <p class="NavTextEn">Resource Sharing</p>
+                        </div>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+    </header>
+
+    <!-- ---------------------內容----------------------- -->
+    <main>
+
+        <section class="Task_page">
+            <div class="container ">
+                <div class="row"></div>
+                <div class="tk_pag_title col-md-12">
+                    <h1>論壇討論區</h1>
+                </div>
+            </div>
+    
+            <div class="container ">
+                <div class="row"></div>
+                <div class="col-md-12 ">
+                    <hr class="style_hr">
+                </div>
+            </div>
+    
+            <div class="container ">
+                <div class="row">
+                    <div class="d-none d-md-block col-md-2">
+                        <div class="content-l">
+                            <div class="listbox">
+                                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/會員區(完成).html">
+                                    前端開發
+                                </a>
+                                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/我的作品(完成).html">
+                                    後端開發
+                                </a>
+                                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/我的討論(完成).html">
+                                    ISO開發
+                                </a>
+                                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/我的任務(完成).html">
+                                    我的任務
+                                </a>
+                                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/喜歡的作品(完成).html">
+                                    喜歡的作品
+                                </a>
+                                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整//追蹤的帳號(完成).html">
+                                    追蹤中的帳號
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <!-- 搜尋框 -->
+                        <div class="Searchbox ">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                    aria-describedby="button-addon2" style="border-right: none;">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: white; "><i
+                                            class="fas fa-search"></i></span>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <!-- tag標籤 -->
+                        <div class="taggroup">
+                            <div class="btn style_cursor">熱門搜尋</div>
+                            <button type="button" class="btn btn-link">名片製作</button>
+                            <button type="button" class="btn btn-link">封面插畫</button>
+                            <button type="button" class="btn btn-link">網頁設計</button>
+                            <button type="button" class="btn btn-link">Logo設計</button>
+                            <button type="button" class="btn btn-link">RWD</button>
+                        </div>
+                        <div class="tk_banner">
+                            <img class="style_img" src="/03-程式/01-工作區/html-ex/會園區子頁/參考/論壇區/論壇Banner_工作區域 1.jpg" alt="">
+                        </div>
+    
+                        <!-- 排列順序列-- -->
+                        <div class="Paginationbox">
+                            <div class="Paginationbox-small">最新上傳
+                                <i class="fas fa-sort-up"></i>
+                            </div>
+                            <div class="Paginationbox-small">最多點評
+                                <i class="fas fa-sort-up"></i></div>
+                            <div class="Paginationbox-small">最高人氣
+                                <i class="fas fa-sort-up"></i></div>
+                        </div>
+                        <div class="underline"></div>
+                        <div class="tk_car_G">
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">賴小明ilove123456</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            前端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">A User
+                                            資料夾已經有群組權限，卻還被系統要求「你當前無權訪問該文件夾，單擊"繼續"獲取永久訪問該文件夾的權限」額外再添加一次使用者權限</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">css</div>
+                                        <div class="qt-skill">JavaScript</div>
+                                        <div class="qt-skill">前端</div>
+                                        <div class="qt-skill">滾輪</div>
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:6</div>
+                                        <div class="qt-love">收藏:6</div>
+                                        <div class="qt-time">2020/10/6</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_1" class="qt-favorites" onclick="check_A_1();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">echochio</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            後端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">
+                                            請推薦 像 python flask appbuilder 的 PHP mysql crud auto generator</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">php7</div>
+                                        <div class="qt-skill">mysql</div>
+                                        <div class="qt-skill">pdo</div>
+                                        <div class="qt-skill">package</div>
+                                   
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:30</div>
+                                        <div class="qt-love">收藏:11</div>
+                                        <div class="qt-time">2020/10/13</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_2" class="qt-favorites" onclick="check_A_2();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">我思故我在</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            前端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">
+                                            請問有前輩能分享關鍵字，關於 client 端都是 windows，但 AD / 共享 Server 想要使用 Ubuntu? 前輩都不推薦用 linux 來當 ad server
+                                            請問 10 年後的今天，有所改變嗎?</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">windows</div>
+                                        <div class="qt-skill">linux</div>
+                                        <div class="qt-skill">ubuntu</div>
+                                        
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:8</div>
+                                        <div class="qt-love">收藏:3</div>
+                                        <div class="qt-time">2020/10/12</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_3" class="qt-favorites" onclick="check_A_3();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">ktro12</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            前端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">
+                                            請問我的程式有哪部分出錯嗎? 我把程式上傳到一個檢測的地方，卻輸出空白而沒有結果</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">#while</div>
+                                       
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:3</div>
+                                        <div class="qt-love">收藏:1</div>
+                                        <div class="qt-time">2020/10/12</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_4" class="qt-favorites" onclick="check_A_4();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">vicentli</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            前端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">
+                                            Go 字串時間，拿掉時區-01:00或轉換去掉時區問題</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">golang</div>
+                                        <div class="qt-skill">go</div>
+                             
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:7</div>
+                                        <div class="qt-love">收藏:0</div>
+                                        <div class="qt-time">2020/10/1</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_5" class="qt-favorites" onclick="check_A_5();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">賴小明ilove123456</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            前端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">
+                                            樹莓派家用領錢機製作</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">atm</div>
+                                        <div class="qt-skill">raspi</div>
+                                        <div class="qt-skill">raspberry pi</div>
+                                        <div class="qt-skill">pi</div>
+                                        <div class="qt-skill">樹莓派</div>
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:12</div>
+                                        <div class="qt-love">收藏:6</div>
+                                        <div class="qt-time">2020/10/11</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_6" class="qt-favorites" onclick="check_A_6();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questioncarA">
+                                <div class="qt-l">
+                                    <div class="qt-bar-a">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">verdipeng</div>
+                                        <div class="qt-category">
+                                            <div class="style_border_tl"></div>
+                                            <div class="style_border_tr"></div>
+                                            <div class="style_border_bl"></div>
+                                            <div class="style_border_br"></div>
+                                            前端
+                                        </div>
+                                    </div>
+                                    <div class="qt-title">
+                                        <h4 class="style_h">
+                                            請教關於Thin Client的進程？</h4>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">thin client</div>
+                                        <div class="qt-skill">虛擬機</div>
+                                        <div class="qt-skill">伺服器</div>
+                                        <div class="qt-skill">滾輪</div>
+                                        <div class="qt-skill">netpc</div>
+                                        <div class="qt-skill">clinet server</div>
+                                    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:9</div>
+                                        <div class="qt-love">收藏:2</div>
+                                        <div class="qt-time">2020/10/12</div>
+                                            <div  class="qt-buttombar">
+                                                <div id="A_7" class="qt-favorites" onclick="check_A_7();">收藏</div>
+                                                <div class="takeit">接案</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tk_car"></div>
+                            <div class="tk_car"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="content-r">
+                            <div class="ad_task">
+                                我要發問
+                            </div>
+                            <div class="top_five_problem">
+                                <div class="tf_p_photo">
+                                    <img src="/03-程式/01-工作區/html-ex/會園區子頁/參考/論壇區/電燈-01.png" alt="">
+                                </div>
+                                <div class="tf_p_title">
+                                    <h4>Hot! Five QT</h4>
+                                </div>
+                                <div class="tf_promblem_G">
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            請問 windows 如何像 Linux 使用命令方式查詢某個資料夾底下的刪除紀錄
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            NAS 組 RAID10 壞了一軌
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            iTHelp 程式碼區塊用色建議, 是否可改？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            託管網站要落地架在自家Server上該注意什麼？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            AD的作業系統版本可否降級？
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="top_five_who"></div>
+                            <div class="advertising"></div>
+                            <div class="advertising"></div>
+    
+    
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    </main>
+
+    <!-- ---------------------頁角----------------------- -->
+    <footer>
+        <div class="FooterFrame container-lg">
+            <div class="FooterRow row row-cols-md-3 mr-auto ml-auto">
+                <div class="col-lg-5 FooterRowL text-center">
+                    <img src="Nav-Logo/TWDF-Logo.png" alt="">
+                    <div class="FooterTWDF-Title">
+                        程式人論壇 | TWDF
+                    </div>
+                    <p>Taiwan Web Developer Forum</p>
+                </div>
+                <div class="col-lg-4 FooterRowM text-center">
+                    <p>+886 900-31540000</p>
+                    <p>+886 900-31540000</p>
+                    <p>TWDF＠gmail.com</p>
+                    <p>台中市北區崇德路民眾技藝中心</p>
+                </div>
+                <div class="d-none d-md-block col-lg-3 FooterRowR">
+                    <p>- 論壇討論區</p>
+                    <p>- 成果作品集</p>
+                    <p>- 案件發布區</p>
+                    <p>- 資源共享區</p>
+                </div>
+            </div>
+            <div class="row CopyrightRow justify-content-center">
+                <p>Copyright © 2020 Taiwan Web Developer Forum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        function check_A_1() {
+            var e = document.getElementById("A_1");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_1").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_1").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_A_2() {
+            var e = document.getElementById("A_2");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_2").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_2").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_A_3() {
+            var e = document.getElementById("A_3");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_3").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_3").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_A_4() {
+            var e = document.getElementById("A_4");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_4").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_4").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_A_5() {
+            var e = document.getElementById("A_5");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_5").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_5").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_A_6() {
+            var e = document.getElementById("A_6");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_6").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_6").style.background = "rgb(255, 255, 255)";
+            }
+        }
+        function check_A_7() {
+            var e = document.getElementById("A_7");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("A_7").style.background = "#ff77ee";
+            } else {
+                document.getElementById("A_7").style.background = "rgb(255, 255, 255)";
+            }
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

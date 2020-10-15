@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        /* ------------------------------導覽列---------------------------------------- */
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: blueviolet;
+        }
+
+        /* ------------------------------主要內容區塊----------------------------------- */
+
+
+        .content {
+            width: 1140px;
+            /* height: calc(100vh - 140px); */
+            background-color: cornflowerblue;
+            margin: auto;
+            display: flex;
+        }
+
+
+        /* ------------------主要內容左邊區塊----------------------- */
+
+
+
+        .content-l {
+            width: 20%;
+            height: 1000px;
+            background-color: cornflowerblue;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .personalbox {
+            width: 80%;
+            height: 20%;
+            padding-top: 10PX;
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .photobox {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            margin: auto;
+            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .namebox {
+            width: 60%;
+            height: 20%;
+            font-size: 24px;
+            /* background-color: darkgray; */
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .listbox {
+            width: 80%;
+            height: 60%;
+            background-color: rgb(228, 212, 212);
+            display: flex;
+            flex-direction: column;
+            margin-top: 10PX;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            /* flex-wrap: wrap; */
+            /* justify-content: space-around; */
+        }
+
+        .projectbox {
+            width: 80%;
+            height: 10%;
+            margin: 10px;
+            /* background-color: rgb(110, 98, 216); */
+            margin: auto;
+            font-size: 18px;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            /* margin: auto; */
+        }
+
+
+
+
+
+        /* ------------------主要內容右邊區塊----------------------- */
+
+        .content-r {
+            width: 80%;
+            height: 100%;
+            background-color: rgb(211, 250, 221);
+            /* display: flex;
+            flex-direction: column; */
+
+        }
+
+        .project-page {
+            width: 100%;
+            height: 100%;
+            /* background-color: rgb(50, 206, 50); */
+        }
+
+        /* ------------------------作品區--------------------------------- */
+
+        .page-title {
+            width: 80%;
+            height: 70px;
+            margin: 20px;
+            /* background-color: bisque; */
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .button-bar {
+            width: 90%;
+            height: 50px;
+            margin: auto;
+            border-bottom: 3px solid black;
+            /* background-color: blue; */
+            display: flex;
+            align-items: center;
+
+        }
+
+        .button {
+            width: 150px;
+            height: 45px;
+            margin: 20px;
+            /* background-color: cadetblue; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .new-work {
+            width: 150px;
+            height: 45px;
+            margin-left: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: crimson; */
+        }
+
+        .page-button {
+            width: 100%;
+            height: 60px;
+            /* padding-top: 20px; */
+            /* background-color: brown; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .pagebox {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            border-radius: 40%;
+            background-color: rgb(249, 244, 255);
+            border: 3px solid black;
+            /* color: white; */
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pageboxD {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            border-radius: 40%;
+            background-color: rgb(249, 244, 255);
+            border: 3px solid black;
+            /* color: white; */
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            width: 100%;
+            display: none;
+
+        }
+
+        .track_car-g {
+            width: 100%;
+            /* height: 70%; */
+            /* background-color: rgb(156, 247, 186); */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+        }
+
+        .track_carA{
+            width: 90%;
+            height: auto;
+            border: 10px solid white;
+            background-color: rgba(229, 253, 226, 0.5);
+            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+            margin: 10px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+            
+        }
+
+        .track_carB{
+            width: 90%;
+            height: auto;
+            background-color: rgb(146, 201, 247);
+            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+            margin: 10px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+        }
+        .track_carC{
+            width: 90%;
+            height: auto;
+            background-color: rgb(253, 242, 159);
+            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+            margin: 10px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+        }
+
+        /* --------------卡片左--------------- */
+        .tk-l{
+            /* width: 20%; */
+            /* height: 80%; */
+            /* background-color: crimson; */
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            align-items: center;
+            /* font-size: 18px; */
+        }
+        /* ----------卡片左內容---- */
+
+        .tk_photo{
+            width: 100px;
+            height: 100px;
+            /* margin-top: 10px;    */
+            border-radius: 50%;
+            background-color: black;
+        }
+
+
+        /* -----卡片右--------------- */
+
+        
+        .tk-r{
+            width: 70%;
+            /* height: 80%; */
+            /* background-color: rgb(225, 241, 241); */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tk-r h3{
+            letter-spacing: 4px;
+            margin-left: 4px;
+            margin-top: 10px;
+            font-weight: bolder;
+            color: rgb(0, 97, 0);
+
+        }
+
+        .tk_profession{
+            /* height: auto; */
+            /* height: 20%; */
+            /* background-color: rgb(219, 73, 73); */
+            display: flex;
+            align-items: center;
+        }
+        .prf_text{
+            width: 100%;
+            /* display: inline; */
+            font-size: 18px;
+            letter-spacing: 2px;
+            padding: 0px 10px;
+            margin:  4px;
+            background-color: rgba(204, 255, 221, 0.5);
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+        }
+
+        .tk_skill-g{
+            /* width: 80%;
+            height: 10%; */
+            /* display: inline; */
+            margin: 4px 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            /* background-color: brown; */
+        }
+
+        .skill {
+            background-color: rgba(67, 97, 61, 0.5);
+            color: white;
+            display: inline;
+            margin: 4px;
+            padding: 0 10px;
+            font-size: 14px;
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        
+        .tk_information{
+            background-color: rgba(245, 255, 247, 0.5);
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding: 10px 8px;
+            margin:  0 4px;
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+        }
+
+        
+
+        .tk_seemore{
+            width: 98%;
+            margin: auto;
+            /* background-color: chartreuse; */
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .bt_seemore{
+            width: 120px;
+            margin: 10px 0;
+            height: 30px;
+            color: white;
+            background-color: rgb(0, 63, 14);
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* ----------卡片右內容---- */
+
+
+
+
+
+
+
+
+
+        /* ------------------------------頁角-------------------------------------- */
+        .footer {
+            width: 100%;
+            height: 90px;
+            background-color: rgb(231, 21, 49);
+        }
+
+
+
+        /* --------設定------- */
+
+        .tk_car_photo{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .activepage {
+            display: block;
+        }
+
+        .pagebox.activepage {
+            /* background-color: rgb(214, 30, 30); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .pageboxD.activepage {
+            /* background-color: rgb(214, 30, 30); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+
+        /* ------------------套件------- */
+
+        
+
+        /* --------------------------注意事項------------------------------------ */
+        /* 高度只是暫定可以自行更動 */
+        /* 區塊背景顏色方便辨識 */
+        /* 側邊盒子區塊挑整高度,可以改變盒子內間距 */
+        /* 側邊盒子 xxx可以命名,記得要在創造它的Class */
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ---------------------導覽列----------------------- -->
+    <div class="navbar"></div>
+    <!-- ---------------------內容----------------------- -->
+
+    <div class="content">
+        <div class="content-l">
+            <div class="personalbox">
+                <div class="photobox"></div>
+                <div class="namebox">賴小明</div>
+            </div>
+            <div class="listbox">
+                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/會員區(完成).html">
+                    個人資料
+                </a>
+                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/我的作品(完成).html">
+                    我的作品
+                </a>
+                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/我的討論(完成).html">
+                    我的討論
+                </a>
+                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/我的任務(完成).html">
+                    我的任務
+                </a>
+                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整/喜歡的作品(完成).html">
+                    喜歡的作品
+                </a>
+                <a class="projectbox" href="/03-程式/01-工作區/html-ex/會園區子頁/統整//追蹤的帳號(完成).html">
+                    追蹤中的帳號
+                </a>
+            </div>
+
+        </div>
+        <div class="content-r">
+            <div class="project-page">
+                <div class="page-title">
+                    <h1>追蹤中的帳號</h1>
+                </div>
+                <div class="page-button">
+                    <div class="pagebox">1</div>
+                    <div class="pagebox">2</div>
+                    <div class="pagebox">3</div>
+                </div>
+                <div class="page activepage">
+                    <div class="track_car-g ">
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                   <img class="tk_car_photo" src="https://5b0988e595225.cdn.sohucs.com/images/20191104/54ebb7dae9c34b15ab8322a2560044c8.jpeg"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>TSENG YUTING</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        UI/UX DesignerDesigner@Freelancer2020 ~ 現在
+                                    </div>
+                                </div>
+                                <div class="tk_skill-g">
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">JaveScipt</div>
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">JaveScipt</div>
+                                </div>
+                                <div class="tk_information">
+                                    您好我是TSENG YUTING，台南人
+                                        <br> 擁有約2年的 UI / UX設計經歷，也擁有經營社群、電商網站的營運經驗。
+                                        我喜歡收集、觀察與探究人事時物的成因。 目前正在經營台灣人導向的日本郵趣Facebook專頁，介紹圖案多樣的日本郵戳與其背後的故事。
+                                </div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSq-yAp8BYRoXObUQ4rkwZ7lwQSSHPNpX384w&usqp=CAU"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>黃宇禎</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        Software Engineer / Backend Engineer行政助理@臺北市家庭教育中心2019 ~ 2019
+                                    </div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">Coding</div>
+                                    <div class="skill">Web Development</div>
+                                    <div class="skill">JaveScipt</div>
+                                    <div class="skill">Node.js/Express.js</div>
+                                    <div class="skill">Bootstrap</div>
+                                    <div class="skill">Handlebars.js</div>
+                                    <div class="skill">Git</div>
+                                </div>
+                                <div class="tk_information">
+                                    過往學經歷偏學術與教育領域，但也對資訊科技很有興趣，除曾經修習課程與企業實習，更熱衷應用於工作與生活，獲得更多便利與樂趣。由於曾錯過進入科技領域的機遇，近年便以轉職後端/全端工程師為目標，掌握產品開發的核心知識與技術能力後捲土重來，如今已能參與協作或是獨立進行完整專案，並結合既有研究精神與學習特質，長於掌握觀念重點、查找解決問題與紀錄反思過程，期許未來能『「網」產品開發的道「路」跨出下一步』。
+                                </div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="https://5b0988e595225.cdn.sohucs.com/images/20190505/4d4b03810a75447dbc04393eeeacab09.jpeg"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>林品翰</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        Front-end Developer前端工程師@潔克幫股份有限公司2020 ~ 現在
+                                    </div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">vue.js</div>
+                                    <div class="skill">vuex</div>
+                                    <div class="skill">vre-router</div>
+                                    <div class="skill">scss/sass</div>
+                                    <div class="skill">Bootstrap</div>
+                                    <div class="skill">jQuery</div>
+                                    <div class="skill">Flexbox</div>
+                                </div>
+                                <div class="tk_information">
+                                    林品翰 現任工作為 潔客幫 的前端工程師，主要負責公司網站的開發及維護。 前端框架使用 Vue.js 框架，熟悉 Vue-Router 做路由管理及切換、使用 Vuex 統一狀態管理也熟悉 Nuxt.js框架處理伺服器渲染（SSR）。 目前除了持續精進前端技術外，也學習後端技能 Node.js、MongoDB，希望能夠與自己前端的學習接軌以及整合。 Front-end Developer T...
+                                </div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="data:image/png;base64,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"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>林佳穎 ｜ Kaei Lin</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        企劃、文案或編輯中文版主編・經理@日本旅遊資訊網| tsunagu Japan 繫日本2016 ~ 2020
+                                    </div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">word</div>
+                                    <div class="skill">PowerPoint</div>
+                                    <div class="skill">Excel</div>
+                                    
+                                </div>
+                                <div class="tk_information">
+                                    林佳穎｜Kaei Lin 畢業於台北市立教育大學視覺藝術系，持有教師證(國小)，因個性積極且勇於挑戰新事物，在從事教職工作之餘利用空擋時間學習日文。由於對日本時尚及文化有莫大的興趣，辭去教師一職後便隻身前往日本唸兩年商業日語課程，留學期間一邊讀書、一邊經營個人Facebook粉絲專頁，目前擁有約15,000名粉絲。 曾在日本女性時尚平台「4meee!」實習，累積大量翻譯、校正、撰文經驗。實習...</div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="https://media.cakeresume.com/image/upload/s--qeyPENU9--/c_fill,g_face,h_120,w_120/v1591066481/cp4rxp59hti6rn7a4e3t.jpg"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>Amingo Huang</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        設計主管、設計師、產品開發工程師、攝影師、行銷企劃、粉專小編美編設計@鴻姿企業有限公司2019 ~ 2020          </div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">平面設計</div>
+                                    <div class="skill">Photoshop</div>
+                                    <div class="skill">CorelDRAW</div>
+                                    <div class="skill">形象攝影</div>
+                                    <div class="skill">油畫</div>
+                                    
+                                </div>
+                                <div class="tk_information">
+                                    Amingo Huang 平面設計師│社群管理│行銷企劃 ID / CMF 工程師│攝影師│講師 手繪創作者│部落客  New Taipei City, Taiwan. 淡水 Skills Graphic Designer 15 years↑ 超過十年以上工作經驗，從原始照相製版到電腦繪圖設計至今，服務過服飾、食品、百貨、餐飲、馬術、文創等產業 企業/產品品牌 LOGO 設計/英文命名 ...</div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="https://cdn0.iconfinder.com/data/icons/avatar-set-one/128/avatar-12-512.png"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>洪宗輔</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        UX Researcher/Designer</div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">專案管理</div>
+                                    <div class="skill">量化統計分析</div>
+                                 
+                                    
+                                </div>
+                                <div class="tk_information">
+                                    洪宗輔 畢業於雲林科技大學資管系碩士班。 台中，TW email： m@gemail.yuntech.edu.tw 、 手機：個人背景 您好，我是洪宗輔，畢業於國立雲林科技大學資訊管理學系碩士。來自台中，父母從小就用民主的方式管教我們，希望我們能夠獨立自主、勇於嘗試困難、並且累積人生經驗，並且在我們遇到困難的時候，會給予適當的幫助以及建議。 綜合以下經驗以及經歷，我在學習的過程中以及我面對挑...</div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="https://static.wixstatic.com/media/b29dfb_26d0943374bd4148953dac82ac8804cf~mv2.png/v1/fit/w_334,h_287,al_c,q_80/file.png"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>王堉萍</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        視覺設設 ｜ 後端工程師</div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">HTML/CSS</div>
+                                    <div class="skill">MS SQL</div>
+                                    <div class="skill">Photoshop</div>
+                                    <div class="skill">Illustrator</div>
+                                    <div class="skill">After Effect</div>
+                                 
+                                    
+                                </div>
+                                <div class="tk_information">
+                                    嗨我是堉萍，有兩年半設計經驗，喜歡學習新技術，熱愛解決問題的成就感，目前剛從資策會的《智慧應用微軟C#工程師就業養成班》畢業，小組專題為寵物食品電商網站，負責資料庫規劃、會員登入系統、後端CRUD功能、API串接及前台樣式設計。</div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="track_car-g ">
+                        <div class="track_carA">
+                            <div class="tk-l">
+                               <div class="tk_photo">
+                                <img class="tk_car_photo" src="https://cdn0.iconfinder.com/data/icons/avatar-set-one/128/avatar-17-512.png"  alt="">
+                               </div>
+                            </div>
+                            <div class="tk-r">
+                                <div class="tk_name"><h3>陳哲宇</h3></div>
+                                <div class="tk_profession">
+                                    <div class="prf_text">
+                                        前端工程師</div>
+                                </div>
+                                <div class="tk_skill-g">    
+                                    <div class="skill">HTML/CSS</div>
+                                    <div class="skill">JavaScript</div>
+                                    <div class="skill">React</div>
+                                 
+                                    
+                                </div>
+                                <div class="tk_information">
+                                    我是陳哲宇，目前在資策會學習有關於前端工程師的技術以及技能。 前端工程師 城市，TW milk840118@gmail.com GitHub網址 https://github.com/mike個人資料 職位名稱:前端工程師 姓名:陳哲宇 連絡電話:家裡電話:地址:台北市南港區忠孝東路六段 役別:役畢 專業培訓:職前訓練=>前端工程師 582 /hr 學歷:中華科技大學畢業 語言:中、...</div>
+                                <div class="tk_seemore">
+                                    <div class="bt_seemore">觀看個人檔案</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://avatarfiles.alphacoders.com/468/46830.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>鐘雅晴 Chloe Chung</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                PM/產品經理/專案管理</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Word</div>
+            <div class="skill">Excel</div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Google Drive</div>
+            <div class="skill">Toeic</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            鍾雅晴ChloeChung  城市|TW • chloe93539@gmail.com 畢業於臺北大學企管系。 You are very much on time and in your time zone destiny set up for you. 主管推薦函: https://reurl.cc/Z7WWlV Ｗork Experience 立闊企業股份有限公司, 業務專員 , Ju...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+
+<!-- 7 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://c4.wallpaperflare.com/wallpaper/553/486/329/avatar-the-last-airbender-wallpaper-preview.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>郭威逸</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                Web Engineer、ASP.Net MVC / C# Engineer</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">C# ASP.NET</div>
+            <div class="skill">MSSQL</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Azure</div>
+            <div class="skill">Line Chatbot</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            郭威逸 個人資料 男 役畢 主要手機E-mail wwwpc168@gmail.com 通訊地址 新北市蘆洲區長興路 郭威逸 英語能力 多益 660 兵役 役畢 生日 1994/09/28 專業技能 主要程式語言 .NET C# 資料庫運用 T-SQL Server ADO.NET LINQ 網頁前端技術 HTML/CSS JavaScript、jQuery ASP.NET MVC Rest...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 8 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/133950591/original/aa708234c7ed519999a2635302f82860ebc076c1/make-you-a-custom-avatar.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>胡斌 Adler Hu</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                Data Analysis、 Data Engineer、Database Engineer市場分析師@廣州五八拉貨物流信息諮詢有限公司2018 ~ 2020</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Python</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Linux</div>
+            <div class="skill">AWS</div>
+            <div class="skill">MongoDB</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            胡斌 Adler 畢業於高雄應用科技大學化材系，退伍後前往中國廣州新創公司擔任市場分析師，主要負責市場分析、客戶開發。回台後專心學習程式，目前剛結業於中壢資策會AI/Big Data資料分析師班。熟悉Python、Linux(CentOs、Ubuntu)、MySQL、Machine learning、AWS、Docker。希望能朝資料分析、資料科學發展。 I'm not the best b...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 9 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>羅崇瑜</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                全端工前師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">VUE</div>
+            <div class="skill">SQLite</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">SCSS</div>
+            <div class="skill">AWS EC2</div>
+            <div class="skill">Bootstrap</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            負責網頁當中所有細節，從設計、功能至檔案庫及開發環境與部署,具現代概念的網頁設計,響應式網頁力求專業標準的UI/UX,檔案庫的編寫及API Call編程，使用現代MVC框架系統Vue構築並深入其生態如VueX狀態管理。 期待您親自探索，並發掘精心編織的每個細節。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 10 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://www.flaticon.com/svg/static/icons/svg/1752/1752772.svg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>John Hsieh</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                網頁前端工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Github</div>
+            <div class="skill">Google Analytics</div>
+            <div class="skill">TypeScript</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            畢業於東吳大學日文系，擁有日文檢定N1證照 畢業後待過線上旅宿出租平台及日商國際貿易公司，有operation、行銷企劃、廣告分析及網頁優化等經歷 期間接觸到網頁程式，靠自學在前端領域找到自我。 喜愛與人分享寫code的喜悅，對自己的期許是能寫出更多有效率並人性化的網頁應用</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 11 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://i1.sndcdn.com/avatars-000595809090-5sxzzp-t500x500.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>鄭為中</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                UI設計師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">ElementUI</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Axios</div>
+            <div class="skill">Google Maps API</div>
+            <div class="skill">Express.js</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            先前分別任職SaaS VR軟體公司擔任行銷部門視覺設計師，以及物流地產開發公司品牌部門擔任軟體UI設計師。前任職務皆隸屬於新創性質公司，除設計外，也負責品牌行銷部分之網頁開發維護專案，因此發現自己對於網頁開發充滿興趣及熱情。於2020年3月全職投入網頁前端的學習並實作Javascript(ES6)、Vue前端框架及相關核心套件(Vuex/ Vue Router)、AJAX API串接之運用，並配合學習後端NodeJs + Express + Firebase。期許職涯能透過不斷學習及擴展知識，挑戰解決不同問題，與團隊一同打造持續成長的產品及服務。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="track_car-g ">
+                        <!-- 12 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROIS-2xBy5Nh9JTejms2WzD85K5rCHQwgLbQ&usqp=CAU"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>蔡佩妤</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                界面/網頁設計師 行銷企劃</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Photoshop</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">SVG animate</div>
+            <div class="skill">Office</div>
+            <div class="skill">Illustrator</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            我是佩妤，畢業於國立高雄科技大學文化創意產業系，大學時因選修網頁設計課程，及擔任社團資訊長的緣故，使用過不用會寫程式就能製作網站的Adobe Muse、 Weebly架站軟體，操作上常有模板限制的困惱，觸發了想學習程式，並設計出自己心目中理想網站的想法。
+今年八月進修完為期半年的前端網頁設計課程，因具備設計科系的學術背景與行銷企劃的工作經驗，在程式學習上逐漸找到自己在介面設計和網頁架構上的優勢。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 13 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://www.shareicon.net/data/512x512/2016/08/05/806962_user_512x512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>陳哲暄</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                界面設計師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Illustrator</div>
+            <div class="skill">Substance Painter</div>
+            <div class="skill">3ds Max</div>
+            <div class="skill">Premiere Pro</div>
+            <div class="skill">ZBrush</div>
+            <div class="skill">SketchUp</div>
+         
+            
+        </div>
+        <div class="tk_information">您好 ! 我是陳哲暄，最近剛從南台科大的多媒體電腦娛樂科學系畢業，在求學過程中有參與專案的經驗，因此比較了解團隊的相互合作和流程，本身比較擅長美術的部分，像是場景建模、建模，次要為人物建模，因為本身是設計領域，所以平時也喜歡接觸其他設計相關的領域，如UI/UX、企劃、平面設計、攝影等等
+            Taipei, Taiwan 南臺科大</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 14 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>鐘伯育</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                Machine Learning</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Python</div>
+            <div class="skill">AI & Machine <Label></Label></div>
+            <div class="skill">Matlab</div>
+            <div class="skill">OpenCV</div>
+            <div class="skill">JavaScript</div>
+         
+            
+        </div>
+        <div class="tk_information">您好，我叫鍾伯育，畢業於銘傳大學電腦與通訊工程學系，目前還繼續讀銘傳大學電腦與工程學系碩士班，我的專長領域在於將各種嵌入式設備進行整合，在大學二年級時參加系上的機器人研究中心，目的是為了增加自己的實戰經驗，在裡面主要都是以比賽為目的，像是去年我去韓國參加2019 FIRA國際機器人大賽，也獲得不錯的成績。後來升上碩士在研究室負責研究、管理大學部學弟妹還有為學校服務，像是學校需要整合性的設備，或是對外參訪，都會找我們研究室，我自己本身研究是利用深度學習結合影像識別達到一些醫療目的，像是測量血壓、心律甚至是血糖，盡量做到一些非接觸式測量的目的，這項研究也通過109年科技部計畫，獲得科技部將近100萬元的贊助。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 15 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/6b0c039e-7804-4a5e-8ac4-821985ad86eb/d2cw6af-644e5645-babd-4412-9a0c-49d68d282437.png/v1/fill/w_500,h_500,q_80,strp/cosmo_3d_avatar_icon_animated_by_black_arg_d2cw6af-fullview.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>游亞絃</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                網頁前端工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Vue.js</div>
+            <div class="skill">RWD<Label></Label></div>
+            <div class="skill">jQuery</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">SCSS</div>
+         
+            
+        </div>
+        <div class="tk_information">一個熱愛學習新事物且心思細膩的人。於求學期間接觸前端，每次的切版都要求與設計稿分毫不差。當遇到問題會透過網路尋求解決方法，解決問題與完成作品總可以帶給我成就感。最近在學習 Vuex，希望在遇到資料狀態較複雜的專案時可以透過它開發易於維護且方便管理的網站。
+            Taoyuan City, Taiwan 國立高雄大學
+            </div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 16 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://p.kindpng.com/picc/s/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>Alvin Tseng</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                軟體工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Swift/iOS</div>
+            <div class="skill">C++<Label></Label></div>
+           
+         
+            
+        </div>
+        <div class="tk_information">Hi 我是 Alvin，目前在台南的「好想工作室」擔任 iOS Training，同時也是一個 FreeLancer。
+            喜歡研究以及分享 iOS 開發相關的技術，也有經營個人的 Medium 部落格，定期分享文章到社群中。            
+            </div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 17 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/cb58bcd3-9012-4dac-9e05-cd48c97f62aa/dci8ea2-40a57e6e-ff91-48bb-8be4-2082a7852762.png/v1/fill/w_500,h_500,q_80,strp/clare___request___charat___avatar_icon___animation_by_ryushurei_dci8ea2-fullview.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>林佩蓁 Pei Zhen Lin</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                行銷企劃</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Google Drive</div>
+            <div class="skill">Word<Label></Label></div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Excel</div>
+
+         
+            
+        </div>
+        <div class="tk_information">我是林佩蓁，畢業於倫敦大學皇后瑪麗學院行銷碩士與臺北大學公共行政與雙主修金融系學士，個性善解人意、負責認真、樂於溝通與分享。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+<!-- 18 -->
+<div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuR6WDWiTUC4X8faeqmsSkpI1gWxujB07xvw&usqp=CAU"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>林李庭瑜 Eife Lee</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                行銷企劃</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">HTML+CSS+JavaScript</div>
+            <div class="skill">jQuerry<Label></Label></div>
+            <div class="skill">PHP</div>
+            <div class="skill">Vue.js</div>
+            <div class="skill">SCSS</div>
+            <div class="skill">Webpack</div>
+
+         
+            
+        </div>
+        <div class="tk_information">畢業於東吳大學法律系，因緣際會接觸到寫程式，喜歡上不斷學習並完成作品的成就感。
+            2018 年開始參加 Huli 的程式導師實驗計劃，並搭配線上資源自學前端語言。
+            2019 年開始第一份前端工程師工作，負責數個網站的維護及開發。
+            相信工作的一部分也在於自我實現，唯有持續學習、充實自己，才能免於被淘汰。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="page-button">
+                    <div class="pageboxD">1</div>
+                    <div class="pageboxD">2</div>
+                    <div class="pageboxD">3</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ---------------------頁角----------------------- -->
+
+    <div class="footer"></div>
+
+
+<!-- 假資料區 -->
+
+<!-- 1 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="data:image/png;base64,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"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>林佳穎 ｜ Kaei Lin</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                企劃、文案或編輯中文版主編・經理@日本旅遊資訊網| tsunagu Japan 繫日本2016 ~ 2020
+            </div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">word</div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Excel</div>
+            
+        </div>
+        <div class="tk_information">
+            林佳穎｜Kaei Lin 畢業於台北市立教育大學視覺藝術系，持有教師證(國小)，因個性積極且勇於挑戰新事物，在從事教職工作之餘利用空擋時間學習日文。由於對日本時尚及文化有莫大的興趣，辭去教師一職後便隻身前往日本唸兩年商業日語課程，留學期間一邊讀書、一邊經營個人Facebook粉絲專頁，目前擁有約15,000名粉絲。 曾在日本女性時尚平台「4meee!」實習，累積大量翻譯、校正、撰文經驗。實習...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 2 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://media.cakeresume.com/image/upload/s--qeyPENU9--/c_fill,g_face,h_120,w_120/v1591066481/cp4rxp59hti6rn7a4e3t.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>Amingo Huang</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                設計主管、設計師、產品開發工程師、攝影師、行銷企劃、粉專小編美編設計@鴻姿企業有限公司2019 ~ 2020          </div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">平面設計</div>
+            <div class="skill">Photoshop</div>
+            <div class="skill">CorelDRAW</div>
+            <div class="skill">形象攝影</div>
+            <div class="skill">油畫</div>
+            
+        </div>
+        <div class="tk_information">
+            Amingo Huang 平面設計師│社群管理│行銷企劃 ID / CMF 工程師│攝影師│講師 手繪創作者│部落客  New Taipei City, Taiwan. 淡水 Skills Graphic Designer 15 years↑ 超過十年以上工作經驗，從原始照相製版到電腦繪圖設計至今，服務過服飾、食品、百貨、餐飲、馬術、文創等產業 企業/產品品牌 LOGO 設計/英文命名 ...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+
+<!-- 3 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://cdn0.iconfinder.com/data/icons/avatar-set-one/128/avatar-12-512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>洪宗輔</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                UX Researcher/Designer</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">專案管理</div>
+            <div class="skill">量化統計分析</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            洪宗輔 畢業於雲林科技大學資管系碩士班。 台中，TW email： m@gemail.yuntech.edu.tw 、 手機：個人背景 您好，我是洪宗輔，畢業於國立雲林科技大學資訊管理學系碩士。來自台中，父母從小就用民主的方式管教我們，希望我們能夠獨立自主、勇於嘗試困難、並且累積人生經驗，並且在我們遇到困難的時候，會給予適當的幫助以及建議。 綜合以下經驗以及經歷，我在學習的過程中以及我面對挑...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- 4 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://static.wixstatic.com/media/b29dfb_26d0943374bd4148953dac82ac8804cf~mv2.png/v1/fit/w_334,h_287,al_c,q_80/file.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>王堉萍</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                視覺設設 ｜ 後端工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">HTML/CSS</div>
+            <div class="skill">MS SQL</div>
+            <div class="skill">Photoshop</div>
+            <div class="skill">Illustrator</div>
+            <div class="skill">After Effect</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            嗨我是堉萍，有兩年半設計經驗，喜歡學習新技術，熱愛解決問題的成就感，目前剛從資策會的《智慧應用微軟C#工程師就業養成班》畢業，小組專題為寵物食品電商網站，負責資料庫規劃、會員登入系統、後端CRUD功能、API串接及前台樣式設計。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- 5 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://cdn0.iconfinder.com/data/icons/avatar-set-one/128/avatar-17-512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>陳哲宇</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                前端工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">HTML/CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            我是陳哲宇，目前在資策會學習有關於前端工程師的技術以及技能。 前端工程師 城市，TW milk840118@gmail.com GitHub網址 https://github.com/mike個人資料 職位名稱:前端工程師 姓名:陳哲宇 連絡電話:家裡電話:地址:台北市南港區忠孝東路六段 役別:役畢 專業培訓:職前訓練=>前端工程師 582 /hr 學歷:中華科技大學畢業 語言:中、...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 6 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://avatarfiles.alphacoders.com/468/46830.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>鐘雅晴 Chloe Chung</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                PM/產品經理/專案管理</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Word</div>
+            <div class="skill">Excel</div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Google Drive</div>
+            <div class="skill">Toeic</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            鍾雅晴ChloeChung  城市|TW • chloe93539@gmail.com 畢業於臺北大學企管系。 You are very much on time and in your time zone destiny set up for you. 主管推薦函: https://reurl.cc/Z7WWlV Ｗork Experience 立闊企業股份有限公司, 業務專員 , Ju...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+
+<!-- 7 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://c4.wallpaperflare.com/wallpaper/553/486/329/avatar-the-last-airbender-wallpaper-preview.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>郭威逸</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                Web Engineer、ASP.Net MVC / C# Engineer</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">C# ASP.NET</div>
+            <div class="skill">MSSQL</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Azure</div>
+            <div class="skill">Line Chatbot</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            郭威逸 個人資料 男 役畢 主要手機E-mail wwwpc168@gmail.com 通訊地址 新北市蘆洲區長興路 郭威逸 英語能力 多益 660 兵役 役畢 生日 1994/09/28 專業技能 主要程式語言 .NET C# 資料庫運用 T-SQL Server ADO.NET LINQ 網頁前端技術 HTML/CSS JavaScript、jQuery ASP.NET MVC Rest...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 8 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/133950591/original/aa708234c7ed519999a2635302f82860ebc076c1/make-you-a-custom-avatar.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>胡斌 Adler Hu</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                Data Analysis、 Data Engineer、Database Engineer市場分析師@廣州五八拉貨物流信息諮詢有限公司2018 ~ 2020</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Python</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Linux</div>
+            <div class="skill">AWS</div>
+            <div class="skill">MongoDB</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            胡斌 Adler 畢業於高雄應用科技大學化材系，退伍後前往中國廣州新創公司擔任市場分析師，主要負責市場分析、客戶開發。回台後專心學習程式，目前剛結業於中壢資策會AI/Big Data資料分析師班。熟悉Python、Linux(CentOs、Ubuntu)、MySQL、Machine learning、AWS、Docker。希望能朝資料分析、資料科學發展。 I'm not the best b...</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 9 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>羅崇瑜</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                全端工前師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">VUE</div>
+            <div class="skill">SQLite</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">SCSS</div>
+            <div class="skill">AWS EC2</div>
+            <div class="skill">Bootstrap</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            負責網頁當中所有細節，從設計、功能至檔案庫及開發環境與部署,具現代概念的網頁設計,響應式網頁力求專業標準的UI/UX,檔案庫的編寫及API Call編程，使用現代MVC框架系統Vue構築並深入其生態如VueX狀態管理。 期待您親自探索，並發掘精心編織的每個細節。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 10 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://www.flaticon.com/svg/static/icons/svg/1752/1752772.svg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>John Hsieh</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                網頁前端工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Github</div>
+            <div class="skill">Google Analytics</div>
+            <div class="skill">TypeScript</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            畢業於東吳大學日文系，擁有日文檢定N1證照 畢業後待過線上旅宿出租平台及日商國際貿易公司，有operation、行銷企劃、廣告分析及網頁優化等經歷 期間接觸到網頁程式，靠自學在前端領域找到自我。 喜愛與人分享寫code的喜悅，對自己的期許是能寫出更多有效率並人性化的網頁應用</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 11 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://i1.sndcdn.com/avatars-000595809090-5sxzzp-t500x500.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>鄭為中</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                UI設計師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">ElementUI</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">Axios</div>
+            <div class="skill">Google Maps API</div>
+            <div class="skill">Express.js</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            先前分別任職SaaS VR軟體公司擔任行銷部門視覺設計師，以及物流地產開發公司品牌部門擔任軟體UI設計師。前任職務皆隸屬於新創性質公司，除設計外，也負責品牌行銷部分之網頁開發維護專案，因此發現自己對於網頁開發充滿興趣及熱情。於2020年3月全職投入網頁前端的學習並實作Javascript(ES6)、Vue前端框架及相關核心套件(Vuex/ Vue Router)、AJAX API串接之運用，並配合學習後端NodeJs + Express + Firebase。期許職涯能透過不斷學習及擴展知識，挑戰解決不同問題，與團隊一同打造持續成長的產品及服務。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 12 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROIS-2xBy5Nh9JTejms2WzD85K5rCHQwgLbQ&usqp=CAU"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>蔡佩妤</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                界面/網頁設計師 行銷企劃</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Photoshop</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">HTML＋CSS＋JavaScript</div>
+            <div class="skill">SVG animate</div>
+            <div class="skill">Office</div>
+            <div class="skill">Illustrator</div>
+         
+            
+        </div>
+        <div class="tk_information">
+            我是佩妤，畢業於國立高雄科技大學文化創意產業系，大學時因選修網頁設計課程，及擔任社團資訊長的緣故，使用過不用會寫程式就能製作網站的Adobe Muse、 Weebly架站軟體，操作上常有模板限制的困惱，觸發了想學習程式，並設計出自己心目中理想網站的想法。
+今年八月進修完為期半年的前端網頁設計課程，因具備設計科系的學術背景與行銷企劃的工作經驗，在程式學習上逐漸找到自己在介面設計和網頁架構上的優勢。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 13 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://www.shareicon.net/data/512x512/2016/08/05/806962_user_512x512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>陳哲暄</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                界面設計師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Illustrator</div>
+            <div class="skill">Substance Painter</div>
+            <div class="skill">3ds Max</div>
+            <div class="skill">Premiere Pro</div>
+            <div class="skill">ZBrush</div>
+            <div class="skill">SketchUp</div>
+         
+            
+        </div>
+        <div class="tk_information">您好 ! 我是陳哲暄，最近剛從南台科大的多媒體電腦娛樂科學系畢業，在求學過程中有參與專案的經驗，因此比較了解團隊的相互合作和流程，本身比較擅長美術的部分，像是場景建模、建模，次要為人物建模，因為本身是設計領域，所以平時也喜歡接觸其他設計相關的領域，如UI/UX、企劃、平面設計、攝影等等
+            Taipei, Taiwan 南臺科大</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 14 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>鐘伯育</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                Machine Learning</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Python</div>
+            <div class="skill">AI & Machine <Label></Label></div>
+            <div class="skill">Matlab</div>
+            <div class="skill">OpenCV</div>
+            <div class="skill">JavaScript</div>
+         
+            
+        </div>
+        <div class="tk_information">您好，我叫鍾伯育，畢業於銘傳大學電腦與通訊工程學系，目前還繼續讀銘傳大學電腦與工程學系碩士班，我的專長領域在於將各種嵌入式設備進行整合，在大學二年級時參加系上的機器人研究中心，目的是為了增加自己的實戰經驗，在裡面主要都是以比賽為目的，像是去年我去韓國參加2019 FIRA國際機器人大賽，也獲得不錯的成績。後來升上碩士在研究室負責研究、管理大學部學弟妹還有為學校服務，像是學校需要整合性的設備，或是對外參訪，都會找我們研究室，我自己本身研究是利用深度學習結合影像識別達到一些醫療目的，像是測量血壓、心律甚至是血糖，盡量做到一些非接觸式測量的目的，這項研究也通過109年科技部計畫，獲得科技部將近100萬元的贊助。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 15 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/6b0c039e-7804-4a5e-8ac4-821985ad86eb/d2cw6af-644e5645-babd-4412-9a0c-49d68d282437.png/v1/fill/w_500,h_500,q_80,strp/cosmo_3d_avatar_icon_animated_by_black_arg_d2cw6af-fullview.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>游亞絃</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                網頁前端工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Vue.js</div>
+            <div class="skill">RWD<Label></Label></div>
+            <div class="skill">jQuery</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">SCSS</div>
+         
+            
+        </div>
+        <div class="tk_information">一個熱愛學習新事物且心思細膩的人。於求學期間接觸前端，每次的切版都要求與設計稿分毫不差。當遇到問題會透過網路尋求解決方法，解決問題與完成作品總可以帶給我成就感。最近在學習 Vuex，希望在遇到資料狀態較複雜的專案時可以透過它開發易於維護且方便管理的網站。
+            Taoyuan City, Taiwan 國立高雄大學
+            </div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 16 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://p.kindpng.com/picc/s/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>Alvin Tseng</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                軟體工程師</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Swift/iOS</div>
+            <div class="skill">C++<Label></Label></div>
+           
+         
+            
+        </div>
+        <div class="tk_information">Hi 我是 Alvin，目前在台南的「好想工作室」擔任 iOS Training，同時也是一個 FreeLancer。
+            喜歡研究以及分享 iOS 開發相關的技術，也有經營個人的 Medium 部落格，定期分享文章到社群中。            
+            </div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 17 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/cb58bcd3-9012-4dac-9e05-cd48c97f62aa/dci8ea2-40a57e6e-ff91-48bb-8be4-2082a7852762.png/v1/fill/w_500,h_500,q_80,strp/clare___request___charat___avatar_icon___animation_by_ryushurei_dci8ea2-fullview.jpg"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>林佩蓁 Pei Zhen Lin</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                行銷企劃</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">Google Drive</div>
+            <div class="skill">Word<Label></Label></div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Excel</div>
+
+         
+            
+        </div>
+        <div class="tk_information">我是林佩蓁，畢業於倫敦大學皇后瑪麗學院行銷碩士與臺北大學公共行政與雙主修金融系學士，個性善解人意、負責認真、樂於溝通與分享。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 18 -->
+<!-- <div class="track_carA">
+    <div class="tk-l">
+       <div class="tk_photo">
+        <img class="tk_car_photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuR6WDWiTUC4X8faeqmsSkpI1gWxujB07xvw&usqp=CAU"  alt="">
+       </div>
+    </div>
+    <div class="tk-r">
+        <div class="tk_name"><h3>林李庭瑜 Eife Lee</h3></div>
+        <div class="tk_profession">
+            <div class="prf_text">
+                行銷企劃</div>
+        </div>
+        <div class="tk_skill-g">    
+            <div class="skill">HTML+CSS+JavaScript</div>
+            <div class="skill">jQuerry<Label></Label></div>
+            <div class="skill">PHP</div>
+            <div class="skill">Vue.js</div>
+            <div class="skill">SCSS</div>
+            <div class="skill">Webpack</div>
+
+         
+            
+        </div>
+        <div class="tk_information">畢業於東吳大學法律系，因緣際會接觸到寫程式，喜歡上不斷學習並完成作品的成就感。
+            2018 年開始參加 Huli 的程式導師實驗計劃，並搭配線上資源自學前端語言。
+            2019 年開始第一份前端工程師工作，負責數個網站的維護及開發。
+            相信工作的一部分也在於自我實現，唯有持續學習、充實自己，才能免於被淘汰。</div>
+        <div class="tk_seemore">
+            <div class="bt_seemore">觀看個人檔案</div>
+        </div>
+    </div>
+</div> -->
+<!-- 假資料區 end -->
+
+
+
+
+    <!-- ----------------------javescript------------------- -->
+    <script>
+
+        var pageboxs = document.querySelectorAll('.pagebox') 
+        var pages = document.querySelectorAll('.page') 
+
+        for (var i = 0; i < pageboxs.length; i++) {
+            const pagebox = pageboxs[i];
+            const page = pages[i];
+
+            pagebox.onclick = function () {
+                remove_activepage()
+
+                pagebox.classList.add('activepage')
+                page.classList.add('activepage')
+            }
+        }
+
+        function remove_activepage() {
+            for (var i = 0; i < pageboxs.length; i++) {
+                const pagebox = pageboxs[i];
+                const page = pages[i];
+
+                console.log(pages, page);
+
+                pagebox.classList.remove('activepage')
+                page.classList.remove('activepage')
+            }
+        }
+
+    </script>
+
+    <script>
+        // 模組化 <- 將功能變成零件 當有需要時可以直接放入使用,不需要重頭來過
+
+        var pageboxDs = document.querySelectorAll('.pageboxD') //nodelist(節點集合)
+        var pages = document.querySelectorAll('.page') //nodelist(節點集合)
+
+
+
+        // 點擊按鈕時,先把所有的active移除,再給被點擊的按鈕加上active的class ,同時給"相對應索引值"的page也加上active的class
+
+        for (var i = 0; i < pageboxDs.length; i++) {
+            // 處理nodelist的最好方法是將其轉化 此處的區域變數宣告是轉化nodelist的資料為正式的HTML標籤
+            const pageboxD = pageboxDs[i];
+            const page = pages[i];
+
+            pageboxD.onclick = function () {
+                remove_activepageB()
+
+                pageboxD.classList.add('activepage')
+                page.classList.add('activepage')
+            }
+        }
+
+        function remove_activepageB() {
+            for (var i = 0; i < pageboxDs.length; i++) {
+                const pageboxD = pageboxDs[i];
+                const page = pages[i];
+
+                pageboxD.classList.remove('activepage')
+                page.classList.remove('activepage')
+            }
+        }
+
+    </script>
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

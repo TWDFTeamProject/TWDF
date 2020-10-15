@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        /* ------------------------------導覽列---------------------------------------- */
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: blueviolet;
+        }
+
+        /* ------------------------------主要內容區塊----------------------------------- */
+
+
+        .content {
+            width: 1140px;
+            height: auto;
+            background-color: cornflowerblue;
+            margin: auto;
+            display: flex;
+        }
+
+
+        /* ------------------主要內容左邊區塊----------------------- */
+
+
+
+        .content-l {
+            width: 20%;
+            height: 1000px;
+            /* background-color: cornflowerblue; */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .personalbox {
+            width: 80%;
+            height: 20%;
+            padding-top: 10PX;
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .photobox {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(84, 60, 218);
+            margin: auto;
+            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .namebox {
+            width: 60%;
+            height: 20%;
+            font-size: 24px;
+            /* background-color: darkgray; */
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .listbox {
+            width: 80%;
+            height: 60%;
+            background-color: rgb(228, 212, 212);
+            display: flex;
+            flex-direction: column;
+            margin-top: 10PX;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            /* flex-wrap: wrap; */
+            /* justify-content: space-around; */
+        }
+
+        .projectbox {
+            width: 80%;
+            height: 10%;
+            margin: 10px;
+            /* background-color: rgb(110, 98, 216); */
+            margin: auto;
+            font-size: 18px;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            /* margin: auto; */
+        }
+
+
+
+
+
+        /* ------------------主要內容右邊區塊----------------------- */
+
+        .content-r {
+            width: 80%;
+            height: auto;
+            padding-bottom: 20px;
+            background-color: rgb(220, 230, 248);
+            /* display: flex;
+            flex-direction: column; */
+
+        }
+
+        .project-page {
+            width: 100%;
+            /* height: calc(100% - 20px); */
+            /* background-color: rgb(163, 184, 163); */
+            display: none;
+        }
+
+        .banner {
+            width: 90%;
+            height: 400px;
+            /* background-color: darkkhaki; */
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+
+        }
+
+        .ba-photo {
+            width: 100%;
+            height: 60%;
+            background-color: rgb(33, 44, 13);
+            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員封面.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .introduction {
+            width: 100%;
+            height: 50%;
+            /* background-color: rgb(152, 189, 89); */
+
+            position: relative;
+        }
+
+        .in_text_main {
+            width: 95%;
+            height: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            font-size: 18px;
+            /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+            position: absolute;
+            top: 20%;
+            left: 1%;
+        }
+
+        .ps-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: deeppink;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        .shillbox {
+            width: 90%;
+            height: auto;
+            padding: 10px 0px;
+            /* background-color: rgb(211, 63, 13); */
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .sk-title {
+            /* background-color: yellow; */
+            width: 95%;
+            margin: 10px;
+
+        }
+
+
+
+        .sk-content {
+            width: 95%;
+            height: auto;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+
+        .skill {
+            background-color: teal;
+            color: white;
+            display: inline;
+            margin: 10px;
+            padding: 0 10px;
+            font-size: 18px;
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+
+
+        .experiencebox {
+            width: 90%;
+            height: auto;
+            /* background-color: rgb(226, 165, 145); */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ex-content {
+            width: 95%;
+            height: auto;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            font-size: 18px;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+
+        }
+
+
+
+
+
+
+        /* ------側邊盒子區塊-- */
+
+
+
+
+        /* ------------------------------頁角-------------------------------------- */
+        .footer {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(231, 21, 49);
+        }
+
+
+
+        /* --------開關顯示---- */
+
+        .active_pj_pages {
+            display: block;
+        }
+
+        .projectbox.active_pj_pages {
+            background-color: rgb(214, 30, 30);
+
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+        /* --------------------------注意事項------------------------------------ */
+        /* 高度只是暫定可以自行更動 */
+        /* 區塊背景顏色方便辨識 */
+        /* 側邊盒子區塊挑整高度,可以改變盒子內間距 */
+        /* 側邊盒子 xxx可以命名,記得要在創造它的Class */
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ---------------------導覽列----------------------- -->
+    <header>
+
+        <!-- ---------------------導覽列----------------------- -->
+        <nav class="navbar sticky-top">
+            <div class="TWDFLogo">
+                <img src="Nav-Logo/TWDF-Logo.png" alt="">
+            </div>
+            <div class="NavBtns">
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">城市人論壇</p>
+                        <p class="NavTextEn">Forum</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">作品展示</p>
+                        <p class="NavTextEn">Portfolios</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">案件發佈</p>
+                        <p class="NavTextEn">Post Cases</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">資源共享</p>
+                        <p class="NavTextEn">Resource Sharing</p>
+                    </div>
+                </a>
+                <a id="StartBtn" class="LogIn"><p>Sign In</p></a>
+            </div>
+        </nav>
+
+    </header>
+    <!-- ---------------------內容----------------------- -->
+    <main>
+        <div class="content">
+            <div class="content-l">
+                <div class="personalbox">
+                    <div class="photobox"></div>
+                    <div class="namebox">賴小明</div>
+                </div>
+                <div class="listbox">
+                    <a class="projectbox" href="/03-程式/01-工作區/2020-10-11-團體統整/06-會員區/01-會員區(完成).html">
+                        個人資料
+                    </a>
+                    <a class="projectbox" href="/03-程式/01-工作區/2020-10-11-團體統整/06-會員區/02-我的作品(完成).html">
+                        我的做品
+                    </a>
+                    <a class="projectbox" href="/03-程式/01-工作區/2020-10-11-團體統整/06-會員區/03-我的討論(完成).html">
+                        我的討論
+                    </a>
+                    <a class="projectbox" href="/03-程式/01-工作區/2020-10-11-團體統整/06-會員區/04-我的任務(完成).html">
+                        我的任務
+                    </a>
+                    <a class="projectbox" href="/03-程式/01-工作區/2020-10-11-團體統整/06-會員區/05-喜歡的作品(完成).html">
+                        喜歡的作品
+                    </a>
+                    <a class="projectbox" href="/03-程式/01-工作區/2020-10-11-團體統整/06-會員區/06-追蹤的帳號(完成).html">
+                        追蹤中的帳號
+                    </a>
+                </div>
+
+            </div>
+            <div class="content-r">
+                <div class="project-page active_pj_pages">
+                    <div class="banner">
+                        <div class="ba-photo"></div>
+                        <div class="introduction">
+                            <div class="in_text_main">
+                                吳若權（1962年1月28日－）台灣作家、主持人，也是企業行銷顧問,畢業於政大企業管理學系。曾任IBM行政專員、HP惠普公司企劃專員、飛碟唱片董事長特別助理、東元行銷經理、微軟行銷經理。
+                            </div>
+                        </div>
+                        <div class="ps-photo"></div>
+                    </div>
+                    <div class="shillbox">
+                        <div class="sk-title">
+                            <h3>技能</h3>
+                        </div>
+                        <div class="sk-content">
+
+                            <div class="skill">CSS</div>
+                            <div class="skill">JaveScipt</div>
+                            <div class="skill">CSS</div>
+                            <div class="skill">CSS</div>
+                            <div class="skill">JaveScipt</div>
+                            <div class="skill">JaveScipt</div>
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="experiencebox">
+                        <div class="sk-title">
+                            <h3>經歷</h3>
+                        </div>
+                        <div class="ex-content">
+                            資深廣告業務 May 2017 ~ July 2018
+                            <br> 品酷廣告股份有限公司
+                            <br> 工作內容：與兩人小組共同完成12個廣告專案，創造約2,500萬營業額、協助廣告專案統籌與進度控管、客戶溝通與協調、監督活動執行及問題解決、專案預算控管
+
+                            <br> 負責客戶：台灣迪士尼、飛躍文創、南山人壽、MeMe直播、ASUS Taiwan、ORIS Taiwan、Honda Taiwan
+
+                            <br> ★ 2017 冰雪奇緣嘉年華
+
+                            <br> ・與美國迪士尼動畫團隊合作，100%還原電影場景
+
+                            <br> ・45天觀展人次100萬，是一般主題肖像展4~5倍﹐追加移展至韓國，受邀擔任施工指導
+
+                            <br> Experiences 00 02@2x
+                            <br> 廣告業務 Sept 2015 ~ May 2017
+                            <br> 九井廣告股份有限公司
+                            <br> 工作內容：協助活動團隊完成廣告專案，主要負責客戶溝通與聯繫、行銷物規劃與發包製作、協助活動執行與支援
+
+                            <br> 負責客戶：台灣迪士尼、野獸國、LINE Taiwan、ASUS Taiwan
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ---------------------頁角----------------------- -->
+
+    <div class="footer"></div>
+
+
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

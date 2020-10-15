@@ -1,0 +1,194 @@
+@import "./default";
+@import "./mixin";
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: auto;
+    // @include EllipseColor;
+}
+
+// .ChangeBackgroundColor{
+//     background-color: $CircleRedColor !important;
+// }
+
+header{
+    @include EllipseColor;
+
+    /* ------------------------------導覽列---------------------------------------- */
+    .navbar {
+        width: 100%;
+        height: 100px;
+        
+        // position: relative;
+
+        .TWDFLogo{
+            margin: 10px;
+            position: absolute;
+        }
+        
+        .NavBtns{
+            font-weight: bolder;
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            .NavBtn{
+                color: rgb(206, 233, 231);
+                text-decoration: unset;
+                margin-right: 50px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                
+                .NavIMG{
+                    width: 42px;
+                    height: 47px;
+                    margin-right: 12px;
+                }
+                .NavText{
+                    p{
+                        font-size: smaller;
+                        font-weight: lighter;
+                        margin-bottom: unset;
+                    }
+                    .NavTextCh{
+                        margin-bottom: 4.6px;
+                    }
+                }
+
+                &::before{
+                    display: block;
+                    content: " ";
+                    width: 0%;
+                    height: 12px;
+                    position: absolute;
+                    z-index: 1;
+                    top: 59px;
+                    left: 50%;
+                    transition: width .5s ease, background-color .5s ease, left .5s ease;
+                }
+
+                &:hover::before{
+                    width: 100%;
+                    background: radial-gradient(ellipse,rgb(204 , 58, 0),rgb(45, 13, 0));
+                    left: 0;
+                }
+
+                &:first-child{
+                    
+                    animation-name: MyWOW;
+                    visibility: visible;
+                    animation-duration: 3s;
+                    animation-delay: 1s;
+                    animation-iteration-count: infinite;
+
+                    @keyframes MyWOW{
+                        0% {
+                            transform: scaleX(1);
+                        }
+                        75% {
+                            transform: scaleX(1);
+                        }
+                        82.5%{
+                            transform: scale3d(1.25,.75,1);
+                        }
+                        85%{
+                            transform: scale3d(.75,1.25,1);
+                        }
+                        87.5%{
+                            transform: scale3d(1.15,.85,1);
+                        }
+                        91.25%{
+                            transform: scale3d(.95,1.05,1);
+                        }
+                        93.75%{
+                            transform: scale3d(1.05,.95,1);
+                        }
+                        100%{
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .LogIn{
+            color: black;
+            font-size: 31px;
+            width: 128px;
+            height: 64px;
+            background-color: rgb(252, 211, 131);
+            text-align: center;
+            line-height: 64px;
+            cursor: pointer;
+            text-decoration: unset;
+            margin-right: 38px;
+        }
+
+    }
+
+}
+
+/* ------------------------------主要內容區塊----------------------------------- */
+main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* ------------------------------頁角-------------------------------------- */
+footer{
+    @include EllipseColor;
+    .FooterFrame{
+        .FooterRow {
+            width: 100%;
+            height: 300px;
+            color: white;
+            font-size: 18px;
+    
+            .FooterRowL{
+                margin-top: 97px;
+                padding-left: 75px;
+
+                img{
+                    width: 66px;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                }
+                .FooterTWDF-Title{
+                    margin-bottom: 9px;
+                }
+            }
+            .FooterRowM{
+                // width: 250px;
+                margin-top: 122px;
+                padding-left: 68px;
+            }
+            .FooterRowR{
+                
+                padding-left: 105px;
+                margin-top: 122px;
+
+            }
+        }
+        .CopyrightRow{
+            color: white;
+            margin-top: 107px;
+            margin-bottom: 55px;
+        }
+    }
+}
+
+/* --------------------------注意事項------------------------------------ */
+/* 高度只是暫定可以自行更動 */
+/* 區塊背景顏色方便辨識 */
+/* 側邊盒子區塊 (content-r-box) 挑整高度,可以改變盒子內間距 */

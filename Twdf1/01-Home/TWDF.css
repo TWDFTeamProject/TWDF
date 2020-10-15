@@ -1,0 +1,862 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+}
+
+header {
+  /*每個圖片各延遲X秒*/
+  /* ------------------------------導覽列---------------------------------------- */
+}
+
+header .BackgroundIMG {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /*當圖片數量增加，影片長度需更改，變為Xs*圖片數量*/
+  -webkit-animation: slider 6s linear forwards infinite;
+          animation: slider 6s linear forwards infinite;
+}
+
+header .BackgroundIMG img {
+  max-width: 100%;
+}
+
+header :nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+header :nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+header :nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+header .navbar {
+  width: 100%;
+  height: 100px;
+}
+
+header .navbar .TWDFLogo {
+  margin: 10px;
+  position: absolute;
+}
+
+header .navbar .NavBtns {
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .NavBtns .NavBtn {
+  color: #cee9e7;
+  text-decoration: unset;
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .navbar .NavBtns .NavBtn .NavIMG {
+  width: 42px;
+  height: 47px;
+  margin-right: 12px;
+}
+
+header .navbar .NavBtns .NavBtn .NavText p {
+  font-size: smaller;
+  font-weight: lighter;
+  margin-bottom: unset;
+}
+
+header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
+  margin-bottom: 4.6px;
+}
+
+header .navbar .NavBtns .NavBtn::before {
+  display: block;
+  content: " ";
+  width: 0%;
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  top: 59px;
+  left: 50%;
+  -webkit-transition: width .5s ease, background-color .5s ease, left .5s ease;
+  transition: width .5s ease, background-color .5s ease, left .5s ease;
+}
+
+header .navbar .NavBtns .NavBtn:hover::before {
+  width: 100%;
+  background: radial-gradient(ellipse, #cc3a00, #2d0d00);
+  left: 0;
+}
+
+header .navbar .NavBtns .NavBtn:first-child {
+  -webkit-animation-name: MyWOW;
+          animation-name: MyWOW;
+  visibility: visible;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes MyWOW {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  82.5% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  87.5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  91.25% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  93.75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes MyWOW {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  82.5% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  87.5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  91.25% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  93.75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+header .navbar #StartBtn {
+  color: black;
+  font-size: 31px;
+  width: 128px;
+  height: 64px;
+  background: #fcd383;
+  text-align: center;
+  line-height: 64px;
+  cursor: pointer;
+  text-decoration: unset;
+  margin-right: 38px;
+}
+
+header .banner {
+  width: 100vw;
+  position: relative;
+  margin-bottom: 940px;
+}
+
+header .banner .content {
+  width: 1154px;
+  height: 720px;
+  border: 12px solid #fbfafc;
+  border-radius: 100.88px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 120px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: unset;
+}
+
+header .banner .content .ContentTop {
+  width: 100%;
+  height: 65px;
+  border-bottom: 12px solid #fbfafc;
+}
+
+header .banner .content .ContentTop .ContentTopPoints {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 52px;
+  margin-top: 18px;
+}
+
+header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
+  width: 23px;
+  height: 20px;
+  border-radius: 9.5px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+header .banner .content .ContentMiddle {
+  color: white;
+  margin-top: 51px;
+  margin-left: 51px;
+}
+
+header .banner .content .ContentBottom {
+  text-align: center;
+  color: white;
+  /* ------搜尋區塊-- */
+}
+
+header .banner .content .ContentBottom .TWDFTitleTop {
+  font-size: 100px;
+  margin-top: 36px;
+}
+
+header .banner .content .ContentBottom .TWDFTitleBottom {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 36px;
+  margin-top: 34px;
+}
+
+header .banner .content .ContentBottom .Searchingbar {
+  width: 545px;
+  height: 43px;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 80px;
+  padding-left: 29px;
+}
+
+header .banner .Scrollpart {
+  position: relative;
+  top: 900px;
+  height: 100px;
+}
+
+header .banner .Scrollpart a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 1;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  padding-top: 40px;
+}
+
+header .banner .Scrollpart a :hover {
+  opacity: .5;
+}
+
+header .banner .Scrollpart a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 22px;
+  height: 36px;
+  margin-left: -11px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .banner .Scrollpart a span::before {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scrollball 2s infinite;
+  animation: scrollball 2s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ------------------------------主要內容區塊----------------------------------- */
+main {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .Section1 {
+  margin-top: 220px;
+}
+
+main .Section1 .OurTeam .OurTeamText {
+  color: white;
+  padding-left: 44px;
+  margin-right: 210px;
+}
+
+main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
+  font-size: 32px;
+  padding-left: 7px;
+  margin-bottom: 78px;
+}
+
+main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
+  font-size: 18px;
+}
+
+main .Section1 .OurTeam .OurTeamText .OurTeamTextContent p {
+  margin-bottom: 6px;
+}
+
+main .Section1 .OurTeam .OurTeamPCImg {
+  width: 421px;
+}
+
+main .Section1 .TeamMemberImg {
+  margin-top: 101px;
+}
+
+main .Section1 .TeamMemberImg .col .TeamMemberImgText {
+  margin-top: 19px;
+  color: white;
+}
+
+main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
+  font-size: 22px;
+  margin-left: 33px;
+  margin-bottom: 17px;
+}
+
+main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
+  font-size: 16px;
+  margin-left: 19px;
+}
+
+main .Section1 .TWDF-Intro {
+  margin-top: 191px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
+  width: 523px;
+  margin-right: 54px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+  color: white;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
+  font-size: 32px;
+  margin-left: 12px;
+  margin-bottom: 66px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
+  font-size: 18px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan {
+  margin-top: 147px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG {
+  width: 560px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS {
+  /*每個圖片各延遲X秒*/
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
+  -webkit-animation: slider2 5s linear forwards infinite;
+          animation: slider2 5s linear forwards infinite;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
+  max-width: 100%;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(3) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(4) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
+  color: white;
+  padding-right: 0px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
+  font-size: 32px;
+  margin-left: 12px;
+  margin-bottom: 74px;
+  margin-top: 58px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
+  font-size: 18px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent p {
+  margin-bottom: 8px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroStart {
+  margin-top: 132px;
+  margin-bottom: 63px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartText {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartText p {
+  color: white;
+  font-size: 24px;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
+  width: 168px;
+  height: 73px;
+  line-height: 73px;
+  color: black;
+  font-weight: bolder;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #fcd383;
+  font-size: 31px;
+  text-align: center;
+  text-decoration: unset;
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
+    width: 168px;
+  }
+}
+
+main .Section2 {
+  background-color: #005f99;
+  width: 100%;
+}
+
+main .Section2 .ShowCases {
+  margin-top: 96px;
+  margin-bottom: 164px;
+}
+
+main .Section2 .ShowCases .ShowCasesText {
+  color: white;
+}
+
+main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleDeco {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+  width: 15px;
+  height: 91px;
+  margin-right: 14px;
+}
+
+main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitleDetails {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+main .Section2 .ShowCases .ShowCasesReadMore a {
+  color: white;
+  font-weight: bolder;
+  margin-right: 42px;
+  text-decoration: none;
+}
+
+main .Section2 .ShowCases .ShowCasesIMG .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-1 {
+  width: 272px;
+  height: 362px;
+  -webkit-box-shadow: -30px 26px 0px 0px #094868;
+          box-shadow: -30px 26px 0px 0px #094868;
+}
+
+main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-2 {
+  width: 326px;
+  height: 440px;
+  -webkit-box-shadow: -30px 26px 0px 0px #094868;
+          box-shadow: -30px 26px 0px 0px #094868;
+}
+
+main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-3 {
+  width: 272px;
+  height: 362px;
+  -webkit-box-shadow: -30px 26px 0px 0px #094868;
+          box-shadow: -30px 26px 0px 0px #094868;
+}
+
+main .Section3 {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+  width: 100%;
+}
+
+main .Section3 .Section3Background {
+  background-color: white;
+  max-width: 1140px;
+  margin: auto;
+}
+
+main .Section3 .Section3Background .TabExplain {
+  padding-top: 101px;
+  padding-bottom: 191px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainTitleArea {
+  margin-left: 95px;
+  margin-bottom: 120px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleDeco {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+  width: 15px;
+  height: 91px;
+  margin-right: 14px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleBlock .TabExplainTitle {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleBlock .TabExplainTitleDetails {
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea {
+  margin: 0 87px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 92px;
+  width: 100%;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .first-child {
+  margin-right: 83px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainblock:nth-child(3) {
+  margin-right: 83px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG {
+  margin-right: 22px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG img {
+  width: 149px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockTitle {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 23px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockDetails {
+  width: 323px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea {
+  margin-left: 95px;
+  margin-bottom: 86px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea .ToBeAPartTitleDeco {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+  width: 15px;
+  height: 62px;
+  margin-right: 14px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea .ToBeAPartTitleBlock .ToBeAPartTitle {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep {
+  position: relative;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepBackLine {
+  width: 12px;
+  height: calc(100% - 138px);
+  background-color: rgba(102, 132, 163, 0.5);
+  margin-left: 303px;
+  position: absolute;
+  z-index: 0;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent {
+  padding-top: 39px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 135px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepNumber {
+  width: 112px;
+  height: 112px;
+  border: 10px solid #c6edff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 92px;
+  font-size: 44px;
+  margin-right: 33px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLinePoint {
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  background-color: rgba(0, 160, 218, 0.5);
+  margin-right: 34px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 15px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo img {
+  width: 100%;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText .ToBeAPartStepTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepDetails {
+  min-height: 75px;
+  margin-top: 10px;
+  margin-left: 380px;
+  font-size: 22px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
+  margin-top: 109px;
+  padding-bottom: 244px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPartGetStartText {
+  font-size: 32px;
+}
+
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn {
+  width: 224px;
+  height: 97px;
+  line-height: 97px;
+  color: #f4f7f9;
+  background: black;
+  text-decoration: unset;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 44px;
+}
+
+/* ------------------------------頁角-------------------------------------- */
+footer .FooterFrame .FooterRow {
+  width: 100%;
+  height: 300px;
+  color: white;
+  font-size: 18px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL {
+  margin-top: 97px;
+  padding-left: 75px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL img {
+  width: 66px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title {
+  margin-bottom: 9px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowM {
+  margin-top: 122px;
+  padding-left: 68px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowR {
+  padding-left: 105px;
+  margin-top: 122px;
+}
+
+footer .FooterFrame .CopyrightRow {
+  color: white;
+  margin-top: 107px;
+  margin-bottom: 55px;
+}
+
+/* --------------------------注意事項------------------------------------ */
+/* 高度只是暫定可以自行更動 */
+/* 區塊背景顏色方便辨識 */
+/* 側邊盒子區塊 (content-r-box) 挑整高度,可以改變盒子內間距 */
+/*# sourceMappingURL=TWDF.css.map */

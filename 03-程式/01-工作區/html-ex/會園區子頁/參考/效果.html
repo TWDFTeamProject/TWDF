@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #demo {
+            background: #000;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo" onclick="javascript:myFunction();"></div>
+
+
+    <script>
+        function myFunction() {
+            var e = document.getElementById("demo");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(0, 0, 0)") {
+                document.getElementById("demo").style.background = "#ff77ee";
+            } else {
+                document.getElementById("demo").style.background = "#000";
+            }
+        }
+    </script>
+</body>
+
+</html>

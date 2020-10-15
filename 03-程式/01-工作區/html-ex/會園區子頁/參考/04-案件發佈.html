@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        /* ------------------------------導覽列---------------------------------------- */
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: blueviolet;
+        }
+
+        /* ------------------------------主要內容區塊----------------------------------- */
+
+
+        .content {
+            width: 1140px;
+            height: 3000px;
+            background-color: burlywood;
+            margin: auto;
+            display: flex;
+        }
+
+
+        /* ------------------主要內容左邊區塊----------------------- */
+
+
+
+        .content-l {
+            width: 80%;
+            height: 100%;
+            background-color: cornflowerblue;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* ------搜尋區塊-- */
+        .Searchbox {
+
+            width: 100%;
+            height: 200px;
+            background-color: black;
+        }
+
+        /* ------分頁按鈕列-- */
+        .Paginationbox {
+
+            width: 100%;
+            height: 50px;
+            background-color: rgb(36, 170, 211);
+        }
+
+        /* ------主要內容區塊-- */
+        .Mainbox {
+
+            width: 100%;
+            height: 2640px;
+            background-color: rgb(209, 209, 245);
+        }
+
+
+        /* ------------------主要內容右邊區塊----------------------- */
+
+        .content-r {
+            width: 20%;
+            height: 100%;
+            background-color: rgb(220, 230, 248);
+        }
+
+        /* ------側邊盒子區塊-- */
+        .content-r-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: white;
+        }
+
+        /* ------發布區塊-- */
+        .Releasebox {
+            width: 100%;
+            height: 400px;
+            background-color: rgb(236, 187, 112);
+        }
+
+        /* ------側邊盒子-- */
+        .xxxbox {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(228, 135, 154);
+        }
+
+
+        /* ------------------------------頁角-------------------------------------- */
+        .footer {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(231, 21, 49);
+        }
+
+        /* --------------------------注意事項------------------------------------ */
+        /* 高度只是暫定可以自行更動 */
+        /* 區塊背景顏色方便辨識 */
+        /* 側邊盒子區塊挑整高度,可以改變盒子內間距 */
+        /* 側邊盒子 xxx可以命名,記得要在創造它的Class */
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ---------------------導覽列----------------------- -->
+    <div class="navbar"></div>
+    <!-- ---------------------內容----------------------- -->
+
+    <div class="content">
+        <div class="content-l">
+            <div class="Searchbox">searchbox
+                <div class="container d-flex mb-3">
+                    <input class="form-control" id="anythingSearch" type="text" placeholder="關鍵字搜尋">
+                    <button class="form-control col-2">解決</button>
+                    <button class="form-control col-2">未解決</button>
+                </div>
+
+                <div class="container d-flex mb-3" data-role="tagsinput">
+                    <button class=" col-2">CSS</button>
+                    <button class=" col-2">Vue.js</button>
+                    <button class=" col-2">PHP</button>
+                    <button class=" col-2">Animation</button>
+                    <button class=" col-2">SSL</button>
+                    <button class=" col-2">SEO</button>
+                </div>
+                <div class="container d-flex mb-3">
+                    <div class="dropdown mr-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            預算金額
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">1K以下</a>
+                            <a class="dropdown-item" href="#">1K~10K</a>
+                            <a class="dropdown-item" href="#">10k以上</a>
+                        </div>
+                    </div>
+                    <div class="dropdown mr-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            最新發佈
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">1日內</a>
+                            <a class="dropdown-item" href="#">3日內</a>
+                            <a class="dropdown-item" href="#">7日內</a>
+                        </div>
+                    </div>
+                    <div class="dropdown mr-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            剩餘時間
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">1日內</a>
+                            <a class="dropdown-item" href="#">3日內</a>
+                            <a class="dropdown-item" href="#">7日內</a>
+                        </div>
+                    </div>
+                    <div class="dropdown mr-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            技術類型
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">前端</a>
+                            <a class="dropdown-item" href="#">後端</a>
+                            <a class="dropdown-item" href="#">網管</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="Paginationbox">
+                <div class="container">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="Mainbox">
+                <div class="container">
+
+
+                    <!-- 案件列表單 -->
+                    <div class="case_published_container row d-flex m-3 flex-md-wrap">
+                        <div class="card border-0 col-md-2">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg"
+                                class="rounded-circle m-3" height="70px" width="70px" alt="avatar">
+                        </div>
+                        <div class="card border-0 col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">WORDPRESS 網站程式碼優化以及商品頁面排版</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">個人暱稱-帳號</h6>
+                                <p class="card-text overflow-hidden" style="height: 50px">
+                                    1.案件說明：目前需求WORDPRESS網站程式碼優化，以便提升速度，以及網站商品頁面的排版設計優化
+                                    2.參考範例網址：https://www.vincentsworld.com.tw/SalePage/Index/6582379 3.注意事項：細節詳談
+                                </p>
+                                <span>2天前更新</span>
+                            </div>
+                        </div>
+                        <div class="card border-0 col-md-3">
+                            <div class="card-body">
+                                <h6 class="card-text">瀏覽人數:</h6>
+                                <h6 class="card-text">報價人數:</h6>
+                                <p></p>
+                                <h6 class="card-text">預算金額:5K~10K</h6>
+                                <h6 class="card-text">發佈時間:</h6>
+                                <h6 class="card-text">結案期限:</h6>
+                                <p></p>
+                                <div class="button_group">
+                                    <button>儲存</button>
+                                    <button>追蹤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case_published_container row d-flex m-3 flex-md-wrap">
+                        <div class="card border-0 col-md-2">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg"
+                                class="rounded-circle m-3" height="70px" width="70px" alt="avatar">
+                        </div>
+                        <div class="card border-0 col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">WORDPRESS 網站程式碼優化以及商品頁面排版</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">個人暱稱-帳號</h6>
+                                <p class="card-text overflow-hidden" style="height: 50px">
+                                    1.案件說明：目前需求WORDPRESS網站程式碼優化，以便提升速度，以及網站商品頁面的排版設計優化
+                                    2.參考範例網址：https://www.vincentsworld.com.tw/SalePage/Index/6582379 3.注意事項：細節詳談
+                                </p>
+                                <span>2天前更新</span>
+                            </div>
+                        </div>
+                        <div class="card border-0 col-md-3">
+                            <div class="card-body">
+                                <h6 class="card-text">瀏覽人數:</h6>
+                                <h6 class="card-text">報價人數:</h6>
+                                <p></p>
+                                <h6 class="card-text">預算金額:5K~10K</h6>
+                                <h6 class="card-text">發佈時間:</h6>
+                                <h6 class="card-text">結案期限:</h6>
+                                <p></p>
+                                <div class="button_group">
+                                    <button>儲存</button>
+                                    <button>追蹤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case_published_container row d-flex m-3 flex-md-wrap">
+                        <div class="card border-0 col-md-2">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg"
+                                class="rounded-circle m-3" height="70px" width="70px" alt="avatar">
+                        </div>
+                        <div class="card border-0 col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">WORDPRESS 網站程式碼優化以及商品頁面排版</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">個人暱稱-帳號</h6>
+                                <p class="card-text overflow-hidden" style="height: 50px">
+                                    1.案件說明：目前需求WORDPRESS網站程式碼優化，以便提升速度，以及網站商品頁面的排版設計優化
+                                    2.參考範例網址：https://www.vincentsworld.com.tw/SalePage/Index/6582379 3.注意事項：細節詳談
+                                </p>
+                                <span>2天前更新</span>
+                            </div>
+                        </div>
+                        <div class="card border-0 col-md-3">
+                            <div class="card-body">
+                                <h6 class="card-text">瀏覽人數:</h6>
+                                <h6 class="card-text">報價人數:</h6>
+                                <p></p>
+                                <h6 class="card-text">預算金額:5K~10K</h6>
+                                <h6 class="card-text">發佈時間:</h6>
+                                <h6 class="card-text">結案期限:</h6>
+                                <p></p>
+                                <div class="button_group">
+                                    <button>儲存</button>
+                                    <button>追蹤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 案件列表單底部 -->
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="Paginationbox">
+                <div class="container">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="content-r">
+            <div class="content-r-box">
+                <div class="Releasebox">
+                    <div class="d-flex flex-column bd-highlight mb-3">
+                        <H3 class="text-center">案件金額TOP</H3>
+                        <div class="p-2 bd-highlight">CSS源碼編問題 預算5K~10K</div>
+                        <div class="p-2 bd-highlight">Flex item 2</div>
+                        <div class="p-2 bd-highlight">Flex item 3</div>
+                    </div>
+                </div>
+                <div class="xxxbox">
+                    <div class="d-flex flex-column bd-highlight mb-3">
+                        <H3 class="text-center">案件金額TOP</H3>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Cras justo odio
+                                <span class="badge badge-primary badge-pill">14</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Dapibus ac facilisis in
+                                <span class="badge badge-primary badge-pill">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Morbi leo risus
+                                <span class="badge badge-primary badge-pill">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xxxbox"></div>
+                <div class="xxxbox"></div>
+                <div class="xxxbox"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ---------------------頁角----------------------- -->
+
+    <div class="footer"></div>
+
+
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

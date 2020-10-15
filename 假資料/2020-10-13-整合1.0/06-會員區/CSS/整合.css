@@ -1,0 +1,662 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ------------------------------導覽列---------------------------------------- */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: blueviolet;
+}
+
+/* ------------------------------主要內容區塊----------------------------------- */
+
+
+.content {
+    width: 1140px;
+    /* height: calc(100vh - 90px); */
+    background-color: cornflowerblue;
+    margin: auto;
+    display: flex;
+}
+
+
+/* ------------------主要內容左邊區塊----------------------- */
+
+
+
+.content-l {
+    width: 20%;
+    height: 1000px;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.personalbox {
+    width: 80%;
+    height: 20%;
+    padding-top: 10PX; /*/需要測試
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.photobox {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(84, 60, 218);
+    margin: auto;
+}
+
+.namebox {
+    width: 60%;
+    height: 20%;
+    font-size: 24px;
+    /* background-color: darkgray; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listbox {
+    width: 80%;
+    height: 60%;
+    background-color: rgb(228, 212, 212);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+}
+
+.projectbox {
+    width: 80%;
+    height: 10%;
+    margin: 10px;
+    /* background-color: rgb(110, 98, 216); */
+    margin: auto;
+    font-size: 18px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    /* margin: auto; */
+}
+
+
+
+
+
+/* ------------------主要內容右邊區塊----------------------- */
+
+.content-r {
+    width: 80%;
+    height: auto;
+    /* height: 100%; */
+    background-color: rgb(65, 155, 65);
+    /* display: flex;
+    flex-direction: column; */
+
+}
+
+.project-page {
+    /* width: 100%; */
+    height: 100%;
+    background-color: rgb(163, 184, 163);
+    display: none;
+}
+.pjbox{
+    width: 100%;
+}
+
+
+/* -----------------個人資料主要內容---------------- */
+
+.banner {
+    width: 90%;
+    height: 40%;
+    background-color: darkkhaki;
+    margin: auto;
+    position: relative;
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+}
+
+.ba-photo {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(33, 44, 13);
+}
+
+.introduction {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(152, 189, 89);
+}
+
+.ps-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: deeppink;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+
+.shillbox {
+    width: 90%;
+    height: auto;
+    padding: 10px 0px;
+    /* background-color: rgb(211, 63, 13); */
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.sk-title {
+    /* background-color: yellow; */
+    width: 95%;
+    margin: 10px;
+
+}
+
+
+
+.sk-content {
+    width: 95%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+}
+
+
+.skill {
+    background-color: teal;
+    color: white;
+    display: inline;
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+
+}
+
+
+
+.experiencebox {
+    width: 90%;
+    height: auto;
+    /* background-color: rgb(226, 165, 145); */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-content {
+    width: 95%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+
+}
+
+
+/* ------------------------作品區--------------------------------- */
+
+.page-title {
+    width: 80%;
+    height: 70px;
+    /* margin: 20px; */
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.button-bar {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border-bottom: 3px solid black;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+
+}
+
+.button {
+    width: 150px;
+    height: 45px;
+    margin: 20px;
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-work {
+    width: 150px;
+    height: 45px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: crimson; */
+}
+
+.page-button {
+    width: 100%;
+    height: 60px;
+    /* padding-top: 20px; */
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.WK_page {
+    width: 100%;
+    display: none;
+
+}
+
+
+.wordscar-g {
+    width: 100%;
+    /* height: 70%; */
+    /* background-color: rgb(156, 247, 186); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.wordscar {
+    width: 30%;
+    height: 300px;
+    background-color: yellow;
+    box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+
+    margin: 10px;
+}
+
+
+
+/* ----------討論卡片-------------- */
+
+
+
+/* ------------任務卡片-------------------- */
+
+.TK_page {
+    width: 100%;
+    display: none;
+
+}
+
+.taskcar-g {
+    width: 100%;
+    /* height: 70%; */
+    /* background-color: rgb(156, 247, 186); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.taskcarA {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(29, 182, 187);
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.taskcarB {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(163, 187, 29);
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.taskcarC {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(230, 159, 192);
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tk-l {
+    width: 70%;
+    height: 90%;
+    background-color: rgb(225, 241, 241);
+
+}
+
+.tk-title {
+    width: 95%;
+    height: 20%;
+    margin-left: 10px;
+    /* background-color: rgb(252, 255, 248); */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.tk-bar {
+    width: 100%;
+    height: 15%;
+    /* background-color: darkgray; */
+    display: flex;
+    align-items: center;
+}
+
+.ps-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 10px;
+}
+
+.ps-name {
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-time {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tk-love {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-category {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-label {
+    width: 100%;
+    height: 15%;
+    /* background-color: rgb(252, 165, 165); */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.labelbox {
+    background-color: teal;
+    color: white;
+    display: inline;
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+}
+
+.tk-r {
+    width: 25%;
+    height: 90%;
+    background-color: crimson;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.tk-see {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-money {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-day {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-endday {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tk-buttombar {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tk-favorites {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(255, 175, 175);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.takeit {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(223, 88, 88);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tk-main {
+    width: 100%;
+    height: 50%;
+    padding: 0 10px;
+    font-size: 18px;
+    border-top: 2px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ------側邊盒子區塊-- */
+
+
+
+
+/* ------------------------------頁角-------------------------------------- */
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(231, 21, 49);
+}
+
+
+
+/* --------主題分頁開關顯示---- */
+
+.active_pj_pages {
+    display: block;
+}
+
+.projectbox.active_pj_pages {
+    background-color: rgb(214, 30, 30);
+
+}
+
+/* -------頁面切換------------ */
+.WK_bn_t {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    /* background-color: blueviolet; */
+    border: 3px solid black;
+    /* color: white; */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WK_bn_d {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    /* background-color: blueviolet; */
+    border: 3px solid black;
+    /* color: white; */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.WK_active {
+    display: block;
+}
+
+.WK_bn_t.WK_active {
+    /* background-color: rgb(214, 30, 30); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.WK_bn_d.WK_active {
+    /* background-color: rgb(214, 30, 30); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+/* -------------背景顏色----------------- */
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+/* --------------------------注意事項------------------------------------ */
+/* 高度只是暫定可以自行更動 */
+/* 區塊背景顏色方便辨識 */
+/* 側邊盒子區塊挑整高度,可以改變盒子內間距 */
+/* 側邊盒子 xxx可以命名,記得要在創造它的Class */

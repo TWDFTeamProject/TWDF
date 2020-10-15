@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <style>
+        /* --------------------------作品卡片----------------------------- */
+        /* 作品圖片 */
+        .work {
+            width: 100%;
+            height: 300px;
+            border: 1px solid black;
+            background-color: rgb(166, 178, 180);
+            background-image: url(https://miro.medium.com/max/1024/1*4KFFuTS6919kIhCxuNiZQA.jpeg);
+            background-size: cover;
+
+        }
+
+        /* 作者列 */
+        .worker {
+            width: 100%;
+            height: 15%;
+            /* background-color: rgb(168, 233, 245); */
+            padding-left: 10px;
+            padding-top: 5px;
+            display: flex;
+
+        }
+
+        /* 大頭照 */
+        .rounded-circle {
+            width: 55px;
+            height: 55px;
+            background-color: rgb(78, 124, 133);
+        }
+
+        /* 作者姓名 */
+        .name {
+            font-size: 16px;
+            margin: auto 20px;
+        }
+
+        /* 評價 */
+        .comment {
+            width: 100%;
+            height: 8%;
+            /* background-color: rgb(103, 187, 82); */
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 5px;
+
+        }
+
+        span {
+            border-left: black solid 1px;
+            border-right: black solid 1px;
+            padding: 0 5px;
+        }
+
+        /* 觀看人數 */
+        .people {
+            width: 100%;
+            height: 6%;
+            /* background-color: rgb(55, 23, 107); */
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 5px;
+            color: grey;
+            font-size: 14px;
+
+        }
+
+        /* 上傳日期 */
+        .date {
+            width: 100%;
+            height: 6%;
+            /* background-color: rgb(78, 124, 133); */
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 5px;
+            color: grey;
+            font-size: 14px;
+
+        }
+
+        /* tag */
+        .tag-group {
+            width: 100%;
+            height: 6%;
+            /* background-color: rgb(177, 164, 105); */
+            display: flex;
+            padding-left: 10px;
+
+        }
+
+        /* tagicon */
+        .fa-hashtag {
+            margin: auto;
+        }
+
+        .tag {
+            width: 15%;
+            border: black solid 1px;
+            margin: 0 5px;
+        }
+
+/* --------------------------作品卡片----------------------------- */
+    </style>
+</head>
+
+<body>
+
+
+    <div class="case-group">
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-4 col-md-6">
+                    <div class="case  text-center py-2 mb-lg-3 mb-md-3 ">
+                        <div class="work"></div>
+                        <div class="worker">
+                            <div class="headshot rounded-circle">
+                            </div>
+                            <div class="name">妮艾德-Monica</div>
+                        </div>
+                        <div class="comment">
+                            90筆作品
+                            <span>78則評價</span>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="people">點閱人數(554)</div>
+                        <div class="date">發佈日期 2020.09.30</div>
+                        <div class="tag-group">
+                            <i class="fas fa-hashtag"></i>
+                            <div class="tag">設計</div>
+                            <div class="tag">工程</div>
+                            <div class="tag">行銷</div>
+                            <div class="tag">資安</div>
+                            <div class="tag">企劃</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<!-- ---------------------CDN----------------------- -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+crossorigin="anonymous"></script>
+</body>
+
+</html>

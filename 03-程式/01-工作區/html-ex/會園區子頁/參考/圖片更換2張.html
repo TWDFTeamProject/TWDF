@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img width="500" src="img/1.jpg">
+
+    <script>
+        var isometric_img_1 ='img/1.jpg';
+        var isometric_img_2 ='img/2.jpg';
+        var isometric_img_3 ='img/3.jpg';
+        var img = document.querySelector('img');
+        var img_src = img.getAttribute('src');
+
+        img.onclick=function(){
+            //兩張圖片更換
+            var img_src = img.getAttribute('src');
+            if(img_src == isometric_img_1){
+                img.setAttribute('src',isometric_img_2);
+            }
+            else{
+                img.setAttribute('src',isometric_img_1);
+            }
+
+            // 三張圖片更換
+            // // 重點 每次執行先取得當前路徑
+            // var img_src = img.getAttribute('src');
+            
+            // // 判斷當前路徑
+            // if(img_src == isometric_img_1){
+                
+            //     img.setAttribute('src',isometric_img_2);
+            // }
+            // else if(img_src == isometric_img_2){
+            //     img.setAttribute('src',isometric_img_3);
+            // }
+            // else{
+            //     img.setAttribute('src',isometric_img_1);
+            // }
+                
+            
+            
+
+
+            
+
+        }
+
+    </script>
+</body>
+</html>

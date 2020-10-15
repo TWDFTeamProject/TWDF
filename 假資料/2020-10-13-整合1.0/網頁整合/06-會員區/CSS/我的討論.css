@@ -1,0 +1,268 @@
+/* ------------------------討論卡片區--------------------------------- */
+
+.page-title {
+    width: 80%;
+    height: 70px;
+    margin: 20px;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.button-bar {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border-bottom: 3px solid black;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+
+}
+
+.button {
+    width: 150px;
+    height: 45px;
+    margin: 20px;
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-work {
+    width: 150px;
+    height: 45px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: crimson; */
+}
+
+.page-button {
+    width: 100%;
+    height: 60px;
+    /* padding-top: 20px; */
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.QT_page {
+    width: 100%;
+    display: none;
+
+}
+
+.wordscar-g {
+    width: 100%;
+    /* height: 70%; */
+    /* background-color: rgb(156, 247, 186); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+
+.questioncarA{
+    width: 90%;
+    height: 200px;
+    background-color: rgb(29, 182, 187);
+    box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.questioncarB{
+    width: 90%;
+    height: 200px;
+    background-color: rgb(163, 187, 29);
+    box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.questioncarC{
+    width: 90%;
+    height: 200px;
+    background-color: rgb(230, 159, 192);
+    box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.qt-l{
+    width: 70%;
+    height: 80%;
+    background-color: rgb(225, 241, 241);
+}
+.qt-bar{
+    width: 100%;
+    height: 30%;
+    /* background-color: darkgray; */
+    display: flex;
+    align-items: center;
+}
+.ps-photo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 10px;
+}
+.ps-name{
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qt-time{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qt-see{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qt-love{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qt-category{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qt-title{
+    width: 100%;
+    height: 45%;
+    margin-left: 10px;
+    /* background-color: rgb(252, 255, 248); */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.qt-label{
+    width: 100%;
+    height: 25%;
+    /* background-color: rgb(252, 165, 165); */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.labelbox{
+    background-color: teal;
+    color: white;
+    display: inline;
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 1px rgba(20%,20%,40%,0.5);
+}
+.qt-r{
+    width: 25%;
+    height: 80%;
+    background-color: crimson;
+}
+
+
+
+/* ------側邊盒子區塊-- */
+
+
+
+
+/* ------------------------------頁角-------------------------------------- */
+.footer {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(231, 21, 49);
+}
+
+/* -------頁面切換------------ */
+.QT_bn_t {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    /* background-color: blueviolet; */
+    border: 3px solid black;
+    /* color: white; */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.QT_bn_d {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    /* background-color: blueviolet; */
+    border: 3px solid black;
+    /* color: white; */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.QT_active {
+    display: block;
+}
+
+.QT_bn_t.QT_active {
+    /* background-color: rgb(214, 30, 30); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.QT_bn_d.QT_active {
+    /* background-color: rgb(214, 30, 30); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
