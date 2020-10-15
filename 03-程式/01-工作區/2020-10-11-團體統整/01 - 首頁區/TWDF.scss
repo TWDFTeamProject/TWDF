@@ -701,6 +701,7 @@ main{
                         @media (max-width: 768px) {
                             font-size: xx-small;
                             margin-left: 8px;
+                            margin-bottom: 0;
                         }
                     }
                 }
@@ -725,6 +726,10 @@ main{
     
                 .TWDF-IntroForumText{
                     color: white;
+
+                    @media (max-width: 768px) {
+                        padding-left: 36px;
+                    }
                     .TWDF-IntroForumTitle{
                         font-size: 32px;
                         margin-left: 12px;
@@ -825,7 +830,7 @@ main{
                     @media (max-width: 575.98px) { 
                         width: 168px;
 
-                     }
+                    }
                 }
             }
         }
@@ -934,6 +939,9 @@ main{
                         display: flex;
                         margin-bottom: 92px;
                         width: 100%;
+                        text-decoration: none;
+                        color: black;
+                        cursor: pointer;
                         // @media (max-width: 1200px) {
                         
                         // }
