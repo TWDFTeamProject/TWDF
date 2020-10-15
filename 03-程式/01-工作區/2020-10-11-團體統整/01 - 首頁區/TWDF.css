@@ -22,10 +22,11 @@ header {
 
 header .BackgroundIMG {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
+  z-index: -1;
   filter: alpha(opacity=0);
   /*當圖片數量增加，影片長度需更改，變為Xs*圖片數量*/
   -webkit-animation: slider 6s linear forwards infinite;
@@ -34,6 +35,12 @@ header .BackgroundIMG {
 
 header .BackgroundIMG img {
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  header .BackgroundIMG img {
+    height: 100vh;
+  }
 }
 
 header :nth-child(1) {
@@ -593,10 +600,29 @@ main .Section1 .OurTeam .OurTeamText {
   }
 }
 
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamText {
+    padding-left: 36px;
+    margin-right: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
   font-size: 32px;
   padding-left: 7px;
   margin-bottom: 78px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
+    width: 100vw;
+    margin-bottom: 39px;
+  }
 }
 
 main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
@@ -611,13 +637,44 @@ main .Section1 .OurTeam .OurTeamPCImg {
   width: 421px;
 }
 
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamPCImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+}
+
 main .Section1 .TeamMemberImg {
   margin-top: 101px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg .col {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
 }
 
 @media (max-width: 1200px) {
   main .Section1 .TeamMemberImg .col img {
     width: 86%;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg .col img {
+    width: 100%;
   }
 }
 
@@ -652,13 +709,35 @@ main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
   }
 }
 
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
+    font-size: xx-small;
+    margin-left: 8px;
+  }
+}
+
 main .Section1 .TWDF-Intro {
   margin-top: 191px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro {
+    margin-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
   width: 523px;
   margin-right: 54px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
+    margin-right: unset;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
@@ -910,6 +989,16 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
   width: 100%;
 }
 
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:hover .TabExplainBlockIMG .img-display {
+  opacity: 0;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:hover .TabExplainBlockIMG .img-hover {
+  display: block;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .first-child {
   margin-right: 83px;
 }
@@ -920,6 +1009,13 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG {
   margin-right: 22px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG .img-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 99;
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG img {
