@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        /* 畫面佔滿版的設定 */
+
+        body {
+            margin: 0;
+        }
+
+        /* 初始化body */
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 控制swiper slide顯示的範圍 */
+
+
+        .banner {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .swiper-slide {
+            background: green;
+        }
+
+
+        .swiper-pagination-bullet {
+            background: blue;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: red;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: red
+        }
+
+        @media(min-width: 1200px) {
+            .d-xl-none {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner d-xl-none">
+        <!-- Swiper -->
+        <div class="swiper-container banner-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img width="100%"
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%"
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%"
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+                        alt="">
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next banner_next"></div>
+            <div class="swiper-button-prev banner_prev"></div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="swiper-container content-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img width="100%"
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%"
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%"
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var banner_swiper = new Swiper('.banner-container', {
+            slidesPerView: 1, //container一次顯示幾張slide
+            // spaceBetween: 30, //Silde之間的距離
+            // effect: 'fade',
+            navigation: {
+                nextEl: '.banner_next',
+                prevEl: '.banner_prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+        var content_swiper = new Swiper('.content-container', {
+            slidesPerView: 1, //container一次顯示幾張slide
+            // spaceBetween: 30, //Silde之間的距離
+            // effect: 'fade',
+            cssMode: true,
+            loop: false, //迴圈
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+
+        banner_swiper.on('slideChange', function () {
+            content_swiper.slideTo(banner_swiper.activeIndex);
+        });
+    </script>
+</body>
+
+</html>
