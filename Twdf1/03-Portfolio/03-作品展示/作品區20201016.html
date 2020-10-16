@@ -478,9 +478,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: -webkit-linear-gradient(225deg, #920162 0, #d4255f 40%, #ec7936 60%, #ffdd9d 100%);
+            background-color: tomato;
+            /* background: -webkit-linear-gradient(225deg, #920162 0, #d4255f 40%, #ec7936 60%, #ffdd9d 100%);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent; */
         }
 
         .pr_c_pinterest {
@@ -876,6 +877,9 @@
         }
         
         .style_form{
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -1409,7 +1413,7 @@ aria-hidden="true">
         <!-- 內容 -->
         <div class="modal-body" style="border: 10px solid white;">
             <div class="PR_main">
-                <div class="pr_main_l">
+                <div class="pr_main_l d-none d-lg-block">
                     <div class="pr_l_side">
                         <div class="pr_s_myphoto"></div>
                         <div class="pr_s_name">
@@ -1434,7 +1438,7 @@ aria-hidden="true">
                                 class="fas fa-heart"></i>收藏</div>
                     </div>
                 </div>
-                <div class="pr_main_r">
+                <div class="pr_main_r mx-auto ">
                     
                     <div class="pr_r_side">
                         <div class="pr_s_work_img">
@@ -1841,12 +1845,12 @@ aria-hidden="true">
      aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
          <!-- 主要內容 -->
-         <div class="modal-content cr_7">
+         <div class="modal-content cr_7 ">
 
              <!-- 內容 -->
              <div class="modal-body" style="border: 10px solid white;">
                  <div class="PR_main">
-                     <div class="pr_main_l">
+                     <div class="pr_main_l d-none d-lg-block">
                          <div class="pr_l_side">
                              <div class="pr_s_myphoto"></div>
                              <div class="pr_s_name">
@@ -1871,7 +1875,7 @@ aria-hidden="true">
                                      class="fas fa-heart"></i>收藏</div>
                          </div>
                      </div>
-                     <div class="pr_main_r">
+                     <div class="pr_main_r mx-auto">
                          <div class="pr_r_side">
                              <div class="pr_s_work_img">
                                  <img class="style_img" src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg" alt="" srcset="">
@@ -2085,14 +2089,14 @@ aria-hidden="true">
     </script>
 
     <!-- 更改圖片路徑為檔名 -->
-    <script>
+    <!-- <script>
         var ipt = document.querySelector(".add_style_input")
         var ipt_val = document.querySelector('#ipt_val')
         ipt.onchange = function(){
             var filename =  ipt.value.replace(/^.*?([^\\\/]*)$/, '$1');
             ipt_val.innerHTML = filename
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
