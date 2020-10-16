@@ -4,17 +4,12 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 
 body {
     margin: auto;
     @include EllipseColor;
 }
-
-// .ChangeBackgroundColor{
-//     background-color: $CircleRedColor !important;
-// }
 
 header{
 
@@ -48,124 +43,6 @@ header{
     :nth-child(3){
         animation-delay: 2s;               
     }
-
-    /* ------------------------------導覽列---------------------------------------- */
-
-    // .navbar {
-    //     width: 100%;
-    //     height: 100px;
-    //     // position: relative;
-
-    //     .TWDFLogo{
-    //         margin: 10px;
-    //         position: absolute;
-    //     }
-        
-    //     .NavBtns{
-    //         font-weight: bolder;
-    //         position: absolute;
-    //         right: 0;
-    //         display: flex;
-    //         flex-wrap: nowrap;
-    //         align-items: center;
-
-    //         .NavBtn{
-    //             color: rgb(206, 233, 231);
-    //             text-decoration: unset;
-    //             margin-right: 50px;
-    //             display: flex;
-    //             align-items: center;
-    //             position: relative;
-                
-    //             .NavIMG{
-    //                 width: 42px;
-    //                 height: 47px;
-    //                 margin-right: 12px;
-    //             }
-    //             .NavText{
-    //                 p{
-    //                     font-size: smaller;
-    //                     font-weight: lighter;
-    //                     margin-bottom: unset;
-    //                 }
-    //                 .NavTextCh{
-    //                     margin-bottom: 4.6px;
-    //                 }
-    //             }
-
-    //             &::before{
-    //                 display: block;
-    //                 content: " ";
-    //                 width: 0%;
-    //                 height: 12px;
-    //                 position: absolute;
-    //                 z-index: 1;
-    //                 top: 59px;
-    //                 left: 50%;
-    //                 transition: width .5s ease, background-color .5s ease, left .5s ease;
-    //             }
-
-    //             &:hover::before{
-    //                 width: 100%;
-    //                 background: radial-gradient(ellipse,rgb(204 , 58, 0),rgb(45, 13, 0));
-    //                 left: 0;
-    //             }
-
-    //             &:first-child{
-                    
-    //                 animation-name: MyWOW;
-    //                 visibility: visible;
-    //                 animation-duration: 3s;
-    //                 animation-delay: 1s;
-    //                 animation-iteration-count: infinite;
-
-    //                 @keyframes MyWOW{
-    //                     0% {
-    //                         transform: scaleX(1);
-    //                     }
-    //                     75% {
-    //                         transform: scaleX(1);
-    //                     }
-    //                     82.5%{
-    //                         transform: scale3d(1.25,.75,1);
-    //                     }
-    //                     85%{
-    //                         transform: scale3d(.75,1.25,1);
-    //                     }
-    //                     87.5%{
-    //                         transform: scale3d(1.15,.85,1);
-    //                     }
-    //                     91.25%{
-    //                         transform: scale3d(.95,1.05,1);
-    //                     }
-    //                     93.75%{
-    //                         transform: scale3d(1.05,.95,1);
-    //                     }
-    //                     100%{
-    //                         transform: scaleX(1);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     #StartBtn{
-    //         color: rgb(0, 0, 0);
-    //         font-size: 31px;
-    //         width: 128px;
-    //         height: 64px;
-    //         background: rgb(252, 211, 131);
-    //         text-align: center;
-    //         line-height: 64px;
-    //         cursor: pointer;
-    //         text-decoration: unset;
-    //         margin-right: 38px;
-    //     }
-
-    // }
-
-
-
 
     /* ---------------------------RWD導覽列---------------------------------------- */
     .navbar {
@@ -345,8 +222,6 @@ header{
 
     .banner{
         width: 100vw;
-        // background-image: url(/Banner/BannerBackground-opacity0.6.png);
-        // background-size: cover;
         position: relative;
         margin-bottom: 940px;
         @media (max-width: 1200px) {
@@ -433,9 +308,6 @@ header{
                 text-align: center;
                 color: white;
 
-                // position: relative; //For Scroll Down
-
-
                 .TWDFTitleTop{
                     font-size: 100px;
                     margin-top: 36px;
@@ -478,59 +350,14 @@ header{
                         margin-top: 54px;
                         padding-left: 29px;
                     }
-
-                    // .SearchingLogo{
-                    //     // width: 21px;
-                    //     position: absolute;
-                    //     right: 10px;
-                    //     // color: white;
-                    // }
                 }
-
-                // .ScrollDown{
-                //     margin-top: 29px;
-                //     display: flex;
-                //     flex-direction: column;
-                //     align-items: center;
-                    
-                //     .ScrollDownLogo{
-                //         width: 22px;
-                //         height: 36px;
-                //         border: 1px solid white;
-                //         border-radius: 11px;
-                //         position: relative;
-
-                //         .ScrollDownLogoCircle{
-                //             width: 5px;
-                //             height: 5px;
-                //             border: 1px solid white;
-                //             border-radius: 50%;
-                //             position: absolute;
-                //             top: 80%;
-                //             left: 50%;
-                //             transform: translate(-50%,-50%);
-                //         }
-                //     }
-                //     .ScrollDownText{
-                //         font-size: xx-small;
-                //         font-weight: lighter;
-                //     }
-                // }
             }
         } 
 
         .Scrollpart{
             position: relative;
             top: 32%;
-            // height: 100px;
-            @media (max-width: 1799.98px) {
-                // top: 860px;
-                // height: 0px;
-            }
-            @media (max-width: 1599.98px) {
-                // top: 900px;
-                // height: 100px;
-            }
+            
             @media (max-width: 1200px) {
                 top: 33%;
             }
@@ -639,7 +466,7 @@ main{
                     margin-bottom: 78px;
                     @media (max-width: 768px) {
                         width: 100vw;
-                        margin-bottom: 39px;
+                        margin-bottom: 36px;
                     }
                 }
                 .OurTeamTextContent{
@@ -733,11 +560,19 @@ main{
                         /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
                         animation: slider3 2s linear forwards infinite;
                         max-width: 100%;
+                        @media (max-width: 768px) {
+                            margin-top: 446px;
+                        }
                         img{
+                            @media (max-width: 991.98px) {
+                                width: 272px;
+                            }
+                            @media (max-width: 768px) {
+                                width: unset;
+                            }
                         }
                     }
                     /*每個圖片各延遲X秒*/
-
                     :nth-child(1){
                         animation-delay: 0s;
                     }
@@ -748,14 +583,22 @@ main{
     
                 .TWDF-IntroForumText{
                     color: white;
-
+                    @media (max-width: 1200px) {
+                        margin-left: 524px;
+                        
+                    }
                     @media (max-width: 768px) {
+                        margin-left: unset;
+                        padding-top: 38px;
                         padding-left: 36px;
                     }
                     .TWDF-IntroForumTitle{
                         font-size: 32px;
                         margin-left: 12px;
                         margin-bottom: 66px;
+                        @media (max-width: 768px) {
+                            margin-bottom: 36px;
+                        }
                     }
                     .TWDF-IntroForumContent{
                         font-size: 18px;
@@ -769,6 +612,11 @@ main{
 
                 .TWDF-IntroYouCanIMG{
                     width: 560px;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: 366px;
+                    }
+                    
                     .TWDF-IntroYouCanIMGS{
                         .BackgroundIMG{
                             display: block;
@@ -783,9 +631,6 @@ main{
                             
                             img{
                                 width: 524px;
-                                // @media (max-width: 1200px) {
-                                //     width: 520px;
-                                // }
                             }
                         }
                         /*每個圖片各延遲X秒*/
@@ -807,8 +652,9 @@ main{
                 .TWDF-IntroYouCanText{
                     color: white;
                     padding-right: 0px;
+
                     @media (max-width: 768px) {
-                        margin-top: 460px;
+                        margin-top: 436px;
                     }
 
                     .TWDF-IntroYouCanTitile{
@@ -816,6 +662,10 @@ main{
                         margin-left: 12px;
                         margin-bottom: 74px;
                         margin-top: 58px;
+                        @media (max-width: 768px) {
+                            margin-top: 38px;
+                            margin-bottom: 36px;
+                        }
                     }
                     .TWDF-IntroYouCanContent{
                         font-size: 18px;
