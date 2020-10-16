@@ -113,22 +113,39 @@
             /* background-color: rgb(241, 167, 167); */
         }
 
-        /* --分頁按鈕列-- */
-        .Paginationbox {
+       /* --分頁按鈕列-- */
+       .Paginationbox {
             width: 100%;
             height: 30px;
             /* background-color: rgb(75, 45, 0); */
             display: flex;
             justify-content: space-around;
-        }
-        
-        .Paginationbox-small {
-            font-size: 24px;
+            margin-bottom: 10px;
+
         }
 
-        .Paginationbox-small:hover {
-            color: rgb(79, 65, 160);
+
+
+
+        .arrow_button {
+            width: 150px;
+            height: 45px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: none;
+            border: 0px;
+            background-color: unset;
+            outline: none;
+
         }
+
+        button:focus {
+            /* outline: 1px dotted; */
+            outline: none;
+        }
+
 
         .page-link{
             border: none;
@@ -414,11 +431,23 @@
 
         <div class="Mainbox">
             <div class="Paginationbox">
-                <div class="Paginationbox-small">最新上傳
-                    <i class="fas fa-sort"></i>
-                </div>
-                <div class="Paginationbox-small">最多點評<i class="fas fa-sort"></i></div>
-                <div class="Paginationbox-small">最高人氣<i class="fas fa-sort"></i></div>
+              
+
+
+                <button class="arrow_button" type="button" id="show_newtime" style="font-size: 18px;">
+                    <div id="newtime_t" style="display:block">最新上傳<i class="fas fa-sort-up"></i></div>
+                    <div id="newtime_d" style="display:none">最新上傳<i class="fas fa-caret-down"></i></div>
+                </button>
+
+                <button class="arrow_button" type="button" id="show_browse" style="font-size: 18px;">
+                    <div id="browse_t" style="display:block">最多點評<i class="fas fa-sort-up"></i></div>
+                    <div id="browse_d" style="display:none">最多點評<i class="fas fa-caret-down"></i></div>
+                </button>
+
+                <button class="arrow_button" type="button" id="show_favorites" style="font-size: 18px;">
+                    <div id="favorites_t" style="display:block">最高人氣<i class="fas fa-sort-up"></i></div>
+                    <div id="favorites_d" style="display:none">最高人氣<i class="fas fa-caret-down"></i></div>
+                </button>
             </div>
              <!-- 主旨下的底線 -->
         <div class="underline"></div>
@@ -883,6 +912,72 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+      <!-- ---------點擊切換Div-------------- -->
+      <script>
+        //  ------------最新上傳切換-------------
+        function show_newtime(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_newtime");
+        sh.onclick = function () {
+            var t = document.getElementById("newtime_t");
+            var d = document.getElementById("newtime_d");
+            show_newtime(t);
+            show_newtime(d);
+            return false;
+        }
+        //  ------------最多點評切換-------------
+        function show_browse(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_browse");
+        sh.onclick = function () {
+            var t = document.getElementById("browse_t");
+            var d = document.getElementById("browse_d");
+            show_browse(t);
+            show_browse(d);
+            return false;
+        }
+        //  ------------最高人氣切換-------------
+        function show_favorites(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_favorites");
+        sh.onclick = function () {
+            var t = document.getElementById("favorites_t");
+            var d = document.getElementById("favorites_d");
+            show_favorites(t);
+            show_favorites(d);
+            return false;
+        }
+    </script>
 </body>
 
 </html>
