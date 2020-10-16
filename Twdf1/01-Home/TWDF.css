@@ -981,6 +981,7 @@ main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
 
 main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn:active {
   background: radial-gradient(circle, #661d00, black);
+  color: white;
 }
 
 main .Section2 {
