@@ -51,7 +51,6 @@
 
         /* ------------------主要內容區塊----------------------- */
         .mainbox {
-            height: 90%;
             display: flex;
             padding-top: 20px;
 
@@ -59,10 +58,13 @@
 
         /* ------滾動主題區區塊列-- */
         .mainbox-l {
-            width: 20%;
             height: auto;
             color: white;
-            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -o-radial-gradient(circle, #002f55, #001027);
+            background: -moz-radial-gradient(circle, #002f55, #001027);
+            background: radial-gradient(circle, #002f55, #001027);
+            position: relative;
         }
 
         .title {
@@ -74,10 +76,17 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
+        .title:hover{
+            /* background-color: lightgrey; */
+            background-image: url(/05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
         /* ------主題區區塊內容列-- */
         .mainbox-r {
-            width: 80%;
+            width: 100%;
             background-color: #FFFFFF;
         }
 
@@ -107,6 +116,16 @@
 
         }
 
+        .drop_up_menu {
+            width: 100%;
+            height: 80px;
+            background-image: url(/05-pic/藍色底色背景_工作區域\ 1.jpg);
+            z-index: 1000;
+            position: fixed;
+            bottom: 0ch;
+            color: lightcyan;
+        }
+
 
         /* ------------------------------頁角-------------------------------------- */
         .footer {
@@ -115,6 +134,124 @@
         }
 
 
+
+
+/* -------網路套件----------- */
+        /* ------背景動畫---- */
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            /*氣泡預設大小*/
+            background: rgba(255, 255, 255, 0.336);
+            /*給氣泡20%的透明度*/
+            animation: animate 20s linear infinite;
+            animation-direction:alternate-reverse;
+            /* animate = 動畫名稱 */
+            /* 25s = 動畫時間25秒 */
+            /* linear = 動畫開始至結束速度一致 */
+            /* infinite = 動畫無限次播放 */
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            /* background-color: brown; */
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 8s;
+            animation-duration: 4s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                /* translateY = Y軸位置 */
+                /* rotate = 旋轉角度 */
+                opacity: 1;
+                /* 透明度的參數可設定0.0(透明) ~ 1.0  (不透明) */
+                border-radius: 0;
+                /* 圓角 */
+            }
+
+            100% {
+                transform: translateY(-300vh) rotate(720deg);
+                /* 氣泡由下往上移動至-1000px，旋轉720度 */
+                opacity: 0;
+                border-radius: 50%;
+                /* 產生圓角 */
+            }
+        }
         /* --------------------------注意事項------------------------------------ */
         /* 高度只是暫定可以自行更動 */
         /* 區塊背景顏色方便辨識 */
@@ -229,138 +366,147 @@
     <main>
 
         <section>
-            <!-- ---------------------內容----------------------- -->
-
             <div class="content container-lg mb-3">
                 <div class="sign-in-box row m-0">
-                    <div class="col-3 m-4 container-lg"
+                    <div class="col-md-3 m-4"
                         style="background-image: url(05-pic/資源共享左圖.png); background-size: contain;background-repeat: no-repeat;">
                     </div>
-                    <div class="col-3 m-4 p-2" style="color:white;">
+                    <div class="col-md-4 mt-3 mb-3" style="color:white;">
                         <h2>共享學習資源</h2>
                         </br>
-                        屬於所有程式人的資源共享區</br>
-                        透過看影片、看書讀理論、接著實作練習挑戰自己。</br>
-                        找到適合自己的學習方法</br>
-                        或是在論壇分享你過往的學習經驗</br>
-                        讓我們一起在程式的世界共同成長吧!
+                        共享學習資源區</br>
+                        是屬於所有程式人的學習專區</br>
+                        尋找工具書? 想了解相關資源?想參與實作練習? </br>
+                        輸入關鍵字，開始你的學習之旅
                         </br>
                         </br>
-                        <button style="background-color:#FFD159; border-radius: 10%;">
-                            <h5> Forum</h5>
-                        </button>
+                        <input type="text" placeholder="輸入關鍵字" name="" value="JavaScript">
                     </div>
                     <div class="col" style="background-image:url(05-pic/PIC03_工作區域\ 1.png);background-size: cover;">
+
                     </div>
                 </div>
-                    <div class="mainbox">
-                        <div class="mainbox-l">
-                            <div class="title row align-items-center">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_books.png " height=60 width=60>
-                                </div>
-                                <div id="ebook" class="title-l col-9 font-weight-bold"><span>學院電子書 </br>Ebooks</span>
-                                </div>
+                <div class="mainbox">
+                    
+                    <div class="mainbox-l d-none d-md-block">
+                        <ul class="circles">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="title row align-items-center">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_books.png " height=60 width=60>
                             </div>
-
-                            <div class="mainbox_detail_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C languages</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3 ">
-                                    <img src="05-pic/white_tools.png " height=60 width=60>
-                                </div>
-                                <div id="tools" class="title-l col-9 font-weight-bold"><span>工具套件</br>Tools</span></div>
-                            </div>
-                            <div class="tools_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_videos.png " height=60 width=60>
-                                </div>
-                                <div id="video" class="title-r col-9 font-weight-bold"><span>相關學習視頻 </br>Videos</span>
-                                </div>
-                            </div>
-                            <div class="video_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_con.png" height=60 width=60>
-                                </div>
-                                <div id="forum" class="title-r col-9 font-weight-bold">其他論壇</br>Other Forums</span>
-                                </div>
-                            </div>
-                            <div class="forum_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_info.png " height=60 width=60>
-                                </div>
-
-                                <div id="info" class="title-r col-9 font-weight-bold">其他資源</hr> Others Infor.</span>
-                                </div>
-                            </div>
-                            <div class="info_nodisplay p-2 ml-5">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
+                            <div id="ebook" class="title-l col-9 font-weight-bold"><span>學院電子書 </br>Ebooks</span>
                             </div>
                         </div>
-                        <div class="mainbox-r">
-                            <!-- 這裡是資源共享的學院電子書區塊 -->
-                            <!-- <div class="section p-5" id="mainbox_books">
+
+                        <div class="mainbox_detail_nodisplay p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C languages</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3 ">
+                                <img src="05-pic/white_tools.png " height=60 width=60>
+                            </div>
+                            <div id="tools" class="title-l col-9 font-weight-bold"><span>工具套件</br>Tools</span></div>
+                        </div>
+                        <div class="tools_nodisplay p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_videos.png " height=60 width=60>
+                            </div>
+                            <div id="video" class="title-r col-9 font-weight-bold"><span>相關學習視頻 </br>Videos</span>
+                            </div>
+                        </div>
+                        <div class="video_nodisplay p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_con.png" height=60 width=60>
+                            </div>
+                            <div id="forum" class="title-r col-9 font-weight-bold">其他論壇</br>Other Forums</span>
+                            </div>
+                        </div>
+                        <div class="forum_nodisplay p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_info.png " height=60 width=60>
+                            </div>
+
+                            <div id="info" class="title-r col-9 font-weight-bold">其他資源</hr> Others Infor.</span>
+                            </div>
+                        </div>
+                        <div class="info_nodisplay p-2 ml-5">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+                    </div>
+                    <div class="mainbox-r">
+                        <!-- 這裡是資源共享的學院電子書區塊 -->
+                        <!-- <div class="section p-5" id="mainbox_books">
 
                             <h2>學院電子書 > Assembly </h2>
                             </pr>
@@ -525,7 +671,7 @@
                             </ul>
                         </div>
                         <!-- 這裡是資源共享的工具套件區塊 -->
-                            <!-- <div class="section p-5" id="mainbox_Tools">
+                        <!-- <div class="section p-5" id="mainbox_Tools">
                             <h2>工具套件</h2>
                             </pr>
                             <h3> Programming Tools</h3>
@@ -559,7 +705,7 @@
 
                         </div>
                         <!-- 這裡是資源共享的相關學習視頻區塊 -->
-                            <!-- <div class="section p-5" id="mainbox_Videos">
+                        <!-- <div class="section p-5" id="mainbox_Videos">
                             <h2>相關學習視頻</h2>
                             </pr>
                             <h3> Programming videos</h3>
@@ -680,13 +826,43 @@
                                 </li>
                             </ul> 
                         </div> -->
-                        </div>
                     </div>
                 </div>
             </div>
 
             </div>
         </section>
+        <!-- 手機板導覽列 -->
+        <div class=" drop_up_menu d-md-none row">
+            <div class=" d-flex  col-9">
+                <div class="menu_item align-items-center m-1 ">
+                    <img src="05-pic/white_books.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_tools.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_videos.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_con.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_info.png " height=60 width=60>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="menu_item m-2">
+                    <h5>推薦</h5>
+                </div>
+                <div class="menu_item m-2">
+                    <h5>收藏</h5>
+                </div>
+
+            </div>
+
+
+        </div>
 
     </main>
 
