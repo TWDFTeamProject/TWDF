@@ -14,7 +14,6 @@ body {
 
 header {
   /*每個圖片各延遲X秒*/
-  /* ------------------------------導覽列---------------------------------------- */
   /* ---------------------------RWD導覽列---------------------------------------- */
   /* -------------------------RWD手機導覽列-------------------------------------- */
   /* ---------------------------------------------------------------------------- */
@@ -621,7 +620,7 @@ main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
 @media (max-width: 768px) {
   main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
     width: 100vw;
-    margin-bottom: 39px;
+    margin-bottom: 36px;
   }
 }
 
@@ -757,6 +756,24 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG 
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    margin-top: 446px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
+    width: 272px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
+    width: unset;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS :nth-child(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -771,8 +788,16 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
   color: white;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-left: 524px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-left: unset;
+    padding-top: 38px;
     padding-left: 36px;
   }
 }
@@ -781,6 +806,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForu
   font-size: 32px;
   margin-left: 12px;
   margin-bottom: 66px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
+    margin-bottom: 36px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
@@ -793,6 +824,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan {
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG {
   width: 560px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG {
+    margin-bottom: 366px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS {
@@ -843,7 +880,7 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
 
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
-    margin-top: 460px;
+    margin-top: 436px;
   }
 }
 
@@ -852,6 +889,13 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYo
   margin-left: 12px;
   margin-bottom: 74px;
   margin-top: 58px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
+    margin-top: 38px;
+    margin-bottom: 36px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
