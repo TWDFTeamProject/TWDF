@@ -163,16 +163,33 @@ header{
         }
 
         .LogIn{
-            color: black;
-            font-size: 31px;
+            color: white;
+            font-size: 24px;
             width: 128px;
             height: 64px;
-            background-color: rgb(252, 211, 131);
+            padding: 6px 10px ;
             text-align: center;
             line-height: 64px;
+            align-items: center;
             cursor: pointer;
+            display: flex;
             text-decoration: unset;
             margin-right: 38px;
+
+            &:hover{
+                color: yellow;
+                transition: .5s;
+                transform: scale(1.2);
+            }
+            &:active{
+                background: radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0));
+            }
+
+            p{
+                margin-bottom: unset;
+                margin-left: 6px;
+            }
+
             @media (max-width: 1200px) {
                 font-size: 15px;
                 width: 64px;
@@ -180,7 +197,6 @@ header{
                 line-height: 32px;
             }
         }
-
     }
 
     /* -------------------------RWD手機導覽列-------------------------------------- */
@@ -213,6 +229,12 @@ header{
                             flex-wrap: nowrap;
                             justify-content: center;
                         }
+                    }
+                    #MobileStartBtn{
+                        display: flex;
+                        text-decoration: unset;
+                        display: inline
+                        font-size: 28px;
                     }
                 }
             }
@@ -707,6 +729,9 @@ main{
                         width: 168px;
 
                     }
+                    &:active{
+                        background: radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0));
+                    }
                 }
             }
         }
@@ -1059,7 +1084,9 @@ main{
                             height: 68px;
                             line-height: 68px;
                         }
-
+                        &:active{
+                            background: radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0));
+                        }
                     }
                 }
             }
@@ -1167,7 +1194,177 @@ footer{
         }
     }
 
+}
 
+/* ------------------------------Sign In-------------------------------------- */
+
+.modal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header{
+                border-bottom: 0;
+                padding: 1rem 0rem 0rem 1rem;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.781);
+                .close{
+                    color: red;
+                    padding: 1rem 2rem;
+                    margin: -1rem -1rem -1rem auto;
+                    :hover{
+                        color: yellow;
+                    }
+                }
+            }
+            .modal-body{
+                background-color: rgba(0, 0, 0, 0.781);
+                .XX_signin_box{
+                    width: 100%;
+                    padding-bottom: 10px;
+                    height: auto;
+                    /* background-color: blanchedalmond; */
+                    margin: auto;
+                    .XX_account{
+                        font-size: 18px;
+                        padding-top: 10px;
+                        margin-left: 10px;
+                        color: white;
+                        display: flex;
+                        /* justify-content: center; */
+                        align-items: center;
+                        input {
+                            width: 85%;
+                            margin-left: 10px;
+                            /* border: 1px solid black; */
+                            border-radius: 10px;
+                        }
+                    }
+                    .XX_password{
+                        font-size: 18px;
+                        margin-left: 10px;
+                        padding-top: 10px;
+                        margin-top: 30px;
+            
+                        color: white;
+            
+                        display: flex;
+                        /* justify-content: center; */
+                        align-items: center;
+                        input {
+                            width: 85%;
+                            margin-left: 10px;
+                            /* border: 1px solid black; */
+                            border-radius: 10px;
+                        }
+                    }
+                    .XX_but_bar{
+                        /* background-color: brown; */
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                        .XX_bar_remember{
+                            color: white;
+                            :hover{
+                                color: blue;
+                            }
+                        }
+                        .XX_bar_forget{
+                            color: white;
+                            :hover{
+                                color: blue;
+                            }
+                        }
+                        .XX_bar_noaccount{
+                            color: white;
+                            :hover{
+                                color: blue;
+                            }
+                        }
+                        .XX_bar_new{
+                            color: white;
+                            :hover{
+                                color: blue;
+                            }
+                        }
+                    }
+                    .XX_sign_in{
+                        width: 90%;
+                        height: 36px;
+                        letter-spacing: 2px;
+                        background-color: blueviolet;
+                        border-radius: 20px;
+                        margin: auto;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .style_hr_t{
+                        width: 90%;
+                        margin: auto;
+                        margin: 20px;
+                        background-color: white;
+                    }
+                    .XX_other_title{
+                        text-align: center;
+                        color: white;
+                        letter-spacing: 3px;
+                    }
+                    .XX_other_sign_bar{
+                        width: 100%;
+                        height: 70px;
+                        /* background-color: black; */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .XX_sign_fb{
+                            width: 60px;
+                            height: 60px;
+                            background-color: blue;
+                            border-radius: 50%;
+                        }
+                        .XX_sign_google{
+                            width: 60px;
+                            height: 60px;
+                            margin: 0px 30px;
+                            background-color: rgb(255, 153, 0);
+                            border-radius: 50%;
+                        }
+                        .XX_sign_apple{
+                            width: 60px;
+                            height: 60px;
+                            background-color: rgb(255, 0, 0);
+                            border-radius: 50%;
+                        }
+                    }
+                    .style_hr_d{
+                        width: 90%;
+                        margin: auto;
+                        margin-top: 20px;
+                        background-color: white;
+                    }
+                }
+            }
+            .modal-footer{
+                border-top: 0;
+                padding: 0rem 0rem 1rem 1rem;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.781);
+                .XX_precautions{
+                    width: 90%;
+                    color: rgb(255, 209, 209);
+                    margin: auto;
+                    .XX_precautions_title{
+                        text-align: center;
+                        color: rgb(255, 29, 29);
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* --------------------------注意事項------------------------------------ */
