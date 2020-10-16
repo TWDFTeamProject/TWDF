@@ -76,8 +76,14 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-        .title:hover{
+        .title:hover {
             /* background-color: lightgrey; */
+            background-image: url(/05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .menu_item:hover{
             background-image: url(/05-pic/hover按鈕效果-01.jpg);
             background-position: center;
             background-size: cover;
@@ -835,19 +841,19 @@
         <!-- 手機板導覽列 -->
         <div class=" drop_up_menu d-md-none row">
             <div class=" d-flex  col-9">
-                <div class="menu_item align-items-center m-1 ">
+                <div id="phone_ebooks" class="menu_item align-items-center m-1 ">
                     <img src="05-pic/white_books.png " height=60 width=60>
                 </div>
-                <div class="menu_item align-items-center m-1">
+                <div id="phone_tools" class="menu_item align-items-center m-1">
                     <img src="05-pic/white_tools.png " height=60 width=60>
                 </div>
-                <div class="menu_item align-items-center m-1">
+                <div id="phone_videos" class="menu_item align-items-center m-1">
                     <img src="05-pic/white_videos.png " height=60 width=60>
                 </div>
-                <div class="menu_item align-items-center m-1">
+                <div id="phone_con"class="menu_item align-items-center m-1">
                     <img src="05-pic/white_con.png " height=60 width=60>
                 </div>
-                <div class="menu_item align-items-center m-1">
+                <div id="phone_info" class="menu_item align-items-center m-1">
                     <img src="05-pic/white_info.png " height=60 width=60>
                 </div>
             </div>
@@ -922,23 +928,21 @@
 
         ebook.onclick = function () {
             mainbox_detail_nodisplay.classList.toggle("mainbox_detail_nodisplay")
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_books">
+            mainbox_r.innerHTML = 
+            `<div class="section p-5" id="mainbox_books">
 
 <h2>學院電子書 > Assembly </h2>
 </pr>
 <h5> Ebooks > Assembly</h5>
 <ul>
     <li>
-        <a href="https://www.tenlong.com.tw/products/9789862803486">
-            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        <a href="https://www.tenlong.com.tw/products/9789862803486"><h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
         </a>
         本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
     </li>
     <li>
-        <a
-            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
+        <a href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning Assembly Programming</h5>
         </a>
         This book is intended for beginners who would like to learn the basics of Assembly
         Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
