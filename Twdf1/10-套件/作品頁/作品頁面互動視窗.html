@@ -12,6 +12,8 @@
         crossorigin="anonymous" />
 
 
+
+        <!-- --------使用方式--- -->
     <style>
         .portfolio_pag {
             width: 100px;
@@ -166,7 +168,7 @@
             /* background-color: royalblue; */
         }
 
-        #pr_1 {
+        #pr_abc {
             color: black;
         }
 
@@ -470,11 +472,11 @@
 
 <body>
 
-    <!-- 作品集模組--按鈕 -->
-    <div class="portfolio_pag" data-toggle="modal" data-target="#portfolio_pag_1">Hello world</div>
+    <!-- 作品集模組--按鈕 abc -->
+    <div class="portfolio_pag" data-toggle="modal" data-target="#portfolio_pag_abc">Hello world</div>
 
     <!-- 作品集模組--互動視窗 -->
-    <div class="modal fade" id="portfolio_pag_1" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1_Title"
+    <div class="modal fade" id="portfolio_pag_abc" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_abc_Title"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <!-- 主要內容 -->
@@ -504,7 +506,7 @@
 
                                 </div>
                                 <div class="pr_s_connection">聯絡報價</div>
-                                <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                <div class="pr_s_favorite" id="pr_abc" onclick="check_pr_abc();"><i
                                         class="fas fa-heart"></i>收藏</div>
                             </div>
                         </div>
@@ -523,7 +525,7 @@
                                         <div class="style_border_br"></div>
                                         <div class="style_border_mr"></div>
                                         <h5 class="style_inline font_style">作品名稱：</h5>
-                                        <h2 class="style_inline font_style">飛鳥與禪</h2>
+                                        <h2 class="style_inline font_style">abc</h2>
                                     </div>
                                     <hr class="style_hr_d">
                                 </div>
@@ -579,13 +581,13 @@
     <!-- -------------作品點擊收藏模組-------------- -->
 
     <script>
-        function check_pr_1() {
-            var e = document.getElementById("pr_1");
+        function check_pr_abc() {
+            var e = document.getElementById("pr_abc");
             var c = window.getComputedStyle(e).color;
             if (c === "rgb(0, 0, 0)") {
-                document.getElementById("pr_1").style.color = "rgb(221, 51, 39)";
+                document.getElementById("pr_abc").style.color = "rgb(221, 51, 39)";
             } else {
-                document.getElementById("pr_1").style.color = "rgb(0, 0, 0)";
+                document.getElementById("pr_abc").style.color = "rgb(0, 0, 0)";
             }
         }
     </script>
