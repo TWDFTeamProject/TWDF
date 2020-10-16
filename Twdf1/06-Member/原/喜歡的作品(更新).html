@@ -7,15 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- --------fontsome圖形---------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <!-- -----google字體---- -->
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-
-
-
     <style>
         * {
             box-sizing: border-box;
@@ -52,20 +46,14 @@
             margin-left: 40px;
             border-radius: 20px;
             min-height: 100vh;
-            background-color: rgba(255, 0, 0, 0.267);
-            /* background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
             background: -o-radial-gradient(circle, #002f55, #001027);
             background: -moz-radial-gradient(circle, #002f55, #001027);
-            background: radial-gradient(circle, #002f55, #001027); */
+            background: radial-gradient(circle, #002f55, #001027);
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .content-l:hover{
-            background-color: rgb(0, 0, 49);
-            transition: 3s;
-        }
-
 
         .personalbox {
             width: 80%;
@@ -154,19 +142,15 @@
             /* background-color: rgb(50, 206, 50); */
         }
 
-        /* ------------------------作品區大版面--------------------------------- */
+        /* ------------------------作品區--------------------------------- */
 
         .page-title {
-            width: 95%;
+            width: 80%;
             height: 70px;
             margin: 20px;
             display: flex;
             align-items: center;
             padding-left: 10px;
-            box-shadow: -4px -2px 4px 3px rgba(63, 63, 71, 0.5);
-            border: 6px solid rgba(255, 255, 255, 0.5);
-
-
         }
 
         .button-bar {
@@ -176,34 +160,16 @@
             border-bottom: 3px solid black;
             display: flex;
             align-items: center;
+
         }
 
-        .new-work {
+        .button {
             width: 150px;
             height: 45px;
-            margin-left: auto;
+            margin: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .ad_work {
-            display: inline;
-            letter-spacing: 3px;
-            padding: 5px 15px;
-            background-color: black;
-            color: rgb(255, 254, 254);
-            border: 0px;
-            border-radius: 5px;
-
-        }
-
-        .ad_work:hover {
-            border-bottom: 3px solid white;
-            border-right: 3px solid white;
-            background-color: rgb(247, 99, 99);
-            box-shadow: 2px 2px 3px 1px rgba(65, 65, 65, 0.5);
-            transition: 0.5s;
         }
 
         .page-button {
@@ -217,27 +183,13 @@
         .WK_page {
             width: 100%;
             display: none;
-
         }
 
         /* ------------------------------頁角-------------------------------------- */
-
-
-        /* ----------------自己寫套件--------------- */
-        /* ------點擊切換Div---------- */
-        .arrow_button {
-            width: 150px;
-            height: 45px;
-            margin: 20px;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: none;
-            border: 0px;
-            background-color: unset;
-            /* background-color: yellow; */
-            outline: none;
+        .footer {
+            width: 100%;
+            height: 90px;
+            background-color: rgb(231, 21, 49);
         }
 
         /* ----------------分頁按鈕---------------- */
@@ -251,7 +203,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
         }
 
         .WK_bn_t:hover {
@@ -298,6 +249,25 @@
 
         }
 
+        /* --------設定------- */
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+
         /* ------------作品集模組------------- */
         /* ------------作品卡片--------------- */
         .wordscar-g {
@@ -311,8 +281,7 @@
             width: 30%;
             height: 300px;
             padding: 10px;
-            border: 6px solid rgba(255, 255, 255, 0.5);
-            box-shadow: -4px 4px 8px rgba(17, 30, 148, 0.5);
+            box-shadow: -4px 4px 8px rgba(20%, 20%, 40%, 0.5);
             margin: 10px;
             display: flex;
             justify-content: center;
@@ -750,7 +719,6 @@
             background-color: rgb(201, 198, 194);
         }
 
-
         /* -----------顏色------------- */
         .cr_0 {
             color: white;
@@ -840,54 +808,25 @@
         <div class="content-r">
             <div class="project-page">
                 <div class="page-title">
-                    <h1>我的作品區</h1>
+                    <h1>喜歡的作品</h1>
                 </div>
                 <div class="button-bar">
+                    <div class="button">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
 
-                    <button class="arrow_button" type="button" id="show_newtime">
-                        <div id="newtime_t" style="display:block">更新時間 <i class="fas fa-sort-up"></i></div>
-                        <div id="newtime_d" style="display:none">更新時間 <i class="fas fa-caret-down"></i></div>
-                    </button>
-
-                    <button class="arrow_button" type="button" id="show_browse">
-                        <div id="browse_t" style="display:block">留言人數 <i class="fas fa-sort-up"></i></div>
-                        <div id="browse_d" style="display:none">留言人數 <i class="fas fa-caret-down"></i></div>
-                    </button>
-
-                    <button class="arrow_button" type="button" id="show_favorites">
-                        <div id="favorites_t" style="display:block">收藏人數 <i class="fas fa-sort-up"></i></div>
-                        <div id="favorites_d" style="display:none">收藏人數 <i class="fas fa-caret-down"></i></div>
-                    </button>
-                    <div class="new-work">
-                        <!-- Button trigger modal -->
-                        <button class="ad_work" type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#exampleModal">
-                            點擊新增作品
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </div>
                     </div>
+                    <div class="button">最新消息</div>
+                    <div class="button">最多人瀏覽</div>
                 </div>
                 <div class="page-button">
                     <div class="WK_bn_t">1</div>
@@ -896,13 +835,15 @@
                 </div>
                 <div class="WK_page WK_active">
                     <div class="wordscar-g">
-                        <!-- 作品集模組--按鈕0 -->
-                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_0">
+                        <!-- 作品集模組--按鈕1 -->
+                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_1">
                             <div class="div"></div>
-                            <img class="" src="https://lh3.googleusercontent.com/proxy/wK2e2-EmuCv3kzEyH8XmN1S8zAvXyJ3OoMc7hTw-GgZBq7jZ68mI5wZHTGK-XuWZ89tTC03E1DG-VzXVXxrBvWeovXOQwM_-K46T5abJtYLjB6NdB8DwJP6ZAyXAhoLjWI8" alt="">
+                            <img class=""
+                                src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                alt="">
                             <!-- 作品集模組--互動視窗 -->
-                            <div class="modal fade" id="portfolio_pag_0" tabindex="-1" role="dialog"
-                                aria-labelledby="portfolio_pag_0_Title" aria-hidden="true">
+                            <div class="modal fade" id="portfolio_pag_1" tabindex="-1" role="dialog"
+                                aria-labelledby="portfolio_pag_1_Title" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                                     <!-- 主要內容 -->
                                     <div class="modal-content cr_7">
@@ -914,7 +855,7 @@
                                                     <div class="pr_l_side">
                                                         <div class="pr_s_myphoto"></div>
                                                         <div class="pr_s_name">
-                                                            <h3>賴科榜</h3>
+                                                            <h3>Daiel</h3>
                                                         </div>
                                                         <div class="pr_s_community">
                                                             <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
@@ -940,7 +881,9 @@
                                                 <div class="pr_main_r">
                                                     <div class="pr_r_side">
                                                         <div class="pr_s_work_img">
-                                                            <img class="style_img" src="https://lh3.googleusercontent.com/proxy/wK2e2-EmuCv3kzEyH8XmN1S8zAvXyJ3OoMc7hTw-GgZBq7jZ68mI5wZHTGK-XuWZ89tTC03E1DG-VzXVXxrBvWeovXOQwM_-K46T5abJtYLjB6NdB8DwJP6ZAyXAhoLjWI8" alt="" srcset="">
+                                                            <img class="style_img"
+                                                                src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                                                alt="" srcset="">
                                                         </div>
                                                         <div class="pr_w_name_G">
                                                             <hr class="style_hr_t">
@@ -952,7 +895,7 @@
                                                                 <div class="style_border_br"></div>
                                                                 <div class="style_border_mr"></div>
                                                                 <h5 class="style_inline font_style">作品名稱：</h5>
-                                                                <h2 class="style_inline font_style">輸入作品名稱</h2>
+                                                                <h2 class="style_inline font_style">飛鳥與禪</h2>
                                                             </div>
                                                             <hr class="style_hr_d">
                                                         </div>
@@ -973,7 +916,9 @@
                                                                 <div class="style_border_tr"></div>
                                                                 <div class="style_border_br"></div>
                                                                 <div class="style_border_mr"></div>
-                                                                輸入作品內容
+                                                                範例二只設計了上邊框以及下邊框的風格，所以左邊框與右邊框都是沒有顯示的，所以用 css border
+                                                                屬性來設計表格邊框，有寫出來的才會顯示，沒寫出來的邊框預設為
+                                                                none，即不顯示。分別替各個方向設計比較費時，但可以設計出獨具風格的邊框樣式。
                                                             </div>
                                                         </div>
                                                     </div>
@@ -985,6 +930,288 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 作品集模組--按鈕2 -->
+                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_2">
+                            <div class="div"></div>
+                            <img class="" src="https://image.gameapps.hk/images/202002/26/5e998cac78633112.jpg" alt="">
+                            <!-- 作品集模組--互動視窗 -->
+                            <div class="modal fade" id="portfolio_pag_2" tabindex="-1" role="dialog"
+                                aria-labelledby="portfolio_pag_2_Title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                    <!-- 主要內容 -->
+                                    <div class="modal-content cr_7">
+
+                                        <!-- 內容 -->
+                                        <div class="modal-body" style="border: 10px solid white;">
+                                            <div class="PR_main">
+                                                <div class="pr_main_l">
+                                                    <div class="pr_l_side">
+                                                        <div class="pr_s_myphoto"></div>
+                                                        <div class="pr_s_name">
+                                                            <h3>Daiel</h3>
+                                                        </div>
+                                                        <div class="pr_s_community">
+                                                            <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                            <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                            </div>
+                                                            <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pr_s_skill_G">
+                                                            <h3>專長</h3>
+                                                            <div class="pr_s_skill">#平面設計</div>
+                                                            <div class="pr_s_skill">#APP製作</div>
+                                                            <div class="pr_s_skill">#影片剪輯</div>
+                                                            <div class="pr_s_skill">#商業娛樂</div>
+
+
+                                                        </div>
+                                                        <div class="pr_s_connection">聯絡報價</div>
+                                                        <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                                class="fas fa-heart"></i>收藏</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_main_r">
+                                                    <div class="pr_r_side">
+                                                        <div class="pr_s_work_img">
+                                                            <img class="style_img"
+                                                                src="https://image.gameapps.hk/images/202002/26/5e998cac78633112.jpg"
+                                                                alt="" srcset="">
+                                                        </div>
+                                                        <div class="pr_w_name_G">
+                                                            <hr class="style_hr_t">
+                                                            <div class="pr_w_name">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                <h5 class="style_inline font_style">作品名稱：</h5>
+                                                                <h2 class="style_inline font_style">飛鳥與禪</h2>
+                                                            </div>
+                                                            <hr class="style_hr_d">
+                                                        </div>
+                                                        <div class="pr_w_description">
+                                                            <div class="pr_d_title">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                作品說明
+                                                            </div>
+                                                            <div class="pr_w_d_content">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                範例二只設計了上邊框以及下邊框的風格，所以左邊框與右邊框都是沒有顯示的，所以用 css border
+                                                                屬性來設計表格邊框，有寫出來的才會顯示，沒寫出來的邊框預設為
+                                                                none，即不顯示。分別替各個方向設計比較費時，但可以設計出獨具風格的邊框樣式。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 作品集模組--按鈕3 -->
+                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_3">
+                            <div class="div"></div>
+                            <img class="" src="https://lineofficial.sp.blogimg.jp/tw/imgs/5/8/58fb5afc.png" alt="">
+                            <!-- 作品集模組--互動視窗 -->
+                            <div class="modal fade" id="portfolio_pag_3" tabindex="-1" role="dialog"
+                                aria-labelledby="portfolio_pag_3_Title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                    <!-- 主要內容 -->
+                                    <div class="modal-content cr_7">
+
+                                        <!-- 內容 -->
+                                        <div class="modal-body" style="border: 10px solid white;">
+                                            <div class="PR_main">
+                                                <div class="pr_main_l">
+                                                    <div class="pr_l_side">
+                                                        <div class="pr_s_myphoto"></div>
+                                                        <div class="pr_s_name">
+                                                            <h3>Daiel</h3>
+                                                        </div>
+                                                        <div class="pr_s_community">
+                                                            <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                            <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                            </div>
+                                                            <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pr_s_skill_G">
+                                                            <h3>專長</h3>
+                                                            <div class="pr_s_skill">#平面設計</div>
+                                                            <div class="pr_s_skill">#APP製作</div>
+                                                            <div class="pr_s_skill">#影片剪輯</div>
+                                                            <div class="pr_s_skill">#商業娛樂</div>
+
+
+                                                        </div>
+                                                        <div class="pr_s_connection">聯絡報價</div>
+                                                        <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                                class="fas fa-heart"></i>收藏</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_main_r">
+                                                    <div class="pr_r_side">
+                                                        <div class="pr_s_work_img">
+                                                            <img class="style_img"
+                                                                src="https://lineofficial.sp.blogimg.jp/tw/imgs/5/8/58fb5afc.png"
+                                                                alt="" srcset="">
+                                                        </div>
+                                                        <div class="pr_w_name_G">
+                                                            <hr class="style_hr_t">
+                                                            <div class="pr_w_name">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                <h5 class="style_inline font_style">作品名稱：</h5>
+                                                                <h2 class="style_inline font_style">飛鳥與禪</h2>
+                                                            </div>
+                                                            <hr class="style_hr_d">
+                                                        </div>
+                                                        <div class="pr_w_description">
+                                                            <div class="pr_d_title">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                作品說明
+                                                            </div>
+                                                            <div class="pr_w_d_content">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                範例二只設計了上邊框以及下邊框的風格，所以左邊框與右邊框都是沒有顯示的，所以用 css border
+                                                                屬性來設計表格邊框，有寫出來的才會顯示，沒寫出來的邊框預設為
+                                                                none，即不顯示。分別替各個方向設計比較費時，但可以設計出獨具風格的邊框樣式。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 作品集模組--按鈕4 -->
+                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_4">
+                            <div class="div"></div>
+                            <img class=""
+                                src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/121329912_5124718967554131_5209220901485579686_n.jpg?_nc_cat=100&_nc_sid=0debeb&_nc_ohc=x7rTSE1IwBIAX_eX1zK&_nc_ht=scontent-tpe1-1.xx&oh=1da1bb19b5335d176d522b0a27d6ecbe&oe=5FAEB4F0"
+                                alt="">
+                            <!-- 作品集模組--互動視窗 -->
+                            <div class="modal fade" id="portfolio_pag_4" tabindex="-1" role="dialog"
+                                aria-labelledby="portfolio_pag_4_Title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                    <!-- 主要內容 -->
+                                    <div class="modal-content cr_7">
+
+                                        <!-- 內容 -->
+                                        <div class="modal-body" style="border: 10px solid white;">
+                                            <div class="PR_main">
+                                                <div class="pr_main_l">
+                                                    <div class="pr_l_side">
+                                                        <div class="pr_s_myphoto"></div>
+                                                        <div class="pr_s_name">
+                                                            <h3>Daiel</h3>
+                                                        </div>
+                                                        <div class="pr_s_community">
+                                                            <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                            <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                            </div>
+                                                            <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pr_s_skill_G">
+                                                            <h3>專長</h3>
+                                                            <div class="pr_s_skill">#平面設計</div>
+                                                            <div class="pr_s_skill">#APP製作</div>
+                                                            <div class="pr_s_skill">#影片剪輯</div>
+                                                            <div class="pr_s_skill">#商業娛樂</div>
+
+
+                                                        </div>
+                                                        <div class="pr_s_connection">聯絡報價</div>
+                                                        <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                                class="fas fa-heart"></i>收藏</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_main_r">
+                                                    <div class="pr_r_side">
+                                                        <div class="pr_s_work_img">
+                                                            <img class="style_img"
+                                                                src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/121329912_5124718967554131_5209220901485579686_n.jpg?_nc_cat=100&_nc_sid=0debeb&_nc_ohc=x7rTSE1IwBIAX_eX1zK&_nc_ht=scontent-tpe1-1.xx&oh=1da1bb19b5335d176d522b0a27d6ecbe&oe=5FAEB4F0"
+                                                                alt="" srcset="">
+                                                        </div>
+                                                        <div class="pr_w_name_G">
+                                                            <hr class="style_hr_t">
+                                                            <div class="pr_w_name">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                <h5 class="style_inline font_style">作品名稱：</h5>
+                                                                <h2 class="style_inline font_style">飛鳥與禪</h2>
+                                                            </div>
+                                                            <hr class="style_hr_d">
+                                                        </div>
+                                                        <div class="pr_w_description">
+                                                            <div class="pr_d_title">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                作品說明
+                                                            </div>
+                                                            <div class="pr_w_d_content">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                範例二只設計了上邊框以及下邊框的風格，所以左邊框與右邊框都是沒有顯示的，所以用 css border
+                                                                屬性來設計表格邊框，有寫出來的才會顯示，沒寫出來的邊框預設為
+                                                                none，即不顯示。分別替各個方向設計比較費時，但可以設計出獨具風格的邊框樣式。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- 作品集模組--按鈕upphoto -->
                         <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_upphoto">
                             <div class="div"></div>
@@ -1134,7 +1361,7 @@
                                                                 <div class="style_border_br"></div>
                                                                 <div class="style_border_mr"></div>
                                                                 <h5 class="style_inline font_style">作品名稱：</h5>
-                                                                <h2 class="style_inline font_style">輸入作品名稱</h2>
+                                                                <h2 class="style_inline font_style">YYY</h2>
                                                             </div>
                                                             <hr class="style_hr_d">
                                                         </div>
@@ -1155,7 +1382,7 @@
                                                                 <div class="style_border_tr"></div>
                                                                 <div class="style_border_br"></div>
                                                                 <div class="style_border_mr"></div>
-                                                                輸入作品內容
+                                                                ZZZ
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1179,6 +1406,7 @@
 
                     </div>
                 </div>
+
                 <div class="WK_page">
                     <div class="wordscar-g bg-green">
                         <div class="wordscar"></div>
@@ -1187,6 +1415,8 @@
 
                     </div>
                 </div>
+
+
                 <div class="page-button">
                     <div class="WK_bn_d" onclick="page(1)">1</div>
                     <div class="WK_bn_d">2</div>
@@ -1208,65 +1438,6 @@
 
 
     <!-- ----------------------javescript------------------- -->
-
-    <!-- ---------點擊切換Div-------------- -->
-    <script>
-        //  ------------更新時間切換-------------
-        function show_newtime(obj) {
-            if (obj.style.display == 'block') {
-                obj.style.display = 'none';
-            }
-            else {
-                obj.style.display = 'block';
-            }
-        }
-
-        var sh = document.getElementById("show_newtime");
-        sh.onclick = function () {
-            var t = document.getElementById("newtime_t");
-            var d = document.getElementById("newtime_d");
-            show_newtime(t);
-            show_newtime(d);
-            return false;
-        }
-        //  ------------留言人數切換-------------
-        function show_browse(obj) {
-            if (obj.style.display == 'block') {
-                obj.style.display = 'none';
-            }
-            else {
-                obj.style.display = 'block';
-            }
-        }
-
-        var sh = document.getElementById("show_browse");
-        sh.onclick = function () {
-            var t = document.getElementById("browse_t");
-            var d = document.getElementById("browse_d");
-            show_browse(t);
-            show_browse(d);
-            return false;
-        }
-        //  ------------收藏人數切換-------------
-        function show_favorites(obj) {
-            if (obj.style.display == 'block') {
-                obj.style.display = 'none';
-            }
-            else {
-                obj.style.display = 'block';
-            }
-        }
-
-        var sh = document.getElementById("show_favorites");
-        sh.onclick = function () {
-            var t = document.getElementById("favorites_t");
-            var d = document.getElementById("favorites_d");
-            show_favorites(t);
-            show_favorites(d);
-            return false;
-        }
-    </script>
-
     <!-- ---------作品頁面切換------------ -->
     <!-- ----------頁面切換上------------ -->
     <script>
@@ -1343,6 +1514,11 @@
         crossorigin="anonymous"></script>
 
     <script src="/03-程式/01-工作區/html-ex/會園區子頁/統整/JS/我的作品.js"></script>
+    <script>
+         $("#myModal").modal({backdrop:'static',keyboard:false});
+    </script>
+
+    
 </body>
 
 </html>
