@@ -125,7 +125,6 @@ header{
                 }
 
                 &:first-child{
-                    
                     animation-name: MyWOW;
                     visibility: visible;
                     animation-duration: 3s;
@@ -178,8 +177,9 @@ header{
 
             &:hover{
                 color: yellow;
-                transition: .5s;
+                transition: .2s;
                 transform: scale(1.2);
+                border-radius: 15px;
             }
             &:active{
                 background: radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0));
@@ -191,8 +191,8 @@ header{
             }
 
             @media (max-width: 1200px) {
-                font-size: 15px;
-                width: 64px;
+                font-size: 12px;
+                width: 84px;
                 height: 32px;
                 line-height: 32px;
             }
@@ -230,11 +230,14 @@ header{
                             justify-content: center;
                         }
                     }
-                    #MobileStartBtn{
-                        display: flex;
-                        text-decoration: unset;
-                        display: inline
-                        font-size: 28px;
+                }
+                .nav-login-link{
+                    display: flex;
+                    .NavText{
+                        color: white; 
+                        p{
+                            font-size: 9px;
+                        }
                     }
                 }
             }

@@ -264,10 +264,11 @@ header .navbar .LogIn {
 
 header .navbar .LogIn:hover {
   color: yellow;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .2s;
+  transition: .2s;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  border-radius: 15px;
 }
 
 header .navbar .LogIn:active {
@@ -281,8 +282,8 @@ header .navbar .LogIn p {
 
 @media (max-width: 1200px) {
   header .navbar .LogIn {
-    font-size: 15px;
-    width: 64px;
+    font-size: 12px;
+    width: 84px;
     height: 32px;
     line-height: 32px;
   }
@@ -333,11 +334,18 @@ header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link .NavText {
           justify-content: center;
 }
 
-header .navbar-light .navbar-collapse .navbar-nav .nav-item #MobileStartBtn {
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-decoration: unset;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText {
+  color: white;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText p {
+  font-size: 9px;
 }
 
 header .banner {
