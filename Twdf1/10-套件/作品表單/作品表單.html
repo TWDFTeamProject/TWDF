@@ -490,6 +490,8 @@
 
 
         /* -------圖片上傳CSS--------- */
+
+        
         
         .add_photo_img{
             width: 100%;
@@ -519,10 +521,10 @@
 
 <body>
 
-    <!-- 作品集模組--按鈕 -->
+    <!-- 作品集模組--新增按鈕 -->
     <div class="add_portfolio_button" data-toggle="modal" data-target="#add_portfolio_button">新增作品</div>
 
-    <!-- 作品集模組--互動視窗 -->
+    <!-- 作品集模組--新增按鈕互動視窗 -->
     <div class="modal fade" id="add_portfolio_button" tabindex="-1" role="dialog" aria-labelledby="add_portfolio_button_Title"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -558,24 +560,17 @@
                             </div>
                         </div>
                         <div class="pr_main_r">
-                            <div class="pr_w_name">
-                                <div class="style_border_tl"></div>
-                                <div class="style_border_bl"></div>
-                                <div class="style_border_ml"></div>
-                                <div class="style_border_tr"></div>
-                                <div class="style_border_br"></div>
-                                <div class="style_border_mr"></div>
-                                <h5 class="style_inline">作品名稱：</h5>
-                                <input class="add_style_input" type="text">
-                            </div>
+                            
                             <div class="pr_r_side">
                                 <div class="pr_s_work_img">
                                     <!-- -----上傳圖片1------ -->
                                     <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
                                         <input class="add_style_input" type="file" onchange="add_photo_1(this)" add_photo_1="preview_progressbarTW_img"
                                             accept="image/gif, image/jpeg, image/png" />
-                                        <img class="add_photo_img" id="preview_progressbarTW_img" src="#" />
+                                        <img class="add_photo_img" id="preview_progressbarTW_img" src="https://lh3.googleusercontent.com/proxy/NS1hLNjx1c9DuMkPTzoCYEgjzfrp01xwcjvIg3lsLrn2Kqca7Aymath090nWiGgNp_RnLpL-JAht2m27jrJieqKk9Uzz6ENuMH2Np_C-TPMzcrFr99iLa7_9Y3w_vf---ODaWnpnBghyyYUNL_42RdlmpjLinfCIK8Ta-nB5-cR8VJO2TA" />
                                     </form>
+
+                                    <h2 id="ipt_val"></h2>
                                     
                                     <!-- -----上傳圖片2------ -->
                                     <!-- <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
@@ -696,6 +691,14 @@
     </script>
 
 
+    <script>
+        var ipt = document.querySelector(".add_style_input")
+        var ipt_val = document.querySelector('#ipt_val')
+        ipt.onchange = function(){
+            var filename =  ipt.value.replace(/^.*?([^\\\/]*)$/, '$1');
+            ipt_val.innerHTML = filename
+        }
+    </script>
 </body>
 
 </html>
