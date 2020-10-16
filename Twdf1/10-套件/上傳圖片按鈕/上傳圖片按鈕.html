@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box_1{
+            display: flex;
+        }
+        .add_photo_img{
+            width: 300px;
+            margin-top: 20px;
+        }
+        .add_style_input{
+
+        }
+        .style_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <input type="text">
+
+    <!-- 純 JavaScript 版本-->
+
+    <!-- HTML part -->
+    <div class="box_1">
+        <!-- -----上傳圖片1------ -->
+        <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+            <input class="add_style_input" type="file" onchange="add_photo_1(this)" add_photo_1="preview_progressbarTW_img"
+                accept="image/gif, image/jpeg, image/png" />
+            <img class="add_photo_img" id="preview_progressbarTW_img" src="#" />
+        </form>
+
+        <!-- -----上傳圖片2------ -->
+        <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+            <input class="add_style_input" type="file" onchange="add_photo_2(this)" add_photo_2="preview_progressbarTW_img_2"
+                accept="image/gif, image/jpeg, image/png" />
+            <img class="add_photo_img" id="preview_progressbarTW_img_2" src="#" />
+        </form>
+    </div>
+
+    
+
+    <!-- JavaScript 圖片上傳預覽-->
+
+    <script>
+
+        function add_photo_1(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_1 = input.getAttribute("add_photo_1");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_1);
+                    img.setAttribute("src", e.target.result)
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function add_photo_2(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_2 = input.getAttribute("add_photo_2");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_2);
+                    img.setAttribute("src", e.target.result)
+
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

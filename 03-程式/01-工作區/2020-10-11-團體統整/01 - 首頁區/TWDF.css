@@ -14,7 +14,6 @@ body {
 
 header {
   /*每個圖片各延遲X秒*/
-  /* ------------------------------導覽列---------------------------------------- */
   /* ---------------------------RWD導覽列---------------------------------------- */
   /* -------------------------RWD手機導覽列-------------------------------------- */
   /* ---------------------------------------------------------------------------- */
@@ -245,22 +244,46 @@ header .navbar .NavBtns .NavBtn:first-child {
 }
 
 header .navbar .LogIn {
-  color: black;
-  font-size: 31px;
+  color: white;
+  font-size: 24px;
   width: 128px;
   height: 64px;
-  background-color: #fcd383;
+  padding: 6px 10px;
   text-align: center;
   line-height: 64px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: unset;
   margin-right: 38px;
 }
 
+header .navbar .LogIn:hover {
+  color: yellow;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-radius: 15px;
+}
+
+header .navbar .LogIn:active {
+  background: radial-gradient(circle, #661d00, black);
+}
+
+header .navbar .LogIn p {
+  margin-bottom: unset;
+  margin-left: 6px;
+}
+
 @media (max-width: 1200px) {
   header .navbar .LogIn {
-    font-size: 15px;
-    width: 64px;
+    font-size: 12px;
+    width: 84px;
     height: 32px;
     line-height: 32px;
   }
@@ -309,6 +332,20 @@ header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link .NavText {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText {
+  color: white;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText p {
+  font-size: 9px;
 }
 
 header .banner {
@@ -621,7 +658,7 @@ main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
 @media (max-width: 768px) {
   main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
     width: 100vw;
-    margin-bottom: 39px;
+    margin-bottom: 36px;
   }
 }
 
@@ -730,23 +767,75 @@ main .Section1 .TWDF-Intro {
   }
 }
 
-main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS {
   width: 523px;
+  max-width: 100%;
   margin-right: 54px;
+  position: relative;
+  /*每個圖片各延遲X秒*/
 }
 
 @media (max-width: 768px) {
-  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS {
     margin-right: unset;
   }
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
+  -webkit-animation: slider3 2s linear forwards infinite;
+          animation: slider3 2s linear forwards infinite;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    margin-top: 446px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
+    width: 272px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
+    width: unset;
+  }
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS :nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS :nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
   color: white;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-left: 524px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-left: unset;
+    padding-top: 38px;
     padding-left: 36px;
   }
 }
@@ -755,6 +844,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForu
   font-size: 32px;
   margin-left: 12px;
   margin-bottom: 66px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
+    margin-bottom: 36px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
@@ -769,6 +864,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG {
   width: 560px;
 }
 
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG {
+    margin-bottom: 366px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS {
   /*每個圖片各延遲X秒*/
 }
@@ -779,39 +880,35 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
   top: 0;
   left: 0;
   opacity: 0;
+  filter: alpha(opacity=0);
   /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
   -webkit-animation: slider2 5s linear forwards infinite;
           animation: slider2 5s linear forwards infinite;
-}
-
-main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
   max-width: 100%;
 }
 
-@media (max-width: 1200px) {
-  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
-    width: 520px;
-  }
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
+  width: 524px;
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(2) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(2) {
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(3) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(3) {
+main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(4) {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-}
-
-main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(4) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
@@ -821,7 +918,7 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
 
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
-    margin-top: 460px;
+    margin-top: 436px;
   }
 }
 
@@ -830,6 +927,13 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYo
   margin-left: 12px;
   margin-bottom: 74px;
   margin-top: 58px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
+    margin-top: 38px;
+    margin-bottom: 36px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
@@ -873,6 +977,10 @@ main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
   main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
     width: 168px;
   }
+}
+
+main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn:active {
+  background: radial-gradient(circle, #661d00, black);
 }
 
 main .Section2 {
@@ -1294,6 +1402,10 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPar
   }
 }
 
+main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn:active {
+  background: radial-gradient(circle, #661d00, black);
+}
+
 /* ------------------------------頁角-------------------------------------- */
 footer {
   /* ------------------------------RWD頁角-------------------------------------- */
@@ -1361,6 +1473,219 @@ footer .FooterFrame .CopyrightRow {
   color: white;
   margin-top: 107px;
   margin-bottom: 55px;
+}
+
+/* ------------------------------Sign In-------------------------------------- */
+.modal .modal-dialog .modal-content .modal-header {
+  border-bottom: 0;
+  padding: 1rem 0rem 0rem 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modal .modal-dialog .modal-content .modal-header .close {
+  color: red;
+  padding: 1rem 2rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal .modal-dialog .modal-content .modal-header .close :hover {
+  color: yellow;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box {
+  width: 100%;
+  padding-bottom: 10px;
+  height: auto;
+  /* background-color: blanchedalmond; */
+  margin: auto;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account {
+  font-size: 18px;
+  padding-top: 10px;
+  margin-left: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* justify-content: center; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account input {
+  width: 85%;
+  margin-left: 10px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password {
+  font-size: 18px;
+  margin-left: 10px;
+  padding-top: 10px;
+  margin-top: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* justify-content: center; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password input {
+  width: 85%;
+  margin-left: 10px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar {
+  /* background-color: brown; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_sign_in {
+  width: 90%;
+  height: 36px;
+  letter-spacing: 2px;
+  background-color: blueviolet;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_t {
+  width: 90%;
+  margin: auto;
+  margin: 20px;
+  background-color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_title {
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar {
+  width: 100%;
+  height: 70px;
+  /* background-color: black; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_fb {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_google {
+  width: 60px;
+  height: 60px;
+  margin: 0px 30px;
+  background-color: #ff9900;
+  border-radius: 50%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_apple {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_d {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+  border-top: 0;
+  padding: 0rem 0rem 1rem 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modal .modal-dialog .modal-content .modal-footer .XX_precautions {
+  width: 90%;
+  color: #ffd1d1;
+  margin: auto;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .XX_precautions .XX_precautions_title {
+  text-align: center;
+  color: #ff1d1d;
+  letter-spacing: 3px;
 }
 
 /* --------------------------注意事項------------------------------------ */

@@ -51,7 +51,6 @@
 
         /* ------------------主要內容區塊----------------------- */
         .mainbox {
-            height: 90%;
             display: flex;
             padding-top: 20px;
 
@@ -59,10 +58,13 @@
 
         /* ------滾動主題區區塊列-- */
         .mainbox-l {
-            width: 20%;
             height: auto;
             color: white;
-            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -o-radial-gradient(circle, #002f55, #001027);
+            background: -moz-radial-gradient(circle, #002f55, #001027);
+            background: radial-gradient(circle, #002f55, #001027);
+            position: relative;
         }
 
         .title {
@@ -75,36 +77,59 @@
             background-repeat: no-repeat;
         }
 
+        .title:hover {
+            /* background-color: lightgrey; */
+            background-image: url(/05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .menu_item:hover {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .menu_btn:hover {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
         /* ------主題區區塊內容列-- */
         .mainbox-r {
-            width: 80%;
+            width: 100%;
             background-color: #FFFFFF;
         }
 
-        .mainbox_detail_nodisplay {
+        .mainbox_detail {
             display: none;
         }
 
-        .tools_nodisplay {
-            display: none;
+        .mainbox_detail.active {
+            display: block;
         }
-
-        .video_nodisplay {
-            display: none;
-        }
-
-        .forum_nodisplay {
-            display: none;
-        }
-
-        .info_nodisplay {
-            display: none;
-        }
-
 
         .section {
             width: 100%;
+            display: none;
+        }
 
+        .section.active {
+            display: block;
+        }
+
+        .drop_up_menu {
+            width: 100%;
+            height: 80px;
+            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
+            z-index: 1000;
+            position: fixed;
+            bottom: 0ch;
+            color: lightcyan;
         }
 
 
@@ -114,6 +139,125 @@
             height: 300px;
         }
 
+
+
+
+        /* -------網路套件----------- */
+        /* ------背景動畫---- */
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            /*氣泡預設大小*/
+            background: rgba(255, 255, 255, 0.336);
+            /*給氣泡20%的透明度*/
+            animation: animate 20s linear infinite;
+            animation-direction: alternate-reverse;
+            /* animate = 動畫名稱 */
+            /* 25s = 動畫時間25秒 */
+            /* linear = 動畫開始至結束速度一致 */
+            /* infinite = 動畫無限次播放 */
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            /* background-color: brown; */
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 8s;
+            animation-duration: 4s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                /* translateY = Y軸位置 */
+                /* rotate = 旋轉角度 */
+                opacity: 1;
+                /* 透明度的參數可設定0.0(透明) ~ 1.0  (不透明) */
+                border-radius: 0;
+                /* 圓角 */
+            }
+
+            100% {
+                transform: translateY(-300vh) rotate(720deg);
+                /* 氣泡由下往上移動至-1000px，旋轉720度 */
+                opacity: 0;
+                border-radius: 50%;
+                /* 產生圓角 */
+            }
+        }
 
         /* --------------------------注意事項------------------------------------ */
         /* 高度只是暫定可以自行更動 */
@@ -229,138 +373,145 @@
     <main>
 
         <section>
-            <!-- ---------------------內容----------------------- -->
-
             <div class="content container-lg mb-3">
                 <div class="sign-in-box row m-0">
-                    <div class="col-3 m-4 container-lg"
+                    <div class="col-md-3 m-4"
                         style="background-image: url(05-pic/資源共享左圖.png); background-size: contain;background-repeat: no-repeat;">
                     </div>
-                    <div class="col-3 m-4 p-2" style="color:white;">
+                    <div class="col-md-4 mt-3 mb-3" style="color:white;">
                         <h2>共享學習資源</h2>
                         </br>
-                        屬於所有程式人的資源共享區</br>
-                        透過看影片、看書讀理論、接著實作練習挑戰自己。</br>
-                        找到適合自己的學習方法</br>
-                        或是在論壇分享你過往的學習經驗</br>
-                        讓我們一起在程式的世界共同成長吧!
+                        共享學習資源區</br>
+                        是屬於所有程式人的學習專區</br>
+                        尋找工具書? 想了解相關資源?想參與實作練習? </br>
+                        輸入關鍵字，開始你的學習之旅
                         </br>
                         </br>
-                        <button style="background-color:#FFD159; border-radius: 10%;">
-                            <h5> Forum</h5>
-                        </button>
+                        <input type="text" placeholder="輸入關鍵字" name="" value="JavaScript">
                     </div>
                     <div class="col" style="background-image:url(05-pic/PIC03_工作區域\ 1.png);background-size: cover;">
+
                     </div>
                 </div>
-                    <div class="mainbox">
-                        <div class="mainbox-l">
-                            <div class="title row align-items-center">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_books.png " height=60 width=60>
-                                </div>
-                                <div id="ebook" class="title-l col-9 font-weight-bold"><span>學院電子書 </br>Ebooks</span>
-                                </div>
+                <div class="mainbox">
+                    <div class="mainbox-l d-none d-md-block">
+                        <ul class="circles">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="title row align-items-center">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_books.png " height=60 width=60>
                             </div>
-
-                            <div class="mainbox_detail_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C languages</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3 ">
-                                    <img src="05-pic/white_tools.png " height=60 width=60>
-                                </div>
-                                <div id="tools" class="title-l col-9 font-weight-bold"><span>工具套件</br>Tools</span></div>
-                            </div>
-                            <div class="tools_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_videos.png " height=60 width=60>
-                                </div>
-                                <div id="video" class="title-r col-9 font-weight-bold"><span>相關學習視頻 </br>Videos</span>
-                                </div>
-                            </div>
-                            <div class="video_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_con.png" height=60 width=60>
-                                </div>
-                                <div id="forum" class="title-r col-9 font-weight-bold">其他論壇</br>Other Forums</span>
-                                </div>
-                            </div>
-                            <div class="forum_nodisplay p-2 ml-5 ">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
-                            </div>
-
-                            <div class="title row align-items-center ">
-                                <div class="title-l col-3">
-                                    <img src="05-pic/white_info.png " height=60 width=60>
-                                </div>
-
-                                <div id="info" class="title-r col-9 font-weight-bold">其他資源</hr> Others Infor.</span>
-                                </div>
-                            </div>
-                            <div class="info_nodisplay p-2 ml-5">
-                                <li class="mt-2">Assembly</li>
-                                <li class="mt-2">C語言</li>
-                                <li class="mt-2">HTML/CSS</li>
-                                <li class="mt-2">JavaScript</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">PHP</li>
-                                <li class="mt-2">Python</li>
-                                <li class="mt-2">RWD</li>
-                                <li class="mt-2">Ruby</li>
-                                <li class="mt-2">Others</li>
+                            <div class="ebook title-l col-9 font-weight-bold"><span>學院電子書 </br>Ebooks</span>
                             </div>
                         </div>
-                        <div class="mainbox-r">
-                            <!-- 這裡是資源共享的學院電子書區塊 -->
-                            <!-- <div class="section p-5" id="mainbox_books">
+
+                        <div class="mainbox_detail active p-2 ml-5 ">
+                            <li class="item mt-2">Assembly</li>
+                            <li class="item mt-2">C languages</li>
+                            <li class="item mt-2">HTML/CSS</li>
+                            <li class="item mt-2">JavaScript</li>
+                            <li class="item mt-2">Python</li>
+                            <li class="item mt-2">PHP</li>
+                            <li class="item mt-2">Python</li>
+                            <li class="item mt-2">RWD</li>
+                            <li class="item mt-2">Ruby</li>
+                            <li class="item mt-2">Others</li>
+                        </div>
+
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3 ">
+                                <img src="05-pic/white_tools.png " height=60 width=60>
+                            </div>
+                            <div id="tools" class="title-l col-9 font-weight-bold"><span>工具套件</br>Tools</span></div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_videos.png " height=60 width=60>
+                            </div>
+                            <div id="video" class="title-r col-9 font-weight-bold"><span>相關學習視頻 </br>Videos</span>
+                            </div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_con.png" height=60 width=60>
+                            </div>
+                            <div id="forum" class="title-r col-9 font-weight-bold">其他論壇</br>Other Forums</span>
+                            </div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5 ">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_info.png " height=60 width=60>
+                            </div>
+
+                            <div id="info" class="title-r col-9 font-weight-bold">其他資源</hr> Others Infor.</span>
+                            </div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5">
+                            <li class="mt-2">Assembly</li>
+                            <li class="mt-2">C語言</li>
+                            <li class="mt-2">HTML/CSS</li>
+                            <li class="mt-2">JavaScript</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">PHP</li>
+                            <li class="mt-2">Python</li>
+                            <li class="mt-2">RWD</li>
+                            <li class="mt-2">Ruby</li>
+                            <li class="mt-2">Others</li>
+                        </div>
+                    </div>
+                    <div class="mainbox-r">
+                        <!-- 這裡是資源共享的學院電子書區塊 -->
+                        <div class="section p-5 active" id="mainbox_books">
 
                             <h2>學院電子書 > Assembly </h2>
                             </pr>
@@ -525,7 +676,7 @@
                             </ul>
                         </div>
                         <!-- 這裡是資源共享的工具套件區塊 -->
-                            <!-- <div class="section p-5" id="mainbox_Tools">
+                        <div class="section p-5" id="mainbox_Tools">
                             <h2>工具套件</h2>
                             </pr>
                             <h3> Programming Tools</h3>
@@ -559,7 +710,7 @@
 
                         </div>
                         <!-- 這裡是資源共享的相關學習視頻區塊 -->
-                            <!-- <div class="section p-5" id="mainbox_Videos">
+                        <div class="section p-5" id="mainbox_Videos">
                             <h2>相關學習視頻</h2>
                             </pr>
                             <h3> Programming videos</h3>
@@ -678,8 +829,7 @@
                                     et unde
                                     nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
                                 </li>
-                            </ul> 
-                        </div> -->
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -687,6 +837,37 @@
 
             </div>
         </section>
+        <!-- 手機板導覽列 -->
+        <div class=" drop_up_menu d-md-none row">
+            <div class="d-flex  col-9">
+                <div class="menu_item align-items-center m-1 ">
+                    <img src="05-pic/white_books.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_tools.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_videos.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_con.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_info.png " height=60 width=60>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="menu_btn m-2">
+                    <h5>推薦</h5>
+                </div>
+                <div class="menu_btn m-2">
+                    <h5>收藏</h5>
+                </div>
+
+            </div>
+
+
+        </div>
 
     </main>
 
@@ -735,484 +916,558 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <script>
+
         //左列學院電子書點擊後出現下方區塊
 
-        var mainbox_detail_nodisplay = document.querySelector(".mainbox_detail_nodisplay")
-        var ebook = document.querySelector("#ebook")
-        var mainbox_r = document.querySelector(".mainbox-r")
+        // var mainbox_detail = document.querySelectorAll(".mainbox_detail")
+        // var ebook = document.querySelector("#ebook")
+        // var mainbox_r = document.querySelector(".mainbox-r")
 
         //顯示此頁面會出現第一篇文章的預設
-        book()
+        //         book()
 
-        ebook.onclick = function () {
-            mainbox_detail_nodisplay.classList.toggle("mainbox_detail_nodisplay")
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_books">
+        //         ebook.onclick = function () {
+        //             mainbox_detail_nodisplay.classList.toggle("mainbox_detail_nodisplay")
+        //             mainbox_r.innerHTML = 
+        //             `<div class="section p-5" id="mainbox_books">
 
-<h2>學院電子書 > Assembly </h2>
-</pr>
-<h5> Ebooks > Assembly</h5>
-<ul>
-    <li>
-        <a href="https://www.tenlong.com.tw/products/9789862803486">
-            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
-        </a>
-        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
-    </li>
-    <li>
-        <a
-            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        This book is intended for beginners who would like to learn the basics of Assembly
-        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
-        The triple S way to learn Assembly Programming. The topics covered in this book includes a
-        brief introduction to assembly, common arithmetic instructions, character and string input
-        and display routines, flow controls including conditional and looping statements, stack, and
-        procedures.
-    </li>
-    <li>
-        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
-    </li>
+        // <h2>學院電子書 > Assembly </h2>
+        // </pr>
+        // <h5> Ebooks > Assembly</h5>
+        // <ul>
+        //     <li>
+        //         <a href="https://www.tenlong.com.tw/products/9789862803486"><h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        //         </a>
+        //         本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+        //     </li>
+        //     <li>
+        //         <a href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning Assembly Programming</h5>
+        //         </a>
+        //         This book is intended for beginners who would like to learn the basics of Assembly
+        //         Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        //         The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        //         brief introduction to assembly, common arithmetic instructions, character and string input
+        //         and display routines, flow controls including conditional and looping statements, stack, and
+        //         procedures.
+        //     </li>
+        //     <li>
+        //         <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+        //     </li>
 
-</ul>
-<h2>學院電子書 > C languages </h2>
-</pr>
-<h5> Ebooks > C languages</h5>
-<ul>
-    <li>
-        <a href="https://www.tenlong.com.tw/products/9789862803486">
-            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
-        </a>
-        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
-    </li>
-    <li>
-        <a
-            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        This book is intended for beginners who would like to learn the basics of Assembly
-        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
-        The triple S way to learn Assembly Programming. The topics covered in this book includes a
-        brief introduction to assembly, common arithmetic instructions, character and string input
-        and display routines, flow controls including conditional and looping statements, stack, and
-        procedures.
-    </li>
-    <li>
-        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
-    </li>
+        // </ul>
+        // <h2>學院電子書 > C languages </h2>
+        // </pr>
+        // <h5> Ebooks > C languages</h5>
+        // <ul>
+        //     <li>
+        //         <a href="https://www.tenlong.com.tw/products/9789862803486">
+        //             <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        //         </a>
+        //         本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+        //     </li>
+        //     <li>
+        //         <a
+        //             href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         This book is intended for beginners who would like to learn the basics of Assembly
+        //         Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        //         The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        //         brief introduction to assembly, common arithmetic instructions, character and string input
+        //         and display routines, flow controls including conditional and looping statements, stack, and
+        //         procedures.
+        //     </li>
+        //     <li>
+        //         <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+        //     </li>
 
-</ul>
+        // </ul>
 
-<h2 class="pt-5">學院電子書 > JavaScript</h2>
-</pr>
-<h5> Ebooks > JavaScript</h5>
-<ul>
-    <li>
-        <a href="http://eloquentjavascript.net/">
-            <h5 class="pt-5">Eloquent JavaScript</h5>
-        </a>
-        一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
-        章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
-    </li>
-    <li>
-        <a href="https://www.oreilly.com/">
-            <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
-        </a>
-        一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
+        // <h2 class="pt-5">學院電子書 > JavaScript</h2>
+        // </pr>
+        // <h5> Ebooks > JavaScript</h5>
+        // <ul>
+        //     <li>
+        //         <a href="http://eloquentjavascript.net/">
+        //             <h5 class="pt-5">Eloquent JavaScript</h5>
+        //         </a>
+        //         一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
+        //         章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
+        //     </li>
+        //     <li>
+        //         <a href="https://www.oreilly.com/">
+        //             <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
+        //         </a>
+        //         一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
 
-    </li>
-    <li>
-        <a href="https://www.oreilly.com/">
-            <h5 class="pt-5">Programming JavaScript Applications</h5>
-        </a>
-        一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
-    </li>
-    <li>
-        <a href="https://www.codewars.com/">
-            <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
-        </a>
-        透過闖關的方式練成 JavaScript
-        達人，網站在註冊的時候，會先讓你選擇程式語言，
-        如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
-        你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
-        註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
-        每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
+        //     </li>
+        //     <li>
+        //         <a href="https://www.oreilly.com/">
+        //             <h5 class="pt-5">Programming JavaScript Applications</h5>
+        //         </a>
+        //         一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
+        //     </li>
+        //     <li>
+        //         <a href="https://www.codewars.com/">
+        //             <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
+        //         </a>
+        //         透過闖關的方式練成 JavaScript
+        //         達人，網站在註冊的時候，會先讓你選擇程式語言，
+        //         如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
+        //         你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
+        //         註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
+        //         每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
 
-    </li>
-    <li>
-        <a href="https://exploringjs.com/">
-            <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript</h5>
-        </a>
-        一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
-        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
-        完整補充 ECMAScript 6 的重要觀念與特性。
+        //     </li>
+        //     <li>
+        //         <a href="https://exploringjs.com/">
+        //             <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript</h5>
+        //         </a>
+        //         一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        //         本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        //         完整補充 ECMAScript 6 的重要觀念與特性。
 
-    </li>
-    <li>
-        <a href="http://liubin.org/promises-book/">
-            <h5 class="pt-5">ECMAScript 6 入门</h5>
-        </a>
-        一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
-        內容也相當完整。此書為簡體中文
+        //     </li>
+        //     <li>
+        //         <a href="http://liubin.org/promises-book/">
+        //             <h5 class="pt-5">ECMAScript 6 入门</h5>
+        //         </a>
+        //         一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
+        //         內容也相當完整。此書為簡體中文
 
-    </li>
-    <li>
-        <a href="http://liubin.org/promises-book/">
-            <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
-        </a>
-        一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
-        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
-        完整補充 ECMAScript 6 的重要觀念與特性。
+        //     </li>
+        //     <li>
+        //         <a href="http://liubin.org/promises-book/">
+        //             <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
+        //         </a>
+        //         一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        //         本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        //         完整補充 ECMAScript 6 的重要觀念與特性。
 
-    </li>
-    <li>
-        <a href="https://www.tenlong.com.tw/products/9789862764411">
-            <h5 class="pt-5">JavaScript 大全, 6/e
-                (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
-        </a>
-        從最基礎的 JavaScript
-        語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
+        //     </li>
+        //     <li>
+        //         <a href="https://www.tenlong.com.tw/products/9789862764411">
+        //             <h5 class="pt-5">JavaScript 大全, 6/e
+        //                 (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
+        //         </a>
+        //         從最基礎的 JavaScript
+        //         語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
 
-    </li>
-    <li>
-        <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
-            <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
-        </a>僅 164 頁，闡述所有 JavaScript
-        的優良部分，適合進階的 JavaScript 開發人員閱讀。
+        //     </li>
+        //     <li>
+        //         <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
+        //             <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
+        //         </a>僅 164 頁，闡述所有 JavaScript
+        //         的優良部分，適合進階的 JavaScript 開發人員閱讀。
 
-    </li>
+        //     </li>
 
-</ul>
-</div>`
-        }
+        // </ul>
+        // </div>`
+        //         }
 
         //左列工具點擊後出現下方區塊
-        var tools_nodisplay = document.querySelector(".tools_nodisplay")
-        var tools = document.querySelector("#tools")
+        // var tools_nodisplay = document.querySelector(".tools_nodisplay")
+        // var tools = document.querySelector("#tools")
 
-        tools.onclick = function () {
-            tools_nodisplay.classList.toggle("tools_nodisplay")
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Tools">
-                    <h2>工具套件</h2>
-                    </pr>
-                    <h3> Programming Tools</h3>
+        // tools.onclick = function () {
+        //     tools_nodisplay.classList.toggle("tools_nodisplay")
+        //     mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Tools">
+        //             <h2>工具套件</h2>
+        //             </pr>
+        //             <h3> Programming Tools</h3>
 
-                    <div class="d-flex pt-5 p-2">
-                        <img class="mr-3" src="05-link icon/tools/vscode-logo.png" height=100 width=100>
-                        <span class="text-align-center">
-                            <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
-                            <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
-                                版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
-                    </div>
-                    <div class="d-flex p-2">
-                        <img class="mr-3" src="05-link icon/tools/aws.png" height=100 width=100>
-                        <span class="text-align-center">
-                            <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
-                            <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
-                    </div>
-                    <div class="d-flex p-2">
-                        <img class="mr-3" src="05-link icon/tools/aws.png" height=100 width=100>
-                        <span class="text-align-center">
-                            <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
-                            <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
-                    </div>
-                    <div class="d-flex pt-5 p-2">
-                        <img class="mr-3" src="05-link icon/tools/vscode-logo.png" height=100 width=100>
-                        <span class="text-align-center">
-                            <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
-                            <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
-                                版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
-                    </div>
+        //             <div class="d-flex pt-5 p-2">
+        //                 <img class="mr-3" src="05-link icon/tools/vscode-logo.png" height=100 width=100>
+        //                 <span class="text-align-center">
+        //                     <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
+        //                     <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
+        //                         版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
+        //             </div>
+        //             <div class="d-flex p-2">
+        //                 <img class="mr-3" src="05-link icon/tools/aws.png" height=100 width=100>
+        //                 <span class="text-align-center">
+        //                     <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
+        //                     <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
+        //             </div>
+        //             <div class="d-flex p-2">
+        //                 <img class="mr-3" src="05-link icon/tools/aws.png" height=100 width=100>
+        //                 <span class="text-align-center">
+        //                     <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
+        //                     <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
+        //             </div>
+        //             <div class="d-flex pt-5 p-2">
+        //                 <img class="mr-3" src="05-link icon/tools/vscode-logo.png" height=100 width=100>
+        //                 <span class="text-align-center">
+        //                     <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
+        //                     <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
+        //                         版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
+        //             </div>
 
-                </div>`
-        }
+        //         </div>`
+        // }
+
         //左列視頻點擊後出現下方區塊
-        var video_nodisplay = document.querySelector(".video_nodisplay")
-        var video = document.querySelector("#video")
+        // var video_nodisplay = document.querySelector(".video_nodisplay")
+        // var video = document.querySelector("#video")
 
-        video.onclick = function () {
-            video_nodisplay.classList.toggle("video_nodisplay")
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Videos">
-                    <h2>相關學習視頻</h2>
-                    </pr>
-                    <h3> Programming videos</h3>
-                    <div class="d-flex align-items-center pt-5 p-2">
-                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <span>
-                            <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
-                        </span>
-                    </div>
-                    <div class="d-flex align-items-center pt-5 p-2">
-                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <span>
-                            <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
-                        </span>
-                    </div>
-                    <div class="d-flex align-items-center pt-5 p-2">
-                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <span>
-                            <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
-                        </span>
-                    </div>
+        // video.onclick = function () {
+        //     video_nodisplay.classList.toggle("video_nodisplay")
+        //     mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Videos">
+        //             <h2>相關學習視頻</h2>
+        //             </pr>
+        //             <h3> Programming videos</h3>
+        //             <div class="d-flex align-items-center pt-5 p-2">
+        //                 <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+        //                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        //                     allowfullscreen></iframe>
+        //                 <span>
+        //                     <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+        //                 </span>
+        //             </div>
+        //             <div class="d-flex align-items-center pt-5 p-2">
+        //                 <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+        //                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        //                     allowfullscreen></iframe>
+        //                 <span>
+        //                     <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+        //                 </span>
+        //             </div>
+        //             <div class="d-flex align-items-center pt-5 p-2">
+        //                 <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+        //                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        //                     allowfullscreen></iframe>
+        //                 <span>
+        //                     <h3>網頁前端工程入門：基礎 HTML 教學</h3>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+        //                 </span>
+        //             </div>
 
-                </div>`
-        }
+        //         </div>`
+        // }
 
         //左列論壇點擊後出現下方區塊
-        var forum_nodisplay = document.querySelector(".forum_nodisplay")
-        var forum = document.querySelector("#forum")
+        // var forum_nodisplay = document.querySelector(".forum_nodisplay")
+        // var forum = document.querySelector("#forum")
 
-        forum.onclick = function () {
-            forum_nodisplay.classList.toggle("forum_nodisplay")
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Forums">
-                    <h2>其他論壇</h2>
-                    </pr>
-                    <h3> Other Forums</h3>
-                    <ul>
-                        <li>
-                            <h5 class="pt-5 p-2">PROGRAMMING BOOK NAME</h5>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque aperiam consectetur nam
-                            ipsa veritatis omnis ipsam optio quod magni? Dolorem a quaerat consequatur voluptate
-                            doloremque. Quis consectetur corrupti dignissimos.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae magni, unde distinctio
-                            rem doloremque, ullam alias ducimus doloribus quaerat atque odio facere amet quos soluta
-                            repudiandae aliquid, optio quisquam.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Minus eveniet tempore exercitationem rem dolores! Doloribus sed quos
-                            ducimus veniam consectetur accusamus rerum nemo, odit reprehenderit accusantium repudiandae
-                            dolorum, rem inventore.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Aliquam, tenetur alias? Delectus, velit id. Molestias hic perferendis, odio tempora ut
-                            ab dolore veritatis repudiandae? Fugiat voluptatem sapiente similique beatae laudantium.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Nisi in debitis, quasi voluptatibus doloremque iste quos officiis itaque, quam et unde
-                            nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
-                        </li>
-                    </ul>
+        // forum.onclick = function () {
+        //     forum_nodisplay.classList.toggle("forum_nodisplay")
+        //     mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Forums">
+        //             <h2>其他論壇</h2>
+        //             </pr>
+        //             <h3> Other Forums</h3>
+        //             <ul>
+        //                 <li>
+        //                     <h5 class="pt-5 p-2">PROGRAMMING BOOK NAME</h5>
+        //                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque aperiam consectetur nam
+        //                     ipsa veritatis omnis ipsam optio quod magni? Dolorem a quaerat consequatur voluptate
+        //                     doloremque. Quis consectetur corrupti dignissimos.
+        //                 </li>
+        //                 <li>
+        //                     <h5 class="p-2">PROGRAMMING BOOK NAME</h5>
+        //                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae magni, unde distinctio
+        //                     rem doloremque, ullam alias ducimus doloribus quaerat atque odio facere amet quos soluta
+        //                     repudiandae aliquid, optio quisquam.
+        //                 </li>
+        //                 <li>
+        //                     <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur,
+        //                     adipisicing elit. Minus eveniet tempore exercitationem rem dolores! Doloribus sed quos
+        //                     ducimus veniam consectetur accusamus rerum nemo, odit reprehenderit accusantium repudiandae
+        //                     dolorum, rem inventore.
+        //                 </li>
+        //                 <li>
+        //                     <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+        //                     elit. Aliquam, tenetur alias? Delectus, velit id. Molestias hic perferendis, odio tempora ut
+        //                     ab dolore veritatis repudiandae? Fugiat voluptatem sapiente similique beatae laudantium.
+        //                 </li>
+        //                 <li>
+        //                     <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+        //                     elit. Nisi in debitis, quasi voluptatibus doloremque iste quos officiis itaque, quam et unde
+        //                     nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
+        //                 </li>
+        //             </ul>
 
-                </div>`
-        }
+        //         </div>`
+        // }
 
         //左列資源點擊後出現下方區塊
-        var info_nodisplay = document.querySelector(".info_nodisplay")
-        var info = document.querySelector("#info")
+        //         var info_nodisplay = document.querySelector(".info_nodisplay")
+        //         var info = document.querySelector("#info")
 
-        info.onclick = function () {
-            info_nodisplay.classList.toggle("info_nodisplay")
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Infor">
-                    <h2>相關資源</h2>
-                    </pr>
-                    <h3> Other Information</h3>
-                    <ul>
-                        <li>
-                            <h5 class="pt-5 p-2">PROGRAMMING BOOK NAME</h5>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque aperiam consectetur nam
-                            ipsa veritatis omnis ipsam optio quod magni? Dolorem a quaerat consequatur voluptate
-                            doloremque. Quis consectetur corrupti dignissimos.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae magni, unde distinctio
-                            rem doloremque, ullam alias ducimus doloribus quaerat atque odio facere amet quos soluta
-                            repudiandae aliquid, optio quisquam.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Minus eveniet tempore exercitationem rem dolores! Doloribus sed quos
-                            ducimus veniam consectetur accusamus rerum nemo, odit reprehenderit accusantium repudiandae
-                            dolorum, rem inventore.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Aliquam, tenetur alias? Delectus, velit id. Molestias hic perferendis, odio tempora ut
-                            ab dolore veritatis repudiandae? Fugiat voluptatem sapiente similique beatae laudantium.
-                        </li>
-                        <li>
-                            <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Nisi in debitis, quasi voluptatibus doloremque iste quos officiis itaque, quam et unde
-                            nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
-                        </li>
-                    </ul>
-                </div>`
+        //         info.onclick = function () {
+        //             info_nodisplay.classList.toggle("info_nodisplay")
+        //             mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_Infor">
+        //                     <h2>相關資源</h2>
+        //                     </pr>
+        //                     <h3> Other Information</h3>
+        //                     <ul>
+        //                         <li>
+        //                             <h5 class="pt-5 p-2">PROGRAMMING BOOK NAME</h5>
+        //                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque aperiam consectetur nam
+        //                             ipsa veritatis omnis ipsam optio quod magni? Dolorem a quaerat consequatur voluptate
+        //                             doloremque. Quis consectetur corrupti dignissimos.
+        //                         </li>
+        //                         <li>
+        //                             <h5 class="p-2">PROGRAMMING BOOK NAME</h5>
+        //                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae magni, unde distinctio
+        //                             rem doloremque, ullam alias ducimus doloribus quaerat atque odio facere amet quos soluta
+        //                             repudiandae aliquid, optio quisquam.
+        //                         </li>
+        //                         <li>
+        //                             <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur,
+        //                             adipisicing elit. Minus eveniet tempore exercitationem rem dolores! Doloribus sed quos
+        //                             ducimus veniam consectetur accusamus rerum nemo, odit reprehenderit accusantium repudiandae
+        //                             dolorum, rem inventore.
+        //                         </li>
+        //                         <li>
+        //                             <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+        //                             elit. Aliquam, tenetur alias? Delectus, velit id. Molestias hic perferendis, odio tempora ut
+        //                             ab dolore veritatis repudiandae? Fugiat voluptatem sapiente similique beatae laudantium.
+        //                         </li>
+        //                         <li>
+        //                             <h5 class="p-2">PROGRAMMING BOOK NAME</h5>Lorem ipsum dolor sit amet consectetur adipisicing
+        //                             elit. Nisi in debitis, quasi voluptatibus doloremque iste quos officiis itaque, quam et unde
+        //                             nulla cupiditate aspernatur eveniet asperiores? Quas asperiores illum magnam.
+        //                         </li>
+        //                     </ul>
+        //                 </div>`
+        //         }
+
+        //         function book() {
+        //             mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_books">
+
+        // <h2>學院電子書 > Assembly </h2>
+        // </pr>
+        // <h5> Ebooks > Assembly</h5>
+        // <ul>
+        //     <li>
+        //         <a href="https://www.tenlong.com.tw/products/9789862803486">
+        //             <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        //         </a>
+        //         本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+        //     </li>
+        //     <li>
+        //         <a
+        //             href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         This book is intended for beginners who would like to learn the basics of Assembly
+        //         Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        //         The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        //         brief introduction to assembly, common arithmetic instructions, character and string input
+        //         and display routines, flow controls including conditional and looping statements, stack, and
+        //         procedures.
+        //     </li>
+        //     <li>
+        //         <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+        //     </li>
+
+        // </ul>
+        // <h2>學院電子書 > C languages </h2>
+        // </pr>
+        // <h5> Ebooks > C languages</h5>
+        // <ul>
+        //     <li>
+        //         <a href="https://www.tenlong.com.tw/products/9789862803486">
+        //             <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
+        //         </a>
+        //         本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+        //     </li>
+        //     <li>
+        //         <a
+        //             href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         This book is intended for beginners who would like to learn the basics of Assembly
+        //         Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
+        //         The triple S way to learn Assembly Programming. The topics covered in this book includes a
+        //         brief introduction to assembly, common arithmetic instructions, character and string input
+        //         and display routines, flow controls including conditional and looping statements, stack, and
+        //         procedures.
+        //     </li>
+        //     <li>
+        //         <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
+        //             <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
+        //                 Assembly Programming</h5>
+        //         </a>
+        //         Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
+        //     </li>
+
+        // </ul>
+
+        // <h2 class="pt-5">學院電子書 > JavaScript</h2>
+        // </pr>
+        // <h5> Ebooks > JavaScript</h5>
+        // <ul>
+        //     <li>
+        //         <a href="http://eloquentjavascript.net/">
+        //             <h5 class="pt-5">Eloquent JavaScript</h5>
+        //         </a>
+        //         一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
+        //         章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
+        //     </li>
+        //     <li>
+        //         <a href="https://www.oreilly.com/">
+        //             <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
+        //         </a>
+        //         一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
+
+        //     </li>
+        //     <li>
+        //         <a href="https://www.oreilly.com/">
+        //             <h5 class="pt-5">Programming JavaScript Applications</h5>
+        //         </a>
+        //         一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
+        //     </li>
+        //     <li>
+        //         <a href="https://www.codewars.com/">
+        //             <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
+        //         </a>
+        //         透過闖關的方式練成 JavaScript
+        //         達人，網站在註冊的時候，會先讓你選擇程式語言，
+        //         如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
+        //         你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
+        //         註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
+        //         每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
+
+        //     </li>
+        //     <li>
+        //         <a href="https://exploringjs.com/">
+        //             <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript</h5>
+        //         </a>
+        //         一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        //         本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        //         完整補充 ECMAScript 6 的重要觀念與特性。
+
+        //     </li>
+        //     <li>
+        //         <a href="http://liubin.org/promises-book/">
+        //             <h5 class="pt-5">ECMAScript 6 入门</h5>
+        //         </a>
+        //         一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
+        //         內容也相當完整。此書為簡體中文
+
+        //     </li>
+        //     <li>
+        //         <a href="http://liubin.org/promises-book/">
+        //             <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
+        //         </a>
+        //         一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+        //         本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+        //         完整補充 ECMAScript 6 的重要觀念與特性。
+
+        //     </li>
+        //     <li>
+        //         <a href="https://www.tenlong.com.tw/products/9789862764411">
+        //             <h5 class="pt-5">JavaScript 大全, 6/e
+        //                 (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
+        //         </a>
+        //         從最基礎的 JavaScript
+        //         語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
+
+        //     </li>
+        //     <li>
+        //         <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
+        //             <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
+        //         </a>僅 164 頁，闡述所有 JavaScript
+        //         的優良部分，適合進階的 JavaScript 開發人員閱讀。
+
+        //     </li>
+
+        // </ul>
+        // </div>`
+        //         }
+
+        //點擊左側項目，跳出右側內容
+        var title = document.querySelectorAll(".title")
+        var section = document.querySelectorAll(".section")
+        var mainbox_detail = document.querySelectorAll(".mainbox_detail")
+
+        //foreach用法1，當點擊項目0時，右側出現第0項內容
+        // for (let index = 0; index < title.length; index++) {
+        //     const btn = title[index];
+        //     const content = section[index]
+
+        //     btn.onclick = function(){
+        //         clearAllActive()
+        //         content.classList.add('active')
+        //     }
+        // }
+
+        //foreach用法2
+        title.forEach(function (btn, index) {
+            btn.onclick = function () {
+                clearSectionActive()
+                section[index].classList.add('active')
+
+                if (mainbox_detail[index].classList.contains('active')) {
+                    mainbox_detail[index].classList.toggle('active')
+                }else{
+                    clearDetailActive()
+                    mainbox_detail[index].classList.add('active')
+                }
+            }
+        })
+
+        //foreach用法3
+        // title.forEach(btn => {
+        //     btn.onclick = function(){
+        //         console.log("123");
+        //     }
+        // });
+        //製作移除ACTIVE的CLASS，點擊到該項目時要先移除active的函式
+        function clearSectionActive() {
+            for (let index = 0; index < section.length; index++) {
+                section[index].classList.remove('active')
+            }
         }
 
-        function book() {
-            mainbox_r.innerHTML = `<div class="section p-5" id="mainbox_books">
-
-<h2>學院電子書 > Assembly </h2>
-</pr>
-<h5> Ebooks > Assembly</h5>
-<ul>
-    <li>
-        <a href="https://www.tenlong.com.tw/products/9789862803486">
-            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
-        </a>
-        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
-    </li>
-    <li>
-        <a
-            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        This book is intended for beginners who would like to learn the basics of Assembly
-        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
-        The triple S way to learn Assembly Programming. The topics covered in this book includes a
-        brief introduction to assembly, common arithmetic instructions, character and string input
-        and display routines, flow controls including conditional and looping statements, stack, and
-        procedures.
-    </li>
-    <li>
-        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
-    </li>
-
-</ul>
-<h2>學院電子書 > C languages </h2>
-</pr>
-<h5> Ebooks > C languages</h5>
-<ul>
-    <li>
-        <a href="https://www.tenlong.com.tw/products/9789862803486">
-            <h5 class="pt-5">組合語言, 7/e (國際版) (Assembly Language for x86 Processors, 7/e)</h5>
-        </a>
-        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
-    </li>
-    <li>
-        <a
-            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        This book is intended for beginners who would like to learn the basics of Assembly
-        Programming. This book uses Simple words, Short sentences and Straightforward paragraphs.
-        The triple S way to learn Assembly Programming. The topics covered in this book includes a
-        brief introduction to assembly, common arithmetic instructions, character and string input
-        and display routines, flow controls including conditional and looping statements, stack, and
-        procedures.
-    </li>
-    <li>
-        <a  href="http://www.nlpir.org/wordpress/wp-content/uploads/2019/03/Assembly.Language.For_.x86.Processors.Kip_.R..Irvine..6ed.Prentice.Hall_.2011www.xuexi111.com_.pdf">
-            <h5 class="pt-5">Assembly Language:Simple, Short, And Straightforward Way Of Learning
-                Assembly Programming</h5>
-        </a>
-        Download the Book:Assembly Language For X86 Processors 7th Edition PDF For Free
-    </li>
-
-</ul>
-
-<h2 class="pt-5">學院電子書 > JavaScript</h2>
-</pr>
-<h5> Ebooks > JavaScript</h5>
-<ul>
-    <li>
-        <a href="http://eloquentjavascript.net/">
-            <h5 class="pt-5">Eloquent JavaScript</h5>
-        </a>
-        一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
-        章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
-    </li>
-    <li>
-        <a href="https://www.oreilly.com/">
-            <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
-        </a>
-        一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
-
-    </li>
-    <li>
-        <a href="https://www.oreilly.com/">
-            <h5 class="pt-5">Programming JavaScript Applications</h5>
-        </a>
-        一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
-    </li>
-    <li>
-        <a href="https://www.codewars.com/">
-            <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
-        </a>
-        透過闖關的方式練成 JavaScript
-        達人，網站在註冊的時候，會先讓你選擇程式語言，
-        如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
-        你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
-        註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
-        每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
-
-    </li>
-    <li>
-        <a href="https://exploringjs.com/">
-            <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript</h5>
-        </a>
-        一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
-        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
-        完整補充 ECMAScript 6 的重要觀念與特性。
-
-    </li>
-    <li>
-        <a href="http://liubin.org/promises-book/">
-            <h5 class="pt-5">ECMAScript 6 入门</h5>
-        </a>
-        一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
-        內容也相當完整。此書為簡體中文
-
-    </li>
-    <li>
-        <a href="http://liubin.org/promises-book/">
-            <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
-        </a>
-        一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
-        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
-        完整補充 ECMAScript 6 的重要觀念與特性。
-
-    </li>
-    <li>
-        <a href="https://www.tenlong.com.tw/products/9789862764411">
-            <h5 class="pt-5">JavaScript 大全, 6/e
-                (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
-        </a>
-        從最基礎的 JavaScript
-        語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
-
-    </li>
-    <li>
-        <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
-            <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
-        </a>僅 164 頁，闡述所有 JavaScript
-        的優良部分，適合進階的 JavaScript 開發人員閱讀。
-
-    </li>
-
-</ul>
-</div>`
+        function clearDetailActive() {
+            for (let index = 0; index < section.length; index++) {
+                mainbox_detail[index].classList.remove('active')
+            }
         }
 
 
+        // title.forEach(function(items,index){
+        //     items.onclick = function(){
+        //         remove_active()
+        //         mainbox_detail[index].classList.add('active')
+        //     }
+        // })
+
+        // function remove_active(){
+        //     for (let index = 0; index < mainbox_detail.length; index++) {
+        //         mainbox_detail[index].classList.remove('active')
+        //     }
+        // }
+
+
+
+        //手機板下方項目選單點擊事件
+        var menu_item = document.querySelectorAll(".menu_item")
+
+        menu_item.forEach(function (menu_item, index) {
+            menu_item.onclick = function () {
+                clearAllActive()
+                section[index].classList.add('active')
+            }
+        })
 
     </script>
 </body>
