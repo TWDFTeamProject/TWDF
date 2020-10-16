@@ -715,12 +715,34 @@ main{
             }
 
             .TWDF-IntroForum{
-
-                .TWDF-IntroForumIMG{
+                .TWDF-IntroForumIMGS{
                     width: 523px;
+                    max-width: 100%;
                     margin-right: 54px;
+                    position: relative;
                     @media (max-width: 768px) {
                         margin-right: unset;
+                    }
+                    .BackgroundIMG{
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                        /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
+                        animation: slider3 2s linear forwards infinite;
+                        max-width: 100%;
+                        img{
+                        }
+                    }
+                    /*每個圖片各延遲X秒*/
+
+                    :nth-child(1){
+                        animation-delay: 0s;
+                    }
+                    :nth-child(2){
+                        animation-delay: 1s;
                     }
                 }
     
@@ -754,30 +776,31 @@ main{
                             top:0;
                             left:0;
                             opacity: 0;
-                            // filter: alpha(opacity=0);
+                            filter: alpha(opacity=0);
                             /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
                             animation: slider2 5s linear forwards infinite;
-                    
+                            max-width: 100%;
+                            
                             img{
-                                max-width: 100%;
-                                @media (max-width: 1200px) {
-                                    width: 520px;
-                                }
+                                width: 524px;
+                                // @media (max-width: 1200px) {
+                                //     width: 520px;
+                                // }
                             }
                         }
                         /*每個圖片各延遲X秒*/
 
                         :nth-child(1){
-                            animation-delay: 1s;
+                            animation-delay: 0s;
                         }
                         :nth-child(2){
-                            animation-delay: 2s;
+                            animation-delay: 1s;
                         }
                         :nth-child(3){
-                            animation-delay: 3s;
+                            animation-delay: 2s;
                         }
                         :nth-child(4){
-                            animation-delay: 4s;
+                            animation-delay: 3s;
                         }
                     }
                 }
