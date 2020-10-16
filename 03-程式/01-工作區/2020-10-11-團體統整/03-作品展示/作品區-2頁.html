@@ -22,17 +22,12 @@
             margin: auto;
         }
 
-        /* ---------------------導覽列----------------------- */
-        .navbar {
-            width: 100%;
-            height: 70px;
-            background-color: blueviolet;
-        }
+       
 
         /* --------------主要內容------------------ */
         .content {
-            width: 1170px;
-            height: 3000px;
+            width: 1140px;
+            /* height: 3000px; */
             /* background-color: burlywood; */
             margin: auto;
         }
@@ -60,7 +55,7 @@
         /* ------發布區塊------- */
         .Releasebox {
             width: 100%;
-            height: 8%;
+            height:250px;
             background-color: rgb(52, 125, 138);
             margin-bottom: 20px;
             display: flex;
@@ -71,11 +66,15 @@
         #post {
             width: 35%;
             height: 100%;
-            background-color: rgb(122, 67, 177);
+            /* background-color: rgb(122, 67, 177); */
             display: flex;
             align-items: center;
             justify-content: flex-end;
-
+            background-image: url(./show/201015成果展示區CC-07.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          
 
 
 
@@ -84,28 +83,18 @@
         #show {
             width: 40%;
             height: 100%;
-            background-color:  rgb(75, 25, 124);
+            /* background-color:  rgb(75, 25, 124); */
 
         }
 
         #content {
             width: 45%;
             height: 100%;
-            background-color:  rgb(75, 25, 124);
+            /* background-color:  rgb(75, 25, 124); */
             padding: 40px;
         }
 
-        #poster {
-            width: 100%;
-            height: 100%;
-            background-image: url(./show/201015成果展示區CC-07.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-
-
-
-
-        }
+        
 
         #shower {
             width: 80%;
@@ -171,13 +160,13 @@
             width: 100%;
             height: 60%;
             background-color: rgb(166, 178, 180);
-            background-image: url(./show/aa0aff7573bc945addafb05d42b13fa2.jpg);
+            background-image: url(./show/page2-1.jpg);
             background-size: cover;
 
         }
 
         #web-2{
-            background-image: url(./show/090f09062ca2fd4d23533912e6144970.jpg);
+            background-image: url(./show/page2-2.jpg);
         }
 
         #pic-2{
@@ -185,7 +174,7 @@
         }
 
         #web-3{
-            background-image: url(./show/31ba5adaad00ce8c02c0ae4cfab69418.jpg);
+            background-image: url(./show/page2-3.jpg);
         }
 
         #pic-3{
@@ -193,7 +182,7 @@
         }
 
         #web-4{
-            background-image:url(./show/c282ac01c89151b5ae9f7aca086afec0.jpg);
+            background-image:url(./show/page2-4.jpg);
         }
 
         #pic-4{
@@ -201,14 +190,14 @@
         }
 
         #web-5{
-            background-image: url(./show/d00e54b4779b766cb607f1c2ec130e11.jpg);
+            background-image: url(./show/page2-5.jpg);
         }
         #pic-5{
             background-image: url(./headshot/unnamed.png);
         }
 
         #web-6{
-            background-image: url(./show/7b079b6f2972bf3d6989b65e1f54b3ba.jpg);
+            background-image: url(./show/page2-8.jpg);
         }
 
         #pic-6{
@@ -249,7 +238,7 @@
         }
 
         #web-11{
-            background-image: url(./show/090f09062ca2fd4d23533912e6144970.jpg);
+            background-image: url(./show/page2-8.jpg);
         }
         #pic-11{
             background-image: url(./headshot/e3a4fa107df8303954e6280a2e7152c1_hd.webp);}
@@ -355,16 +344,23 @@
             margin: 0 5px;
         }
 
-        /* ---------------------頁角----------------------- */
-        .footer {
-            width: 100%;
-            height: 300px;
-            background-color: rgb(231, 21, 49);
+
+        @media(max-width:767.98px){
+            .content{
+                width: 540px;
+            }
+
+            .Releasebox {
+           
+            height:200px;
         }
 
-        /* ---------------------注意事項----------------------- */
-        /* 高度寬度都只是暫定可以自行更動 */
-        /* 區塊背景顏色方便辨識 */
+        #content {
+            padding: 0px;
+        }
+
+        }
+    
     </style>
 </head>
 
@@ -429,17 +425,17 @@
         <br>
             <!-- 分頁按鈕 -->
             <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end ">
+                <ul class="pagination justify-content-end " id="page123">
                    
                         <a class="page-link" href="./作品區.html">
                             <button type="button" class="btn btn-outline-dark">1
                             </button>
                         </a>
-                        <a class="page-link" href="#">
+                        <a class="page-link" href="./作品區-2頁.html">
                             <button type="button" class="btn btn-outline-dark">2
                             </button>
                         </a>
-                        <a class="page-link" href="#">
+                        <a class="page-link" href="./作品區-3.html">
                             <button type="button" class="btn btn-outline-dark">3
                             </button>
                         </a>
@@ -471,7 +467,7 @@
                                     >
                                         
                                     </div>
-                                    <div class="name">妮艾德-Monica</div>
+                                    <div class="name">-Monica</div>
                                 </div>
                                 <div class="comment">
                                     90筆作品
@@ -502,7 +498,7 @@
                                 <div class="worker">
                                     <div class="headshot rounded-circle" id="pic-2">
                                     </div>
-                                    <div class="name">艾斯</div>
+                                    <div class="name">可噁斯</div>
                                 </div>
                                 <div class="comment">
                                     84筆作品
@@ -840,15 +836,15 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end ">
                    
-                        <a class="page-link" href="#">
+                        <a class="page-link" href="./作品區.html">
                             <button type="button" class="btn btn-outline-dark">1
                             </button>
                         </a>
-                        <a class="page-link" href="#">
+                        <a class="page-link" href="./作品區-2頁.html">
                             <button type="button" class="btn btn-outline-dark">2
                             </button>
                         </a>
-                        <a class="page-link" href="#">
+                        <a class="page-link" href="./作品區-3.html">
                             <button type="button" class="btn btn-outline-dark">3
                             </button>
                         </a>
@@ -872,9 +868,7 @@
 
 
     </div>
-    <!-- ---------------------頁角----------------------- -->
-
-    <div class="footer"></div>
+   
 
 
 
