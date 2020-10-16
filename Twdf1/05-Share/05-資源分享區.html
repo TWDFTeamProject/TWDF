@@ -79,14 +79,20 @@
 
         .title:hover {
             /* background-color: lightgrey; */
-            background-image: url(/05-pic/hover按鈕效果-01.jpg);
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
 
         .menu_item:hover {
-            background-image: url(/05-pic/hover按鈕效果-01.jpg);
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .menu_btn:hover {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -131,7 +137,7 @@
         .drop_up_menu {
             width: 100%;
             height: 80px;
-            background-image: url(/05-pic/藍色底色背景_工作區域\ 1.jpg);
+            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
             z-index: 1000;
             position: fixed;
             bottom: 0ch;
@@ -863,10 +869,10 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class=" m-2">
+                <div class="menu_btn m-2">
                     <h5>推薦</h5>
                 </div>
-                <div class="m-2">
+                <div class="menu_btn m-2">
                     <h5>收藏</h5>
                 </div>
 
@@ -925,8 +931,8 @@
 
         //左列學院電子書點擊後出現下方區塊
 
-        // var mainbox_detail_nodisplay = document.querySelector(".mainbox_detail_nodisplay")
-        // var ebook = document.querySelector(".ebook")
+        var mainbox_detail_nodisplay = document.querySelector(".mainbox_detail_nodisplay")
+        var ebook = document.querySelector("#ebook")
         // var mainbox_r = document.querySelector(".mainbox-r")
 
         //顯示此頁面會出現第一篇文章的預設
@@ -1436,8 +1442,8 @@
 
         var menu_item = document.querySelectorAll(".menu_item")
 
-        menu_item.forEach(function(btn,index){
-            btn.onclick = function(){
+        menu_item.forEach(function(menu_item,index){
+            menu_item.onclick = function(){
                 clearAllActive()
                 section[index].classList.add('active')
             }
