@@ -9,8 +9,9 @@
     <style>
         .wrap {
             background-color: #009688;
-            width: 100%;
+            width: 20%;
             height: 100vh;
+            position: relative;
         }
 
         .circles li {
@@ -27,13 +28,14 @@
             /* 25s = 動畫時間25秒 */
             /* linear = 動畫開始至結束速度一致 */
             /* infinite = 動畫無限次播放 */
-            bottom: -150px;
+            bottom: 0px;
+            opacity: 0;
         }
 
         .circles li:nth-child(1) {
             left: 25%;
-            width: 80px;
-            height: 80px;
+            width: 40px;
+            height: 40px;
             animation-delay: 0s;
         }
 
@@ -58,6 +60,7 @@
             height: 60px;
             animation-delay: 0s;
             animation-duration: 6s;
+            /* background-color: brown; */
         }
 
         .circles li:nth-child(5) {
@@ -69,15 +72,15 @@
 
         .circles li:nth-child(6) {
             left: 75%;
-            width: 110px;
-            height: 110px;
+            width: 30px;
+            height: 30px;
             animation-delay: 4s;
         }
 
         .circles li:nth-child(7) {
             left: 35%;
-            width: 150px;
-            height: 150px;
+            width: 50px;
+            height: 50px;
             animation-delay: 7s;
         }
 
@@ -99,8 +102,8 @@
 
         .circles li:nth-child(10) {
             left: 85%;
-            width: 150px;
-            height: 150px;
+            width: 25px;
+            height: 25px;
             animation-delay: 0s;
             animation-duration: 6s;
         }
