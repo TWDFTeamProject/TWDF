@@ -844,6 +844,44 @@
             font-family: 'Ma Shan Zheng', cursive;
         }
         /* ------------------------- */
+
+
+        /* -------------輸入框------------ */
+        .add_portfolio_button{
+            position: relative;
+        }
+           .add_style_input{
+            border: 0;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            position: relative;
+
+            
+            
+            
+        }
+        .add_style_textarea{
+            width: 100%;
+            border: 0px;
+            border-radius: 10px;
+        }
+
+
+        /* -------圖片上傳CSS--------- */
+        
+        .add_photo_img{
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .style_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 
@@ -890,7 +928,7 @@
                 <p>好的設計與作品永遠不嫌多
                 </p>
                 <p> 上傳自己的作品，讓更多人看見你</p>
-                <button type="button" class="btn btn-warning">Start</button>
+                <button type="button" class="btn btn-warning add_portfolio_button"  data-toggle="modal" data-target="#add_portfolio_button">Start</button>
             </div>
             <div id="show">
                 <div id="shower"></div>
@@ -925,7 +963,7 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end " id="page123">
 
-                    <a class="page-link" href="./作品區.html">
+                    <a class="page-link" href="./作品區20201016.html">
                         <button type="button" class="btn btn-outline-dark">1
                         </button>
                     </a>
@@ -1324,7 +1362,7 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end ">
 
-                    <a class="page-link" href="./作品區.html">
+                    <a class="page-link" href="./作品區20201016.html">
                         <button type="button" class="btn btn-outline-dark">1
                         </button>
                     </a>
@@ -1360,7 +1398,105 @@
 
 
 
+<!-- 新增作品按鈕 -->
+<!-- 作品集模組--新增按鈕互動視窗 -->
+<div class="modal fade" id="add_portfolio_button" tabindex="-1" role="dialog" aria-labelledby="add_portfolio_button_Title"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <!-- 主要內容 -->
+    <div class="modal-content cr_7">
 
+        <!-- 內容 -->
+        <div class="modal-body" style="border: 10px solid white;">
+            <div class="PR_main">
+                <div class="pr_main_l">
+                    <div class="pr_l_side">
+                        <div class="pr_s_myphoto"></div>
+                        <div class="pr_s_name">
+                            <h3>Daiel</h3>
+                        </div>
+                        <div class="pr_s_community">
+                            <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                            <div class="pr_c_ig"><i class="fab fa-instagram-square"></i></div>
+                            <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i></div>
+                        </div>
+                        <div class="pr_s_skill_G">
+                            <h3>專長</h3>
+                            <div class="pr_s_skill">#平面設計</div>
+                            <div class="pr_s_skill">#APP製作</div>
+                            <div class="pr_s_skill">#影片剪輯</div>
+                            <div class="pr_s_skill">#商業娛樂</div>
+
+
+                        </div>
+                        <div class="pr_s_connection">聯絡報價</div>
+                        <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                class="fas fa-heart"></i>收藏</div>
+                    </div>
+                </div>
+                <div class="pr_main_r">
+                    
+                    <div class="pr_r_side">
+                        <div class="pr_s_work_img">
+                            <!-- -----上傳圖片1------ -->
+                            <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+                                <input class="add_style_input" type="file" onchange="add_photo_1(this)" add_photo_1="preview_progressbarTW_img"
+                                    accept="image/gif, image/jpeg, image/png" />
+                                <img class="add_photo_img" id="preview_progressbarTW_img" src="https://lh3.googleusercontent.com/proxy/NS1hLNjx1c9DuMkPTzoCYEgjzfrp01xwcjvIg3lsLrn2Kqca7Aymath090nWiGgNp_RnLpL-JAht2m27jrJieqKk9Uzz6ENuMH2Np_C-TPMzcrFr99iLa7_9Y3w_vf---ODaWnpnBghyyYUNL_42RdlmpjLinfCIK8Ta-nB5-cR8VJO2TA" />
+                            </form>
+                            <h2 id="ipt_val"></h2>
+                            
+                            <!-- -----上傳圖片2------ -->
+                            <!-- <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+                                <input class="add_style_input" type="file" onchange="add_photo_2(this)" add_photo_2="preview_progressbarTW_img_2"
+                                    accept="image/gif, image/jpeg, image/png" />
+                                <img class="add_photo_img" id="preview_progressbarTW_img_2" src="#" />
+                            </form> -->
+                        </div>
+                        <!-- <div class="pr_s_work_img">
+                            <img class="style_img" src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg" alt="" srcset=""> -->
+                        </div>
+                        <div class="pr_w_name_G">
+                            <hr class="style_hr_t">
+                            <div class="pr_w_name">
+                                <div class="style_border_tl"></div>
+                                <div class="style_border_bl"></div>
+                                <div class="style_border_ml"></div>
+                                <div class="style_border_tr"></div>
+                                <div class="style_border_br"></div>
+                                <div class="style_border_mr"></div>
+                                <h5 class="style_inline">作品名稱：</h5>
+                                <input class="add_style_input" type="text">
+                            </div>
+                            <hr class="style_hr_d">
+                        </div>
+                        <div class="pr_w_description">
+                            <div class="pr_d_title">
+                                <div class="style_border_tl"></div>
+                                <div class="style_border_bl"></div>
+                                <div class="style_border_ml"></div>
+                                <div class="style_border_tr"></div>
+                                <div class="style_border_br"></div>
+                                <div class="style_border_mr"></div>
+                                作品說明
+                            </div>
+                            <div class="pr_w_d_content">
+                                <div class="style_border_tl"></div>
+                                <div class="style_border_bl"></div>
+                                <div class="style_border_ml"></div>
+                                <div class="style_border_tr"></div>
+                                <div class="style_border_br"></div>
+                                <div class="style_border_mr"></div>
+                                <textarea class="add_style_textarea" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <!-- -----------------作品視窗---------------- -->
     <!-- 作品集模組--互動視窗_abc -->
@@ -1913,6 +2049,49 @@
         }
         
 
+    </script>
+
+     <!-- JavaScript 圖片上傳預覽-->
+
+     <script>
+
+        function add_photo_1(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_1 = input.getAttribute("add_photo_1");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_1);
+                    img.setAttribute("src", e.target.result)
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function add_photo_2(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_2 = input.getAttribute("add_photo_2");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_2);
+                    img.setAttribute("src", e.target.result)
+
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    </script>
+
+    <!-- 更改圖片路徑為檔名 -->
+    <script>
+        var ipt = document.querySelector(".add_style_input")
+        var ipt_val = document.querySelector('#ipt_val')
+        ipt.onchange = function(){
+            var filename =  ipt.value.replace(/^.*?([^\\\/]*)$/, '$1');
+            ipt_val.innerHTML = filename
+        }
     </script>
 </body>
 
