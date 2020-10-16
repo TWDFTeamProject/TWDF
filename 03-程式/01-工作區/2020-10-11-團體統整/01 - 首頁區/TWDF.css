@@ -22,10 +22,11 @@ header {
 
 header .BackgroundIMG {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
+  z-index: -1;
   filter: alpha(opacity=0);
   /*當圖片數量增加，影片長度需更改，變為Xs*圖片數量*/
   -webkit-animation: slider 6s linear forwards infinite;
@@ -34,6 +35,12 @@ header .BackgroundIMG {
 
 header .BackgroundIMG img {
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  header .BackgroundIMG img {
+    height: 100vh;
+  }
 }
 
 header :nth-child(1) {
@@ -54,6 +61,12 @@ header :nth-child(3) {
 header .navbar {
   width: 100%;
   height: 100px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar {
+    height: 50px;
+  }
 }
 
 header .navbar .TWDFLogo {
@@ -88,7 +101,7 @@ header .navbar .NavBtns .NavBtn {
   position: relative;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   header .navbar .NavBtns .NavBtn {
     margin-right: 20px;
   }
@@ -100,7 +113,7 @@ header .navbar .NavBtns .NavBtn .NavIMG {
   margin-right: 12px;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   header .navbar .NavBtns .NavBtn .NavIMG {
     width: 21px;
     height: 23.5px;
@@ -114,7 +127,7 @@ header .navbar .NavBtns .NavBtn .NavText p {
   margin-bottom: unset;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   header .navbar .NavBtns .NavBtn .NavText p {
     font-size: xx-small;
   }
@@ -124,7 +137,7 @@ header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
   margin-bottom: 4.6px;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
     margin-bottom: 0;
   }
@@ -244,7 +257,7 @@ header .navbar .LogIn {
   margin-right: 38px;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   header .navbar .LogIn {
     font-size: 15px;
     width: 64px;
@@ -304,12 +317,17 @@ header .banner {
   margin-bottom: 940px;
 }
 
+@media (max-width: 1200px) {
+  header .banner {
+    margin-bottom: 600px;
+  }
+}
+
 header .banner .content {
   width: 1154px;
   height: 720px;
   border: 12px solid #fbfafc;
   border-radius: 100.88px;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,10 +344,27 @@ header .banner .content {
   padding: unset;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content {
+    margin-top: 60px;
+    width: 860px;
+    height: 480px;
+    border: 6px solid #fbfafc;
+    border-radius: 36px;
+  }
+}
+
 header .banner .content .ContentTop {
   width: 100%;
   height: 65px;
   border-bottom: 12px solid #fbfafc;
+}
+
+@media (max-width: 1200px) {
+  header .banner .content .ContentTop {
+    height: 32px;
+    border-bottom: 6px solid #fbfafc;
+  }
 }
 
 header .banner .content .ContentTop .ContentTopPoints {
@@ -344,6 +379,14 @@ header .banner .content .ContentTop .ContentTopPoints {
   margin-top: 18px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentTop .ContentTopPoints {
+    margin-left: 26px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+}
+
 header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
   width: 23px;
   height: 20px;
@@ -352,10 +395,28 @@ header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
   margin-right: 20px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentTop .ContentTopPoints .ContentTopPoint {
+    width: 11.5px;
+    height: 10px;
+    border-radius: 4.75px;
+    margin-right: 10px;
+  }
+}
+
 header .banner .content .ContentMiddle {
   color: white;
   margin-top: 51px;
   margin-left: 51px;
+  font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+  header .banner .content .ContentMiddle {
+    margin-top: 34px;
+    margin-left: 34px;
+    font-size: 26px;
+  }
 }
 
 header .banner .content .ContentBottom {
@@ -369,10 +430,24 @@ header .banner .content .ContentBottom .TWDFTitleTop {
   margin-top: 36px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentBottom .TWDFTitleTop {
+    font-size: 66px;
+    margin-top: 24px;
+  }
+}
+
 header .banner .content .ContentBottom .TWDFTitleBottom {
   font-family: 'Cantarell', sans-serif;
   font-size: 36px;
   margin-top: 34px;
+}
+
+@media (max-width: 1200px) {
+  header .banner .content .ContentBottom .TWDFTitleBottom {
+    font-size: 24px;
+    margin-top: 22.6px;
+  }
 }
 
 header .banner .content .ContentBottom .Searchingbar {
@@ -393,10 +468,27 @@ header .banner .content .ContentBottom .Searchingbar {
   padding-left: 29px;
 }
 
+@media (max-width: 1200px) {
+  header .banner .content .ContentBottom .Searchingbar {
+    width: 366px;
+    height: 28px;
+    border: .5px solid white;
+    border-radius: 32px;
+    margin-bottom: 6px;
+    margin-top: 54px;
+    padding-left: 29px;
+  }
+}
+
 header .banner .Scrollpart {
   position: relative;
-  top: 900px;
-  height: 100px;
+  top: 32%;
+}
+
+@media (max-width: 1200px) {
+  header .banner .Scrollpart {
+    top: 33%;
+  }
 }
 
 header .banner .Scrollpart a {
@@ -412,6 +504,13 @@ header .banner .Scrollpart a {
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
   padding-top: 40px;
+}
+
+@media (max-width: 1200px) {
+  header .banner .Scrollpart a {
+    left: 48%;
+    padding-top: 24px;
+  }
 }
 
 header .banner .Scrollpart a :hover {
@@ -431,6 +530,14 @@ header .banner .Scrollpart a span {
           box-sizing: border-box;
 }
 
+@media (max-width: 1200px) {
+  header .banner .Scrollpart a span {
+    left: 56%;
+    width: 16px;
+    height: 24px;
+  }
+}
+
 header .banner .Scrollpart a span::before {
   position: absolute;
   top: 9px;
@@ -445,6 +552,15 @@ header .banner .Scrollpart a span::before {
   animation: scrollball 2s infinite;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  header .banner .Scrollpart a span::before {
+    top: 2px;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+  }
 }
 
 /* ------------------------------主要內容區塊----------------------------------- */
@@ -466,16 +582,47 @@ main .Section1 {
   margin-top: 220px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 {
+    margin-top: 110px;
+  }
+}
+
 main .Section1 .OurTeam .OurTeamText {
   color: white;
   padding-left: 44px;
   margin-right: 210px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .OurTeam .OurTeamText {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamText {
+    padding-left: 36px;
+    margin-right: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
   font-size: 32px;
   padding-left: 7px;
   margin-bottom: 78px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
+    width: 100vw;
+    margin-bottom: 39px;
+  }
 }
 
 main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
@@ -490,8 +637,45 @@ main .Section1 .OurTeam .OurTeamPCImg {
   width: 421px;
 }
 
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamPCImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+}
+
 main .Section1 .TeamMemberImg {
   margin-top: 101px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg .col {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main .Section1 .TeamMemberImg .col img {
+    width: 86%;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg .col img {
+    width: 100%;
+  }
 }
 
 main .Section1 .TeamMemberImg .col .TeamMemberImgText {
@@ -505,13 +689,45 @@ main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
   margin-bottom: 17px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 6px;
+  }
+}
+
 main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
   font-size: 16px;
   margin-left: 19px;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
+    font-size: xx-small;
+    margin-left: 8px;
+    margin-bottom: 0;
+  }
+}
+
 main .Section1 .TWDF-Intro {
   margin-top: 191px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro {
+    margin-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
@@ -519,8 +735,20 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
   margin-right: 54px;
 }
 
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMG {
+    margin-right: unset;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
   color: white;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    padding-left: 36px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
@@ -560,6 +788,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
   max-width: 100%;
 }
 
+@media (max-width: 1200px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
+    width: 520px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS :nth-child(1) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
@@ -583,6 +817,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
   color: white;
   padding-right: 0px;
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
+    margin-top: 460px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
@@ -668,6 +908,12 @@ main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitleDet
   font-weight: 100;
 }
 
+@media (max-width: 768px) {
+  main .Section2 .ShowCases .ShowCasesReadMore {
+    margin-bottom: 20px;
+  }
+}
+
 main .Section2 .ShowCases .ShowCasesReadMore a {
   color: white;
   font-weight: bolder;
@@ -694,11 +940,29 @@ main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-1 {
           box-shadow: -30px 26px 0px 0px #094868;
 }
 
+@media (max-width: 768px) {
+  main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-1 {
+    width: 240px;
+    height: 330px;
+    -webkit-box-shadow: -15px 13px 0px 0px #094868;
+            box-shadow: -15px 13px 0px 0px #094868;
+  }
+}
+
 main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-2 {
   width: 326px;
   height: 440px;
   -webkit-box-shadow: -30px 26px 0px 0px #094868;
           box-shadow: -30px 26px 0px 0px #094868;
+}
+
+@media (max-width: 768px) {
+  main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-2 {
+    width: 240px;
+    height: 330px;
+    -webkit-box-shadow: -15px 13px 0px 0px #094868;
+            box-shadow: -15px 13px 0px 0px #094868;
+  }
 }
 
 main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-3 {
@@ -726,9 +990,22 @@ main .Section3 .Section3Background .TabExplain {
   padding-bottom: 191px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .TabExplain {
+    padding-bottom: 80px;
+  }
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainTitleArea {
   margin-left: 95px;
   margin-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainTitleArea {
+    margin-left: unset;
+    margin-bottom: 60px;
+  }
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleDeco {
@@ -754,12 +1031,37 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea {
   margin: 0 87px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea {
+    margin: unset;
+  }
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 92px;
   width: 100%;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock {
+    margin-bottom: 46px;
+  }
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:hover .TabExplainBlockIMG .img-display {
+  opacity: 0;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:hover .TabExplainBlockIMG .img-hover {
+  display: block;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .first-child {
@@ -772,6 +1074,13 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG {
   margin-right: 22px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG .img-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 99;
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG img {
@@ -793,6 +1102,13 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea {
   margin-left: 95px;
   margin-bottom: 86px;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea {
+    margin-left: unset;
+    margin-bottom: 60px;
+  }
 }
 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea .ToBeAPartTitleDeco {
@@ -822,6 +1138,14 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   z-index: 0;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepBackLine {
+    width: 8px;
+    margin-left: 97px;
+    height: calc(100% - 112px);
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent {
   padding-top: 39px;
 }
@@ -836,6 +1160,12 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   margin-left: 135px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow {
+    margin-left: unset;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepNumber {
   width: 112px;
   height: 112px;
@@ -847,6 +1177,19 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   margin-right: 33px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepNumber {
+    width: 80px;
+    height: 80px;
+    border: 6.6px solid #c6edff;
+    line-height: 68px;
+    font-size: 28px;
+    margin-right: unset;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLinePoint {
   width: 57px;
   height: 57px;
@@ -855,20 +1198,47 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   margin-right: 34px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLinePoint {
+    width: 42px;
+    height: 42px;
+    margin-right: 11px;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo {
   max-width: 80px;
   max-height: 80px;
   margin-right: 15px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo {
+    margin-right: unset;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo img {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo img {
+    width: 66%;
+  }
 }
 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText .ToBeAPartStepTitle {
   font-size: 30px;
   font-weight: bold;
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText .ToBeAPartStepTitle {
+    font-size: 26px;
+    font-weight: bold;
+  }
 }
 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepDetails {
@@ -878,9 +1248,25 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   font-size: 22px;
 }
 
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepDetails {
+    min-height: unset;
+    margin-top: 10px;
+    margin-left: 136px;
+    font-size: 18px;
+    margin-bottom: 66px;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
   margin-top: 109px;
   padding-bottom: 244px;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
+    padding-bottom: 122px;
+  }
 }
 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPartGetStartText {
@@ -897,6 +1283,15 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPar
   font-size: 43px;
   text-align: center;
   margin-top: 44px;
+}
+
+@media (max-width: 768px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn {
+    font-size: 28px;
+    width: 166px;
+    height: 68px;
+    line-height: 68px;
+  }
 }
 
 /* ------------------------------頁角-------------------------------------- */
@@ -916,9 +1311,9 @@ footer .FooterFrame .FooterRow .FooterRowL {
   padding-left: 75px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   footer .FooterFrame .FooterRow .FooterRowL {
-    margin-top: 20px;
+    margin-top: 38px;
     padding-left: 0;
     padding-right: 0;
   }

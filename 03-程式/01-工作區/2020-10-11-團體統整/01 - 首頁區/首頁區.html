@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
     <!-- Google Font similar Orator Std Slanted  -->
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="TWDF.css">
@@ -259,42 +261,45 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav align-items-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">
-                        <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
-                        <div class="NavText">
-                            <p class="NavTextCh">城市人論壇</p>
-                            <p class="NavTextEn">Forum</p>
-                        </div><span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
-                        <div class="NavText">
-                            <p class="NavTextCh">作品展示</p>
-                            <p class="NavTextEn">Portfolios</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
-                        <div class="NavText">
-                            <p class="NavTextCh">案件發佈</p>
-                            <p class="NavTextEn">Post Cases</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
-                        <div class="NavText">
-                            <p class="NavTextCh">資源共享</p>
-                            <p class="NavTextEn">Resource Sharing</p>
-                        </div>
-                    </a>
-                </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">城市人論壇</p>
+                                <p class="NavTextEn">Forum</p>
+                            </div><span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">作品展示</p>
+                                <p class="NavTextEn">Portfolios</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">案件發佈</p>
+                                <p class="NavTextEn">Post Cases</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">資源共享</p>
+                                <p class="NavTextEn">Resource Sharing</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="MobileStartBtn" class="LogIn"><p>Sign In</p></a>
+                    </li>
                 </ul>
             </div>
             </nav>
@@ -311,7 +316,7 @@
                     </div>
                 </div>
                 <div class="ContentMiddle">
-                    <h1>&lt;&emsp;&frasl;&emsp;&gt;</h1>
+                    <p>&lt;&emsp;&frasl;&emsp;&gt;</p>
                 </div>
                 <div class="ContentBottom">
     
@@ -333,11 +338,12 @@
                     </div> -->
     
                 </div>
+                <div class="Scrollpart d-none d-md-block">
+                    <a href="#Section1"><span></span>Scroll</a>
+                </div>
             </div>
 
-            <div class="Scrollpart">
-                <a href="#Section1"><span></span>Scroll</a>
-            </div>
+
 
         </div>
 
@@ -351,7 +357,7 @@
 
 
         <div id="Section1" class="Section1 container">
-            <div class="OurTeam row justify-content-center">
+            <div class="OurTeam row justify-content-lg-center">
                 <div class="OurTeamText col">
                     <div class="OurTeamTextTitle">
                         程式人團隊 | Our Team
@@ -368,40 +374,60 @@
                     <img src="OurTeam/CloudPCLogo.png" alt="">
                 </div>
             </div>
-            <div class="TeamMemberImg row  row-cols-2 row-cols-md-5">
+            <div class="TeamMemberImg row row-cols-5">
                 <div class="col">
                     <img src="OurTeam/team-1.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">陳鋐原</div>
-                        <p>企劃 Project Planner</p>
+                        <p class="d-none d-md-inline">企劃 Project Planner</p>
+                        <div class="d-md-none">
+                            <p>企劃</p>
+                            <p>Project Planner</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-2.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">陳姿評</div>
-                        <p>企劃 Project Planner</p>
+                        <p class="d-none d-md-inline">企劃 Project Planner</p>
+                        <div class="d-md-none">
+                            <p>企劃</p>
+                            <p>Project Planner</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-3.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">賴科榜</div>
-                        <p>工程師 Engineer</p>
+                        <p class="d-none d-md-inline">工程師 Engineer</p>
+                        <div class="d-md-none">
+                            <p>工程師</p>
+                            <p>Engineer</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-4.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">趙品昇</div>
-                        <p>工程師 Engineer</p>
+                        <p class="d-none d-md-inline">工程師 Engineer</p>
+                        <div class="d-md-none">
+                            <p>工程師</p>
+                            <p>Engineer</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-5.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">李佩珊</div>
-                        <p>設計師 Designer</p>
+                        <p class="d-none d-md-inline">設計師 Designer</p>
+                        <div class="d-md-none">
+                            <p>設計師</p>
+                            <p>Designer</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -429,7 +455,7 @@
                 </div>
 
                 <div class="TWDF-IntroYouCan row flex-row-reverse">
-                    <div class="TWDF-IntroYouCanIMG col">
+                    <div class="TWDF-IntroYouCanIMG col-md">
                         <!-- <img class="TWDF-IntroIMG2" src="TWDF-Intro/Intro2.png" alt=""> -->
                                 <!-- Animation-Background -->
                         <div class="TWDF-IntroYouCanIMGS">
@@ -447,7 +473,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="TWDF-IntroYouCanText col">
+                    <div class="TWDF-IntroYouCanText col-md">
                         <div class="TWDF-IntroYouCanTitile">
                             <div class="TWDF-IntroYouCanTitileCH">在程式人論壇，你可以</div>
                             <div class="TWDF-IntroYouCanTitileEN">In TWDF, you can...</div>
@@ -518,9 +544,10 @@
                         </div>
                     </div>
                     <div class="TabExplainArea row row-cols-1 row-cols-md-2">
-                        <div class="TabExplainBlock col">
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-1.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-1.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick1.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -532,10 +559,11 @@
                                     <br>都可以在論壇討論區互動交流
                                 </p>
                             </div>
-                        </div>
-                        <div class="TabExplainBlock col">
+                        </a>
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-2.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-2.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick2.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -548,10 +576,11 @@
                                     <br>看到喜歡的展示可聯繫創作者報價
                                 </p>
                             </div>
-                        </div>
-                        <div class="TabExplainBlock col">
+                        </a>
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-3.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-3.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick3.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -564,10 +593,11 @@
                                     <br>讓更多人看見
                                 </p>
                             </div>
-                        </div>
-                        <div class="TabExplainBlock col">
+                        </a>
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-4.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-4.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick4.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -580,7 +610,7 @@
                                     <br>都能在此學習成長的共享資源專區
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
     
@@ -597,7 +627,7 @@
                         <div class="ToBeAPartStepBackLine"></div>
                         <div class="ToBeAPartStepContent">
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">01</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">01</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step1.png" alt="">
@@ -611,7 +641,7 @@
                                 免費註冊，登入會員即可成為程式人論壇的一員
                             </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">02</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">02</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step2.png" alt="">
@@ -621,43 +651,58 @@
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 提出你的問題，讓在線的程式人們一起為你解決、提供意見
                                 <br>例 : 開始自學程式語言，該如何提升自己的能力呢?
                             </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                提出你的問題，讓在線的程式人們一起為你解決、提供意見
+                                例 : 開始自學程式語言，該如何提升自己的能力呢?
+                            </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">03</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">03</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step3.png" alt="">
                                 </div>
                                 <div class="ToBeAPartStepText">
-                                    <div class="ToBeAPartStepTitle">觀看大大作品，立訂學習目標</div>
+                                    <div class="d-none d-md-block ToBeAPartStepTitle">觀看大大作品，立訂學習目標</div>
+                                    <div class="d-md-none ToBeAPartStepTitle">觀看大大作品<br>立訂學習目標</div>
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 參考已解決案例、成果專區裡大大們的作品集，
                                 <br>選擇你想學習的內容，訂定學習目標
                             </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                參考已解決案例、成果專區裡大大們的作品集，
+                                選擇你想學習的內容，訂定學習目標
+                            </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">04</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">04</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step4.png" alt="">
                                 </div>
                                 <div class="ToBeAPartStepText">
-                                    <div class="ToBeAPartStepTitle">資源共享資料庫，開始學習</div>
+                                    <div class="d-none d-md-block ToBeAPartStepTitle">資源共享資料庫，開始學習</div>
+                                    <div class="d-md-none ToBeAPartStepTitle">資源共享資料庫<br>開始學習</div>
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 透過資源共享專區裡提供的電子書、網站程式介紹等學習教材集，
                                 <br>讓你自學沒煩惱，看不懂也別擔心，回到論壇找神人求救
                                 <br>或是透過發案形式能更快解決問題
                             </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                透過資源共享專區裡提供的電子書、網站程式介紹等學習教材集，
+                                讓你自學沒煩惱，看不懂也別擔心，回到論壇找神人求救
+                                或是透過發案形式能更快解決問題
+                            </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">05</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">05</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step5.png" alt="">
@@ -667,10 +712,15 @@
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 讓我們一同為華語圈程式語言的進步共同努力吧。
                                 <br>現在換你成為大大，在討論區為新手們指點迷津，
                                 <br>亦可以到發案專區開始接案賺外快囉!
+                            </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                讓我們一同為華語圈程式語言的進步共同努力吧。
+                                現在換你成為大大，在討論區為新手們指點迷津，
+                                亦可以到發案專區開始接案賺外快囉!
                             </div>
                         </div>
                     </div>
@@ -761,45 +811,13 @@
 
     <!-- wow.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
 
     <!--Start Btn onclick change background color -->
     <script>
 
-
-            // first
-        // $("#StartBtn").click(function() {
-        //     $(this).addClass("ChangeBackgroundColor");
-        // });
-
-
-
-
-            // second
-        // function BtnOnClickChangeBackground() { 
-        //     var btn = document.getElementById("StartBtn");
-        //     var bc = window.getComputedStyle(btn).background;
-
-        //     if (bc === "rgb(0, 0, 0)") {
-        //         document.getElementById("StartBtn").style.background = "rgb(252, 211, 131)";
-        //     } else{
-        //         document.getElementById("StartBtn").style.background = "radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0))";
-        //     }
-
-        //     var c = window.getComputedStyle(btn).Color;
-        //     if (c === "rgb(0, 0, 0)") {
-        //         document.getElementById("StartBtn").style.Color = "rgb(0, 0, 0)";
-        //     } else{
-        //         document.getElementById("StartBtn").style.Color = "rgb(255, 255, 255)";
-        //     }
-        // }
-
-
-
-
-        
-            // third
         document.getElementById('StartBtn').onclick = changeColor;  
 
         function changeColor() {
@@ -824,12 +842,17 @@
             return false;
         }   
 
-        
+    </script>
+
+    <!-- hover to change IMG -->
+    <script>
+
+
 
     </script>
 
     <!-- On Scroll Change IMG -->
-    <script>
+    <!-- <script>
 
     var onScrollHandler = function() {
     var newImageUrl = document.querySelector(".TWDF-IntroIMG2");
@@ -850,6 +873,12 @@
     };
     object.addEventListener ("scroll", onScrollHandler);
 
+    </script> -->
+
+
+    <!-- AOS INI -->
+    <script>
+        AOS.init();
     </script>
 
 
