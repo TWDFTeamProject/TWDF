@@ -10,17 +10,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-
-
     <style>
-        .portfolio_pag {
-            width: 100px;
-            height: 50px;
-            background-color: brown;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .add_portfolio_button {
+            display: inline;
+            letter-spacing: 3px;
+            padding: 10px 15px;
+            line-height: 40px;
+            background-color: black;
+            color: rgb(255, 254, 254);
+            border: 0px;
+            border-radius: 5px;
+        }
+        .add_portfolio_button:hover {
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+            background-color: rgb(247, 99, 99);
+            box-shadow: 2px 2px 3px 1px rgba(65, 65, 65, 0.5);
+            transition: 0.5s;
+        }
+        .add_portfolio_button_1 {
+            display: inline;
+            letter-spacing: 3px;
+            padding: 10px 15px;
+            line-height: 40px;
+            background-color: rgb(129, 158, 255);
+            color: rgb(255, 254, 254);
+            border: 0px;
+            border-radius: 5px;
         }
 
 
@@ -179,6 +195,7 @@
         .pr_main_r {
             width: 80%;
             background-color: rgb(196, 194, 174);
+            position: relative;
             /* padding: 10px; */
 
         }
@@ -204,7 +221,6 @@
         .pr_w_name {
             text-align: center;
             padding: 10px;
-
         }
 
         .pr_w_n_name {
@@ -316,19 +332,19 @@
 
 
         .pr_w_name_G {
-            width: 40%;
+            width: 70%;
+            background-color: rgb(240, 233, 215);
             margin: auto;
             position: relative;
 
         }
 
-        .pr_w_name_G:hover {
+        /* .pr_w_name_G:hover {
             width: 70%;
             transition: 3s;
-            background-color: rgb(240, 233, 215);
             color: rgb(65, 6, 17);
-
-        }
+            background-color: rgb(240, 233, 215);
+        } */
 
 
         /* ----------框限------------- */
@@ -395,6 +411,7 @@
 
         .style_inline {
             display: inline;
+            font-weight:bolder ;
         }
 
         /* --------背景顏色------- */
@@ -456,6 +473,38 @@
             background-color: rgb(196, 194, 174);
         }
 
+
+        /* -------------輸入框------------ */
+        .add_style_input{
+            border: 0;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            
+        }
+        .add_style_textarea{
+            width: 100%;
+            border: 0px;
+            border-radius: 10px;
+        }
+
+
+        /* -------圖片上傳CSS--------- */
+        
+        .add_photo_img{
+            width: 100%;
+            margin-top: 20px;
+        }
+        .add_style_input{
+
+        }
+        .style_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
         /* -----------基礎設定---------- */
         .style_img{
             width: 100%;
@@ -471,10 +520,10 @@
 <body>
 
     <!-- 作品集模組--按鈕 -->
-    <div class="portfolio_pag" data-toggle="modal" data-target="#portfolio_pag_1">Hello world</div>
+    <div class="add_portfolio_button" data-toggle="modal" data-target="#add_portfolio_button">Start</div>
 
     <!-- 作品集模組--互動視窗 -->
-    <div class="modal fade" id="portfolio_pag_1" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1_Title"
+    <div class="modal fade" id="add_portfolio_button" tabindex="-1" role="dialog" aria-labelledby="add_portfolio_button_Title"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <!-- 主要內容 -->
@@ -509,9 +558,34 @@
                             </div>
                         </div>
                         <div class="pr_main_r">
+                            <div class="pr_w_name">
+                                <div class="style_border_tl"></div>
+                                <div class="style_border_bl"></div>
+                                <div class="style_border_ml"></div>
+                                <div class="style_border_tr"></div>
+                                <div class="style_border_br"></div>
+                                <div class="style_border_mr"></div>
+                                <h5 class="style_inline">作品名稱：</h5>
+                                <input class="add_style_input" type="text">
+                            </div>
                             <div class="pr_r_side">
                                 <div class="pr_s_work_img">
-                                    <img class="style_img" src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg" alt="" srcset="">
+                                    <!-- -----上傳圖片1------ -->
+                                    <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+                                        <input class="add_style_input" type="file" onchange="add_photo_1(this)" add_photo_1="preview_progressbarTW_img"
+                                            accept="image/gif, image/jpeg, image/png" />
+                                        <img class="add_photo_img" id="preview_progressbarTW_img" src="#" />
+                                    </form>
+                                    
+                                    <!-- -----上傳圖片2------ -->
+                                    <!-- <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+                                        <input class="add_style_input" type="file" onchange="add_photo_2(this)" add_photo_2="preview_progressbarTW_img_2"
+                                            accept="image/gif, image/jpeg, image/png" />
+                                        <img class="add_photo_img" id="preview_progressbarTW_img_2" src="#" />
+                                    </form> -->
+                                </div>
+                                <!-- <div class="pr_s_work_img">
+                                    <img class="style_img" src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg" alt="" srcset=""> -->
                                 </div>
                                 <div class="pr_w_name_G">
                                     <hr class="style_hr_t">
@@ -522,8 +596,8 @@
                                         <div class="style_border_tr"></div>
                                         <div class="style_border_br"></div>
                                         <div class="style_border_mr"></div>
-                                        <h5 class="style_inline font_style">作品名稱：</h5>
-                                        <h2 class="style_inline font_style">飛鳥與禪</h2>
+                                        <h5 class="style_inline">作品名稱：</h5>
+                                        <input class="add_style_input" type="text">
                                     </div>
                                     <hr class="style_hr_d">
                                 </div>
@@ -544,8 +618,7 @@
                                         <div class="style_border_tr"></div>
                                         <div class="style_border_br"></div>
                                         <div class="style_border_mr"></div>
-                                        範例二只設計了上邊框以及下邊框的風格，所以左邊框與右邊框都是沒有顯示的，所以用 css border
-                                        屬性來設計表格邊框，有寫出來的才會顯示，沒寫出來的邊框預設為 none，即不顯示。分別替各個方向設計比較費時，但可以設計出獨具風格的邊框樣式。
+                                        <textarea class="add_style_textarea" name="" id="" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -588,6 +661,38 @@
                 document.getElementById("pr_1").style.color = "rgb(0, 0, 0)";
             }
         }
+    </script>
+    <!-- JavaScript 圖片上傳預覽-->
+
+    <script>
+
+        function add_photo_1(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_1 = input.getAttribute("add_photo_1");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_1);
+                    img.setAttribute("src", e.target.result)
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function add_photo_2(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_2 = input.getAttribute("add_photo_2");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_2);
+                    img.setAttribute("src", e.target.result)
+
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
     </script>
 
 
