@@ -10,6 +10,8 @@
         crossorigin="anonymous" />
     <style>
         .arrow_button {
+            font-size: 18px;
+            letter-spacing: 5px;
             width: 150px;
             height: 45px;
             margin: 20px;
@@ -21,23 +23,29 @@
             background-color: unset;
             outline:none;
         }
+        .arrow_button:hover{
+            color: brown;
+        }
+        .arrow_button:focus{
+            outline:none;
+        }
     </style>
 </head>
 
 <body>
     <button class="arrow_button" type="button" id="show_newtime">
-        <div id="newtime_t" style="display:block">更新時間<i class="fas fa-sort-up"></i></div>
-        <div id="newtime_d" style="display:none">更新時間<i class="fas fa-caret-down"></i></div>
+        <div id="newtime_t" style="display:block">更新時間 <i class="fas fa-sort-up"></i></div>
+        <div id="newtime_d" style="display:none">更新時間 <i class="fas fa-caret-down"></i></div>
     </button>
 
     <button class="arrow_button" type="button" id="show_browse">
-        <div id="browse_t" style="display:block">留言人數<i class="fas fa-sort-up"></i></div>
-        <div id="browse_d" style="display:none">留言人數<i class="fas fa-caret-down"></i></div>
+        <div id="browse_t" style="display:block">留言人數 <i class="fas fa-sort-up"></i></div>
+        <div id="browse_d" style="display:none">留言人數 <i class="fas fa-caret-down"></i></div>
     </button>
 
     <button class="arrow_button" type="button" id="show_favorites">
-        <div id="favorites_t" style="display:block">收藏人數<i class="fas fa-sort-up"></i></div>
-        <div id="favorites_d" style="display:none">收藏人數<i class="fas fa-caret-down"></i></div>
+        <div id="favorites_t" style="display:block">收藏人數 <i class="fas fa-sort-up"></i></div>
+        <div id="favorites_d" style="display:none">收藏人數 <i class="fas fa-caret-down"></i></div>
     </button>
 
 
