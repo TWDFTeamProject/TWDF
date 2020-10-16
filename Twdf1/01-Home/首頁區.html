@@ -13,14 +13,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
     <!-- Google Font similar Orator Std Slanted  -->
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="TWDF.css">
 
     <!-- Scroll Part -->
     <style>
-            /* ScrollDown */
-
+        /* ScrollDown */
 
         @-webkit-keyframes scrollball {
             0% {
@@ -61,91 +66,105 @@
                 opacity: 0;
             }
         }
-
     </style>
 
     <!-- background-animation -->
     <style>
-/* ///////////////////headerbackgroundIMGS////////////////////////// */
-            @-webkit-keyframes slider {
-                3% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-                27% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-                30% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-            }
-            @keyframes slider {
-                3% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-                27% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-                30% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
+        /* ///////////////////headerbackgroundIMGS////////////////////////// */
+        @-webkit-keyframes slider {
+            3% {
+                opacity: 1;
+                filter: alpha(opacity=100);
             }
 
-/* ///////////////////TWDFIntroYouCan///////////////////////////// */
-            /* @-webkit-keyframes slider2 {
-                3% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-
-                27% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-                30% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-            } */
-            @keyframes slider2 {
-                /* 3% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-
-                27% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                }
-                30% {
-                    opacity: 1;
-                    filter: alpha(opacity=100);
-                } */
-
-                0%{
-                    opacity: 0;
-                }
-                20%{
-                    opacity: 1;
-                }
-                40%{
-                    opacity: 1;
-                }
-                60%{
-                    opacity: 1;
-                }
-                80%{
-                    opacity: 1;
-                }
-                100%{
-                    opacity: 0;
-                }
+            27% {
+                opacity: 1;
+                filter: alpha(opacity=100);
             }
+
+            30% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+        }
+
+        @keyframes slider {
+            3% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            27% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            30% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+        }
+
+        /* ///////////////////TWDFIntroYouCan///////////////////////////// */
+        @-webkit-keyframes slider2 {
+            3% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            27% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            30% {
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+        }
+
+        @keyframes slider2 {
+            3% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            27% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            30% {
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+        }
+
+        /* ///////////////////TWDFIntroForum///////////////////////////// */
+        @-webkit-keyframes slider3 {
+            0% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            50% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+        }
+
+        @keyframes slider3 {
+            0% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            50% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+        }
+
 
     </style>
 
@@ -153,7 +172,7 @@
 
 
 <body>
-    
+
     <header>
 
         <!-- Animation-Background -->
@@ -170,41 +189,102 @@
         </div>
 
         <!-- ---------------------導覽列----------------------- -->
-        
-        <nav class="navbar sticky-top">
-            <a class="TWDFLogo" href="../01 - 首頁區/首頁區.html">
+        <nav class="d-none d-md-block navbar sticky-top">
+            <div class="TWDFLogo">
                 <img src="Nav-Logo/TWDF-Logo.png" alt="">
-            </a>
+            </div>
             <div class="NavBtns">
-                <a class="NavBtn" href="../02-論壇區/02-論壇區.html">
+                <a class="NavBtn" href="">
                     <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">城市人論壇</p>
                         <p class="NavTextEn">Forum</p>
                     </div>
                 </a>
-                <a class="NavBtn" href="../03-作品展示/03-作品展示區.html">
+                <a class="NavBtn" href="">
                     <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">作品展示</p>
                         <p class="NavTextEn">Portfolios</p>
                     </div>
                 </a>
-                <a class="NavBtn" href="/Twdf1/01-Home/02-xxx/04-我的任務(完成).html">
+                <a class="NavBtn" href="">
                     <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">案件發佈</p>
                         <p class="NavTextEn">Post Cases</p>
                     </div>
                 </a>
-                <a class="NavBtn" href="../05-資源分享區/05-資源分享區.html">
+                <a class="NavBtn" href="">
                     <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">資源共享</p>
                         <p class="NavTextEn">Resource Sharing</p>
                     </div>
                 </a>
-                <a id="StartBtn" class="LogIn"><p>Sign In</p></a>
+                <a id="StartBtn" class="LogIn" data-toggle="modal" data-target="#member_form_1">
+                    <i class="far fa-user-circle"></i>
+                    <p>Sign In</p>
+                </a>
+            </div>
+        </nav>
+
+        <!-- -------------------手機導覽列--------------------- -->
+        <nav class="d-block d-md-none navbar navbar-dark navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="mr-2" src="Nav-Logo/TWDF-Logo.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="" loading="lazy">
+                程式人
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">城市人論壇</p>
+                                <p class="NavTextEn">Forum</p>
+                            </div><span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">作品展示</p>
+                                <p class="NavTextEn">Portfolios</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">案件發佈</p>
+                                <p class="NavTextEn">Post Cases</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">資源共享</p>
+                                <p class="NavTextEn">Resource Sharing</p>
+                            </div>
+                        </a>
+                    </li>
+                    <a class="nav-login-link  align-items-end" href="#">
+                        <div class="NavText">
+                            <p>會員登入 / 註冊</p>
+                        </div>
+                    </a>
+                </ul>
+
             </div>
         </nav>
 
@@ -219,47 +299,37 @@
                     </div>
                 </div>
                 <div class="ContentMiddle">
-                    <h1>&lt;&emsp;&frasl;&emsp;&gt;</h1>
+                    <p>&lt;&emsp;&frasl;&emsp;&gt;</p>
                 </div>
                 <div class="ContentBottom">
-    
+
                     <div class="TWDFTitle">
-                        <div class="TWDFTitleTop" >程式人</div>
+                        <div class="TWDFTitleTop">程式人</div>
                         <div class="TWDFTitleBottom">TWDF</br>Taiwan Web Developer Forum</div>
                     </div>
-    
+
                     <!-- ---------------------搜尋----------------------- -->
                     <div class="Searchingbar">
                         舉手發問
                     </div>
-                    <!-- --------------------Scroll---------------------- -->
-                    <!-- <div class="ScrollDown">
-                        <div class="ScrollDownLogo">
-                            <div class="ScrollDownLogoCircle"></div>
-                        </div>
-                        <div class="ScrollDownText">Scroll</div>
-                    </div> -->
-    
+
+                </div>
+                <div class="Scrollpart d-none d-md-block">
+                    <a href="#Section1"><span></span>Scroll</a>
                 </div>
             </div>
 
-            <div class="Scrollpart">
-                <a href="#Section1"><span></span>Scroll</a>
-            </div>
+
 
         </div>
-
-
 
     </header>
 
     <!-- ---------------------內容----------------------- -->
     <main>
 
-
-
         <div id="Section1" class="Section1 container">
-            <div class="OurTeam row justify-content-center">
+            <div class="OurTeam row justify-content-lg-center">
                 <div class="OurTeamText col">
                     <div class="OurTeamTextTitle">
                         程式人團隊 | Our Team
@@ -276,47 +346,72 @@
                     <img src="OurTeam/CloudPCLogo.png" alt="">
                 </div>
             </div>
-            <div class="TeamMemberImg row  row-cols-2 row-cols-md-5">
+            <div class="TeamMemberImg row row-cols-5">
                 <div class="col">
                     <img src="OurTeam/team-1.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">陳鋐原</div>
-                        <p>企劃 Project Planner</p>
+                        <p class="d-none d-md-inline">企劃 Project Planner</p>
+                        <div class="d-md-none">
+                            <p>企劃</p>
+                            <p>Project Planner</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-2.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">陳姿評</div>
-                        <p>企劃 Project Planner</p>
+                        <p class="d-none d-md-inline">企劃 Project Planner</p>
+                        <div class="d-md-none">
+                            <p>企劃</p>
+                            <p>Project Planner</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-3.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">賴科榜</div>
-                        <p>工程師 Engineer</p>
+                        <p class="d-none d-md-inline">工程師 Engineer</p>
+                        <div class="d-md-none">
+                            <p>工程師</p>
+                            <p>Engineer</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-4.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">趙品昇</div>
-                        <p>工程師 Engineer</p>
+                        <p class="d-none d-md-inline">工程師 Engineer</p>
+                        <div class="d-md-none">
+                            <p>工程師</p>
+                            <p>Engineer</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <img src="OurTeam/team-5.png" alt="">
                     <div class="TeamMemberImgText">
                         <div class="TeamMemberImgTextTitle">李佩珊</div>
-                        <p>設計師 Designer</p>
+                        <p class="d-none d-md-inline">設計師 Designer</p>
+                        <div class="d-md-none">
+                            <p>設計師</p>
+                            <p>Designer</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="TWDF-Intro">
                 <div class="TWDF-IntroForum row">
-                    <div class="TWDF-IntroForumIMG">
-                        <img src="TWDF-Intro/Intro1.png" alt="">
+                    <div class="TWDF-IntroForumIMGS">
+                        <div class="BackgroundIMG">
+                            <img src="TWDF-Intro/Intro1.png" alt="">
+                        </div>
+                        <div class="BackgroundIMG">
+                            <img src="TWDF-Intro/Intro2.png" alt="">
+                        </div>
                     </div>
                     <div class="TWDF-IntroForumText">
                         <div class="TWDF-IntroForumTitle">
@@ -336,26 +431,26 @@
                     </div>
                 </div>
 
-                <div class="TWDF-IntroYouCan row flex-row-reverse">
-                    <div class="TWDF-IntroYouCanIMG col">
+                <div class="TWDF-IntroYouCan row flex-sm-column-reverse flex-lg-row-reverse">
+                    <div class="TWDF-IntroYouCanIMG col-12 col-lg-6">
                         <!-- <img class="TWDF-IntroIMG2" src="TWDF-Intro/Intro2.png" alt=""> -->
-                                <!-- Animation-Background -->
+                        <!-- Animation-Background -->
                         <div class="TWDF-IntroYouCanIMGS">
                             <div class="BackgroundIMG">
-                                <img src="/03-程式/01-工作區/2020-10-11-團體統整/01 - 首頁區/TWDF-Intro/Laptop1.png">
+                                <img src="TWDF-Intro/Laptop1.png">
                             </div>
                             <div class="BackgroundIMG">
-                                <img src="/03-程式/01-工作區/2020-10-11-團體統整/01 - 首頁區/TWDF-Intro/Laptop2.png">
+                                <img src="TWDF-Intro/Laptop2.png">
                             </div>
                             <div class="BackgroundIMG">
-                                <img src="/03-程式/01-工作區/2020-10-11-團體統整/01 - 首頁區/TWDF-Intro/Laptop3.png">
+                                <img src="TWDF-Intro/Laptop3.png">
                             </div>
                             <div class="BackgroundIMG">
-                                <img src="/03-程式/01-工作區/2020-10-11-團體統整/01 - 首頁區/TWDF-Intro/Laptop4.png">
+                                <img src="TWDF-Intro/Laptop4.png">
                             </div>
                         </div>
                     </div>
-                    <div class="TWDF-IntroYouCanText col">
+                    <div class="TWDF-IntroYouCanText col-12 col-lg-6">
                         <div class="TWDF-IntroYouCanTitile">
                             <div class="TWDF-IntroYouCanTitileCH">在程式人論壇，你可以</div>
                             <div class="TWDF-IntroYouCanTitileEN">In TWDF, you can...</div>
@@ -426,9 +521,10 @@
                         </div>
                     </div>
                     <div class="TabExplainArea row row-cols-1 row-cols-md-2">
-                        <div class="TabExplainBlock col">
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-1.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-1.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick1.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -440,10 +536,11 @@
                                     <br>都可以在論壇討論區互動交流
                                 </p>
                             </div>
-                        </div>
-                        <div class="TabExplainBlock col">
+                        </a>
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-2.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-2.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick2.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -456,10 +553,11 @@
                                     <br>看到喜歡的展示可聯繫創作者報價
                                 </p>
                             </div>
-                        </div>
-                        <div class="TabExplainBlock col">
+                        </a>
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-3.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-3.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick3.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -472,10 +570,11 @@
                                     <br>讓更多人看見
                                 </p>
                             </div>
-                        </div>
-                        <div class="TabExplainBlock col">
+                        </a>
+                        <a class="TabExplainBlock col">
                             <div class="TabExplainBlockIMG">
-                                <img src="TabExplain/Tab-4.png" alt="">
+                                <img class="img-display" src="TabExplain/Tab-4.png" alt="">
+                                <img class="img-hover" src="TabExplain/onclick4.png" alt="">
                             </div>
                             <div class="TabExplainBlockText">
                                 <div class="TabExplainBlockTitle">
@@ -488,10 +587,10 @@
                                     <br>都能在此學習成長的共享資源專區
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
-    
+
                 <div class="ToBeAPartOfTWDF container">
                     <div class="ToBeAPartTitleArea row align-items-center">
                         <div class="ToBeAPartTitleDeco"></div>
@@ -505,7 +604,8 @@
                         <div class="ToBeAPartStepBackLine"></div>
                         <div class="ToBeAPartStepContent">
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">01</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-bottom">01</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step1.png" alt="">
@@ -519,7 +619,8 @@
                                 免費註冊，登入會員即可成為程式人論壇的一員
                             </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">02</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">02</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step2.png" alt="">
@@ -529,43 +630,61 @@
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 提出你的問題，讓在線的程式人們一起為你解決、提供意見
                                 <br>例 : 開始自學程式語言，該如何提升自己的能力呢?
                             </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                提出你的問題，讓在線的程式人們一起為你解決、提供意見
+                                例 : 開始自學程式語言，該如何提升自己的能力呢?
+                            </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">03</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">03</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step3.png" alt="">
                                 </div>
                                 <div class="ToBeAPartStepText">
-                                    <div class="ToBeAPartStepTitle">觀看大大作品，立訂學習目標</div>
+                                    <div class="d-none d-md-block ToBeAPartStepTitle">觀看大大作品，立訂學習目標</div>
+                                    <div class="d-md-none ToBeAPartStepTitle">觀看大大作品<br>立訂學習目標</div>
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 參考已解決案例、成果專區裡大大們的作品集，
                                 <br>選擇你想學習的內容，訂定學習目標
                             </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                參考已解決案例、成果專區裡大大們的作品集，
+                                選擇你想學習的內容，訂定學習目標
+                            </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">04</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">04</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step4.png" alt="">
                                 </div>
                                 <div class="ToBeAPartStepText">
-                                    <div class="ToBeAPartStepTitle">資源共享資料庫，開始學習</div>
+                                    <div class="d-none d-md-block ToBeAPartStepTitle">資源共享資料庫，開始學習</div>
+                                    <div class="d-md-none ToBeAPartStepTitle">資源共享資料庫<br>開始學習</div>
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 透過資源共享專區裡提供的電子書、網站程式介紹等學習教材集，
                                 <br>讓你自學沒煩惱，看不懂也別擔心，回到論壇找神人求救
                                 <br>或是透過發案形式能更快解決問題
                             </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                透過資源共享專區裡提供的電子書、網站程式介紹等學習教材集，
+                                讓你自學沒煩惱，看不懂也別擔心，回到論壇找神人求救
+                                或是透過發案形式能更快解決問題
+                            </div>
                             <div class="ToBeAPartStepRow">
-                                <div class="ToBeAPartStepNumber">05</div>
+                                <div class="ToBeAPartStepNumber" data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">05</div>
                                 <div class="ToBeAPartStepLinePoint"></div>
                                 <div class="ToBeAPartStepLogo">
                                     <img src="ToBeAPartOfTWDF/Step5.png" alt="">
@@ -575,10 +694,15 @@
                                     <img src="ToBeAPartOfTWDF/DottedLine.png" alt="">
                                 </div>
                             </div>
-                            <div class="ToBeAPartStepDetails">
+                            <div class="d-none d-md-block ToBeAPartStepDetails">
                                 讓我們一同為華語圈程式語言的進步共同努力吧。
                                 <br>現在換你成為大大，在討論區為新手們指點迷津，
                                 <br>亦可以到發案專區開始接案賺外快囉!
+                            </div>
+                            <div class="d-md-none ToBeAPartStepDetails">
+                                讓我們一同為華語圈程式語言的進步共同努力吧。
+                                現在換你成為大大，在討論區為新手們指點迷津，
+                                亦可以到發案專區開始接案賺外快囉!
                             </div>
                         </div>
                     </div>
@@ -592,27 +716,28 @@
             </div>
         </div>
 
-
     </main>
 
     <!-- ---------------------頁角----------------------- -->
+
+    <!-- RWD Footer -->
     <footer>
-        <div class="FooterFrame container">
-            <div class="FooterRow row row-cols-3 justify-content-center">
-                <div class="col-5 FooterRowL">
+        <div class="FooterFrame container-lg">
+            <div class="FooterRow row row-cols-md-3 mr-auto ml-auto">
+                <div class="col-lg-5 FooterRowL text-center">
                     <img src="Nav-Logo/TWDF-Logo.png" alt="">
                     <div class="FooterTWDF-Title">
                         程式人論壇 | TWDF
                     </div>
                     <p>Taiwan Web Developer Forum</p>
                 </div>
-                <div class="col-4 FooterRowM">
+                <div class="col-lg-4 FooterRowM text-center">
                     <p>+886 900-31540000</p>
                     <p>+886 900-31540000</p>
                     <p>TWDF＠gmail.com</p>
                     <p>台中市北區崇德路民眾技藝中心</p>
                 </div>
-                <div class="col-3 FooterRowR">
+                <div class="d-none d-md-block col-lg-3 FooterRowR">
                     <p>- 論壇討論區</p>
                     <p>- 成果作品集</p>
                     <p>- 案件發布區</p>
@@ -625,6 +750,52 @@
         </div>
     </footer>
 
+    <!-- -------------------Sign In---------------------- -->
+    <div class="modal fade" id="member_form_1" tabindex="-1" role="dialog" aria-labelledby="member_form_1Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-1 ">
+                    <h5 class="modal-title" id="member_form_1Label">會員登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-1 ">
+                    <div class="XX_signin_box">
+                        <div class="XX_account">帳號<input type="text"></div>
+                        <div class="XX_password">密碼<input type="text"></div>
+                        <div class="XX_but_bar">
+                            <div class="XX_bar_remember"><input type="checkbox" name="" id=""> 記住我</div>
+                            <div class="XX_bar_forget">忘記密碼</div>
+                            <div class="XX_bar_noaccount">沒有帳號</div>
+                            <div class="XX_bar_new">創建新帳號</div>
+
+                        </div>
+                        <div class="XX_sign_in">登入</div>
+                        <hr class="style_hr_t">
+                        <div class="XX_other_title">
+                            <h5>其他登入方式</h5>
+                        </div>
+                        <div class="XX_other_sign_bar">
+                            <div class="XX_sign_fb"></div>
+                            <div class="XX_sign_google"></div>
+                            <div class="XX_sign_apple"></div>
+                        </div>
+                        <hr class="style_hr_d">
+                    </div>
+                </div>
+                <div class="modal-footer bg-1 ">
+                    <div class="XX_precautions">
+                        <div class="XX_precautions_title">
+                            <h5>注意事項</h5>
+                        </div>
+                        請勿在公共場所登入論壇帳號，避免使用不信任的無線網路、Proxy或VPN，以防帳號被盜取。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ---------------------CDN----------------------- -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -639,98 +810,43 @@
 
     <!-- wow.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    
 
     <!--Start Btn onclick change background color -->
-    <script>
+    <!-- <script>
 
-
-            // first
-        // $("#StartBtn").click(function() {
-        //     $(this).addClass("ChangeBackgroundColor");
-        // });
-
-
-
-
-            // second
-        // function BtnOnClickChangeBackground() { 
-        //     var btn = document.getElementById("StartBtn");
-        //     var bc = window.getComputedStyle(btn).background;
-
-        //     if (bc === "rgb(0, 0, 0)") {
-        //         document.getElementById("StartBtn").style.background = "rgb(252, 211, 131)";
-        //     } else{
-        //         document.getElementById("StartBtn").style.background = "radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0))";
-        //     }
-
-        //     var c = window.getComputedStyle(btn).Color;
-        //     if (c === "rgb(0, 0, 0)") {
-        //         document.getElementById("StartBtn").style.Color = "rgb(0, 0, 0)";
-        //     } else{
-        //         document.getElementById("StartBtn").style.Color = "rgb(255, 255, 255)";
-        //     }
-        // }
-
-
-
-
-        
-            // third
-        document.getElementById('StartBtn').onclick = changeColor;  
+        document.getElementById('StartBtn').onclick = changeColor;
 
         function changeColor() {
             document.getElementById("StartBtn").style.color = "white";
             document.getElementById("StartBtn").style.background = "radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0))";
             return false;
-        }   
+        }
 
-        document.getElementById('TWDF-IntroStartBtn').onclick = changeColor2;  
+        document.getElementById('TWDF-IntroStartBtn').onclick = changeColor2;
 
         function changeColor2() {
             document.getElementById("TWDF-IntroStartBtn").style.color = "white";
             document.getElementById("TWDF-IntroStartBtn").style.background = "radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0))";
             return false;
-        }   
+        }
 
-        document.getElementById('ToBeAPartGetStartBtn').onclick = changeColor3;  
+        document.getElementById('ToBeAPartGetStartBtn').onclick = changeColor3;
 
         function changeColor3() {
             document.getElementById("ToBeAPartGetStartBtn").style.color = "white";
             document.getElementById("ToBeAPartGetStartBtn").style.background = "radial-gradient(circle,rgb(102 , 29, 0),rgb(0, 0, 0))";
             return false;
-        }   
+        }
 
-        
+    </script> -->
 
-    </script>
-
-    <!-- On Scroll Change IMG -->
+    <!-- AOS INI -->
     <script>
-
-    var onScrollHandler = function() {
-    var newImageUrl = document.querySelector(".TWDF-IntroIMG2");
-    var scrollTop = document.querySelector('.TWDF-Intro').offsetTop;
-    if (scrollTop > 200) {
-        newImageUrl = "TWDF-Intro/Intro1.png"
-    }
-    if (scrollTop > 300) {
-        newImageUrl = "TWDF-Intro/Intro2.png"
-    }
-    if (scrollTop > 400) {
-        newImageUrl = "TWDF-Intro/Intro1.png"
-    }
-    if (scrollTop > 500) {
-        newImageUrl = "TWDF-Intro/Intro2.png"
-    }
-    yourImageElement.src = newImageUrl;
-    };
-    object.addEventListener ("scroll", onScrollHandler);
-
+        AOS.init();
     </script>
-
-
 
 </body>
 
