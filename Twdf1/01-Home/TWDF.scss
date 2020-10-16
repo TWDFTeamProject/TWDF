@@ -366,6 +366,16 @@ header{
                     margin-bottom: 10px;
                     margin-top: 80px;
                     padding-left: 29px;
+                    background: none;
+                    color: white;
+                    &:focus {
+                        outline: none;
+                    }
+                    &::placeholder { 
+                        color: white;
+                        opacity: .8; 
+                      }
+          
                     @media (max-width: 1200px) {
                         width: 366px;
                         height: 28px;

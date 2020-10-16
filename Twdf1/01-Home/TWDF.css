@@ -503,6 +503,32 @@ header .banner .content .ContentBottom .Searchingbar {
   margin-bottom: 10px;
   margin-top: 80px;
   padding-left: 29px;
+  background: none;
+  color: white;
+}
+
+header .banner .content .ContentBottom .Searchingbar:focus {
+  outline: none;
+}
+
+header .banner .content .ContentBottom .Searchingbar::-webkit-input-placeholder {
+  color: white;
+  opacity: .8;
+}
+
+header .banner .content .ContentBottom .Searchingbar:-ms-input-placeholder {
+  color: white;
+  opacity: .8;
+}
+
+header .banner .content .ContentBottom .Searchingbar::-ms-input-placeholder {
+  color: white;
+  opacity: .8;
+}
+
+header .banner .content .ContentBottom .Searchingbar::placeholder {
+  color: white;
+  opacity: .8;
 }
 
 @media (max-width: 1200px) {
