@@ -22,7 +22,7 @@
     <style>
         * {
             box-sizing: border-box;
-            
+
         }
 
         body {
@@ -49,10 +49,12 @@
             margin-top: 20px;
             letter-spacing: 10px;
         }
+
         /* ------分隔頁面------------- */
         .style_hr {
             border: 3px solid black;
         }
+
         /* ------------------主要內容左邊區塊----------------------- */
 
 
@@ -115,8 +117,8 @@
             flex-direction: column;
             margin-top: 10PX;
             opacity: 0.9;
-            border-top: 8px double  rgb(247, 99, 99);
-            border-bottom: 8px double  rgb(247, 99, 99);
+            border-top: 8px double rgb(247, 99, 99);
+            border-bottom: 8px double rgb(247, 99, 99);
 
         }
 
@@ -135,7 +137,8 @@
             opacity: 0.9;
             border-bottom: 4px solid rgb(255, 254, 254);
         }
-        .projectbox:hover{
+
+        .projectbox:hover {
             transition: 1.5s;
             background-color: #E07C64;
             opacity: 1;
@@ -169,21 +172,35 @@
 
         .banner {
             width: 90%;
-            height: 400px;
+            height: auto;
             /* background-color: darkkhaki; */
             margin: auto;
             margin-top: 20px;
+            display: flex;
+            flex-direction: column;
             position: relative;
             box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
-
-
         }
 
         .ba-photo {
             width: 100%;
-            height: 60%;
+            height: 300px;
             background-color: rgb(33, 44, 13);
             background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員封面.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        .ps-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: deeppink;
+            position: absolute;
+            top: 60%;
+            left: 5%;
+            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -191,38 +208,59 @@
 
         .introduction {
             width: 100%;
-            height: 50%;
-            /* background-color: rgb(152, 189, 89); */
+            background-color: rgb(152, 189, 89);
             position: relative;
         }
 
         .in_text_main {
-            width: 95%;
-            height: 50%;
-            background-color: white;
+            width: 100%;
+            height: auto;
+            background-color: rgb(255, 255, 255);
             display: flex;
             align-items: center;
-            margin: 10px;
-            padding: 10px;
-            font-size: 18px;
+            padding: 40px 20px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            line-height: 40px;
             /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
-            position: absolute;
-            top: 20%;
-            left: 1%;
+            
         }
 
-        .ps-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: deeppink;
-            position: absolute;
-            top: 30%;
-            left: 5%;
-            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+
+        
+
+        @media (max-width: 768px) {
+            .banner {
+                width: 90%;
+                /* background-color: darkkhaki; */
+                margin: auto;
+                margin-top: 20px;
+                position: relative;
+                box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            }
+
+            .in_text_main {
+                width: 95%;
+                /* height: 50%; */
+                background-color: white;
+                display: flex;
+                align-items: center;
+                margin: 10px;
+                padding: 10px;
+                font-size: 14px;
+                /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+                position: absolute;
+                top: 20%;
+                left: 1%;
+            }
+
+            .ps-photo {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 50%;
+                left: 5%;
+            }
         }
 
 
@@ -397,7 +435,7 @@
                                 追蹤中的帳號
                             </a>
                         </div>
-            
+
                     </div>
                 </div>
                 <!-- 右邊欄位-- -->
@@ -405,30 +443,30 @@
                     <div class="content-r">
                         <div class="project-page active_pj_pages">
                             <div class="banner">
-                                <div class="ba-photo"></div>
-                                <div class="introduction">
-                                    <div class="in_text_main">
-                                        吳若權（1962年1月28日－）台灣作家、主持人，也是企業行銷顧問,畢業於政大企業管理學系。曾任IBM行政專員、HP惠普公司企劃專員、飛碟唱片董事長特別助理、東元行銷經理、微軟行銷經理。
-                                    </div>
-                                </div>
+                                <div class="ba-photo">
                                 <div class="ps-photo"></div>
+                                </div>
+                                <div class="in_text_main">
+                                    吳若權（1962年1月28日－）台灣作家、主持人，也是企業行銷顧問,畢業於政大企業管理學系。曾任IBM行政專員、HP惠普公司企劃專員、飛碟唱片董事長特別助理、東元行銷經理、微軟行銷經理。
+                                    
+                                </div>
                             </div>
                             <div class="shillbox">
                                 <div class="sk-title">
                                     <h3>技能</h3>
                                 </div>
                                 <div class="sk-content">
-            
+
                                     <div class="skill">CSS</div>
                                     <div class="skill">JaveScipt</div>
                                     <div class="skill">CSS</div>
                                     <div class="skill">CSS</div>
                                     <div class="skill">JaveScipt</div>
                                     <div class="skill">JaveScipt</div>
-            
-            
-            
-            
+
+
+
+
                                 </div>
                             </div>
                             <div class="experiencebox">
@@ -436,24 +474,24 @@
                                     <h3>經歷</h3>
                                 </div>
                                 <div class="ex-content">
-                                   資深廣告業務 May 2017 ~ July 2018
-                                   <br>  品酷廣告股份有限公司
-                                   <br>  工作內容：與兩人小組共同完成12個廣告專案，創造約2,500萬營業額、協助廣告專案統籌與進度控管、客戶溝通與協調、監督活動執行及問題解決、專案預算控管
-            
-                                   <br>  負責客戶：台灣迪士尼、飛躍文創、南山人壽、MeMe直播、ASUS Taiwan、ORIS Taiwan、Honda Taiwan
-            
-                                   <br>  ★ 2017 冰雪奇緣嘉年華
-            
-                                   <br>  ・與美國迪士尼動畫團隊合作，100%還原電影場景
-            
-                                   <br>  ・45天觀展人次100萬，是一般主題肖像展4~5倍﹐追加移展至韓國，受邀擔任施工指導
-            
-                                   <br>  Experiences 00 02@2x
-                                   <br>  廣告業務 Sept 2015 ~ May 2017
-                                   <br>  九井廣告股份有限公司
-                                   <br>  工作內容：協助活動團隊完成廣告專案，主要負責客戶溝通與聯繫、行銷物規劃與發包製作、協助活動執行與支援
-            
-                                   <br>  負責客戶：台灣迪士尼、野獸國、LINE Taiwan、ASUS Taiwan
+                                    資深廣告業務 May 2017 ~ July 2018
+                                    <br> 品酷廣告股份有限公司
+                                    <br> 工作內容：與兩人小組共同完成12個廣告專案，創造約2,500萬營業額、協助廣告專案統籌與進度控管、客戶溝通與協調、監督活動執行及問題解決、專案預算控管
+
+                                    <br> 負責客戶：台灣迪士尼、飛躍文創、南山人壽、MeMe直播、ASUS Taiwan、ORIS Taiwan、Honda Taiwan
+
+                                    <br> ★ 2017 冰雪奇緣嘉年華
+
+                                    <br> ・與美國迪士尼動畫團隊合作，100%還原電影場景
+
+                                    <br> ・45天觀展人次100萬，是一般主題肖像展4~5倍﹐追加移展至韓國，受邀擔任施工指導
+
+                                    <br> Experiences 00 02@2x
+                                    <br> 廣告業務 Sept 2015 ~ May 2017
+                                    <br> 九井廣告股份有限公司
+                                    <br> 工作內容：協助活動團隊完成廣告專案，主要負責客戶溝通與聯繫、行銷物規劃與發包製作、協助活動執行與支援
+
+                                    <br> 負責客戶：台灣迪士尼、野獸國、LINE Taiwan、ASUS Taiwan
                                 </div>
                             </div>
                         </div>
@@ -462,7 +500,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- ---------------------內容----------------------- -->
 
