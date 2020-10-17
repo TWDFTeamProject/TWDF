@@ -617,62 +617,25 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
     <section class="Task_page">
+        <!-- html頁面標題-- -->
         <div class="container ">
             <div class="row"></div>
             <div class="tk_pag_title col-md-12">
                 <h1>論壇討論區</h1>
             </div>
         </div>
-
+        <!-- 分隔線-- -->
         <div class="container ">
             <div class="row"></div>
             <div class="col-md-12 ">
                 <hr class="style_hr">
             </div>
         </div>
-
+        <!-- 主要內容-- -->
         <div class="container ">
             <div class="row">
-                
+                <!-- 左邊欄位-- -->
                 <div class="col-md-9">
                     <!-- 搜尋框 -->
                     <div class="Searchbox ">
@@ -687,7 +650,6 @@
 
                         </div>
                     </div>
-
                     <!-- tag標籤 -->
                     <div class="taggroup">
                         <div class="btn style_cursor">熱門搜尋</div>
@@ -700,7 +662,6 @@
                     <div class="tk_banner">
                         <img class="style_img" src="/03-程式/01-工作區/html-ex/會園區子頁/參考/論壇區/論壇Banner_工作區域 1.jpg" alt="">
                     </div>
-
                     <!-- 排列順序列-- -->
                     <div class="Paginationbox">
                         <div class="Paginationbox-small">最新上傳
@@ -762,6 +723,7 @@
                         <div class="tk_car"></div>
                     </div>
                 </div>
+                <!-- 右邊欄位-- -->
                 <div class="col-md-3">
                     <div class="content-r">
                         <div class="ad_task">
@@ -827,10 +789,15 @@
                 </div>
             </div>
         </div>
+        <!-- 互動視窗模組-- -->
+        <main>
+        </main>
     </section>
 
 
+    <!-- ---點擊愛心收藏---- -->
     <script>
+        // <!-- ---點擊愛心收藏 編號B_1---- -->
         function check_B_1() {
             var e = document.getElementById("B_1");
             var c = window.getComputedStyle(e).backgroundColor;
@@ -840,62 +807,6 @@
                 document.getElementById("B_1").style.background = "rgb(255, 255, 255)";
             }
         }
-        function check_B_2() {
-            var e = document.getElementById("B_2");
-            var c = window.getComputedStyle(e).backgroundColor;
-            if (c === "rgb(255, 255, 255)") {
-                document.getElementById("B_2").style.background = "#ff77ee";
-            } else {
-                document.getElementById("B_2").style.background = "rgb(255, 255, 255)";
-            }
-        }
-        function check_B_3() {
-            var e = document.getElementById("B_3");
-            var c = window.getComputedStyle(e).backgroundColor;
-            if (c === "rgb(255, 255, 255)") {
-                document.getElementById("B_3").style.background = "#ff77ee";
-            } else {
-                document.getElementById("B_3").style.background = "rgb(255, 255, 255)";
-            }
-        }
-        function check_B_4() {
-            var e = document.getElementById("B_4");
-            var c = window.getComputedStyle(e).backgroundColor;
-            if (c === "rgb(255, 255, 255)") {
-                document.getElementById("B_4").style.background = "#ff77ee";
-            } else {
-                document.getElementById("B_4").style.background = "rgb(255, 255, 255)";
-            }
-        }
-        function check_B_5() {
-            var e = document.getElementById("B_5");
-            var c = window.getComputedStyle(e).backgroundColor;
-            if (c === "rgb(255, 255, 255)") {
-                document.getElementById("B_5").style.background = "#ff77ee";
-            } else {
-                document.getElementById("B_5").style.background = "rgb(255, 255, 255)";
-            }
-        }
-        function check_B_6() {
-            var e = document.getElementById("B_6");
-            var c = window.getComputedStyle(e).backgroundColor;
-            if (c === "rgb(255, 255, 255)") {
-                document.getElementById("B_6").style.background = "#ff77ee";
-            } else {
-                document.getElementById("B_6").style.background = "rgb(255, 255, 255)";
-            }
-        }
-        function check_B_7() {
-            var e = document.getElementById("B_7");
-            var c = window.getComputedStyle(e).backgroundColor;
-            if (c === "rgb(255, 255, 255)") {
-                document.getElementById("B_7").style.background = "#ff77ee";
-            } else {
-                document.getElementById("B_7").style.background = "rgb(255, 255, 255)";
-            }
-        }
-
-        
     </script>
 
 
