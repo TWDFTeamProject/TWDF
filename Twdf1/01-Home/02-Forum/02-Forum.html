@@ -142,28 +142,6 @@
             outline: unset;
         }
 
-        /* -------關鍵字tagRWD------ */
-        @media (max-width: 767.98px) {
-            .taggroup {
-                height: 90px;
-                display: flex;
-                flex-wrap: wrap;
-                font-size: 14px;
-                margin-top: 10px;
-
-            }
-
-            .qt_tag_style {
-                width: 30%;
-                margin: 3px;
-                padding: 3px 0;
-                border: 0;
-                background-color: unset;
-            }
-
-        }
-
-
         .tag_title {
             height: 40px;
             background-color: chartreuse;
@@ -204,16 +182,6 @@
             outline: none;
         }
 
-
-        /* -------排列順序RWD------ */
-        @media (max-width: 767.98px) {
-            .arrow_button {
-                font-size: 14px;
-                letter-spacing: 1px;
-            }
-        }
-
-
         .arrow_button:hover {
             color: brown;
         }
@@ -224,14 +192,14 @@
 
         /* ------分頁按鈕----- */
         .page-button {
-            width: 0px;
+            width: 150px;
             height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-left: auto;
         }
-        
+
 
         .Qt_bn_t {
             width: 34.6px;
@@ -272,29 +240,6 @@
             color: white;
             transition: 1s;
         }
-
-        /* -------頁面切換按鈕RWD------ */
-
-        @media (max-width: 767.98px) {
-            .page-button {
-            width: 100px;
-            } 
-        
-            .Qt_bn_t {
-                width: 24px;
-                height: 28px;
-                font-size: 14px;
-            }
-
-            .Qt_bn_d {
-                width: 24px;
-                height: 28px;
-                font-size: 14px;
-            }
-        }
-
-
-
 
 
         /* ------問題卡片樣式----- */
@@ -463,39 +408,6 @@
             box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
         }
 
-        /* -------卡片RWD------ */
-
-        @media (max-width: 767.98px) {
-            .qt-l {
-                width: 100%;
-            }
-
-            .ps-name {
-                font-size: 14px;
-            }
-
-            .qt-title h5 {
-                font-size: 14px;
-                letter-spacing: 1px;
-            }
-
-            .qt-r {
-                display: none;
-            }
-
-            .qt-skill {
-                font-size: 8px;
-            }
-
-            .qt-see {
-                font-size: 10px;
-            }
-
-            .qt-love {
-                font-size: 10px;
-            }
-        }
-
         /* ------------分頁點擊顯示--------------- */
 
         .Qt_active {
@@ -565,9 +477,9 @@
             /* background-color: rgb(2, 0, 37); */
             /* padding-top: 10px; */
             /* position: fixed;
-            display: flex; */
+    display: flex; */
             /* position: sticky;
-            top: 5%; */
+    top: 5%; */
             /* align-content: center; */
         }
 
@@ -617,13 +529,15 @@
             align-content: space-between;
             /* background-color: crimson; */
         }
-        .tf_promblem_G a{
+
+        .tf_promblem_G a {
             color: unset;
             text-decoration: none;
-            
+
 
         }
-        .tf_promblem_G a:hover{
+
+        .tf_promblem_G a:hover {
             color: rgb(73, 76, 255);
 
         }
@@ -633,7 +547,7 @@
             margin-top: 10px;
             display: flex;
         }
-        
+
 
         /* ------前五名答題者------- */
 
@@ -682,6 +596,7 @@
             display: flex;
             flex-direction: column;
         }
+
         .top_man {
             width: 100%;
             height: 30px;
@@ -690,13 +605,16 @@
             display: flex;
             align-items: center;
         }
-        .top_man_photo{
+
+        .top_man_photo {
             width: 30px;
             height: 30px;
         }
-        .top_man_photo img{
+
+        .top_man_photo img {
             height: 100%;
         }
+
         /* --------廣告------------- */
 
         .advertising_1 {
@@ -706,7 +624,8 @@
             background-color: rgb(0, 46, 21);
 
         }
-        .advertising_1 img{
+
+        .advertising_1 img {
             width: 100%;
         }
 
@@ -716,16 +635,19 @@
             margin-bottom: 10px;
             background-color: rgb(0, 46, 21);
         }
-        .advertising_2 img{
+
+        .advertising_2 img {
             width: 100%;
         }
+
         .advertising_3 {
             width: 100%;
             height: auto;
             margin-bottom: 10px;
             background-color: rgb(0, 46, 21);
         }
-        .advertising_3 img{
+
+        .advertising_3 img {
             width: 100%;
         }
 
@@ -750,7 +672,7 @@
             width: 100%;
         }
 
-        
+
 
 
 
@@ -840,9 +762,11 @@
         .clr_2 {
             color: rgb(255, 129, 129);
         }
+
         .clr_3 {
             color: rgb(128, 128, 255);
         }
+
         /* ----- 網路套件----------- */
         /* ------網路--背景動畫---- */
         .circles li {
@@ -1046,7 +970,7 @@
             background: -o-radial-gradient(circle, #002f55, #001027);
             background: -moz-radial-gradient(circle, #002f55, #001027);
             background: radial-gradient(circle, #002f55, #001027);
-            
+
             -webkit-transform: scale(1);
             transform: scale(1);
             -webkit-transition-property: transform;
@@ -1071,11 +995,177 @@
         .hvr-rectangle-in:active:before {
             -webkit-transform: scale(0);
             transform: scale(0);
-            
+
         }
 
 
-        /* ---------RWD------ */
+        /* -------RWD------ */
+        /* -------RWD767.98px版本------------- */
+        /* -------關鍵字tagRWD----- */
+        @media (max-width: 767.98px) {
+            .taggroup {
+                height: 90px;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 14px;
+                margin-top: 10px;
+
+            }
+
+            .qt_tag_style {
+                width: 30%;
+                margin: 3px;
+                padding: 3px 0;
+                border: 0;
+                background-color: unset;
+            }
+        }
+
+        /* -------排列順序RWD------ */
+        @media (max-width: 767.98px) {
+            .arrow_button {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* -------頁面切換按鈕RWD--- */
+
+        @media (max-width: 767.98px) {
+            .page-button {
+                width: 100px;
+            }
+
+            .Qt_bn_t {
+                width: 24px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .Qt_bn_d {
+                width: 24px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+
+        /* -------卡片RWD---------- */
+        @media (max-width: 767.98px) {
+            .qt-l {
+                width: 100%;
+            }
+
+            .ps-name {
+                font-size: 14px;
+            }
+
+            .qt-title h5 {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .qt-r {
+                display: none;
+            }
+
+            .qt-skill {
+                font-size: 8px;
+            }
+
+            .qt-see {
+                font-size: 10px;
+            }
+
+            .qt-love {
+                font-size: 10px;
+            }
+        }
+
+        /* ----------------------------------------------- */
+
+
+        /* -------RWD992px版本------------- */
+        /* -------關鍵字tagRWD----- */
+        @media (max-width: 992px) {
+            .taggroup {
+                height: 90px;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 14px;
+                margin-top: 10px;
+
+            }
+
+            .qt_tag_style {
+                width: 30%;
+                margin: 3px;
+                padding: 3px 0;
+                border: 0;
+                background-color: unset;
+            }
+        }
+
+        /* -------排列順序RWD------ */
+        @media (max-width: 992px) {
+            .arrow_button {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* -------頁面切換按鈕RWD--- */
+
+        @media (max-width: 992px) {
+            .page-button {
+                width: 100px;
+            }
+
+            .Qt_bn_t {
+                width: 24px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .Qt_bn_d {
+                width: 24px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+
+        /* -------卡片RWD---------- */
+        @media (max-width: 992px) {
+            .qt-l {
+                width: 100%;
+            }
+
+            .ps-name {
+                font-size: 14px;
+            }
+
+            .qt-title h5 {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .qt-r {
+                display: none;
+            }
+
+            .qt-skill {
+                font-size: 8px;
+            }
+
+            .qt-see {
+                font-size: 10px;
+            }
+
+            .qt-love {
+                font-size: 10px;
+            }
+        }
+
+        /* ----------------------------------------------- */
     </style>
 </head>
 
@@ -1120,28 +1210,22 @@
                                 <div class="listbox_photo">
                                 </div>
                                 <div class="all_theme">全部主題</div>
-                                <a class="projectbox hvr-rectangle-out"
-                                    href="#">
+                                <a class="projectbox hvr-rectangle-out" href="#">
                                     前端開發
                                 </a>
-                                <a class="projectbox hvr-rectangle-out"
-                                    href="#">
+                                <a class="projectbox hvr-rectangle-out" href="#">
                                     後端開發
                                 </a>
-                                <a class="projectbox hvr-rectangle-out"
-                                    href="#">
+                                <a class="projectbox hvr-rectangle-out" href="#">
                                     ISO開發
                                 </a>
-                                <a class="projectbox hvr-rectangle-out"
-                                    href="#">
+                                <a class="projectbox hvr-rectangle-out" href="#">
                                     Android開發
                                 </a>
-                                <a class="projectbox hvr-rectangle-out"
-                                    href="#">
+                                <a class="projectbox hvr-rectangle-out" href="#">
                                     人工智慧
                                 </a>
-                                <a class="projectbox hvr-rectangle-out"
-                                    href="#">
+                                <a class="projectbox hvr-rectangle-out" href="#">
                                     雲端運算
                                 </a>
                             </div>
@@ -1197,8 +1281,8 @@
                     </div>
                     <!-- 問題分頁1預設-- -->
                     <div class="Qt_pag_g Qt_active">
-                        <!-- 問題卡片1-1-- -->
-                        <div class="questioncarA">
+                        <!-- 問題卡片1-001-- -->
+                        <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-001">
                             <div class="qt-l">
                                 <div class="qt-personal">
                                     <div class="ps-photo"></div>
@@ -1236,8 +1320,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 問題卡片1-2-- -->
-                        <div class="questioncarA">
+                        <!-- 問題卡片1-002-- -->
+                        <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-002">
                             <div class="qt-l">
                                 <div class="qt-personal">
                                     <div class="ps-photo"></div>
@@ -1275,8 +1359,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 問題卡片1-3-- -->
-                        <div class="questioncarA">
+                        <!-- 問題卡片1-003-- -->
+                        <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-003">
                             <div class="qt-l">
                                 <div class="qt-personal">
                                     <div class="ps-photo"></div>
@@ -1318,8 +1402,8 @@
                     </div>
                     <!-- 問題分頁2-- -->
                     <div class="Qt_pag_g">
-                        <!-- 問題卡片2-1-- -->
-                        <div class="questioncarA">
+                        <!-- 問題卡片2-001-- -->
+                        <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_2-001">
                             <div class="qt-l">
                                 <div class="qt-personal">
                                     <div class="ps-photo"></div>
@@ -1357,8 +1441,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 問題卡片2-2-- -->
-                        <div class="questioncarA">
+                        <!-- 問題卡片2-002-- -->
+                        <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_2-002">
                             <div class="qt-l">
                                 <div class="qt-personal">
                                     <div class="ps-photo"></div>
@@ -1399,8 +1483,8 @@
                     </div>
                     <!-- 問題分頁3-- -->
                     <div class="Qt_pag_g">
-                        <!-- 問題卡片3-1-- -->
-                        <div class="questioncarA">
+                        <!-- 問題卡片3-001-- -->
+                        <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_3-001">
                             <div class="qt-l">
                                 <div class="qt-personal">
                                     <div class="ps-photo"></div>
@@ -1560,6 +1644,59 @@
                 </div>
             </div>
         </div>
+
+        <!-- 互動視窗模組-- -->
+        <main>
+            <!-- 互動視窗模組--編號 1-001 -->
+            <div class="modal fade" id="portfolio_pag_1-001" tabindex="-1" role="dialog"
+                aria-labelledby="portfolio_pag_1-001_Title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <!-- 主要內容 -->
+                    <div class="modal-content cr_7">
+                        <!-- 內容 -->
+                        <div class="modal-body" style="border: 10px solid white;">
+                            <section>
+                                ...請自行創造
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 互動視窗模組--編號 1-002 -->
+            <div class="modal fade" id="portfolio_pag_1-002" tabindex="-1" role="dialog"
+                aria-labelledby="portfolio_pag_1-002_Title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <!-- 主要內容 -->
+                    <div class="modal-content cr_7">
+                        <!-- 內容 -->
+                        <div class="modal-body" style="border: 10px solid white;">
+                            <section>
+                                ...請自行創造
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 互動視窗模組--編號 1-003 -->
+            <div class="modal fade" id="portfolio_pag_1-003" tabindex="-1" role="dialog"
+                aria-labelledby="portfolio_pag_1-003_Title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <!-- 主要內容 -->
+                    <div class="modal-content cr_7">
+                        <!-- 內容 -->
+                        <div class="modal-body" style="border: 10px solid white;">
+                            <section>
+                                ...請自行創造
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
     </section>
 
 
