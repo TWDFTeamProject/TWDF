@@ -52,7 +52,7 @@ a {
     width: 80%;
     height: 10%;
     margin: auto;
-    background-image: url(./img/01-論壇區-零件.png);
+    background-image: url("img/01-論壇區-零件.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -541,7 +541,7 @@ a {
     width: 40%;
     height: 50px;
     margin-top: 10px;
-    background-image: url(/Twdf1/01-Home/02-Forum/素材/02-論壇區-皇冠.png);
+    background-image: url("img/02-論壇區-皇冠.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -962,7 +962,7 @@ a {
 /* -------RWD------ */
 /* -------RWD767.98px版本------------- */
 /* -------關鍵字tagRWD----- */
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
     .taggroup {
         font-size: 16px;
         height: auto;
@@ -975,17 +975,17 @@ a {
         padding: unset;
         padding-left: 2px;
     }
-}
+} */
 /* -------排列順序RWD------ */
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
     .arrow_button {
         font-size: 14px;
         letter-spacing: 1px;
     }
-}
+} */
 /* -------頁面切換按鈕RWD--- */
 
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
     .page-button {
     width: 100px;
     } 
@@ -999,9 +999,9 @@ a {
         height: 28px;
         font-size: 14px;
     }
-}
+} */
 /* -------卡片RWD---------- */
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
     .qt-l {
         width: 100%;
     }
@@ -1024,13 +1024,13 @@ a {
     .qt-love {
         font-size: 10px;
     }
-}
+} */
 /* ----------------------------------------------- */
 
 
 /* -------RWD992px版本------------- */
 /* -------關鍵字tagRWD----- */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .taggroup {
         font-size: 16px;
         height: auto;
@@ -1043,17 +1043,17 @@ a {
         padding: unset;
         padding-left: 2px;
     }
-}
+} */
 /* -------排列順序RWD------ */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .arrow_button {
         font-size: 14px;
         letter-spacing: 1px;
     }
-}
+} */
 /* -------頁面切換按鈕RWD--- */
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .page-button {
     width: 100px;
     } 
@@ -1067,9 +1067,9 @@ a {
         height: 28px;
         font-size: 14px;
     }
-}
+} */
 /* -------卡片RWD---------- */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .qt-l {
         width: 100%;
     }
@@ -1092,5 +1092,69 @@ a {
     .qt-love {
         font-size: 10px;
     }
-}
+} */
 /* ----------------------------------------------- */
+
+@media (max-width: 1199.98px) { 
+    .tk_banner{
+        margin: 0 !important;
+    }
+    .Paginationbox{
+        height: 30px !important;
+        margin-bottom: 6px !important;
+    }
+    .page-button{
+        height: 30px !important;
+    }
+    .Qt_bn_t,
+    .Qt_bn_d{
+        width: 20px !important;
+        height: 24px !important;
+        margin: 3px 1px !important;
+        font-size: 12px !important;
+    }
+    .qt-buttombar{
+        margin-right: 6px !important;
+        margin-bottom: unset !important;
+    }
+    .qt-see,
+    .qt-love,
+    .qt-time,
+    .qt-favorites,
+    .takeit{
+        font-size: x-small;
+    }
+
+    #newtime_t,
+    #browse_t,
+    #favorites_t{
+        font-size: smaller;
+    }
+    .style_cursor,
+    .btn-link{
+        padding: 6px 6px;
+        font-size: small;
+    }
+    .all_theme,
+    .projectbox,
+    .tf_promblem_G,
+    .top_man{
+        font-size: small;
+    }
+}
+@media (max-width: 991.98px) { 
+    .qt-car-photo{
+        width: 100%;
+    }
+
+}
+@media (max-width: 767.98px) { 
+    .col-md-7{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .Searchbox{
+        width: 80% !important;
+        margin-left: 50px;
+    }
+}

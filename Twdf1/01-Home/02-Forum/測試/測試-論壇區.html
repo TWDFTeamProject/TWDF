@@ -25,6 +25,16 @@
     <!-- ---------論壇區CSS------- -->
     <link rel="stylesheet" href="02-forum.css">
 
+    <!-- SubNav -->
+    <style>
+        .bs-example{
+            margin: 20px;
+        }
+        body{
+            padding-bottom: 70px;
+        }
+    </style>
+
 </head>
 
 
@@ -224,7 +234,7 @@
                             <button type="button" class="btn btn-link style_btn">封面插畫</button>
                             <button type="button" class="btn btn-link style_btn">網頁設計</button>
                             <button type="button" class="btn btn-link style_btn">Logo設計</button>
-                            <button type="button" class="btn btn-link style_btn">RWD</button>
+                            <button type="button" class="d-none d-lg-inline  btn btn-link style_btn">RWD</button>
                         </div>
                         <!-- banner圖 -->
                         <div class="tk_banner">
@@ -501,7 +511,6 @@
                                 <div class="qt-r">
                                     <div class="qt-car-photo">
                                         <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
-                                        <img src="Twdf1/01-Home/02-Forum/素材/12-論壇區-目前沒有圖.png" alt="">
                                     </div>
                                     <div class="qt-buttombar">
                                         <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
@@ -611,8 +620,7 @@
                             <!-- 熱門五個問題-- -->
                             <div class="top_five_problem">
                                 <div class="tf_p_photo">
-                                    <img src="./img/電燈-01.png" alt="">
-                                    <img src="03-程式/01-工作區/html-ex/會園區子頁/參考/論壇區/電燈-01.png" alt="">
+                                    <img src="img/電燈-01.png" alt="">
                                 </div>
                                 <div class="tf_p_title">
                                     <h4>Hot! Five QT</h4>
@@ -669,19 +677,19 @@
                                 <div class="top_who_man_G">
                                     <div class="top_man clr_1">
                                         <div class="top_man_photo">
-                                            <img src="./img/08-論壇區-金獎牌.png" alt="">
+                                            <img src="img/08-論壇區-金獎牌.png" alt="">
                                         </div>
                                         海綿寶寶 (antijava)
                                     </div>
                                     <div class="top_man clr_2">
                                         <div class="top_man_photo">
-                                            <img src="./img/07-論壇區-銀獎牌.png" alt="">
+                                            <img src="img/07-論壇區-銀獎牌.png" alt="">
                                         </div>
                                         海綿寶寶 (antijava)
                                     </div>
                                     <div class="top_man clr_3">
                                         <div class="top_man_photo">
-                                            <img src="./img/08-論壇區-銅獎牌.png" alt="">
+                                            <img src="img/08-論壇區-銅獎牌.png" alt="">
                                         </div>
                                         通靈亡 (ted59438)
     
@@ -702,15 +710,15 @@
                             </div>
                             <!-- 廣告1-- -->
                             <div class="advertising_1">
-                                <img src="./img/04-論壇區-廣告1.png" alt="">
+                                <img src="img/04-論壇區-廣告1.png" alt="">
                             </div>
                             <!-- 廣告2-- -->
                             <div class="advertising_2">
-                                <img src="./img/05-論壇區-廣告2.png" alt="">
+                                <img src="img/05-論壇區-廣告2.png" alt="">
                             </div>
                             <!-- 廣告3-- -->
                             <div class="advertising_3">
-                                <img src="./img/06-論壇區-廣告3.png" alt="">
+                                <img src="img/06-論壇區-廣告3.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -771,6 +779,27 @@
             
         </section>
 
+            <!-- SubNav -->
+    <div class="d-block d-md-none bs-example">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+            <a href="#" class="navbar-brand"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+                <div class="navbar-nav">
+                    <a href="#" class="text-right nav-item nav-link active">Top</a>
+                    <a href="#" class="text-right nav-item nav-link">後端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">前端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">ISO開發</a>
+                    <a href="#" class="text-right nav-item nav-link">Android開發</a>
+                    <a href="#" class="text-right nav-item nav-link">人工智慧</a>
+                    <a href="#" class="text-right nav-item nav-link">雲端運算</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     </main>
 
