@@ -42,6 +42,12 @@ header .BackgroundIMG img {
   }
 }
 
+@media (max-width: 575.98px) {
+  header .BackgroundIMG img {
+    width: 100%;
+  }
+}
+
 header :nth-child(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -392,6 +398,12 @@ header .banner .content {
   }
 }
 
+@media (max-width: 575.98px) {
+  header .banner .content {
+    width: 100%;
+  }
+}
+
 header .banner .content .ContentTop {
   width: 100%;
   height: 65px;
@@ -541,6 +553,12 @@ header .banner .content .ContentBottom .Searchingbar::placeholder {
     margin-bottom: 6px;
     margin-top: 54px;
     padding-left: 29px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  header .banner .content .ContentBottom .Searchingbar {
+    width: 80%;
   }
 }
 
@@ -795,6 +813,13 @@ main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
   }
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+}
+
 main .Section1 .TeamMemberImg .col .TeamMemberImgText p {
   font-size: 16px;
   margin-left: 19px;
@@ -874,6 +899,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG 
   }
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    margin-top: 486px;
+  }
+}
+
 @media (max-width: 991.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
     width: 272px;
@@ -883,6 +914,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG 
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
     width: unset;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
+    width: 100%;
   }
 }
 
@@ -920,6 +957,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
   }
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-top: 20px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
   font-size: 32px;
   margin-left: 12px;
@@ -952,6 +995,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForu
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
+    font-size: xx-small;
   }
 }
 
@@ -994,6 +1043,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
   max-width: 100%;
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG {
+    width: 524px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
   width: 524px;
 }
@@ -1007,6 +1062,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
     width: 524px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
+    width: 100%;
   }
 }
 
@@ -1046,6 +1107,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
     margin-top: 436px;
     margin-left: 0;
     padding-left: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
+    margin-top: 406px;
   }
 }
 

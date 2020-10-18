@@ -31,6 +31,9 @@ header{
             @media (max-width: 767.98px) {
                 height: 100vh;
             }
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
         }
     }
     /*每個圖片各延遲X秒*/
@@ -278,7 +281,9 @@ header{
                 border: 6px solid rgb(251, 250, 252);
                 border-radius: 36px;
             }
-
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
             
 
             .ContentTop{
@@ -383,6 +388,9 @@ header{
                         margin-bottom: 6px;
                         margin-top: 54px;
                         padding-left: 29px;
+                    }
+                    @media (max-width: 575.98px) {
+                        width: 80%;
                     }
                 }
             }
@@ -575,6 +583,11 @@ main{
                             margin-left: 20px;
                             margin-bottom: 6px;
                         }
+                        @media (max-width: 575.98px) {
+                            font-size: 14px;
+                            margin-left: 16px;
+                        }
+
                     }
                     p{
                         font-size: 16px;
@@ -600,7 +613,7 @@ main{
             @media (max-width: 767.98px) {
                 margin-top: 20px;
                 justify-content: center;
-            }
+            }    
 
             .TWDF-IntroForum{
                 .TWDF-IntroForumIMGS{
@@ -612,6 +625,10 @@ main{
                     @media (max-width: 767.98px) {
                         margin-right: unset;
                     }
+                    @media (max-width: 575.98px) {
+                        
+                    }
+
                     .BackgroundIMG{
                         display: block;
                         position: absolute;
@@ -629,12 +646,18 @@ main{
                             padding-left: unset;
                             margin-top: 446px;
                         }
+                        @media (max-width: 575.98px) {
+                            margin-top: 486px;
+                        }
                         img{
                             @media (max-width: 991.98px) {
                                 width: 272px;
                             }
                             @media (max-width: 767.98px) {
                                 width: unset;
+                            }
+                            @media (max-width: 575.98px) {
+                                width: 100%;
                             }
                         }
                     }
@@ -660,6 +683,9 @@ main{
                         padding-top: 38px;
                         padding-left: 36px;
                     }
+                    @media (max-width: 575.98px) {
+                        margin-top: 20px;
+                    }
                     .TWDF-IntroForumTitle{
                         font-size: 32px;
                         margin-left: 12px;
@@ -680,6 +706,9 @@ main{
                         @media (max-width: 767.98px) {
                             font-size: 18px;
                         }
+                        @media (max-width: 535px) {
+                            font-size: xx-small;
+                        }
                     }
                 }
             }
@@ -692,6 +721,9 @@ main{
                 @media (max-width: 767.98px) {
                     margin-top: 147px;
                 }
+                // @media (max-width: 575.98px) {
+                //     margin-top: 320px;
+                // }
 
                 .TWDF-IntroYouCanIMG{
                     // width: 560px;
@@ -711,7 +743,9 @@ main{
                             /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
                             animation: slider2 5s linear forwards infinite;
                             max-width: 100%;
-
+                            @media (max-width: 575.98px) {
+                                width: 524px;
+                            }
                             
                             img{
                                 width: 524px;
@@ -721,6 +755,10 @@ main{
                                 @media (max-width: 767.98px) {
                                     width: 524px;
                                 }
+                                @media (max-width: 575.98px) {
+                                    width: 100%;
+                                }
+
                             }
                         }
                         /*每個圖片各延遲X秒*/
@@ -750,6 +788,9 @@ main{
                         margin-top: 436px;
                         margin-left: 0;
                         padding-left: 15px;
+                    }
+                    @media (max-width: 575.98px) {
+                        margin-top: 406px;
                     }
 
                     .TWDF-IntroYouCanTitile{
