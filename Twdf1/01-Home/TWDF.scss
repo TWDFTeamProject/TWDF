@@ -486,9 +486,11 @@ main{
                 @media (max-width: 1200px) {
                     margin-right: 100px;
                 }
+                @media (max-width: 992px) {
+                    margin-right: 0;
+                }
                 @media (max-width: 768px) {
                     padding-left: 36px;
-                    margin-right: unset;
                     display: flex;
                     flex-wrap: wrap;
                 }
@@ -499,30 +501,51 @@ main{
                     font-size: 32px;
                     padding-left: 7px;
                     margin-bottom: 78px;
-                    @media (max-width: 768px) {
-                        width: 100vw;
+                    @media (max-width: 991.98px) {
+                        font-size: 22px;
                         margin-bottom: 36px;
+                    }
+                    @media (max-width: 768px) {
+                        font-size: 32px;
+                        width: 100vw;
                     }
                 }
                 .OurTeamTextContent{
                     font-size: 18px;
+                    @media (max-width: 991.98px) {
+                        font-size: 14px;
+                    }
+                    @media (max-width: 768px) {
+                        font-size: 18px;
+                    }
                     p{
                         margin-bottom: 6px;
                     }
                 }
             }
             .OurTeamPCImg{
-                width: 421px;
+                img{
+                    width: 421px;
+                }
+                @media (max-width: 991.98px) {
+                    img{
+                        width: 90%;
+                    }
+                }
                 @media (max-width: 768px) {
                     display: flex;
                     justify-content: center;
                     margin-top: 20px;
+                    img{
+                        width: 100%;
+                    }
                 }
             }
         }
         .TeamMemberImg{
             margin-top: 101px;
-            @media (max-width: 768px) {
+
+            @media (max-width: 991.98px) {
                 margin-top: 50px;
             }
 
@@ -571,6 +594,9 @@ main{
         }
         .TWDF-Intro{
             margin-top: 191px;
+            @media (max-width: 991.98px) {
+                margin-top: 50px;
+            }
             @media (max-width: 768px) {
                 margin-top: 20px;
                 justify-content: center;
@@ -582,6 +608,7 @@ main{
                     max-width: 100%;
                     margin-right: 54px;
                     position: relative;
+
                     @media (max-width: 768px) {
                         margin-right: unset;
                     }
@@ -595,7 +622,11 @@ main{
                         /*當圖片數量增加，影片長度需更改，變為 Xs*圖片數量*/
                         animation: slider3 2s linear forwards infinite;
                         max-width: 100%;
+                        @media (max-width: 991.98px) {
+                            padding-left: 44px;
+                        }
                         @media (max-width: 768px) {
+                            padding-left: unset;
                             margin-top: 446px;
                         }
                         img{
@@ -620,7 +651,9 @@ main{
                     color: white;
                     @media (max-width: 1200px) {
                         margin-left: 524px;
-                        
+                    }
+                    @media (max-width: 991.98px) {
+                        margin-left: 350px;
                     }
                     @media (max-width: 768px) {
                         margin-left: unset;
@@ -631,13 +664,22 @@ main{
                         font-size: 32px;
                         margin-left: 12px;
                         margin-bottom: 66px;
-                        @media (max-width: 768px) {
+                        @media (max-width: 991.98px) {
+                            font-size: 22px;
                             margin-bottom: 36px;
+                        }
+                        @media (max-width: 768px) {
+                            font-size: 32px;
                         }
                     }
                     .TWDF-IntroForumContent{
                         font-size: 18px;
-    
+                        @media (max-width: 991.98px) {
+                            font-size: 14px;
+                        }
+                        @media (max-width: 768px) {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -688,8 +730,14 @@ main{
                     color: white;
                     padding-right: 0px;
 
+                    @media (max-width: 991.98px) {
+                        margin-left: 44px;
+                        padding-left: 0;
+                    }
                     @media (max-width: 768px) {
                         margin-top: 436px;
+                        margin-left: 0;
+                        padding-left: 15px;
                     }
 
                     .TWDF-IntroYouCanTitile{
@@ -697,13 +745,23 @@ main{
                         margin-left: 12px;
                         margin-bottom: 74px;
                         margin-top: 58px;
-                        @media (max-width: 768px) {
-                            margin-top: 38px;
+                        @media (max-width: 991.98px) {
+                            font-size: 22px;
                             margin-bottom: 36px;
+                        }
+                        @media (max-width: 768px) {
+                            font-size: 32px;
+                            margin-top: 38px;
                         }
                     }
                     .TWDF-IntroYouCanContent{
                         font-size: 18px;
+                        @media (max-width: 991.98px) {
+                            font-size: 14px;
+                        }
+                        @media (max-width: 768px) {
+                            font-size: 18px;
+                        }
 
                         p{
                             margin-bottom: 8px;
