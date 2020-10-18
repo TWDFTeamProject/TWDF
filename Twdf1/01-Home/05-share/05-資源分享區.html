@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+            background-color: #E0E0E0;
+        }
+
+        /* ------------------------------導覽列---------------------------------------- */
+
+
+        /* ------------------------------主要內容區塊----------------------------------- */
+
+
+        .content {
+            /* width: 1140px; */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        .sign-in-box {
+            /* width: 1140px; */
+            height: auto;
+            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
+        }
+
+
+        /* ------------------主要內容區塊----------------------- */
+        .mainbox {
+            display: flex;
+            padding-top: 20px;
+
+        }
+
+        /* ------滾動主題區區塊列-- */
+        .mainbox-l {
+            height: auto;
+            color: white;
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -o-radial-gradient(circle, #002f55, #001027);
+            background: -moz-radial-gradient(circle, #002f55, #001027);
+            background: radial-gradient(circle, #002f55, #001027);
+            position: relative;
+        }
+
+        .title {
+            margin: auto;
+            margin-top: 20%;
+        }
+
+        .title-l {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .title:hover {
+            /* background-color: lightgrey; */
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .menu_item:hover {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .menu_btn:hover {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .title_mainbox:hover {
+            font-weight: 800;
+            color: yellow;
+        }
+
+        .clicked {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* ------主題區區塊內容列-- */
+        .mainbox-r {
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+
+        .mainbox_detail {
+            display: none;
+        }
+
+        .mainbox_detail.active {
+            display: block;
+        }
+
+        .section {
+            width: 100%;
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .content_mainbox {
+            display: none;
+        }
+
+        .content_mainbox.active {
+            display: block;
+        }
+
+
+
+        /* 手機板選單 */
+
+        .drop_up_menu {
+            width: 100%;
+            height: 80px;
+            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
+            z-index: 1000;
+            position: fixed;
+            bottom: 0ch;
+            color: lightcyan;
+        }
+
+
+        /* ------------------------------頁角-------------------------------------- */
+        .footer {
+            width: 100%;
+            height: 300px;
+        }
+
+
+
+
+
+
+        /* -------網路套件----------- */
+        /* ------背景動畫---- */
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            /*氣泡預設大小*/
+            background: rgba(255, 255, 255, 0.336);
+            /*給氣泡20%的透明度*/
+            animation: animate 20s linear infinite;
+            animation-direction: alternate-reverse;
+            /* animate = 動畫名稱 */
+            /* 25s = 動畫時間25秒 */
+            /* linear = 動畫開始至結束速度一致 */
+            /* infinite = 動畫無限次播放 */
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            /* background-color: brown; */
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 8s;
+            animation-duration: 4s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                /* translateY = Y軸位置 */
+                /* rotate = 旋轉角度 */
+                opacity: 1;
+                /* 透明度的參數可設定0.0(透明) ~ 1.0  (不透明) */
+                border-radius: 0;
+                /* 圓角 */
+            }
+
+            100% {
+                transform: translateY(-300vh) rotate(720deg);
+                /* 氣泡由下往上移動至-1000px，旋轉720度 */
+                opacity: 0;
+                border-radius: 50%;
+                /* 產生圓角 */
+            }
+        }
+
+        /* --------------------------注意事項------------------------------------ */
+        /* 高度只是暫定可以自行更動 */
+        /* 區塊背景顏色方便辨識 */
+        /* 側邊盒子區塊 (content-r-box) 挑整高度,可以改變盒子內間距 */
+        /* 側邊盒子 xxx可以命名,記得要在創造它的Class */
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <!-- ---------------------導覽列----------------------- -->
+        <nav class="d-none d-md-block navbar sticky-top">
+            <div class="TWDFLogo">
+                <img src="Nav-Logo/TWDF-Logo.png" alt="">
+            </div>
+            <div class="NavBtns">
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">城市人論壇</p>
+                        <p class="NavTextEn">Forum</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">作品展示</p>
+                        <p class="NavTextEn">Portfolios</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">案件發佈</p>
+                        <p class="NavTextEn">Post Cases</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">資源共享</p>
+                        <p class="NavTextEn">Resource Sharing</p>
+                    </div>
+                </a>
+                <a id="StartBtn" class="LogIn">
+                    <p>Sign In</p>
+                </a>
+            </div>
+        </nav>
+
+        <!-- -------------------手機導覽列--------------------- -->
+
+        <nav class="d-block d-md-none navbar navbar-dark navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="mr-2" src="Nav-Logo/TWDF-Logo.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="" loading="lazy">
+                程式人
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">城市人論壇</p>
+                                <p class="NavTextEn">Forum</p>
+                            </div><span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">作品展示</p>
+                                <p class="NavTextEn">Portfolios</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">案件發佈</p>
+                                <p class="NavTextEn">Post Cases</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">資源共享</p>
+                                <p class="NavTextEn">Resource Sharing</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ---------------------內容----------------------- -->
+    <main>
+
+        <section>
+            <div class="content container-lg mb-3">
+                <div class="sign-in-box row m-0">
+                    <div class="col-md-3 m-4"
+                        style="background-image: url(05-pic/資源共享左圖.png); background-size: contain;background-repeat: no-repeat;">
+                    </div>
+                    <div class="col-md-4 mt-3 mb-3" style="color:white;">
+                        <h2>共享學習資源</h2>
+                        </br>
+                        共享學習資源區</br>
+                        是屬於所有程式人的學習專區</br>
+                        尋找工具書? 想了解相關資源?想參與實作練習? </br>
+                        輸入關鍵字，開始你的學習之旅
+                        </br>
+                        </br>
+                        <input type="text" placeholder="輸入關鍵字" name="" value="JavaScript">
+                    </div>
+                    <div class="col" style="background-image:url(05-pic/PIC03_工作區域\ 1.png);background-size: cover;">
+
+                    </div>
+                </div>
+                <div class="mainbox">
+                    <div class="mainbox-l d-none d-md-block">
+                        <ul class="circles">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="title row align-items-center">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_books.png " height=60 width=60>
+                            </div>
+                            <div class="ebook title-l col-9 font-weight-bold"><span>學院電子書 </br>Ebooks</span>
+                            </div>
+                        </div>
+
+                        <div class="mainbox_detail p-2 ml-5 ">
+                            <li class="title_mainbox mt-2">Assembly</li>
+                            <li class="title_mainbox mt-2">HTML/CSS</li>
+                            <li class="title_mainbox mt-2">JavaScript</li>
+                            <li class="title_mainbox mt-2">Python</li>
+                            <li class="title_mainbox mt-2">PHP</li>
+                            <li class="title_mainbox mt-2">Others</li>
+                        </div>
+
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3 ">
+                                <img src="05-pic/white_tools.png " height=60 width=60>
+                            </div>
+                            <div id="tools" class="title-l col-9 font-weight-bold"><span>工具套件</br>Tools</span></div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5 ">
+                            <li class="title_mainbox mt-2">程式碼編輯器</li>
+                            <li class="title_mainbox mt-2">文字編輯器套件</li>
+                            <li class="title_mainbox mt-2">網頁動畫套件</li>
+
+
+                            <li class="title_mainbox mt-2">開發者常用工具</li>
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_videos.png " height=60 width=60>
+                            </div>
+                            <div id="video" class="title-r col-9 font-weight-bold"><span>相關學習影片 </br>Videos</span>
+                            </div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5 ">
+                            <!-- <li class="item mt-2">HTML/CSS</li>
+                            <li class="item mt-2">JavaScript</li>
+                            <li class="item mt-2">Server Side</li>
+                            <li class="item mt-2">Programming</li>
+                            <li class="item mt-2">Web Building</li>
+                            <li class="item mt-2">XML Tutorials</li>
+                            <li class="item mt-2">References</li>
+                            <li class="item mt-2">Others</li> -->
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_con.png" height=60 width=60>
+                            </div>
+                            <div id="forum" class="title-r col-9 font-weight-bold">其他論壇</br>Other Forums</span>
+                            </div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5 ">
+                        </div>
+
+                        <div class="title row align-items-center ">
+                            <div class="title-l col-3">
+                                <img src="05-pic/white_info.png " height=60 width=60>
+                            </div>
+
+                            <div id="info" class="title-r col-9 font-weight-bold">線上學習資源</hr> Others Infor.</span>
+                            </div>
+                        </div>
+                        <div class="mainbox_detail p-2 ml-5">
+                            <li class="title_mainbox mt-2">網路學習平台</li>
+                            <li class="title_mainbox mt-2">網路練習平台</li>
+                        </div>
+                    </div>
+                    <div class="mainbox-r">
+                        <!-- 這裡是資源共享的學院電子書區塊 -->
+                        <div class="section p-5 active">
+                            <!-- 電子書>assembly -->
+                            <div class="content_mainbox active">
+                                <h2>學院電子書 > Assembly </h2>
+                                </pr>
+                                <h5> Ebooks > Assembly</h5>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.tenlong.com.tw/products/9789862803486">
+                                            <h5 class="pt-5">《Assembly Language for x86 Processors》
+                                            </h5>
+                                        </a>
+                                        本書意在教導有關x86處理器及Intel64處理器的組合語言程式設計與架構，並指導學生如何於機器層次撰寫程式，以及對程式進行除錯
+                                    </li>
+                                    <li>
+                                        <a href="https://www.kobo.com/tw/zh/ebook/mastering-assembly-programming">
+                                            <h5 class="pt-5">Mastering Assembly Programming
+                                            </h5>
+                                        </a>Understand the Assembly programming concepts and the benefits of examining
+                                        the AL codes generated from high level languages
+                                        Learn to incorporate the assembly language routines in your high level language
+                                        applications
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.kobo.com/tw/zh/ebook/assembly-language-simple-short-and-straightforward-way-of-learning-assembly-programming">
+                                            <h5 class="pt-5">《Assembly Language:Simple, Short, And Straightforward Way
+                                                Of Learning Assembly Programming》
+                                            </h5>
+                                        </a>This book is intended for beginners who would like to learn the basics
+                                        ofAssembly Programming.
+                                        This book uses Simple words, Short sentences and Straightforwardparagraphs.The
+                                        triple S way to learn
+                                        Assembly Programming. The topics covered in this book includes a brief
+                                        introduction to assembly, common
+                                        arithmetic instructions, character and string input and display routines, flow
+                                        controls including conditional and looping
+                                        statements, stack, and procedures.
+                                    </li>
+                                    <li>
+                                        <a href="https://download.csdn.net/download/kekoa83/4801862">
+                                            <h5 class="pt-5">《Assembly Language for X86 Processors》
+                                            </h5>
+                                        </a>Assembly Language for x86 Processors, 7e is suitable for undergraduate
+                                        courses in assembly language programming and introductory courses in computer
+                                        systems and computer architecture. Proficiency in one other programming
+                                        language, preferably Java, C, or C++, is recommended.
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- 電子書>html -->
+                            <div class="content_mainbox">
+                                <h2>學院電子書 > HTML/CSS </h2>
+                                </pr>
+                                <h5> Ebooks > HTML/CSS</h5>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.oreilly.com/library/view/css-secrets/9781449372736/">
+                                            <h5 class="pt-5">《CSS Secrets》
+                                            </h5>
+                                        </a>
+                                        CSS專家Lea Verou提供了47種沒有文檔記錄的技術和技巧，以幫助中高級CSS開發人員解決各種日常網頁設計問題，從而使用CSS創建更好的網站效果。
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="http://www.oreilly.com/web-platform/free/little-book-html-css-coding-guidelines.csp">
+                                            <h5 class="pt-5">《The Little Book of HTML/CSS Coding Guidelines》</h5>
+                                        </a>
+                                        一個合理的計劃可以改進代碼，包括HTML文檔和CSS樣式表。Jens Oliver
+                                        Meiert通過本書探索了編碼指導原則的理論和實踐，並以谷歌的HTML和CSS標準為例
+
+                                    </li>
+                                    <li>
+                                        <a href="https://www.oreilly.com/free/transforms-in-css.csp">
+                                            <h5 class="pt-5">《Transforms in CSS》</h5>
+                                        </a>作者Eric是一位國際公認的HTML，CSS和Web標準專家，他通過本書向讀者詳細介紹CSS元素，如果你正在學習CSS，這本書千萬不要錯過了
+
+
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.oreilly.com/library/view/getting-started-with/9781492048190/">
+                                            <h5 class="pt-5">《Getting Started with the Web》</h5>
+                                        </a>
+                                        這個免費指南，向你介紹了網站構建的基礎知識：你將學習如何使用HTML，CSS和其他Web工具來創建一個適用於傳統計算機和移動設備的簡單站點。
+
+
+                                    </li>
+                                    <li>
+                                        <a href="https://www.oreilly.com/library/view/the-little-book/9781492048121/">
+                                            <h5 class="pt-5">《The Little Book of HTML/CSS Frameworks》</h5>
+                                        </a>
+                                        這本書主要圍繞HTML和CSS的Web開發框架，作者Jens Oliver Meiert概述了各種原則，方法和實踐，你可以通過這些實踐方法來提高自己的開發水平
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- 電子書>JS -->
+                            <div class="content_mainbox">
+                                <h2>學院電子書 > JavaScript</h2>
+                                </pr>
+                                <h5> Ebooks > JavaScript</h5>
+                                <ul>
+                                    <li>
+                                        <a href="http://eloquentjavascript.net/">
+                                            <h5 class="pt-5">Eloquent JavaScript</h5>
+                                        </a>
+                                        一本開放、免費且非常優質的 JavaScript 線上電子書，曾榮獲 Mozilla 與多人贊助
+                                        章節結構清楚明瞭，內容不拖泥帶水，各種格式的電子書、範例程式通通可以線上取得。
+                                    </li>
+                                    <li>
+                                        <a href="https://www.oreilly.com/">
+                                            <h5 class="pt-5">Speaking JavaScript: An In-Depth Guide for Programmers</h5>
+                                        </a>
+                                        一本寫給已經有其他程式語言基礎的人看的書，從入門到進階可以在短時間內學會許多重要的觀念。
+
+                                    </li>
+                                    <li>
+                                        <a href="https://www.oreilly.com/">
+                                            <h5 class="pt-5">Programming JavaScript Applications</h5>
+                                        </a>
+                                        一本寫給有點 JavaScript 開發經驗的人看的書，內容精簡扼要，也是有網路上知名人物Eric Elliott 撰寫的書籍，品質有保證！
+                                    </li>
+                                    <li>
+                                        <a href="https://www.codewars.com/">
+                                            <h5 class="pt-5">Train with Programming Challenges/Kata | Codewars</h5>
+                                        </a>
+                                        透過闖關的方式練成 JavaScript
+                                        達人，網站在註冊的時候，會先讓你選擇程式語言，
+                                        如果你選擇 JavaScript 的話，他會問你兩個 JavaScript 的問題，要你在線上改 Code，
+                                        你必須回答正確才能讓你註冊帳號，所以你適合給已經入門的人練功。
+                                        註冊成功後，可以點擊 Kata 開始練等級 (kyu)，他有八個困難等級，共有 1,158 關，
+                                        每一關通過後還可以看到全世界其他人有哪些不同的解法，非常有趣。
+
+                                    </li>
+                                    <li>
+                                        <a href="https://exploringjs.com/">
+                                            <h5 class="pt-5">Exploring ES6: Upgrade to the next version of JavaScript
+                                            </h5>
+                                        </a>
+                                        一本針對ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+                                        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+                                        完整補充 ECMAScript 6 的重要觀念與特性。
+
+                                    </li>
+                                    <li>
+                                        <a href="http://liubin.org/promises-book/">
+                                            <h5 class="pt-5">ECMAScript 6 入门</h5>
+                                        </a>
+                                        一本開源的 JavaScript 語言教學，主要針對 ECMAScript 6 引入的語法與特性進行解說，
+                                        內容也相當完整。此書為簡體中文
+
+                                    </li>
+                                    <li>
+                                        <a href="http://liubin.org/promises-book/">
+                                            <h5 class="pt-5">JavaScript Promise 迷你书（中文版）</h5>
+                                        </a>
+                                        一本針對 ECMAScript 6 進行詳細闡述的書，可免費線上觀看，
+                                        本書的主要對象是已經擁有 ECMAScript 5 開發經驗的 JavaScript 開發人員，
+                                        完整補充 ECMAScript 6 的重要觀念與特性。
+
+                                    </li>
+                                    <li>
+                                        <a href="https://www.tenlong.com.tw/products/9789862764411">
+                                            <h5 class="pt-5">JavaScript 大全, 6/e
+                                                (JavaScript: The Definitive Guide: Activate Your Web Pages, 6/e)</h5>
+                                        </a>
+                                        從最基礎的 JavaScript
+                                        語言特性講起，非常適合初學者閱讀，只怕你覺得他太厚而中途放棄而已！
+
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tenlong.com.tw/items/9866840271?item_id=46241">
+                                            <h5 class="pt-5">JavaScript－優良部份 (JavaScript: The Good Parts)</h5>
+                                        </a>僅 164 頁，闡述所有 JavaScript
+                                        的優良部分，適合進階的 JavaScript 開發人員閱讀。
+
+                                    </li>
+                                    <li>
+                                        <a href="http://www.oreilly.com/web-platform/free/modern-javascript.csp">
+                                            <h5 class="pt-5">《modern JavaScript》</h5>
+                                        </a>本書將教你如何使用JavaScript，無論你是想使用前端框架構建單頁Web應用程式還是使用Node構建RESTful
+                                        API，都可以在這本書里找到你想要的。
+                                    </li>
+                                    <li>
+                                        <a href="http://www.oreilly.com/web-platform/free/js-next-a-managers-guide.csp">
+                                            <h5 class="pt-5">《JS.Next: A Manager's Guide, 2nd Edition》</h5>
+                                        </a>ECMAScript 6包含了大量的新特性，作者Aaron Frost通過這本書介紹了大量的ECMAScript
+                                        6新特性，以及ECMAScript在過去十年中的快速發展以及ES6是如何形成的
+
+                                    </li>
+                                    <li>
+                                        <a href="http://shop.oreilly.com/product/0636920039303.do">
+                                            <h5 class="pt-5">《You Don't Know JS: Up & Going》</h5>
+                                        </a>這是一個系列，一共包含6本書，這6本書集合了JavaScript的核心機制，廣受初學者和中級程式設計師的好評
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- 電子書>python -->
+                            <div class="content_mainbox">
+                                <h2>學院電子書 > Python</h2>
+                                </pr>
+                                <h5> Ebooks > Python</h5>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://www.oreilly.com/library/view/python-web-frameworks/9781492037873/">
+                                            <h5 class="pt-5">《Python Web Frameworks》</h5>
+                                        </a>
+                                        本書里就介紹了當下功能強大，易於學習的30個Python
+                                        Web框架，並深入介紹其中6種，Django，Flask，Tornado，Bottle，Pyramid和CherryPy
+                                    </li>
+                                    <li>
+                                        <a href="https://www.oreilly.com/">
+                                            <h5 class="pt-5">《簡明 Python 教程》</h5>
+                                        </a>
+                                        簡明python教程是Swaroop C H 寫給 python 新手們的書籍，他說“假如你知道電腦如何儲存test檔案，那麼這本書就是你需要的”。
+                                        這本書對於python新手們是很好的啟蒙教材
+                                        </br>
+                                        <a href="https://download.csdn.net/detail/longerzone/6612125"><span>《簡明 Python
+                                                教程》英文版（byte to Python）</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://download.csdn.net/detail/longerzone/6611577">
+                                            <h5 class="pt-5">笨方法學Python（Learn Python The Hard Way）</h5>
+                                        </a>
+                                        笨方法學python是Zed
+                                        Shaw著的新手程式設計書籍，基於的版本是python2.6，“笨方法更簡單”正是他們在書中程式設計以及他們想要告訴大家的：
+                                        你是不是一直想要學習怎麼程式設計卻沒想到你能程式設計？你是否想要為以後更大更復雜的程式設計打牢基礎？
+                                        你是否想要為你的大腦換一種新思維？那麼這本書很適合你！
+                                    </li>
+                                    <li>
+                                        <a href="http://download.csdn.net/book_detail/20005/144">
+                                            <h5 class="pt-5">《Python編程入門經典》</h5>
+                                        </a>是一本系統而科學的Python入門教程，美國密歇根州立大學等多所美國知名高校采用其作為編程語言的入門教材，被奉為經典。
+                                        它不僅從計算機教學和計算機科學的角度講解了初學者如何才能更有效地去學習Python，而且特別強調用Python解決生活中的實際問題，
+                                        精心組織了大量來源於生活中不同領域的與數值計算和數據處理相關的案例。
+
+
+                                    </li>
+                                    <li>
+                                        <a href="http://down.51cto.com/data/64689">
+                                            <h5 class="pt-5">《Python入門指南》【中英對照版PDF】</h5>
+                                        </a>
+                                        Python 為熱門的程式語言之一，中英文學習資源都琳瑯滿目，無論是網路上免費的或是書店裡販賣的書籍，
+                                        讀者可以找到各式各類的教材，目前中、英文學習資源都很豐富，無論是網路上免費的或是書店裡販賣的書籍，
+                                        入門書籍方面，惟獨缺少直接帶領讀者學習開發軟體的教材，此亦本書的設計理念，希望藉由帶領讀者開發簡單的應用軟體，
+                                        以此帶給讀者完整的軟體開發觀念。
+
+                                    </li>
+                                    <li>
+                                        <a href="http://down.51cto.com/data/194154">
+                                            <h5 class="pt-5">《Python灰帽子：黑客與逆向工程師的Python編程之道》</h5>
+                                        </a>
+                                        本書的絕大部分篇幅著眼于黑客技術領域中的兩大經久不衰的話題︰逆向工程與漏洞挖掘，
+                                        並向讀者呈現了幾乎每個逆向工程師或安全研究人員在日常工作中所面臨的各種場景，其中包括︰如何設計?構建自己的調試工具，
+                                        如何自動化實現煩瑣的逆向分析任務，如何設計與構建自己的fuzzing工具，如何利用fuzzing測試來找出存在于軟件產品中的安全漏洞，
+                                        一些小技巧諸如鉤子與注入技術的應用，以及對一些主流Python安全工具如PyDbg、Immunity
+                                        Debugger、Sulley、IDAPython、PyEmu等的深入介紹。
+
+                                    </li>
+                                    <li>
+                                        <a href="http://download.csdn.net/book_detail/20005/145">
+                                            <h5 class="pt-5">《Python項目開發實戰》</h5>
+                                        </a>
+                                        通過理論和實踐的結合以及實際可操作的指導，《Python項目開發實戰》將為你呈現真實世界中的Python編程。書中的實際教程聚焦於功能，覆蓋了基本的創建應用、構建和封裝庫。
+
+                                        同時在有經驗的Python教員一直為你提供有價值的見解的幫助下，教程並開始創建項目。讀者應該熟悉核心Python語言的基礎語法，並准備增強自己的技能，這樣才能在這門編程語言的實際應用中成為專家。
+
+                                    </li>
+                                    <li>
+                                        <a href="http://down.51cto.com/data/81127">
+                                            <h5 class="pt-5">《自己動手寫Python遊戲》（英文版）</h5>
+                                        </a>
+                                        本書按內容分為六個部分，第一部分介紹語言虛擬機的基本概念，並實現位元組碼解譯器；第二部分，實現內嵌類型，如整數、字串、清單和字典等；第三部分，實現了函數；第四部分，實現自訂類、對象和方法；第五部分，實現垃圾回收，也就是自動內存管理；第六部分，模組和反覆運算。本書的章節內容之間都有很強的依賴性，後面的章節內容都是在前面章節的基礎上去實現的，所以讀者必須按部就班地從前向後閱讀，才能保證閱讀的流暢。
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- 電子書>php -->
+                            <div class="content_mainbox">
+                                <h2>學院電子書 > PHP</h2>
+                                </pr>
+                                <h5> Ebooks > PHP</h5>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.oreilly.com/web-platform/free/upgrading-to-php-seven.csp">
+                                            <h5 class="pt-5">《Upgrading to PHP 7》</h5>
+                                        </a>
+                                        O'Reilly通過這本書向讀者介紹了PHP 7 的特性，學習PHP 7 相關的基礎知識，並了解為什麼從PHP 5到PHP 7中間間隔了十年之久
+                                    </li>
+                                    <li>
+                                        <a href="http://it-ebooks.info/book/3344/">
+                                            <h5 class="pt-5">《 Learning PHP, MySQL, JavaScript, CSS & HTML5》</h5>
+                                        </a>
+                                        就算你只是 HTML 初學者，也可以使用強大的開放原始碼技術與網頁標準，創建出互動、資料導向的網站。
+                                        藉由這本鉅細靡遺的指南，你可以使用當代的核心技術設計動態網頁程式：PHP、MySQL、JavaScript、jQuery、CSS 與 HTML5。
+                                        本書將引領你逐一探討各項技術並教導整合的方法，在學習過程中讓你獲得寶貴的網頁程式設計經驗。
+                                        在本書結尾，你將學會整合所有技術，使用 XAMPP 或任何喜歡的開發堆疊，建置一個完整的社群網站。
+
+                                    </li>
+                                    <li>
+                                        <a href="http://goo.gl/yTvmi">
+                                            <h5 class="pt-5">《PHP 5 Power Programming》</h5>
+                                        </a>
+                                        In this book, PHP 5's co-creator and two leading PHP developers show you how to
+                                        make
+                                        the most of PHP 5's industrial-strength enhancements in any project—no matter
+                                        how
+                                        large or
+                                        complex. Their unique insights and realistic examples illuminate PHP 5's new
+                                        object
+                                        model,
+                                        powerful design patterns, improved XML Web services support, and much more.
+                                        Whether
+                                        you're
+                                        creating web applications, extensions, packages, or shell scripts—or migrating
+                                        PHP 4
+                                        code—here
+                                        are high-powered solutions you won't find anywhere else.
+
+                                    </li>
+                                    <li>
+                                        <a href="http://it-ebooks.info/book/3218/">
+                                            <h5 class="pt-5">《Head First! PHP and MySQL》</h5>
+                                        </a>
+                                        Learning isn't something that just happens to you. It's something you do.
+                                        You can't learn without pumping some neurons. Learning means building more
+                                        mental
+                                        pathways,
+                                        bridging connections between new and pre-existing knowledge, recognizing
+                                        patterns,
+                                        and turning facts and information into knowledge (and ultimately, wisdom).
+                                        Based on the latest research in cognitive science, neurobiology, and educational
+                                        psychology,
+                                        Head First books get your brain into learning mode.
+
+                                    </li>
+                                    <li>
+                                        <a href="http://laravel-taiwan.github.io/php-the-right-way/">
+                                            <h5 class="pt-5">《PHP 之道》(PHP:The Right Way)</h5>
+                                        </a>
+                                        目前網路上充斥著大量的過時資訊，讓 PHP 新手誤入歧途，並且傳播著錯誤的實踐方法與不安全的代碼。 PHP 之道 是一個快速易讀的指南，包含 PHP
+                                        熱門編碼標準、連結網路上權威教程和現時貢獻者認定的最佳實踐方法。
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <!-- 電子書>others -->
+                            <div class="content_mainbox">
+                                <h2>學院電子書 > Others</h2>
+                                </pr>
+                                <h5> Ebooks >Others</h5>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://www.kobo.com/tw/zh/ebook/how-to-become-a-self-taught-programmer">
+                                            <h5 class="pt-5">《How to Become a Self-Taught Programmer》</h5>
+                                        </a>
+                                        This e-book introduces how to become a self-taught programmer using examples of
+                                        Visual Basic, C, C++, C#, Java, JavaScript, Python and Swift. Every programming
+                                        language has common elements and understand these elements that you can learn
+                                        any programming language quickly.
+                                    </li>
+                                    <li>
+                                        <a href="https://www.books.com.tw/products/E050035291">
+                                            <h5 class="pt-5">《提升程式設計師的面試力｜189道面試題目與解答》</h5>
+                                        </a>
+                                        本書內容包括學習如何發現題目中的提示與隱藏的細節、分解問題、遇到難題時的脫困技巧、(重新)學習計算機核心概念、以及189道面試題目與解答。題庫來自真正的面試，並非摘自教科書。它們反映出頂尖公司真正會出的題目，你可以藉此做好充分準備。
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.books.com.tw/products/E050020386?loc=P_br_r0vq68ygz_D_2aabd0_B_1">
+                                            <h5 class="pt-5">《演算法圖鑑：26種演算法 + 7種資料結構，人工智慧、數據分析、邏輯思考的原理和應用全圖解 (電子書)》</h5>
+                                        </a>不管用哪種程式語言編寫程式，演算法都是不可或缺的，不過如果認為只有學電腦的人才要了解演算法，那就太可惜了。演算法其實是一連串解決問題的邏輯步驟，只要熟悉這些步驟和運用方式，每個人都能設計自己的演算法並應用於各種不同領域。學習演算法正是建構嚴謹思維和幫助做出最佳判斷的訓練。
+                                    </li>
+                                    <li>
+                                        <a href="http://www.j9p.com/down/520829.html">
+                                            <h5 class="pt-5">《刻意練習：原創者全面解析，比天賦更關鍵的學習法 》</h5>
+                                        </a>揮別道聽塗說的不完整資訊，正確學會這足以讓你精通所有技能的全新學習法，顛覆你長久以來對潛能、對天賦、對智商的觀念！
+                                    </li>
+                                    <li>
+                                        <a href="https://www.books.com.tw/products/E050073188">
+                                            <h5 class="pt-5">《大數據X資料探勘X智慧營運 》</h5>
+                                        </a>全書分為九章，內容包括：大資料探勘與智慧營運的概念，資料前處理，資料探勘中的四種主流演算法：集群分析、分類分析、迴歸分析、關聯分析，增強型資料探勘演算法，資料探勘在營運商智慧營運中的應用案例，未來大資料探勘的發展趨勢等。主要提供給電信業者及其他高科技企業員工、大專院校學生和研究生，以及其他對資料探勘與精準行銷感興趣的讀者
+                                    </li>
+                                    <li>
+                                        <a href="https://www.kobo.com/tw/zh/ebook/google-34">
+                                            <h5 class="pt-5">《極限嚴選！Google超神密技完全攻略［年度最強決定版］》</h5>
+                                        </a>■你還不知道的Google活用方法一次公開，多位3C部落客集思廣義，絕不是一本枯燥乏味的Google工具書。
+
+                                        ■集結好玩實用應用與你沒想過的密技，Google不只有搜尋、行事曆等功能，還有超多活用技巧等你發掘！
+
+                                    </li>
+                                    <li>
+                                        <a href="https://www.books.com.tw/products/E050073666?loc=P_0036_003">
+                                            <h5 class="pt-5">《Spring Boot情境式網站開發指南｜使用Spring Data JPA、Spring
+                                                Security、Spring Web Flow》</h5>
+                                        </a>Spring框架是Java語言裡最熱門的框架。打造一個功能強大、資訊安全的網站，使用Spring MVC、Spring Security、Spring
+                                        Data JPA，再搭配Spring Boot以簡化設定並快速布署幾乎已經是業界開發標準。
+
+                                        　　本書介紹Spring框架模組的運作機制，書末專案實作結合Spring Web Flow以提升使用者操作體驗，完整呈現新一代企業網站的建置策略。
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 這裡是資源共享的工具套件區塊 -->
+                        <div class="section p-5">
+                            <h2>工具套件</h2>
+                            <h3> Programming Tools</h3>
+                            <!-- 這裡是資源共享>工具套件>程式碼編輯器套件 -->
+                            <div class="content_mainbox active pt-5">
+                                <h4>工具套件>程式碼編輯器套件</h4>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/atom.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>‍A hackable text editior (Atom) 文字編輯器</h4>
+                                        <p>Atom
+                                            具備智慧型自動完成功能，能讓你在撰寫程式碼時更快、更輕鬆，同時避免掉可能發生的錯誤。
+                                            此外，內建套件和佈景主題功能，強調極高自訂性，可依照使用者需求來加裝自己需要的套件。目前可以在 Windows、Mac OSX、Linux
+                                            平台免費下載、使用。</p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/EmacsIcon.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>Editor MACroS(Emacs) 巨集編輯器</h4>
+                                        <p>Emacs，是一個純文字編輯器家族，具有強大的可延伸性，在程式設計師和其他以技術工作為主的電腦用戶中廣受歡迎。</p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/notepad++.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>Notepad++ </h4>
+                                        <p>Notepad++是自由軟體的純文字編輯器，由侯今吾基於同是開放原始碼的Scintilla文字編輯組件並獨力研發，是一個 Windows
+                                            下的文本編輯器，旨在成為大多數 Windows 用戶熟悉的記事本的專業化版本。</p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/logo-sublime-3.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>Sublime 2 & 3</h4>
+                                        <p>Sublime Text 是許多開發人員日常使用的經典文本編輯器，可用於包括 Windows、Mac、Linux 等多個平台。Sublime
+                                            Text是一套跨平台的文字編輯器，支援基於Python的外掛程式。Sublime
+                                            Text是專有軟體，可透過套件擴充功能。大多數的套件使用自由軟體授權釋出，並由社群建置維護。
+                                            編程語言： C++、Python</p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/TextMate logo.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>TextMate</h4>
+                                        <p>TextMate是OS X下的著名的文本編輯器，與BBedit並稱OS X上的Emacs和Vim。尤其適合程式設計師使用，可定製許多貼心功能。
+                                            具有豐富的功能集、外部庫和一些一出現就被其他編輯器複製的創新功能。只適用於 Mac 系統。</p>
+                                </div>
+
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/vim-logo-png.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>Vim / MacVim</h4>
+                                        <p>Vim是從vi發展出來的一個文字編輯器。其代碼補完、編譯及錯誤跳轉等方便編程的功能特別豐富，在程式設計師中被廣泛使用。和Emacs並列成為類Unix系統用戶最喜歡的編輯器。
+                                            Vim的第一個版本由布萊姆·米勒在1991年發布。</p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/VSCODE logo.ico" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
+                                        <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、
+                                            Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git
+                                            版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。</p>
+                                </div>
+                            </div>
+                            <!-- 這裡是資源共享>工具套件>文字編輯器套 -->
+                            <div class="content_mainbox pt-5">
+                                <h4>工具套件>文字編輯器套件</h4>
+
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/‍Auto close tag.png" height=60 width=100>
+                                    <span class="text-align-center">
+                                        <h4>‍Auto close tag</h4>
+                                        <p>在html裡面會有很多語法都是需要頭尾的，‍Auto close tag可以幫助你你只要寫前面他後面就會幫助你自動跳出來
+                                            幫助你減少錯誤的發生
+                                        </p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/Bracket Pair Colorizer.png" height=100
+                                        width=100>
+                                    <span class="text-align-center">
+                                        <h4>Bracket Pair Colorizer</h4>
+                                        <p>寫程式的時候尤其是一些很複雜的功能
+                                            很常會遇到Nested（巢狀）的困擾
+                                            他會幫你把每一個巢狀都標示不同的顏色
+                                            這樣你在刪掉function或是任一巢狀的時候都比較不會出錯
+
+                                        </p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/GIT.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>‍git（版本控制）</h4>
+                                        <p>git是用於Linux核心開發的版本控制工具。與CVS、Subversion一類的集中式版本控制工具不同，它採用了分散式版本庫的作法，不需要伺服器端軟體，就可以運作版本控制，使得原始碼的釋出和交流極其方便。git的速度很快，這對於諸如Linux核心這樣的大專案來說自然很重要。git最為出色的是它的合併追蹤（merge
+                                            tracing）能力。
+                                        </p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/HTML Snippets.png" height=100 width=100>
+                                    <span class="HTML Snippets">
+                                        <h4>HTML Snippets</h4>
+                                        <p>打入關鍵字的時候
+                                            此套件會跳出對應的選項
+                                            只需要選擇自己需要的項目他就可以幫你對應到所對應的程式碼了
+
+                                        </p>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/‍Live Server" height=100 width=100>
+                                    <span class="HTML Snippets">
+                                        <h4>‍Live Server</h4>
+                                        <p>前端有時候改完程式碼都需要儲存過後
+                                            再去瀏覽器重新整理這個頁面
+                                            才知道想要做的功能有沒有上去
+                                            他安裝完只需要在IDE按下儲存
+                                            瀏覽器就會自動幫你更新
+
+                                        </p>
+                                </div>
+                            </div>
+                             <!-- 這裡是資源共享>工具套件>網頁動畫套件 -->
+                            <div class="content_mainbox pt-5">
+                                <h4>工具套件>網頁動畫套件</h4>
+                                <div class="d-flex p-2">
+                                    <ul>
+                                        <li>
+                                            <a href="https://animate.style/">
+                                                <h5 class="pt-5">Animate.css</h5>
+                                            </a>
+                                            Animate.css內建了超過70種的動畫效果，要套用特效前必須先在要套用的特效加上 animated
+                                            這個class，然後再加上你想要的特效class
+                                        </li>
+                                        <li>
+                                            <a href="https://michalsnik.github.io/aos/">
+                                                <h5 class="pt-5">AOS.js</h5>
+                                            </a>
+                                            AOS Animate On Scroll
+                                            Library，他是一款好手上的滾動式動畫的資料庫，對於需要自訂義動畫的人相當方便。值得一提的是當滾輪滾回去的時會回到起始點，當滾輪在滾下來時重複播放動畫
+                                        </li>
+                                        <li>
+                                            <a href="http://ianlunn.github.io/Hover/">
+                                                <h5 class="pt-5">Hover.css</h5>
+                                            </a>
+                                            A collection of CSS3 powered hover effects to be applied to links, buttons,
+                                            logos, SVG, featured images and so on. Easily apply to your own elements,
+                                            modify or just use for inspiration. Available in CSS, Sass, and LESS.
+                                        </li>
+                                        <li>
+                                            <a href=" https://www.delac.io/wow/">
+                                                <h5 class="pt-5">wow.js</h5>
+                                            </a>
+                                            WOW.js 依賴 animate.css，所以它支援 animate.css 多達 60 多種的動畫效果。
+                                        </li>
+                                        <li>
+                                            <a href=" https://scrollrevealjs.org/">
+                                                <h5 class="pt-5">scrollReveal.js</h5>
+                                            </a>
+                                            ScrollReveal.js 是一款頁面滾動顯示動畫的
+                                            JavaScript，能讓頁面更加有趣，更吸引用戶眼球，且動畫可以設定播放一次或無限次，也不依賴其他任何文件。雖然 ScrollReveal.js
+                                            不依賴 animate.css 但確是用 CSS3 創建的，故不支持 IE9 以下流覽器。
+                                        </li>
+                                        <li>
+                                            <a href=" https://github.com/miniMAC/magic">
+                                                <h5 class="pt-5">Magic.css</h5>
+                                            </a>
+                                            Magic CSS are a set of simple animations to include in your web or app
+                                            project's.
+                                        </li>
+                                        <li>
+                                            <a href="https://visionmedia.github.io/move.js/">
+                                                <h5 class="pt-5">move.js</h5>
+                                            </a>
+                                            一個小型的 JavaScript 庫，通過 JS 來控制一系列的 CSS 動畫順序執行，使 CSS3 動畫變得非常簡單和優雅。
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                              <!-- 這裡是資源共享>工具套件>開發者常用工具 -->
+                            <div class="content_mainbox pt-5">
+                                <h4>工具套件>開發者常用工具</h4>
+                                <div class="d-flex p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/AWS01.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
+                                        <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
+                                </div>
+
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/Bootstrap.jpg" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <a href="https://getbootstrap.com/">
+                                            <h4>Bootstrap</h4>
+                                        </a>
+                                        <p>是一個由 HTML、CSS 和 JavaScript
+                                            寫成的前端框架，核心的設計目標是達成RWD響應式與行動優先，
+                                            也就是讓你的網站排版可以自動適應螢幕大小。它預先做好一套網站的基礎建設，
+                                            讓你能在框架的基礎上進行開發，不需要再去煩惱瑣碎的設定。
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/CSS Form Code Maker.jpg" height=100
+                                        width=100>
+                                    <span class="text-align-center">
+                                        <a href="https://www.jotform.com/css-form-generator/">
+                                            <h4>CSS Form Code Maker</h4>
+                                        </a>
+                                        <p>You don’t need CSS coding to make your form look exactly how you want it to.
+                                            With our free CSS Form Generator, simply drag and drop elements to get the
+                                            look you want. Add your logo, choose fonts and colors, and integrate with
+                                            100+ apps and integrations — no coding required.
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/NET Framework.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <a href="https://www.microsoft.com/zh-tw/download/details.aspx?id=17718">
+                                            <h4> .NET Framework</h4>
+                                        </a>
+                                        <p>.NET 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對開發人員而言，.NET Framework
+                                            提供全方位且一致的程式撰寫模型，可建置具有令人視覺震撼之使用者體驗及順暢且安全之通訊的應用程式。
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/Github.png" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <a href="https://github.com/">
+                                            <h4>Github</h4>
+                                        </a>
+                                        <p>GitHub裡面的專案可以透過標準的Git命令進行存取和操作。同時，所有的Git命令都可以用到GitHub專案上面。GitHub開發了針對Microsoft
+                                            Windows和macOS作業系統的桌面客戶端。此外，也可以使用第三方外掛程式來實現Git功能。
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="d-flex pt-4 p-2">
+                                    <img class="mr-3" src="/05-share/05-pic/jQuery.jpg" height=100 width=100>
+                                    <span class="text-align-center">
+                                        <a href="https://jquery.com/">
+                                            <h4>jQuery</h4>
+                                        </a>
+                                        <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things
+                                            like HTML document traversal and manipulation, event handling, animation,
+                                            and Ajax much simpler with an easy-to-use API that works across a multitude
+                                            of browsers. With a combination of versatility and extensibility, jQuery has
+                                            changed the way that millions of people write JavaScript.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- 這裡是資源共享的相關學習視頻區塊 -->
+                        <div class="section p-5">
+                            <h2>相關學習視頻</h2>
+                            <h3> Programming videos</h3>
+                            </br>
+                            <div class="row p-3">
+                                <div class=" col-8 col-lg-6 align-items-center">
+                                    <iframe src="https://www.youtube.com/embed/gT0Lh1eYk78" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe></div>
+                                <div class="col-lg-6">
+                                    <span>
+                                        <h5>HTML, CSS, JavaScript Explained</h5>
+                                        Danielle Thé</br>Before you start any web development tutorials for beginners,
+                                        FIRST understand what languages are used for building websites: HTML, CSS,
+                                        JavaScript. Learn why you can't exist online without these programming
+
+                                    </span>
+                                </div>
+                                <div class="row p-3">
+                                    <div class=" col-3 col-lg-6 align-items-center">
+                                        <iframe src="https://www.youtube.com/embed/2EaopRDxNrw" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="col-lg-6">
+                                        <span>
+                                            <h5>How to Select Your First Programming Language</h5>
+
+                                            Treehouse</br>
+                                            One of the hardest questions you’ll ask when you start tackling programming
+                                            is
+                                            ‘what language should I learn first?’ – let’s talk through some of the
+                                            concerns
+                                            you might have...
+
+
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class=" col-3 col-lg-6 align-items-center">
+                                        <iframe src="https://www.youtube.com/embed/n63qcjz60Co" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="col-lg-6">
+                                        <span>
+                                            <h5>Neumorphic Calculator Build 2020 (HTML, CSS, JavaScript)</h5>
+                                            codeSTACKr</br>
+                                            In this video we are going to talk about neumorphic design.
+
+                                            Neumorphism is a recent UI design trend. It’s also called “Soft UI”.
+                                            It’s designs appear to extrude from the background...
+
+
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-3 col-lg-6 align-items-center">
+                                        <iframe src="https://www.youtube.com/embed/qtGD6JLr4LA" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>[HTML][中文][初學] 01. HTML / CSS / JavaScript 網頁開發基本介紹 (線上課程教學)</h5>
+                                            Progress
+                                            Bar 進度條線上課程
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="pb-3 col-3 col-lg-6 ">
+                                        <iframe src="https://www.youtube.com/embed/CqINpeM-wko" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>JavaScript 教學 01| 認識 HTML CSS JavaScript 網頁前端開發三劍客</h5>
+                                            ALPHA Camp School
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-3 col-lg-6">
+                                        <iframe src="https://www.youtube.com/embed/JkhaG3mFN6E" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>[偷米騎巴哥] 20180726 (超入門JavaScript邏輯判斷)</h5>偷米騎巴哥</br>
+                                            主題：誰說偷米只能一深，本週分享入門JavaScript時常常會遇到「邏輯判斷」的問題，如果你也是邏輯判斷的苦主，千萬母湯錯過喔！
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-3 col-lg-6">
+                                        <iframe src="https://www.youtube.com/embed/Tn4rfHyYRXU" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>[HTML][JavaScript][進階] 01. 原型鏈</h5>Progress Bar 進度條線上課程
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-3 col-lg-6">
+                                        <iframe src="https://www.youtube.com/embed/ArTvxaAQ5cE" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>[HTML][JavaScript][中文][初學] 06. 其他的選擇器 (className/ Tag / Name Selector)
+                                            </h5>
+                                            Progress Bar 進度條線上課程
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-3 col-lg-6">
+                                        <iframe src="https://www.youtube.com/embed/R9RuTbJ7WVg" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>【编程入门】使用 HTML CSS 制作登录页面 (零基础菜鸟必看) | How to create a login form in html
+                                                css
+                                            </h5>WenXuanDecode文轩解码
+                                        </span></div>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-3 col-lg-6">
+                                        <iframe src="https://www.youtube.com/embed/SRbewm2AUew" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe></div>
+                                    <div class="text col-lg-6">
+                                        <span>
+                                            <h5>網頁前端工程入門：基礎 HTML 教學</h5>學習撰寫我的第一份網頁，基礎 HTML 教學。 BY 彭彭的課程
+                                        </span></div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- 這裡是資源共享的其他論壇區塊 -->
+                        <div class="section p-5">
+                            <h2>其他論壇</h2>
+                            </pr>
+                            <h3> Other Forums</h3>
+                            <ul>
+                                <li>
+                                    <a href="https://bytes.com/">
+                                        <h5 class="pt-5 p-2">Bytes</h5>
+                                    </a>
+                                    Bytes.com is a community for Developers and IT Professionals. Join 462816 members
+                                    and discuss topics such as software development, networking, security, ...
+                                </li>
+                                </li>
+                                <li>
+                                    <a href="https://www.codeproject.com/">
+                                        <h5 class="pt-3">CodeProject</h5>
+                                    </a>
+                                    Code Project (formerly The Code Project) is a community for computer programmers
+                                    with articles
+                                    on different topics and programming languages such as web development, software
+                                    development,
+                                    C++, Java, and other topics.
+                                </li>
+                                <li>
+                                    <a href="https://bytes.com/">
+                                        <h5 class="pt-3">DaniWeb</h5>
+                                    </a>Discussion forums for IT professionals and programmers. Get free computer help
+                                    and support. We cover all aspects of tech support, programming, and digital ...
+                                </li>
+                                <li>
+                                    <a href="https://www.dreamincode.net/">
+                                        <h5 class="pt-3">Dream In Code</h5>
+                                    </a>
+                                    Dream.In.Code is a community of over half a million programmers, web developers, and
+                                    geeks who share a passion for learning and helping others learn. With several
+                                    comprehensive and very active Q&A areas including Programming Help, Web Development,
+                                    and Computer Support areas.
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">Hacker News</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">Reddit</h5>
+                                    </a>
+                                    Reddit is an American social news aggregation, web content rating, and discussion
+                                    website. Registered members submit content to the site such as links, text ...
+
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">SitePoint</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+
+                                </li>
+
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">Stack Overflow</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">Tech.Pro</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">Pineapple</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">Lobsters</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+
+                                </li>
+                                <li>
+                                    <a href="https://news.ycombinator.com/">
+                                        <h5 class="pt-3">SitePoint</h5>
+                                    </a>
+                                    Hacker News is a social news website focusing on computer science and
+                                    entrepreneurship.
+                                    It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+                                    In general, content that can be submitted is defined as "anything that gratifies
+                                    one's intellectual curiosity.
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <!-- 這裡是資源共享的線上學習資源區塊 -->
+                        <div class="section p-5">
+                            <h2>相關資源</h2>
+                            </pr>
+                            <h3> Other Information</h3>
+                            <div class="content_mainbox active pt-5"><h4>網路學習平台<br></h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.w3schools.com/">
+                                            <h5 class="pt-5 p-2">W3Schools</h5>
+                                        </a>
+                                        W3Schools是目前內容最豐富，資料最完整的網頁教學平台，從基礎的HTML、CSS到jQuery、PHP應有盡有，是學習網頁必備的網站之一。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/d3Ng2u">
+                                            <h5 class="pt-5 p-2">Coursera</h5>
+                                        </a>
+                                        最老牌的線上課程網站，跟很多大學合作共同推出很多課程，也有很多適合初學者入門的課程。大部分的課程如果不需要證書都不需要付費，通常需要註冊然後跟著每個禮拜規定的進度走。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/EhUiCa">
+                                            <h5 class="pt-5 p-2">台大資訊系統訓練班</h5>
+                                        </a>
+                                        這是由台大資工系對外開授的一個實體課程，有平日晚上以及假日班可以選。有教的語言包括 Python、C++、HTML、CSS、JavaScript、Ruby on
+                                        Rails 等等。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/Xg1hfL">
+                                            <h5 class="pt-5 p-2">Codecademy</h5>
+                                        </a>
+                                        在所有免費的程式線上學習資源中，應該是最知名的網站。語言種類非常多元，教學的方式大部分是透過互動式的介面，讓你在讀完一小段教學之後，可以實際在網站上用小作業練習，如果程式碼正確就可以進到下一階段的練習。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/Wv17Ca">
+                                            <h5 class="pt-5 p-2">Udemy</h5>
+                                        </a>
+                                        Udemy 上有非常非常多各種面向幫助新手的入門的課程，也有一些進階的課程提供進修，在觀看影片學習的線上學習網站中我覺得 UI
+                                        算是設計的很人性化。雖然課程原價都很嚇人，但可以等到網站不定時有 0.6 折的超特價時買進，另外，也要注意課程是否有提供你需要的字幕哦。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/8qZhoJu">
+                                            <h5 class="pt-5 p-2">Hahow</h5>
+                                        </a>
+                                        來自台灣的線上課程平台，透過群眾集資的方式開課。上面有很多厲害的老師提供基礎且很用心的課程讓新手入門，沒有語言隔閡也讓新手能夠更踴躍的在討論區中向老師提問。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/5mPwqe">
+                                            <h5 class="pt-5 p-2">TreeHouse</h5>
+                                        </a>
+                                        月費制的線上付費學習網站，一個月 25 美金，有七天的免費試用期。一樣是採用影片教學加上課後測驗的方式。值得一提的是它的每段影片都不長，搭配它本身的 App
+                                        可以很方便地運用零碎時間學習。
+                                    </li>
+                                    <li>
+                                        <a href="https://goo.gl/cQ9kM1">
+                                            <h5 class="pt-5 p-2">CS50</h5>
+                                        </a>
+                                        CS50 是一堂由哈佛大學開設的電腦科學入門課程，在哈佛大學內非常有名。由一位非常有舞台魅力的教授 David J .
+                                        Malan，帶著大家在約十二週的時間認識從操作底層記憶體、排序演算法，到網路基本知識、MVC 概念等等。這堂課在 edX
+                                        上面有完整的課程以及作業，想要一瞥教授風采的，也可以先從底下 CS50 2016 年的課程播放清單開始看起。
+                                    </li>
+                                    <li>
+                                        <a href="https://school.appworks.tw/">
+                                            <h5 class="pt-5 p-2">AppWorks School</h5>
+                                        </a>
+                                        AppWorks School 是一個全程免費、以專案導向式訓練，做軟體人才培訓的機構。現有的 iOS、Android Class 及 Web Class 提供
+                                        16 週全日制的 iOS / Android App 或 Web App 開發訓練，主要學員為有明確決心，想要轉職工程師並學習軟體開發的人。過去兩年多來，77
+                                        位學員中已經有 66 位成功轉職，適合非常有決心想要轉職成為工程師，有時間每天全職投入的人。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content_mainbox pt-5"><h4>網路練習平台!程式挑戰解謎讓編碼好有趣!!</h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.codingame.com/start">
+                                            <h5 class="pt-5 p-2">CodinGame</h5>
+                                        </a>
+                                        玩遊戲學程式！提供25種程式語言的程式挑戰解題平台，透過遊戲化的學習方式讓編碼不再無趣！
+                                    </li>
+                                    <li>
+                                        <a href="https://leetcode.com/">
+                                            <h5 class="pt-5 p-2">LeetCode</h5>
+                                        </a>
+                                        LeetCode 又稱軟體工程師的 GRE（英文檢定），是一個線上解題平台，內含許多網際網路公司的演算法和資料結構的題目，被稱為刷題神器。
+                                    </li>
+                                    <li>
+                                        <a href="https://www.hackerrank.com/">
+                                            <h5 class="pt-5 p-2">Hacker Rank</h5>
+                                        </a>
+                                        線上解題平台，除了解題外也提供教學內容，初學者可以透過寫Hackerrank的題目幫忙複習基本的資料結構和演算法。
+                                    </li>
+                                    <li>
+                                        <a href="https://codefights.com/">
+                                            <h5 class="pt-5 p-2">CodeFights</h5>
+                                        </a>
+                                        CodeFights 可以讓你和世界各地的程式設計師對戰，讓寫程式變成像圍棋一樣一場場對奕，十分有趣。
+                                    </li>
+                                    <li>
+                                        <a href="https://www.codewars.com//">
+                                            <h5 class="pt-5 p-2">Codewars</h5>
+                                        </a>
+                                        程式挑戰的解題平台，提供多種程式語言讓使用者可以練習，包含JavaScript、Python、C#、Java、Python 等語言。
+                                    </li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <!-- 手機板導覽列 -->
+        <div class=" drop_up_menu d-md-none row">
+            <div class="d-flex  col-9">
+                <div class="menu_item align-items-center m-1 ">
+                    <img src="05-pic/white_books.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_tools.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_videos.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_con.png " height=60 width=60>
+                </div>
+                <div class="menu_item align-items-center m-1">
+                    <img src="05-pic/white_info.png " height=60 width=60>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="menu_btn m-2">
+                    <h5>推薦</h5>
+                </div>
+                <div class="menu_btn m-2">
+                    <h5>收藏</h5>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- ---------------------頁角----------------------- -->
+    <footer>
+        <div class="FooterFrame container-lg">
+            <div class="FooterRow row row-cols-md-3 mr-auto ml-auto">
+                <div class="col-lg-5 FooterRowL text-center">
+                    <img src="Nav-Logo/TWDF-Logo.png" alt="">
+                    <div class="FooterTWDF-Title">
+                        程式人論壇 | TWDF
+                    </div>
+                    <p>Taiwan Web Developer Forum</p>
+                </div>
+                <div class="col-lg-4 FooterRowM text-center">
+                    <p>+886 900-31540000</p>
+                    <p>+886 900-31540000</p>
+                    <p>TWDF＠gmail.com</p>
+                    <p>台中市北區崇德路民眾技藝中心</p>
+                </div>
+                <div class="d-none d-md-block col-lg-3 FooterRowR">
+                    <p>- 論壇討論區</p>
+                    <p>- 成果作品集</p>
+                    <p>- 案件發布區</p>
+                    <p>- 資源共享區</p>
+                </div>
+            </div>
+            <div class="row CopyrightRow justify-content-center">
+                <p>Copyright © 2020 Taiwan Web Developer Forum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+
+        // var title_ebook = document.querySelectorAll(".title_ebook")
+        // var content_ebook = document.querySelectorAll(".content_")
+        //左列學院電子書點擊後出現下方區塊
+
+        // var mainbox_detail = document.querySelectorAll(".mainbox_detail")
+        // var ebook = document.querySelector("#ebook")
+        // var mainbox_r = document.querySelector(".mainbox-r")
+
+        //顯示此頁面會出現第一篇文章的預設
+        //         book()
+
+        //         ebook.onclick = function () {
+        //             mainbox_detail_nodisplay.classList.toggle("mainbox_detail_nodisplay")
+
+
+        //左列工具點擊後出現下方區塊
+        // var tools_nodisplay = document.querySelector(".tools_nodisplay")
+        // var tools = document.querySelector("#tools")
+
+        // tools.onclick = function () {
+        //     tools_nodisplay.classList.toggle("tools_nodisplay")
+
+        //左列視頻點擊後出現下方區塊
+        // var video_nodisplay = document.querySelector(".video_nodisplay")
+        // var video = document.querySelector("#video")
+
+        // video.onclick = function () {
+        //     video_nodisplay.classList.toggle("video_nodisplay")
+
+
+        //左列論壇點擊後出現下方區塊
+        // var forum_nodisplay = document.querySelector(".forum_nodisplay")
+        // var forum = document.querySelector("#forum")
+
+        // forum.onclick = function () {
+        //     forum_nodisplay.classList.toggle("forum_nodisplay")
+
+
+        //左列資源點擊後出現下方區塊
+        //         var info_nodisplay = document.querySelector(".info_nodisplay")
+        //         var info = document.querySelector("#info")
+
+        //         info.onclick = function () {
+        //             info_nodisplay.classList.toggle("info_nodisplay")
+
+
+        //點擊左側項目，跳出右側內容
+        var title = document.querySelectorAll(".title")
+        var section = document.querySelectorAll(".section")
+        var mainbox_detail = document.querySelectorAll(".mainbox_detail")
+
+
+        //foreach用法1，當點擊項目0時，右側出現第0項內容
+        // for (let index = 0; index < title.length; index++) {
+        //     const btn = title[index];
+        //     const content = section[index]
+
+        //     btn.onclick = function(){
+        //         clearAllActive()
+        //         content.classList.add('active')
+        //     }
+        // }
+        var title_buttons = document.querySelectorAll('div.title.row.align-items-center')
+
+        //foreach用法2
+        title.forEach(function (btn, index) {
+            btn.onclick = function () {
+                clearSectionActive()
+                section[index].classList.add('active')
+                title_buttons[index].classList.add('clicked');
+
+                if (mainbox_detail[index].classList.contains('active')) {
+                    mainbox_detail[index].classList.toggle('active')
+                } else {
+                    clearDetailActive()
+                    mainbox_detail[index].classList.add('active')
+                }
+            }
+        })
+        //這裡是學院電子書的onclick事件
+        var title_mainbox = document.querySelectorAll(".title_mainbox")
+        var content_mainboxs = document.querySelectorAll(".content_mainbox")
+
+
+        for (let index = 0; index < title_mainbox.length; index++) {
+            const btn = title_mainbox[index];
+            // const content_mainbox = content_mainboxs[index]
+
+            btn.onclick = function () {
+                clearAllDetailActive();
+                content_mainbox = content_mainboxs[index];
+                content_mainbox.classList.add('active');
+
+                title_mainbox.classList.add('clicked');
+            }
+
+        }
+        function clearAllDetailActive() {
+            for (let index = 0; index < content_mainboxs.length; index++) {
+                content_mainboxs[index].classList.remove('active');
+            }
+        }
+
+        // title_ebook.forEach(function(title_btn,i){
+        //     title_btn.onclick = function(){
+        //         clearActive()
+        //         content_ebook[index].classList.add('active')
+
+        //         if (content_ebook[index].classList.contains('active')) {
+        //             content_ebook[index].classList.toggle('active')
+        //         } else {
+        //             clearActive()
+        //             content_ebook[index].classList.add('active')
+        //         }
+        //     }
+        // })
+
+        // function clearActive() {
+        //     for (let index = 0; index < content_ebook.length; index++) {
+        //         content_ebook[index].classList.remove('active')
+        //     }
+        // }
+
+
+
+        //foreach用法3
+        // title.forEach(btn => {
+        //     btn.onclick = function(){
+        //         console.log("123");
+        //     }
+        // });
+
+        //製作移除ACTIVE的CLASS，點擊到該項目時要先移除active的函式
+        function clearSectionActive() {
+            for (let index = 0; index < section.length; index++) {
+                section[index].classList.remove('active')
+                title_buttons[index].classList.remove('clicked');
+            }
+        }
+
+        function clearDetailActive() {
+            for (let index = 0; index < section.length; index++) {
+                mainbox_detail[index].classList.remove('active')
+            }
+        }
+
+
+        // title.forEach(function(items,index){
+        //     items.onclick = function(){
+        //         remove_active()
+        //         mainbox_detail[index].classList.add('active')
+        //     }
+        // })
+
+        // function remove_active(){
+        //     for (let index = 0; index < mainbox_detail.length; index++) {
+        //         mainbox_detail[index].classList.remove('active')
+        //     }
+        // }
+
+
+
+        //手機板下方項目選單點擊事件
+        var menu_item = document.querySelectorAll(".menu_item")
+
+        menu_item.forEach(function (menu_item, index) {
+            menu_item.onclick = function () {
+                clearAllActive()
+                section[index].classList.add('active')
+            }
+        })
+        function clearAllActive() {
+            for (let index = 0; index < section.length; index++) {
+                section[index].classList.remove('active')
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
