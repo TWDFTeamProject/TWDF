@@ -334,7 +334,6 @@ footer .FooterFrame .FooterRow .FooterRowL {
 
 @media (max-width: 768px) {
   footer .FooterFrame .FooterRow .FooterRowL {
-    margin-top: 38px;
     padding-left: 0;
     padding-right: 0;
   }
