@@ -46,7 +46,8 @@
             justify-content: center;
             align-items: center;
         }
-        .tk_pag_title h1{
+
+        .tk_pag_title h1 {
             margin: 10px;
         }
 
@@ -59,10 +60,8 @@
 
         /* --------------主要內容------------------ */
         .content {
-            width: 1140px;
             /* height: 3000px; */
             /* background-color: burlywood; */
-            background-color: #E0E0E0;
             margin: auto;
         }
 
@@ -75,23 +74,27 @@
         /* ------搜尋區塊------- */
         .Searchbox {
             width: 100%;
-            /* height: 8%; */
-            /* background-color: black; */
-
         }
 
         /* 關鍵字 */
         .taggroup {
-            height: 100px;
-
-
+            padding: 10px 10px;
         }
+
+        .taggroup button {
+            color: brown;
+        }
+
+        .taggroup button:hover {
+            color: rgb(42, 85, 165);
+            text-decoration: none;
+        }
+
 
         /* ------發布區塊------- */
         .Releasebox {
             width: 100%;
             height: 250px;
-
             margin-bottom: 20px;
             display: flex;
             float: left;
@@ -99,13 +102,11 @@
             background: -o-radial-gradient(circle, #002f55, #001027);
             background: -moz-radial-gradient(circle, #002f55, #001027);
             background: radial-gradient(circle, #002f55, #001027);
-
         }
 
         #post {
             width: 35%;
             height: 100%;
-            /* background-color: rgb(122, 67, 177); */
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -113,11 +114,10 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-
-
-
-
         }
+        #post img{
+                display: none;
+            }
 
         #show {
             width: 40%;
@@ -125,7 +125,6 @@
             /* background-color:  rgb(75, 25, 124); */
 
         }
-
         #content {
             width: 45%;
             height: 100%;
@@ -143,6 +142,72 @@
             background-size: cover;
             background-repeat: no-repeat;
 
+        }
+        #show img{
+                display: none;
+            }
+
+        @media (max-width: 767.98px) {
+            .taggroup {
+                font-size: 16px;
+                height: auto;
+                padding: 5px 10px;
+            }
+
+            .style_btn {
+                display: inline;
+                margin: unset;
+                padding: unset;
+                padding-left: 2px;
+            }
+
+            .Releasebox {
+                height: auto;
+                margin-bottom: 0px;
+                flex-direction: column;
+                float: unset;
+            }
+
+            #post {
+                width: 100%;
+                height: unset;
+                justify-content: center;
+                background-image: unset;
+            }
+            #post img{
+                display: block;
+                width: 100%;
+            }
+            #shower{
+                display: none;
+            }
+
+            #show {
+                width: 100%;
+                height: unset;
+                background-image: unset;
+
+            }
+            #show img{
+                display: block;
+                width: 100%;
+            }
+
+            #content {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #content h3 {
+                font-size: 36px;
+                padding: 10px;
+                /* display: inline; */
+            }
         }
 
         /* ------內容區塊-------- */
@@ -411,29 +476,22 @@
 
 
         @media(max-width:1199.98px) {
-            .content {
-                width: 720px;
-            }
 
-            .Releasebox {
+
+            /* .Releasebox {
 
                 height: 200px;
             }
 
             #content {
                 padding: 0px;
-            }
+            } */
 
         }
 
-        @media(max-width: 767.98px) {
-            .content {
-                width: 540px;
-            }
+        @media (max-width: 767.98px) {}
 
 
-
-        }
 
 
 
@@ -1110,514 +1168,519 @@
                 </div>
             </div>
             <!-- 主要內容-- -->
-            <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- 搜尋框 -->
+                        <div class="Searchbox ">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                    aria-describedby="button-addon2" style="border-right: none;">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: white; "><i
+                                            class="fas fa-search"></i></span>
 
-                <!-- 搜尋框 -->
-                <div class="Searchbox ">
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                            aria-describedby="button-addon2" style="border-right: none;">
-                        <div class="input-group-append">
-                            <span class="input-group-text" style="background-color: white; "><i
-                                    class="fas fa-search"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- tag標籤 -->
+                        <div class="taggroup">
+                            熱門搜尋:
+                            <button type="button" class="btn btn-link style_btn">名片製作</button>
+                            <button type="button" class="btn btn-link style_btn">封面插畫</button>
+                            <button type="button" class="btn btn-link style_btn">網頁設計</button>
+                            <button type="button" class="btn btn-link style_btn">Logo設計</button>
+                            <button type="button" class="btn btn-link style_btn">RWD</button>
 
                         </div>
 
-                    </div>
-                </div>
+                        <div class="Releasebox">
+                            <div id="post">
+                                <div id="poster"></div>
+                                <img src="./show/201015成果展示區CC-07.png" alt="">
+                            </div>
+                            <div id="content">
+                                <h3>Design Creative</h3>
+                                <p>好的設計與作品永遠不嫌多
+                                </p>
+                                <p> 上傳自己的作品，讓更多人看見你</p>
+                                <button type="button" class="btn btn-warning add_portfolio_button" data-toggle="modal"
+                                    data-target="#add_portfolio_button">Start</button>
+                            </div>
+                            <div id="show">
+                                <div id="shower"></div>
+                                <img src="./show/發布作品右圖.jpg" alt="">
+                            </div>
+                        </div>
 
-                <!-- tag標籤 -->
-                <div class="taggroup">
-                    熱門搜尋
-                    <button type="button" class="btn btn-link">名片製作</button>
-                    <button type="button" class="btn btn-link">封面插畫</button>
-                    <button type="button" class="btn btn-link">網頁設計</button>
-                    <button type="button" class="btn btn-link">Logo設計</button>
-                    <button type="button" class="btn btn-link">RWD</button>
-                </div>
+                        <div class="Mainbox">
 
-                <div class="Releasebox">
-                    <div id="post">
-                        <div id="poster"></div>
-                    </div>
-                    <div id="content">
-                        <h3>Design Creative</h3>
-                        <p>好的設計與作品永遠不嫌多
-                        </p>
-                        <p> 上傳自己的作品，讓更多人看見你</p>
-                        <button type="button" class="btn btn-warning add_portfolio_button" data-toggle="modal"
-                            data-target="#add_portfolio_button">Start</button>
-                    </div>
-                    <div id="show">
-                        <div id="shower"></div>
-                    </div>
-                </div>
-
-                <div class="Mainbox">
-
-                    <div class="Paginationbox">
+                            <div class="Paginationbox">
 
 
 
-                        <button class="arrow_button" type="button" id="show_newtime" style="font-size: 18px;">
-                            <div id="newtime_t" style="display:block">最新上傳<i class="fas fa-sort-up"></i></div>
-                            <div id="newtime_d" style="display:none">最新上傳<i class="fas fa-caret-down"></i></div>
-                        </button>
-
-                        <button class="arrow_button" type="button" id="show_browse" style="font-size: 18px;">
-                            <div id="browse_t" style="display:block">最多點評<i class="fas fa-sort-up"></i></div>
-                            <div id="browse_d" style="display:none">最多點評<i class="fas fa-caret-down"></i></div>
-                        </button>
-
-                        <button class="arrow_button" type="button" id="show_favorites" style="font-size: 18px;">
-                            <div id="favorites_t" style="display:block">最高人氣<i class="fas fa-sort-up"></i></div>
-                            <div id="favorites_d" style="display:none">最高人氣<i class="fas fa-caret-down"></i></div>
-                        </button>
-                    </div>
-                    <!-- 主旨下的底線 -->
-                    <div class="underline"></div>
-                    <br>
-                    <!-- 分頁按鈕 -->
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-end " id="page123">
-
-                            <a class="page-link" href="./作品區(已登入)20201017-.html">
-                                <button type="button" class="btn btn-outline-dark">1
+                                <button class="arrow_button" type="button" id="show_newtime" style="font-size: 18px;">
+                                    <div id="newtime_t" style="display:block">最新上傳<i class="fas fa-sort-up"></i></div>
+                                    <div id="newtime_d" style="display:none">最新上傳<i class="fas fa-caret-down"></i></div>
                                 </button>
-                            </a>
-                            <a class="page-link" href="./作品區(已登入)20201017-2.html">
-                                <button type="button" class="btn btn-outline-dark">2
+
+                                <button class="arrow_button" type="button" id="show_browse" style="font-size: 18px;">
+                                    <div id="browse_t" style="display:block">最多點評<i class="fas fa-sort-up"></i></div>
+                                    <div id="browse_d" style="display:none">最多點評<i class="fas fa-caret-down"></i></div>
                                 </button>
-                            </a>
-                            <a class="page-link" href="./作品區(已登入)20201017-3.html">
-                                <button type="button" class="btn btn-outline-dark">3
+
+                                <button class="arrow_button" type="button" id="show_favorites" style="font-size: 18px;">
+                                    <div id="favorites_t" style="display:block">最高人氣<i class="fas fa-sort-up"></i></div>
+                                    <div id="favorites_d" style="display:none">最高人氣<i class="fas fa-caret-down"></i>
+                                    </div>
                                 </button>
-                            </a>
-                            <a class="page-link" href="#">
-                                <button type="button" class="btn btn-outline-dark">4
-                                </button>
-                            </a>
-                            <a class="page-link" href="#">
-                                <button type="button" class="btn btn-outline-dark">5
-                                </button>
-                            </a>
+                            </div>
+                            <!-- 主旨下的底線 -->
+                            <div class="underline"></div>
+                            <br>
+                            <!-- 分頁按鈕 -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end " id="page123">
 
-                            <a class="page-link" href="#">
-                                <button type="button" class="btn btn-outline-dark"><i class="fas fa-angle-double-right"
-                                        style="width: 10px"></i>
-                                </button>
-                            </a>
+                                    <a class="page-link" href="./作品區(已登入)20201017-.html">
+                                        <button type="button" class="btn btn-outline-dark">1
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="./作品區(已登入)20201017-2.html">
+                                        <button type="button" class="btn btn-outline-dark">2
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="./作品區(已登入)20201017-3.html">
+                                        <button type="button" class="btn btn-outline-dark">3
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="#">
+                                        <button type="button" class="btn btn-outline-dark">4
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="#">
+                                        <button type="button" class="btn btn-outline-dark">5
+                                        </button>
+                                    </a>
 
-                        </ul>
-                    </nav>
+                                    <a class="page-link" href="#">
+                                        <button type="button" class="btn btn-outline-dark"><i
+                                                class="fas fa-angle-double-right" style="width: 10px"></i>
+                                        </button>
+                                    </a>
 
-                    <div class="case-group" id="case-group-page1">
-                        <div class="container">
-                            <div class="row">
-                                <div class=" col-xl-4 col-md-6">
-                                    <div class="case  text-center py-2 mb-lg-3 mb-md-3 " data-toggle="modal"
-                                        data-target="#portfolio_pag_abc">
-                                        <div class="work"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-1">
+                                </ul>
+                            </nav>
+
+                            <div class="case-group" id="case-group-page1">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class=" col-xl-4 col-md-6">
+                                            <div class="case  text-center py-2 mb-lg-3 mb-md-3 " data-toggle="modal"
+                                                data-target="#portfolio_pag_abc">
+                                                <div class="work"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-1">
+
+                                                    </div>
+                                                    <div class="name">妮艾德-Monica</div>
+                                                </div>
+                                                <div class="comment">
+                                                    90筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(554)</div>
+                                                <div class="date">發佈日期 2020.09.30</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
                                             </div>
-                                            <div class="name">妮艾德-Monica</div>
                                         </div>
-                                        <div class="comment">
-                                            90筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(554)</div>
-                                        <div class="date">發佈日期 2020.09.30</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
+                                                data-target="#portfolio_pag_2">
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                        data-target="#portfolio_pag_2">
+                                                <div class="work" id="web-2"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-2">
+                                                    </div>
+                                                    <div class="name">艾斯</div>
+                                                </div>
+                                                <div class="comment">
+                                                    84筆作品
+                                                    <span>68則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
 
-                                        <div class="work" id="web-2"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-2">
+                                                </div>
+                                                <div class="people">點閱人數(54)</div>
+                                                <div class="date">發佈日期 2020.09.30</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
+
                                             </div>
-                                            <div class="name">艾斯</div>
                                         </div>
-                                        <div class="comment">
-                                            84筆作品
-                                            <span>68則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
+                                                data-target="#portfolio_pag_3">
+                                                <div class="work" id="web-3"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-3">
+                                                    </div>
+                                                    <div class="name">SUSHI</div>
+                                                </div>
+                                                <div class="comment">
+                                                    10筆作品
+                                                    <span>66則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
 
-                                        </div>
-                                        <div class="people">點閱人數(54)</div>
-                                        <div class="date">發佈日期 2020.09.30</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                                </div>
+                                                <div class="people">點閱人數(84)</div>
+                                                <div class="date">發佈日期 2020.09.20</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                        data-target="#portfolio_pag_3">
-                                        <div class="work" id="web-3"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-3">
                                             </div>
-                                            <div class="name">SUSHI</div>
                                         </div>
-                                        <div class="comment">
-                                            10筆作品
-                                            <span>66則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
+                                                data-target="#portfolio_pag_5">
+                                                <div class="work" id="web-4"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-4">
+                                                    </div>
+                                                    <div class="name">妮德</div>
+                                                </div>
+                                                <div class="comment">
+                                                    12筆作品
+                                                    <span>55則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(54)</div>
+                                                <div class="date">發佈日期 2020.09.10</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                        </div>
-                                        <div class="people">點閱人數(84)</div>
-                                        <div class="date">發佈日期 2020.09.20</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                        data-target="#portfolio_pag_5">
-                                        <div class="work" id="web-4"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-4">
                                             </div>
-                                            <div class="name">妮德</div>
                                         </div>
-                                        <div class="comment">
-                                            12筆作品
-                                            <span>55則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(54)</div>
-                                        <div class="date">發佈日期 2020.09.10</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
+                                                data-target="#portfolio_pag_5">
+                                                <div class="work" id="web-5"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-5">
+                                                    </div>
+                                                    <div class="name">Monica</div>
+                                                </div>
+                                                <div class="comment">
+                                                    42筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                        data-target="#portfolio_pag_5">
-                                        <div class="work" id="web-5"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-5">
+                                                </div>
+                                                <div class="people">點閱人數(33)</div>
+                                                <div class="date">發佈日期 2020.09.10</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
+
                                             </div>
-                                            <div class="name">Monica</div>
                                         </div>
-                                        <div class="comment">
-                                            42筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-6"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-6">
+                                                    </div>
+                                                    <div class="name">小鴨</div>
+                                                </div>
+                                                <div class="comment">
+                                                    12筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(59)</div>
+                                                <div class="date">發佈日期 2020.08.30</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                        </div>
-                                        <div class="people">點閱人數(33)</div>
-                                        <div class="date">發佈日期 2020.09.10</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-6"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-6">
                                             </div>
-                                            <div class="name">小鴨</div>
                                         </div>
-                                        <div class="comment">
-                                            12筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(59)</div>
-                                        <div class="date">發佈日期 2020.08.30</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-7"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-7">
+                                                    </div>
+                                                    <div class="name">天心</div>
+                                                </div>
+                                                <div class="comment">
+                                                    90筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-7"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-7">
+                                                </div>
+                                                <div class="people">點閱人數(32)</div>
+                                                <div class="date">發佈日期 2020.08.30</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
+
                                             </div>
-                                            <div class="name">天心</div>
                                         </div>
-                                        <div class="comment">
-                                            90筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-8"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-8">
+                                                    </div>
+                                                    <div class="name">霏霏</div>
+                                                </div>
+                                                <div class="comment">
+                                                    15筆作品
+                                                    <span>65則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(55)</div>
+                                                <div class="date">發佈日期 2020.09.16</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                        </div>
-                                        <div class="people">點閱人數(32)</div>
-                                        <div class="date">發佈日期 2020.08.30</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-8"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-8">
                                             </div>
-                                            <div class="name">霏霏</div>
                                         </div>
-                                        <div class="comment">
-                                            15筆作品
-                                            <span>65則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(55)</div>
-                                        <div class="date">發佈日期 2020.09.16</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-9"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-9">
+                                                    </div>
+                                                    <div class="name">高肌日</div>
+                                                </div>
+                                                <div class="comment">
+                                                    90筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(554)</div>
+                                                <div class="date">發佈日期 2020.09.21</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-9"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-9">
                                             </div>
-                                            <div class="name">高肌日</div>
                                         </div>
-                                        <div class="comment">
-                                            90筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(554)</div>
-                                        <div class="date">發佈日期 2020.09.21</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-10"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-10">
+                                                    </div>
+                                                    <div class="name">陳德-Hcica</div>
+                                                </div>
+                                                <div class="comment">
+                                                    90筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(554)</div>
+                                                <div class="date">發佈日期 2020.09.30</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-10"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-10">
                                             </div>
-                                            <div class="name">陳德-Hcica</div>
                                         </div>
-                                        <div class="comment">
-                                            90筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(554)</div>
-                                        <div class="date">發佈日期 2020.09.30</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-11"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-11">
+                                                    </div>
+                                                    <div class="name">林熺陳</div>
+                                                </div>
+                                                <div class="comment">
+                                                    90筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
 
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-11"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-11">
+                                                </div>
+                                                <div class="people">點閱人數(95)</div>
+                                                <div class="date">發佈日期 2020.09.13</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
+
                                             </div>
-                                            <div class="name">林熺陳</div>
                                         </div>
-                                        <div class="comment">
-                                            90筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="case text-center py-2 mb-lg-3  mb-md-3">
+                                                <div class="work" id="web-12"></div>
+                                                <div class="worker">
+                                                    <div class="headshot rounded-circle" id="pic-12">
+                                                    </div>
+                                                    <div class="name">SHISHO</div>
+                                                </div>
+                                                <div class="comment">
+                                                    90筆作品
+                                                    <span>78則評價</span>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="people">點閱人數(554)</div>
+                                                <div class="date">發佈日期 2020.09.30</div>
+                                                <div class="tag-group">
+                                                    <i class="fas fa-hashtag"></i>
+                                                    <div class="tag">設計</div>
+                                                    <div class="tag">工程</div>
+                                                    <div class="tag">行銷</div>
+                                                    <div class="tag">資安</div>
+                                                    <div class="tag">企劃</div>
+                                                </div>
 
-                                        </div>
-                                        <div class="people">點閱人數(95)</div>
-                                        <div class="date">發佈日期 2020.09.13</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="case text-center py-2 mb-lg-3  mb-md-3">
-                                        <div class="work" id="web-12"></div>
-                                        <div class="worker">
-                                            <div class="headshot rounded-circle" id="pic-12">
                                             </div>
-                                            <div class="name">SHISHO</div>
                                         </div>
-                                        <div class="comment">
-                                            90筆作品
-                                            <span>78則評價</span>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="people">點閱人數(554)</div>
-                                        <div class="date">發佈日期 2020.09.30</div>
-                                        <div class="tag-group">
-                                            <i class="fas fa-hashtag"></i>
-                                            <div class="tag">設計</div>
-                                            <div class="tag">工程</div>
-                                            <div class="tag">行銷</div>
-                                            <div class="tag">資安</div>
-                                            <div class="tag">企劃</div>
-                                        </div>
-
                                     </div>
+
                                 </div>
                             </div>
+                            <div class="Paginationbox"></div>
+                            <!-- 分頁按鈕 -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end ">
 
+                                    <a class="page-link" href="./作品區(已登入)20201017-.html">
+                                        <button type="button" class="btn btn-outline-dark">1
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="./作品區(已登入)20201017-2.html">
+                                        <button type="button" class="btn btn-outline-dark">2
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="./作品區(已登入)20201017-3.html">
+                                        <button type="button" class="btn btn-outline-dark">3
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="#">
+                                        <button type="button" class="btn btn-outline-dark">4
+                                        </button>
+                                    </a>
+                                    <a class="page-link" href="#">
+                                        <button type="button" class="btn btn-outline-dark">5
+                                        </button>
+                                    </a>
+
+                                    <a class="page-link" href="#">
+                                        <button type="button" class="btn btn-outline-dark"><i
+                                                class="fas fa-angle-double-right" style="width: 10px;"></i>
+                                        </button>
+                                    </a>
+
+                                </ul>
+                            </nav>
                         </div>
                     </div>
-                    <div class="Paginationbox"></div>
-                    <!-- 分頁按鈕 -->
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-end ">
-
-                            <a class="page-link" href="./作品區(已登入)20201017-.html">
-                                <button type="button" class="btn btn-outline-dark">1
-                                </button>
-                            </a>
-                            <a class="page-link" href="./作品區(已登入)20201017-2.html">
-                                <button type="button" class="btn btn-outline-dark">2
-                                </button>
-                            </a>
-                            <a class="page-link" href="./作品區(已登入)20201017-3.html">
-                                <button type="button" class="btn btn-outline-dark">3
-                                </button>
-                            </a>
-                            <a class="page-link" href="#">
-                                <button type="button" class="btn btn-outline-dark">4
-                                </button>
-                            </a>
-                            <a class="page-link" href="#">
-                                <button type="button" class="btn btn-outline-dark">5
-                                </button>
-                            </a>
-
-                            <a class="page-link" href="#">
-                                <button type="button" class="btn btn-outline-dark"><i class="fas fa-angle-double-right"
-                                        style="width: 10px;"></i>
-                                </button>
-                            </a>
-
-                        </ul>
-                    </nav>
                 </div>
-
-
             </div>
+
         </section>
         <!-- 標題 -->
         <!-- <h2 style="text-align: center;  line-height: 100px; ">作品展示區</h2> -->
