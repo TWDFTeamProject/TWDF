@@ -15,9 +15,6 @@ body {
 header {
   /* ---------------------------RWD導覽列---------------------------------------- */
   /* -------------------------RWD手機導覽列-------------------------------------- */
-  /* ------------------------------主要內容區塊----------------------------------- */
-  /* ------------------------------頁角-------------------------------------- */
-  /* ------------------------------Sign In-------------------------------------- */
 }
 
 header .navbar {
@@ -27,7 +24,13 @@ header .navbar {
 
 @media (max-width: 1200px) {
   header .navbar {
-    height: 50px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  header .navbar {
+    height: 90px;
   }
 }
 
@@ -311,103 +314,105 @@ header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText p {
   font-size: 9px;
 }
 
-header footer {
+/* ------------------------------主要內容區塊----------------------------------- */
+/* ------------------------------頁角-------------------------------------- */
+footer {
   /* ------------------------------RWD頁角-------------------------------------- */
 }
 
-header footer .FooterFrame .FooterRow {
+footer .FooterFrame .FooterRow {
   width: 100%;
   height: 300px;
   color: white;
   font-size: 18px;
 }
 
-header footer .FooterFrame .FooterRow .FooterRowL {
+footer .FooterFrame .FooterRow .FooterRowL {
   margin-top: 97px;
   padding-left: 75px;
 }
 
 @media (max-width: 768px) {
-  header footer .FooterFrame .FooterRow .FooterRowL {
-    margin-top: 38px;
+  footer .FooterFrame .FooterRow .FooterRowL {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-header footer .FooterFrame .FooterRow .FooterRowL img {
+footer .FooterFrame .FooterRow .FooterRowL img {
   width: 66px;
   margin-left: 30px;
   margin-bottom: 10px;
 }
 
 @media (max-width: 767.98px) {
-  header footer .FooterFrame .FooterRow .FooterRowL img {
+  footer .FooterFrame .FooterRow .FooterRowL img {
     margin-left: 0px;
   }
 }
 
-header footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title {
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title {
   margin-bottom: 9px;
 }
 
-header footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title p {
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title p {
   font-family: 'Cantarell', sans-serif;
 }
 
-header footer .FooterFrame .FooterRow .FooterRowM {
+footer .FooterFrame .FooterRow .FooterRowM {
   margin-top: 122px;
   padding-left: 68px;
 }
 
 @media (max-width: 767.98px) {
-  header footer .FooterFrame .FooterRow .FooterRowM {
+  footer .FooterFrame .FooterRow .FooterRowM {
     margin-top: 0;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-header footer .FooterFrame .FooterRow .FooterRowR {
+footer .FooterFrame .FooterRow .FooterRowR {
   padding-left: 105px;
   margin-top: 122px;
 }
 
-header footer .FooterFrame .CopyrightRow {
+footer .FooterFrame .CopyrightRow {
   color: white;
   margin-top: 107px;
   margin-bottom: 55px;
 }
 
-header .modal .modal-dialog .modal-content .modal-header {
+/* ------------------------------Sign In-------------------------------------- */
+.modal .modal-dialog .modal-content .modal-header {
   border-bottom: 0;
   padding: 1rem 0rem 0rem 1rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.781);
 }
 
-header .modal .modal-dialog .modal-content .modal-header .close {
+.modal .modal-dialog .modal-content .modal-header .close {
   color: red;
   padding: 1rem 2rem;
   margin: -1rem -1rem -1rem auto;
 }
 
-header .modal .modal-dialog .modal-content .modal-header .close :hover {
+.modal .modal-dialog .modal-content .modal-header .close :hover {
   color: yellow;
 }
 
-header .modal .modal-dialog .modal-content .modal-body {
+.modal .modal-dialog .modal-content .modal-body {
   background-color: rgba(0, 0, 0, 0.781);
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box {
   width: 100%;
   padding-bottom: 10px;
   height: auto;
   margin: auto;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account {
   font-size: 18px;
   padding-top: 10px;
   margin-left: 10px;
@@ -420,13 +425,13 @@ header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_accoun
           align-items: center;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account input {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account input {
   width: 85%;
   margin-left: 10px;
   border-radius: 10px;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password {
   font-size: 18px;
   margin-left: 10px;
   padding-top: 10px;
@@ -440,13 +445,13 @@ header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_passwo
           align-items: center;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password input {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password input {
   width: 85%;
   margin-left: 10px;
   border-radius: 10px;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,39 +461,39 @@ header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_ba
   margin-bottom: 30px;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember {
   color: white;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember :hover {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember :hover {
   color: blue;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget {
   color: white;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget :hover {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget :hover {
   color: blue;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount {
   color: white;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount :hover {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount :hover {
   color: blue;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new {
   color: white;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new :hover {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new :hover {
   color: blue;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_sign_in {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_sign_in {
   width: 90%;
   height: 36px;
   letter-spacing: 2px;
@@ -509,20 +514,20 @@ header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_sign_i
           align-items: center;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_t {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_t {
   width: 90%;
   margin: auto;
   margin: 20px;
   background-color: white;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_title {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_title {
   text-align: center;
   color: white;
   letter-spacing: 3px;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar {
   width: 100%;
   height: 70px;
   display: -webkit-box;
@@ -536,14 +541,14 @@ header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_
           align-items: center;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_fb {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_fb {
   width: 60px;
   height: 60px;
   background-color: blue;
   border-radius: 50%;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_google {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_google {
   width: 60px;
   height: 60px;
   margin: 0px 30px;
@@ -551,34 +556,34 @@ header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_
   border-radius: 50%;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_apple {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_apple {
   width: 60px;
   height: 60px;
   background-color: red;
   border-radius: 50%;
 }
 
-header .modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_d {
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_d {
   width: 90%;
   margin: auto;
   margin-top: 20px;
   background-color: white;
 }
 
-header .modal .modal-dialog .modal-content .modal-footer {
+.modal .modal-dialog .modal-content .modal-footer {
   border-top: 0;
   padding: 0rem 0rem 1rem 1rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.781);
 }
 
-header .modal .modal-dialog .modal-content .modal-footer .XX_precautions {
+.modal .modal-dialog .modal-content .modal-footer .XX_precautions {
   width: 90%;
   color: #ffd1d1;
   margin: auto;
 }
 
-header .modal .modal-dialog .modal-content .modal-footer .XX_precautions .XX_precautions_title {
+.modal .modal-dialog .modal-content .modal-footer .XX_precautions .XX_precautions_title {
   text-align: center;
   color: #ff1d1d;
   letter-spacing: 3px;

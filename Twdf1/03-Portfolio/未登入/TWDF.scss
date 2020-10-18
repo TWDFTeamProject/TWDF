@@ -20,7 +20,10 @@ header{
         height: 100px;
         // position: relative;
         @media (max-width: 1200px) {
-            height: 50px;
+            height: 80px;
+        }
+        @media (max-width: 992px) {
+            height: 90px;
         }
         
         
@@ -213,11 +216,10 @@ header{
             }
         }
     }
+}
 
 /* ------------------------------主要內容區塊----------------------------------- */
-main{
 
-}
 
 /* ------------------------------頁角-------------------------------------- */
 footer{
@@ -235,7 +237,6 @@ footer{
                 margin-top: 97px;
                 padding-left: 75px;
                 @media (max-width: 768px) {
-                    margin-top: 38px;
                     padding-left: 0;
                     padding-right: 0;
                 }
@@ -278,7 +279,6 @@ footer{
             margin-bottom: 55px;
         }
     }
-
 }
 
 /* ------------------------------Sign In-------------------------------------- */
