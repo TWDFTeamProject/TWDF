@@ -672,6 +672,7 @@ main .Section1 .OurTeam .OurTeamText {
 
 @media (max-width: 767.98px) {
   main .Section1 .OurTeam .OurTeamText {
+    margin-bottom: 50px;
     padding-left: 36px;
     display: -webkit-box;
     display: -ms-flexbox;
