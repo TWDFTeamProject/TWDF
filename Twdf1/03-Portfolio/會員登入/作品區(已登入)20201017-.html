@@ -169,6 +169,7 @@
             justify-content: flex-end;
             align-items: center;
         }
+
         .Paginationbox_d {
             width: 100%;
             height: 60px;
@@ -201,7 +202,14 @@
         .arrow_button:focus {
             outline: none;
         }
-
+        /* ------bootstap分頁按鈕----- */
+        .page-link{
+            background-color: unset;
+            border: 0px;
+        }
+        .page-link button{
+            background-color: rgb(238, 238, 255);
+        }
 
         /* --案件區塊-- */
         .case-group {
@@ -417,7 +425,6 @@
         }
 
 
-        
 
 
 
@@ -425,22 +432,11 @@
 
 
 
-        /* ------------作品模組Css------------- */
-        .portfolio_pag {
-            width: 100px;
-            height: 50px;
-            background-color: brown;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
+        /* ------------作品互動視窗模組Css------------- */
         .modal-body {
             background-color: rgb(196, 194, 174);
         }
-
-
 
         /* -------作品內容--------- */
 
@@ -449,6 +445,7 @@
             background-color: rgb(196, 194, 174);
         }
 
+        /* ----作品內容左邊欄位------ */
         .pr_main_l {
             width: 25%;
             background-color: rgb(233, 186, 148);
@@ -596,11 +593,7 @@
             color: black;
         }
 
-
-
-
-
-        /* -----------右邊內容---------- */
+        /* ----作品內容右邊欄位---------- */
 
         .pr_main_r {
             width: 80%;
@@ -608,8 +601,6 @@
             /* padding: 10px; */
 
         }
-
-
 
         .pr_s_work_img {
             width: 70%;
@@ -624,22 +615,17 @@
             /* margin-top: 10px; */
             /* background-color: rgb(71, 114, 77); */
             box-shadow: 4px 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
-
         }
 
         .pr_w_name {
             text-align: center;
             padding: 10px;
-
         }
 
         .pr_w_n_name {
             display: inline;
             background-color: yellow;
-
-
         }
-
 
         .pr_d_title {
             width: 100px;
@@ -676,6 +662,9 @@
         }
 
 
+
+
+
         /* --------互動視窗基本設定---------------- */
 
 
@@ -684,7 +673,9 @@
             border-bottom: 0;
             padding: 1rem 0rem 0rem 1rem;
             margin-left: 10%;
-
+        }
+        .modal-header button span {
+            border: 0px;
         }
 
         /* -----右上角叉叉----- */
@@ -736,6 +727,8 @@
             background-color: rgba(70, 0, 0, 0.863);
         }
 
+
+
         /* --------------------------------- */
 
         /* ------------hover------------ */
@@ -757,8 +750,10 @@
         }
 
 
+
+
         /* ----------框限------------- */
-        .style_border_tl {
+        /* .style_border_tl {
             width: 3%;
             height: 10%;
             background-color: black;
@@ -767,7 +762,6 @@
             top: 0;
             left: 0;
         }
-
         .style_border_ml {
             width: 3%;
             height: 80%;
@@ -777,7 +771,6 @@
             left: 0;
 
         }
-
         .style_border_bl {
             width: 3%;
             height: 10%;
@@ -787,8 +780,6 @@
             left: 0;
 
         }
-
-
         .style_border_tr {
             width: 3%;
             height: 10%;
@@ -798,7 +789,6 @@
             right: 0;
 
         }
-
         .style_border_mr {
             width: 3%;
             height: 80%;
@@ -808,7 +798,6 @@
             right: 0;
 
         }
-
         .style_border_br {
             width: 3%;
             height: 10%;
@@ -817,7 +806,7 @@
             bottom: 0;
             right: 0;
 
-        }
+        } */
 
         .style_inline {
             display: inline;
@@ -964,10 +953,10 @@
             justify-content: space-between;
             margin-right: 10px;
         }
-        /* ---------作品頁1199.98 Rwd--------- */
-        @media(max-width:1199.98px) {
 
-        }
+        /* ---------作品頁1199.98 Rwd--------- */
+        @media(max-width:1199.98px) {}
+
         /* ---------作品頁1199.98 Rwd--------- */
 
         /* ---------作品頁767.98 Rwd--------- */
@@ -977,41 +966,48 @@
                 height: auto;
                 padding: 5px 10px;
             }
+
             .style_btn {
                 display: inline;
                 margin: unset;
                 padding: unset;
                 padding-left: 2px;
             }
+
             .Releasebox {
                 height: auto;
                 margin-bottom: 0px;
                 flex-direction: column;
                 float: unset;
             }
+
             #post {
                 width: 100%;
                 height: unset;
                 justify-content: center;
                 background-image: unset;
             }
+
             #post img {
                 display: block;
                 width: 100%;
             }
+
             #shower {
                 display: none;
             }
+
             #show {
                 width: 100%;
                 height: unset;
                 background-image: unset;
-
             }
+
             #show img {
                 display: block;
                 width: 100%;
             }
+
             #content {
                 width: 100%;
                 height: auto;
@@ -1021,40 +1017,89 @@
                 justify-content: center;
                 align-items: center;
             }
+
             #content h3 {
                 font-size: 36px;
                 padding: 10px;
                 /* display: inline; */
             }
+
             /* -------排列順序RWD------ */
             .arrow_button {
                 font-size: 14px;
                 letter-spacing: 1px;
             }
-            /* -------卡片------ */
-            /* ---卡片RWD間距----- */
-            .style_m{
+
+            /* -------卡片RWD---------- */
+            /* ---卡片間距----- */
+            .style_m {
                 margin-bottom: 1rem;
             }
 
             .case-group {
-            width: 100%;
-            /* height: calc(100% - 60px); */
-            /* background-color: rgb(75, 81, 170); */
-            display: flex;
-            float: left;
-            padding-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .Paginationbox_d {
+                height: 0px;
+            }
+
+            /* 互動視窗RWD */
+            @media (max-width: 767.98px) {
+                /* 卡片標題RWD */
+
+                .pr_w_name_G {
+                    width: 100%;
+                    background-color: rgb(240, 233, 215);
+                    margin: auto;
+                    position: relative;
+                }
+
+                .pr_w_name_G:hover {
+                    display: unset;
+                }
+
+                .pr_w_name {
+                    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+                }
+
+                /* 卡片照片RWD */
+                .pr_s_work_img {
+                    width: 100%;
+                }
+
+                /* 卡片說明RWD */
+                .pr_d_title {
+                    margin-left: 0%;
+                }
+
+                /* 卡片框限RWD */
+                .style_hr_t {
+                    background-color: unset;
+                }
+
+                .style_hr_d {
+                    background-color: unset;
+                }
+
+                .style_hr_t {
+                    background-color: unset;
+                }
+
+                .style_hr_d {
+                    background-color: unset;
+                }
+
+                /* 卡片內文RWD */
+                .pr_w_d_content {
+                    width: 100%;
+                    margin-left: 0%;
+                }
+            }
+
+            /* 互動視窗RWD */
         }
-        .Paginationbox_d {
-            width: 100%;
-            height: 00px;
-            border-bottom: 2px solid black;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        }
+
         /* ---------作品頁767.98 Rwd--------- */
     </style>
 </head>
@@ -1288,10 +1333,10 @@
                             <div class="case-group" id="case-group-page1">
                                 <div class="container">
                                     <div class="row">
-                                        <!-- 卡片編號001 -->
+                                        <!-- 卡片編號_XXXX -->
                                         <div class=" col-xl-4 col-md-6 style_m">
                                             <div class="case  text-center py-2 mb-lg-3 mb-md-3" data-toggle="modal"
-                                                data-target="#portfolio_pag_abc">
+                                                data-target="#portfolio_pag_XXXX">
                                                 <div class="work"></div>
                                                 <div class="worker">
                                                     <div class="headshot rounded-circle" id="pic-1">
@@ -1319,9 +1364,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- 卡片編號_1001 -->
                                         <div class="col-xl-4 col-md-6 style_m">
                                             <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                                data-target="#portfolio_pag_2">
+                                                data-target="#portfolio_pag_1001">
 
                                                 <div class="work" id="web-2"></div>
                                                 <div class="worker">
@@ -1350,9 +1396,10 @@
 
                                             </div>
                                         </div>
+                                        <!-- 卡片編號_1002 -->
                                         <div class="col-xl-4 col-md-6 style_m">
                                             <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                                data-target="#portfolio_pag_3">
+                                                data-target="#portfolio_pag_1002">
                                                 <div class="work" id="web-3"></div>
                                                 <div class="worker">
                                                     <div class="headshot rounded-circle" id="pic-3">
@@ -1378,12 +1425,12 @@
                                                     <div class="tag">資安</div>
                                                     <div class="tag">企劃</div>
                                                 </div>
-
                                             </div>
                                         </div>
+                                        <!-- 卡片編號_1003 -->
                                         <div class="col-xl-4 col-md-6 style_m">
                                             <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                                data-target="#portfolio_pag_5">
+                                                data-target="#portfolio_pag_1003">
                                                 <div class="work" id="web-4"></div>
                                                 <div class="worker">
                                                     <div class="headshot rounded-circle" id="pic-4">
@@ -1412,9 +1459,10 @@
 
                                             </div>
                                         </div>
+                                        <!-- 卡片編號_1004 -->
                                         <div class="col-xl-4 col-md-6 style_m">
                                             <div class="case text-center py-2 mb-lg-3  mb-md-3" data-toggle="modal"
-                                                data-target="#portfolio_pag_5">
+                                                data-target="#portfolio_pag_1004">
                                                 <div class="work" id="web-5"></div>
                                                 <div class="worker">
                                                     <div class="headshot rounded-circle" id="pic-5">
@@ -1699,7 +1747,12 @@
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <!-- 主要內容 -->
                 <div class="modal-content cr_7">
-
+                    <!-- 關閉按鈕 -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                     <!-- 內容 -->
                     <div class="modal-body" style="border: 10px solid white; ">
                         <div class="PR_main">
@@ -1729,7 +1782,6 @@
                                 </div>
                             </div>
                             <div class="pr_main_r mx-auto ">
-
                                 <div class="pr_r_side">
                                     <div class="pr_s_work_img">
                                         <!-- -----上傳圖片1------ -->
@@ -1757,10 +1809,8 @@
                              <img class="add_photo_img" id="preview_progressbarTW_img_2" src="#" />
                          </form> -->
                                     </div>
-                                    <!-- <div class="pr_s_work_img">
-                         <img class="style_img" src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg" alt="" srcset=""> -->
-                                </div>
 
+                                </div>
                                 <div class="pr_w_name_G">
                                     <hr class="style_hr_t">
                                     <div class="pr_w_name">
@@ -1805,15 +1855,20 @@
         </div>
 
         <!-- -----------------作品視窗---------------- -->
-        <!-- 作品集模組--互動視窗_abc -->
-        <div class="modal fade" id="portfolio_pag_abc" tabindex="-1" role="dialog"
+        <!-- 作品集模組--互動視窗_XXXX -->
+        <div class="modal fade" id="portfolio_pag_XXXX" tabindex="-1" role="dialog"
             aria-labelledby="portfolio_pag_abc_Title" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <!-- 主要內容 -->
                 <div class="modal-content cr_7">
-
+                    <!-- 關閉按鈕 -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                     <!-- 內容 -->
-                    <div class="modal-body" style="border: 10px solid white;">
+                    <div class="modal-body">
                         <div class="PR_main">
                             <div class="pr_main_l d-none d-lg-block">
                                 <div class="pr_l_side">
@@ -1889,18 +1944,20 @@
                 </div>
             </div>
         </div>
-
-
-
-        <!-- 作品集模組--互動視窗 -->
-        <div class="modal fade" id="portfolio_pag_2" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1_Title"
+        <!-- 作品集模組--互動視窗_1001 -->
+        <div class="modal fade" id="portfolio_pag_1001" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1_Title"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <!-- 主要內容 -->
                 <div class="modal-content cr_7">
-
+                    <!-- 關閉按鈕 -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                     <!-- 內容 -->
-                    <div class="modal-body" style="border: 10px solid white;">
+                    <div class="modal-body">
                         <div class="PR_main">
                             <div class="pr_main_l d-none d-lg-block">
                                 <div class="pr_l_side">
@@ -1931,7 +1988,7 @@
                                 <div class="pr_r_side">
                                     <div class="pr_s_work_img">
                                         <img class="style_img"
-                                            src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                            src="./show/aa0aff7573bc945addafb05d42b13fa2.jpg"
                                             alt="" srcset="">
                                     </div>
                                     <div class="pr_w_name_G">
@@ -1977,15 +2034,20 @@
                 </div>
             </div>
         </div>
-        <!-- 作品集模組--互動視窗 -->
-        <div class="modal fade" id="portfolio_pag_3" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_3_Title"
+        <!-- 作品集模組--互動視窗_1002 -->
+        <div class="modal fade" id="portfolio_pag_1002" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_3_Title"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <!-- 主要內容 -->
                 <div class="modal-content cr_7">
-
+                    <!-- 關閉按鈕 -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                     <!-- 內容 -->
-                    <div class="modal-body" style="border: 10px solid white;">
+                    <div class="modal-body">
                         <div class="PR_main">
                             <div class="pr_main_l d-none d-lg-block">
                                 <div class="pr_l_side">
@@ -2016,7 +2078,7 @@
                                 <div class="pr_r_side">
                                     <div class="pr_s_work_img">
                                         <img class="style_img"
-                                            src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                            src="./show/31ba5adaad00ce8c02c0ae4cfab69418.jpg"
                                             alt="" srcset="">
                                     </div>
                                     <div class="pr_w_name_G">
@@ -2062,16 +2124,20 @@
                 </div>
             </div>
         </div>
-
-        <!-- 作品集模組--互動視窗 -->
-        <div class="modal fade" id="portfolio_pag_4" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_4_Title"
+        <!-- 作品集模組--互動視窗_1003 -->
+        <div class="modal fade" id="portfolio_pag_1003" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_4_Title"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <!-- 主要內容 -->
                 <div class="modal-content cr_7">
-
+                    <!-- 關閉按鈕 -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                     <!-- 內容 -->
-                    <div class="modal-body" style="border: 10px solid white;">
+                    <div class="modal-body">
                         <div class="PR_main">
                             <div class="pr_main_l d-none d-lg-block">
                                 <div class="pr_l_side">
@@ -2102,7 +2168,7 @@
                                 <div class="pr_r_side">
                                     <div class="pr_s_work_img">
                                         <img class="style_img"
-                                            src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                            src="./show/c282ac01c89151b5ae9f7aca086afec0.jpg"
                                             alt="" srcset="">
                                     </div>
                                     <div class="pr_w_name_G">
@@ -2148,16 +2214,20 @@
                 </div>
             </div>
         </div>
-
-        <!-- 作品集模組--互動視窗 -->
-        <div class="modal fade" id="portfolio_pag_5" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_5_Title"
+        <!-- 作品集模組--互動視窗_1004 -->
+        <div class="modal fade" id="portfolio_pag_1004" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_5_Title"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <!-- 主要內容 -->
                 <div class="modal-content cr_7 ">
-
+                    <!-- 關閉按鈕 -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                     <!-- 內容 -->
-                    <div class="modal-body" style="border: 10px solid white;">
+                    <div class="modal-body">
                         <div class="PR_main">
                             <div class="pr_main_l d-none d-lg-block">
                                 <div class="pr_l_side">
@@ -2188,7 +2258,7 @@
                                 <div class="pr_r_side">
                                     <div class="pr_s_work_img">
                                         <img class="style_img"
-                                            src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                            src="./show/d00e54b4779b766cb607f1c2ec130e11.jpg"
                                             alt="" srcset="">
                                     </div>
                                     <div class="pr_w_name_G">
