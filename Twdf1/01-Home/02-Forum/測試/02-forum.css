@@ -52,7 +52,7 @@ a {
     width: 80%;
     height: 10%;
     margin: auto;
-    background-image: url("./Twdf1/01-Home/02-Forum/素材/01-論壇區-零件.png");
+    background-image: url(./img/01-論壇區-零件.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -541,7 +541,7 @@ a {
     width: 40%;
     height: 50px;
     margin-top: 10px;
-    background-image: url("./Twdf1/01-Home/02-Forum/素材/02-論壇區-皇冠.png");
+    background-image: url(/Twdf1/01-Home/02-Forum/素材/02-論壇區-皇冠.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
