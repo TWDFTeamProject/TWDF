@@ -52,7 +52,7 @@ a {
     width: 80%;
     height: 10%;
     margin: auto;
-    background-image: url(/Twdf1/01-Home/02-Forum/素材/01-論壇區-零件.png);
+    background-image: url("./Twdf1/01-Home/02-Forum/素材/01-論壇區-零件.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -92,8 +92,6 @@ a {
 .Searchbox {
     width: 100%;
     padding-top: 10px;
-    /* height: 8%; */
-    /* background-color: black; */
 }
 
 .Searchbox input:focus {
@@ -102,24 +100,18 @@ a {
 
 
 /* 關鍵字 */
-.taggroup {
-    height: 40px;
-    display: flex;
-    align-content: center;
+ /* 關鍵字 */
+ .taggroup {
+    padding: 10px 10px;
 }
 
-.qt_tag_style {
-    background-color: unset;
-    border: unset;
+.taggroup button {
     color: brown;
 }
 
-.qt_tag_style:hover {
-    color: blue;
-}
-
-.qt_tag_style:focus {
-    outline: unset;
+.taggroup button:hover {
+    color: rgb(42, 85, 165);
+    text-decoration: none;
 }
 
 .tag_title {
@@ -549,7 +541,7 @@ a {
     width: 40%;
     height: 50px;
     margin-top: 10px;
-    background-image: url(/Twdf1/01-Home/02-Forum/素材/02-論壇區-皇冠.png);
+    background-image: url("./Twdf1/01-Home/02-Forum/素材/02-論壇區-皇冠.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -972,19 +964,16 @@ a {
 /* -------關鍵字tagRWD----- */
 @media (max-width: 767.98px) {
     .taggroup {
-        height: 90px;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 14px;
-        margin-top: 10px;
-
+        font-size: 16px;
+        height: auto;
+        padding: 5px 10px;
     }
-    .qt_tag_style {
-        width: 30%;
-        margin: 3px;
-        padding: 3px 0;
-        border: 0;
-        background-color: unset;
+    
+    .style_btn {
+        display: inline;
+        margin: unset;
+        padding: unset;
+        padding-left: 2px;
     }
 }
 /* -------排列順序RWD------ */
@@ -1043,19 +1032,16 @@ a {
 /* -------關鍵字tagRWD----- */
 @media (max-width: 992px) {
     .taggroup {
-        height: 90px;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 14px;
-        margin-top: 10px;
-
+        font-size: 16px;
+        height: auto;
+        padding: 5px 10px;
     }
-    .qt_tag_style {
-        width: 30%;
-        margin: 3px;
-        padding: 3px 0;
-        border: 0;
-        background-color: unset;
+    
+    .style_btn {
+        display: inline;
+        margin: unset;
+        padding: unset;
+        padding-left: 2px;
     }
 }
 /* -------排列順序RWD------ */

@@ -663,10 +663,15 @@ main .Section1 .OurTeam .OurTeamText {
   }
 }
 
+@media (max-width: 992px) {
+  main .Section1 .OurTeam .OurTeamText {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .OurTeam .OurTeamText {
     padding-left: 36px;
-    margin-right: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -681,10 +686,17 @@ main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
   margin-bottom: 78px;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
+    font-size: 22px;
+    margin-bottom: 36px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
+    font-size: 32px;
     width: 100vw;
-    margin-bottom: 36px;
   }
 }
 
@@ -692,12 +704,30 @@ main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
   font-size: 18px;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
+    font-size: 18px;
+  }
+}
+
 main .Section1 .OurTeam .OurTeamText .OurTeamTextContent p {
   margin-bottom: 6px;
 }
 
-main .Section1 .OurTeam .OurTeamPCImg {
+main .Section1 .OurTeam .OurTeamPCImg img {
   width: 421px;
+}
+
+@media (max-width: 991.98px) {
+  main .Section1 .OurTeam .OurTeamPCImg img {
+    width: 90%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -710,13 +740,16 @@ main .Section1 .OurTeam .OurTeamPCImg {
             justify-content: center;
     margin-top: 20px;
   }
+  main .Section1 .OurTeam .OurTeamPCImg img {
+    width: 100%;
+  }
 }
 
 main .Section1 .TeamMemberImg {
   margin-top: 101px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   main .Section1 .TeamMemberImg {
     margin-top: 50px;
   }
@@ -784,6 +817,12 @@ main .Section1 .TWDF-Intro {
   margin-top: 191px;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro {
     margin-top: 20px;
@@ -820,8 +859,15 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG 
   max-width: 100%;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    padding-left: 44px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    padding-left: unset;
     margin-top: 446px;
   }
 }
@@ -858,6 +904,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
   }
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-left: 350px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
     margin-left: unset;
@@ -872,14 +924,33 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForu
   margin-bottom: 66px;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
+    font-size: 22px;
+    margin-bottom: 36px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
-    margin-bottom: 36px;
+    font-size: 32px;
   }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
   font-size: 18px;
+}
+
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
+    font-size: 18px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan {
@@ -942,9 +1013,18 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
   padding-right: 0px;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
+    margin-left: 44px;
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
     margin-top: 436px;
+    margin-left: 0;
+    padding-left: 15px;
   }
 }
 
@@ -955,15 +1035,34 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYo
   margin-top: 58px;
 }
 
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
+    font-size: 22px;
+    margin-bottom: 36px;
+  }
+}
+
 @media (max-width: 768px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
+    font-size: 32px;
     margin-top: 38px;
-    margin-bottom: 36px;
   }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
   font-size: 18px;
+}
+
+@media (max-width: 991.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
+    font-size: 18px;
+  }
 }
 
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent p {
