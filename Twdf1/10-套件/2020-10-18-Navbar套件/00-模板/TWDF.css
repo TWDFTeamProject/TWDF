@@ -1,0 +1,597 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+}
+
+header {
+  /* ---------------------------RWD導覽列---------------------------------------- */
+  /* -------------------------RWD手機導覽列-------------------------------------- */
+}
+
+header .navbar {
+  width: 100%;
+  height: 100px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar {
+    height: 100px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  header .navbar {
+    height: 100px;
+  }
+}
+
+header .navbar .TWDFLogo {
+  margin: 10px;
+  position: absolute;
+}
+
+header .navbar .NavBtns {
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .NavBtns .NavBtn {
+  color: #cee9e7;
+  text-decoration: unset;
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn {
+    margin-right: 20px;
+  }
+}
+
+header .navbar .NavBtns .NavBtn .NavIMG {
+  width: 42px;
+  height: 47px;
+  margin-right: 12px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn .NavIMG {
+    width: 21px;
+    height: 23.5px;
+    margin-right: 6px;
+  }
+}
+
+header .navbar .NavBtns .NavBtn .NavText p {
+  font-size: smaller;
+  font-weight: lighter;
+  margin-bottom: unset;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn .NavText p {
+    font-size: xx-small;
+  }
+}
+
+header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
+  margin-bottom: 4.6px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .NavBtns .NavBtn .NavText .NavTextCh {
+    margin-bottom: 0;
+  }
+}
+
+header .navbar .NavBtns .NavBtn::before {
+  display: block;
+  content: " ";
+  width: 0%;
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  top: 59px;
+  left: 50%;
+  -webkit-transition: width .5s ease, background-color .5s ease, left .5s ease;
+  transition: width .5s ease, background-color .5s ease, left .5s ease;
+}
+
+header .navbar .NavBtns .NavBtn:hover::before {
+  width: 100%;
+  background: radial-gradient(ellipse, #cc3a00, #2d0d00);
+  left: 0;
+}
+
+header .navbar .NavBtns .NavBtn:first-child {
+  -webkit-animation-name: MyWOW;
+          animation-name: MyWOW;
+  visibility: visible;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes MyWOW {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  82.5% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  87.5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  91.25% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  93.75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes MyWOW {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  82.5% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  87.5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  91.25% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  93.75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+header .navbar .LogIn {
+  color: white;
+  font-size: 24px;
+  width: 128px;
+  height: 64px;
+  padding: 6px 10px;
+  text-align: center;
+  line-height: 64px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: unset;
+  margin-right: 38px;
+}
+
+header .navbar .LogIn:hover {
+  color: yellow;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-radius: 15px;
+}
+
+header .navbar .LogIn:active {
+  background: radial-gradient(circle, #661d00, black);
+}
+
+header .navbar .LogIn p {
+  margin-bottom: unset;
+  margin-left: 6px;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .LogIn {
+    font-size: 12px;
+    width: 84px;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+header .navbar-light {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse, #002b50, #001127);
+  position: relative;
+  color: white;
+}
+
+header .navbar-light .navbar-toggler {
+  position: absolute;
+  right: 5%;
+  margin-right: 10px;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item {
+  width: 260px;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link .NavIMG {
+  margin-right: 10px;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link .NavText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText {
+  color: white;
+}
+
+header .navbar-light .navbar-collapse .navbar-nav .nav-login-link .NavText p {
+  font-size: 9px;
+}
+
+/* ------------------------------主要內容區塊----------------------------------- */
+/* ------------------------------頁角-------------------------------------- */
+footer {
+  /* ------------------------------RWD頁角-------------------------------------- */
+}
+
+footer .FooterFrame .FooterRow {
+  width: 100%;
+  height: 300px;
+  color: white;
+  font-size: 18px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL {
+  margin-top: 97px;
+  padding-left: 75px;
+}
+
+@media (max-width: 768px) {
+  footer .FooterFrame .FooterRow .FooterRowL {
+    margin-top: 38px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+footer .FooterFrame .FooterRow .FooterRowL img {
+  width: 66px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767.98px) {
+  footer .FooterFrame .FooterRow .FooterRowL img {
+    margin-left: 0px;
+  }
+}
+
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title {
+  margin-bottom: 9px;
+}
+
+footer .FooterFrame .FooterRow .FooterRowL .FooterTWDF-Title p {
+  font-family: 'Cantarell', sans-serif;
+}
+
+footer .FooterFrame .FooterRow .FooterRowM {
+  margin-top: 122px;
+  padding-left: 68px;
+}
+
+@media (max-width: 767.98px) {
+  footer .FooterFrame .FooterRow .FooterRowM {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+footer .FooterFrame .FooterRow .FooterRowR {
+  padding-left: 105px;
+  margin-top: 122px;
+}
+
+footer .FooterFrame .CopyrightRow {
+  color: white;
+  margin-top: 107px;
+  margin-bottom: 55px;
+}
+
+/* ------------------------------Sign In-------------------------------------- */
+.modal .modal-dialog .modal-content .modal-header {
+  border-bottom: 0;
+  padding: 1rem 0rem 0rem 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modal .modal-dialog .modal-content .modal-header .close {
+  color: red;
+  padding: 1rem 2rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal .modal-dialog .modal-content .modal-header .close :hover {
+  color: yellow;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box {
+  width: 100%;
+  padding-bottom: 10px;
+  height: auto;
+  margin: auto;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account {
+  font-size: 18px;
+  padding-top: 10px;
+  margin-left: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_account input {
+  width: 85%;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password {
+  font-size: 18px;
+  margin-left: 10px;
+  padding-top: 10px;
+  margin-top: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_password input {
+  width: 85%;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_remember :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_forget :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_noaccount :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_but_bar .XX_bar_new :hover {
+  color: blue;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_sign_in {
+  width: 90%;
+  height: 36px;
+  letter-spacing: 2px;
+  background-color: blueviolet;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_t {
+  width: 90%;
+  margin: auto;
+  margin: 20px;
+  background-color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_title {
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_fb {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_google {
+  width: 60px;
+  height: 60px;
+  margin: 0px 30px;
+  background-color: #ff9900;
+  border-radius: 50%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .XX_other_sign_bar .XX_sign_apple {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .XX_signin_box .style_hr_d {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+  border-top: 0;
+  padding: 0rem 0rem 1rem 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+.modal .modal-dialog .modal-content .modal-footer .XX_precautions {
+  width: 90%;
+  color: #ffd1d1;
+  margin: auto;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .XX_precautions .XX_precautions_title {
+  text-align: center;
+  color: #ff1d1d;
+  letter-spacing: 3px;
+}
+
+/* --------------------------注意事項------------------------------------ */
+/* 高度只是暫定可以自行更動 */
+/* 區塊背景顏色方便辨識 */
+/* 側邊盒子區塊 (content-r-box) 挑整高度,可以改變盒子內間距 */
+/*# sourceMappingURL=TWDF.css.map */
