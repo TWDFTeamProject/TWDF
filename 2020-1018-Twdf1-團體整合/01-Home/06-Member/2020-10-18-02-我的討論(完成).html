@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- --------fontsome圖形---------- -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <!-- -----google字體---- -->
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
     <style>
         * {
             box-sizing: border-box;
@@ -638,7 +642,6 @@
 
 <body>
 
-    <!-- ---------------------導覽列----------------------- -->
     <header>
 
         <!-- ---------------------導覽列----------------------- -->
@@ -743,10 +746,11 @@
         </nav>
 
     </header>
-    <!-- ---------------------導覽列----------------------- -->
 
     <!-- ---------------------內容----------------------- -->
-    <section class="Task_page">
+    <main>
+
+        <section class="Task_page">
             <!-- 頁面標提-- -->
             <div class="container ">
                 <div class="row"></div>
@@ -807,7 +811,7 @@
                             </div>
                         </div>
                         
-
+    
                     </div>
                 </div>
                     <!-- 右邊欄位-- -->
@@ -970,9 +974,9 @@
                 </div>
             </div>
     </section>
-    
 
-    <!-- ---------------------內容----------------------- -->
+    </main>
+
     <!-- ---------------------頁角----------------------- -->
     <footer>
         <div class="FooterFrame container-lg">
@@ -1002,80 +1006,16 @@
             </div>
         </div>
     </footer>
+    
+    <!-- 手機板下方列表 bootsrap-- -->
+    <div class="d-block d-md-none container">
+        <div class="row">
+            <div class="col-md-12"></div>
+            <div class="anchor_point"></div>
+        </div>
+    </div>
+    
 
-    <!-- ---------------------頁角----------------------- -->
-
-
-
-
-
-
-
-
-    <!-- ----------------------javescript------------------- -->
-    <!-- ----------我的討論頁面切換------------ -->
-    <!-- ----------頁面切換上------------ -->
-
-    <script>
-
-
-        var QT_bn_ts = document.querySelectorAll('.QT_bn_t')
-        var QT_pages = document.querySelectorAll('.QT_page')
-
-        for (var i = 0; i < QT_bn_ts.length; i++) {
-
-            const QT_bn_t = QT_bn_ts[i];
-            const QT_page = QT_pages[i];
-
-            QT_bn_t.onclick = function () {
-                remove_activepage()
-
-                QT_bn_t.classList.add('QT_active')
-                QT_page.classList.add('QT_active')
-            }
-        }
-
-        function remove_activepage() {
-            for (var i = 0; i < QT_bn_ts.length; i++) {
-                const QT_bn_t = QT_bn_ts[i];
-                const QT_page = QT_pages[i];
-
-                QT_bn_t.classList.remove('QT_active')
-                QT_page.classList.remove('QT_active')
-            }
-        }
-
-    </script>
-
-    <!-- ----------頁面切換下------------ -->
-    <script>
-
-        var QT_bn_ds = document.querySelectorAll('.QT_bn_d')
-        var QT_pages = document.querySelectorAll('.QT_page')
-
-        for (var i = 0; i < QT_bn_ds.length; i++) {
-            const pageboxD = QT_bn_ds[i];
-            const QT_page = QT_pages[i];
-
-            pageboxD.onclick = function () {
-                remove_QT_active()
-
-                pageboxD.classList.add('QT_active')
-                QT_page.classList.add('QT_active')
-            }
-        }
-
-        function remove_QT_active() {
-            for (var i = 0; i < QT_bn_ds.length; i++) {
-                const pageboxD = QT_bn_ds[i];
-                const QT_page = QT_pages[i];
-
-                pageboxD.classList.remove('QT_active')
-                QT_page.classList.remove('QT_active')
-            }
-        }
-
-    </script>
 
 
     <!-- ---------------------CDN----------------------- -->
@@ -1088,6 +1028,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    
 </body>
 
 </html>

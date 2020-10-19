@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- --------fontsome圖形---------- -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <!-- -----google字體---- -->
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
     <style>
         * {
             box-sizing: border-box;
@@ -29,6 +33,8 @@
         
 
         /* ------------------------------主要內容區塊----------------------------------- */
+
+
         .content {
             width: 1140px;
             height: auto;
@@ -36,7 +42,8 @@
             margin: auto;
             display: flex;
         }
-        
+
+
         /* ------標題頁面------------- */
         .Task_page {
             background-color: #C9C6C2;
@@ -143,6 +150,8 @@
 
 
 
+
+
         /* ------------------主要內容右邊區塊----------------------- */
 
         .content-r {
@@ -153,14 +162,16 @@
         .project-page {
             width: 100%;
             height: 100%;
+            /* background-color: rgb(50, 206, 50); */
         }
 
-        /* ------------------------討論卡片區--------------------------------- */
+        /* ------------------------作品區--------------------------------- */
 
         .page-title {
             width: 80%;
             height: 70px;
             margin: 20px;
+            /* background-color: bisque; */
             display: flex;
             align-items: center;
             padding-left: 10px;
@@ -208,13 +219,38 @@
             
         }
 
-        
+        .pagebox {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            /* background-color: blueviolet; */
+            border: 3px solid black;
+            /* color: white; */
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        .QT_page {
+        .pageboxD {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            /* background-color: blueviolet; */
+            border: 3px solid black;
+            /* color: white; */
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
             width: 100%;
             display: none;
 
         }
+
 
         .wordscar-g {
             width: 100%;
@@ -227,139 +263,21 @@
 
         }
 
-
-        .questioncarA{
-            width: 90%;
-            height: 200px;
-            background-color: rgb(29, 182, 187);
+        .wordscar {
+            width: 30%;
+            height: 300px;
+            background-color: yellow;
             box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
-            margin: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
 
-        .questioncarB{
-            width: 90%;
-            height: 200px;
-            background-color: rgb(163, 187, 29);
+            margin: 10px;
+        }
+        .wordscarB {
+            width: 30%;
+            height: 300px;
+            background-color: rgb(102, 207, 76);
             box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
-            margin: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .questioncarC{
-            width: 90%;
-            height: 200px;
-            background-color: rgb(230, 159, 192);
-            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
-            margin: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
 
-        .qt-l{
-            width: 70%;
-            height: 80%;
-            background-color: rgb(225, 241, 241);
-        }
-        .qt-bar{
-            width: 100%;
-            height: 30%;
-            /* background-color: darkgray; */
-            display: flex;
-            align-items: center;
-        }
-        .ps-photo{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: black;
             margin: 10px;
-        }
-        .ps-name{
-            width: 150px;
-            height: 30px;
-            margin-left: 10px;
-            border-radius: 5px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .qt-time{
-            width: 100px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .qt-see{
-            width: 70px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .qt-love{
-            width: 70px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .qt-category{
-            width: 70px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .qt-title{
-            width: 100%;
-            height: 45%;
-            margin-left: 10px;
-            /* background-color: rgb(252, 255, 248); */
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-        }
-        .qt-label{
-            width: 100%;
-            height: 25%;
-            /* background-color: rgb(252, 165, 165); */
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-        }
-        .labelbox{
-            background-color: teal;
-            color: white;
-            display: inline;
-            margin: 10px;
-            padding: 0 10px;
-            font-size: 18px;
-            box-shadow: 2px 2px 1px rgba(20%,20%,40%,0.5);
-        }
-        .qt-r{
-            width: 25%;
-            height: 80%;
-            background-color: crimson;
         }
 
 
@@ -376,62 +294,27 @@
             background-color: rgb(231, 21, 49);
         }
 
-        /* -------頁面切換------------ */
-        .QT_bn_t {
-            width: 34.6px;
-            height: 38px;
-            margin: 10px 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .QT_bn_t:hover{
-            background-color: black;
-            color: white;
-            transition: 1s;
-        }
 
-        .QT_bn_d {
-            width: 34.6px;
-            height: 38px;
-            margin: 10px 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .QT_bn_d:hover{
-            background-color: black;
-            color: white;
-            transition: 1s;
-        }
 
-        
-        .QT_active {
+        /* --------設定------- */
+        .activepage {
             display: block;
         }
 
-        .QT_bn_t.QT_active {
+        .pagebox.activepage {
             /* background-color: rgb(214, 30, 30); */
             display: flex;
             justify-content: center;
             align-items: center;
 
         }
-        .QT_bn_d.QT_active {
+        .pageboxD.activepage {
             /* background-color: rgb(214, 30, 30); */
             display: flex;
             justify-content: center;
             align-items: center;
 
         }
-
-        /* --------設定------- */
 
         .bg-red {
             background-color: red;
@@ -448,7 +331,6 @@
         .bg-yellow {
             background-color: yellow;
         }
-
 
         /* -------網路套件----------- */
         /* -----網路hover套件------- */
@@ -638,7 +520,6 @@
 
 <body>
 
-    <!-- ---------------------導覽列----------------------- -->
     <header>
 
         <!-- ---------------------導覽列----------------------- -->
@@ -743,10 +624,11 @@
         </nav>
 
     </header>
-    <!-- ---------------------導覽列----------------------- -->
 
     <!-- ---------------------內容----------------------- -->
-    <section class="Task_page">
+    <main>
+
+        <section class="Task_page">
             <!-- 頁面標提-- -->
             <div class="container ">
                 <div class="row"></div>
@@ -762,217 +644,151 @@
                     <hr class="style_hr">
                 </div>
             </div>
-           <!-- 主要內容-- -->
+             <!-- 主要內容-- -->
             <div class="container mt-5">
                 <div class="row">
                     <!-- 左邊欄位-- -->
-                <div class="d-none d-md-block col-md-3">
-                    <div class="content-l">
-                        <div class="bg_effect">
-                            <ul class="circles">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <div class="listbox">
-                                <div class="personalbox">
-                                    <div class="photobox"></div>
-                                    <div class="namebox">賴小明</div>
-                                </div>
-                                <a class="projectbox hvr-rectangle-out" href="qwe">
-                                    個人資料
-                                </a>
-                                <a class="projectbox hvr-rectangle-out" href="qwe">
-                                    我的做品
-                                </a>
-                                <a class="projectbox hvr-rectangle-out" href="qwe">
-                                    我的討論
-                                </a>
-                                <a class="projectbox hvr-rectangle-out" href="qwe">
-                                    我的任務
-                                </a>
-                                <a class="projectbox hvr-rectangle-out" href="qwe">
-                                    喜歡的作品
-                                </a>
-                                <a class="projectbox hvr-rectangle-out" href="qwe">
-                                    追蹤中的帳號
-                                </a>
-                            </div>
-                        </div>
-                        
-
-                    </div>
-                </div>
-                    <!-- 右邊欄位-- -->
-                    <div class="col-md-9 col-sm-12">
-                        <div class="content-r">
-                            <div class="project-page">
-                                <div class="page-title">
-                                    <h1>我的討論</h1>
-                                </div>
-                                <div class="button-bar">
-                                    <div class="button">
-                                        <div class="dropdown">
-                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                全部
-                                            </a>
-                
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
+                    <div class="d-none d-md-block col-md-3">
+                        <div class="content-l">
+                            <div class="bg_effect">
+                                <ul class="circles">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <div class="listbox">
+                                    <div class="personalbox">
+                                        <div class="photobox"></div>
+                                        <div class="namebox">賴小明</div>
                                     </div>
-                                    <div class="button">最新消息</div>
-                                    <div class="button">最多人瀏覽</div>
-                                    <div class="new-work">
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                            新增作品
-                                        </button>
-                
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="page-button">
-                                    <div class="QT_bn_t">1</div>
-                                    <div class="QT_bn_t">2</div>
-                                    <div class="QT_bn_t">3</div>
-                                </div>
-                                <div class="QT_page QT_active">
-                                    <div class="wordscar-g ">
-                                        <div class="questioncarA">
-                                            <div class="qt-l">
-                                                <div class="qt-title">
-                                                    <h2>PHP 上使用 PDO bindParam 問題 </h2>
-                                                </div>
-                                                <div class="qt-bar">
-                                                    <div class="ps-photo"></div>
-                                                    <div class="ps-name">賴小明ilove123456</div>
-                                                    <div class="qt-category">前端</div>
-                                                    <div class="qt-see">瀏覽:6</div>
-                                                    <div class="qt-love">收藏:6</div>
-                                                    <div class="qt-time">2020/10/6</div>
-                
-                
-                                                </div>
-                                               
-                                                <div class="qt-label">
-                                                    <div class="labelbox">css</div>
-                                                    <div class="labelbox">Jacescript</div>
-                                                    <div class="labelbox">前端</div>
-                                                    <div class="labelbox">滾輪</div>
-                
-                                                </div>
-                                            </div>
-                                            <div class="qt-r"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="QT_page">
-                                    <div class="wordscar-g ">
-                                        <div class="questioncarB">
-                                            <div class="qt-l">
-                                                <div class="qt-title">
-                                                    <h2>PHP 上使用 PDO bindParam 問題 </h2>
-                                                </div>
-                                                <div class="qt-bar">
-                                                    <div class="ps-photo"></div>
-                                                    <div class="ps-name">賴小明ilove123456</div>
-                                                    <div class="qt-time">2020/10/6</div>
-                                                    <div class="qt-see">瀏覽:6</div>
-                                                    <div class="qt-love">收藏:6</div>
-                                                </div>
-                                               
-                                                <div class="qt-label">
-                                                    <div class="labelbox">css</div>
-                                                    <div class="labelbox">Jacescript</div>
-                                                    <div class="labelbox">前端</div>
-                                                    <div class="labelbox">滾輪</div>
-                
-                                                </div>
-                                            </div>
-                                            <div class="qt-r"></div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                
-                                <div class="QT_page">
-                                    <div class="wordscar-g ">
-                                        <div class="questioncarC">
-                                            <div class="qt-l">
-                                                <div class="qt-title">
-                                                    <h2>PHP 上使用 PDO bindParam 問題 </h2>
-                                                </div>
-                                                <div class="qt-bar">
-                                                    <div class="ps-photo"></div>
-                                                    <div class="ps-name">賴小明ilove123456</div>
-                                                    <div class="qt-time">2020/10/6</div>
-                                                    <div class="qt-see">瀏覽:6</div>
-                                                    <div class="qt-love">收藏:6</div>
-                                                </div>
-                                               
-                                                <div class="qt-label">
-                                                    <div class="labelbox">css</div>
-                                                    <div class="labelbox">Jacescript</div>
-                                                    <div class="labelbox">前端</div>
-                                                    <div class="labelbox">滾輪</div>
-                
-                                                </div>
-                                            </div>
-                                            <div class="qt-r"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                
-                                <div class="page-button">
-                                    <div class="QT_bn_d">1</div>
-                                    <div class="QT_bn_d">2</div>
-                                    <div class="QT_bn_d">3</div>
+                                    <a class="projectbox hvr-rectangle-out" href="qwe">
+                                        個人資料
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out" href="qwe">
+                                        我的做品
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out" href="qwe">
+                                        我的討論
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out" href="qwe">
+                                        我的任務
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out" href="qwe">
+                                        喜歡的作品
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out" href="qwe">
+                                        追蹤中的帳號
+                                    </a>
                                 </div>
                             </div>
-                
+                            
+    
                         </div>
                     </div>
+                        <!-- 右邊欄位-- -->
+                        <div class="col-md-9 col-sm-12">
+                            <div class="content-r">
+                                <div class="project-page">
+                                    <div class="page-title">
+                                        <h1>喜歡的作品</h1>
+                                    </div>
+                                    <div class="button-bar">
+                                        <div class="button">
+                                            <div class="dropdown">
+                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    類別
+                                                </a>
+                    
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item" href="#">一頁式網頁</a>
+                                                    <a class="dropdown-item" href="#">網站</a>
+                                                    <a class="dropdown-item" href="#">效果</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button">最新作品</div>
+                                        <div class="button">最多人瀏覽</div>
+                                    </div>
+                                    <div class="page-button">
+                                        <div class="pagebox" onclick="page(1)">1</div>
+                                        <div class="pagebox">2</div>
+                                        <div class="pagebox">3</div>
+                                    </div>
+                                    <div class="page activepage">
+                                        <div class="wordscar-g bg-red">
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="page">
+                                        <div class="wordscar-g bg-blue">
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                            <div class="wordscarB"></div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="page">
+                                        <div class="wordscar-g bg-green">
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                            <div class="wordscar"></div>
+                                        </div>
+                                    </div>
+                    
+                    
+                                    <div class="page-button">
+                                        <div class="pageboxD" onclick="page(1)">1</div>
+                                        <div class="pageboxD">2</div>
+                                        <div class="pageboxD">3</div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
                 </div>
             </div>
-    </section>
-    
+        </section>
 
-    <!-- ---------------------內容----------------------- -->
+    </main>
+
     <!-- ---------------------頁角----------------------- -->
     <footer>
         <div class="FooterFrame container-lg">
@@ -1002,80 +818,36 @@
             </div>
         </div>
     </footer>
+    
+    <!-- 手機板下方列表 bootsrap-- -->
+    <div class="d-block d-md-none container">
+        <div class="row">
+            <div class="col-md-12"></div>
+            <div class="anchor_point"></div>
+        </div>
+    </div>
+    <!-- 手機板導覽列 -->
+    <div class="d-block d-md-none bs-example">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+            <a href="#" class="navbar-brand"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- ---------------------頁角----------------------- -->
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+                <div class="navbar-nav">
+                    <a href="#" class="text-right nav-item nav-link active">Top</a>
+                    <a href="#" class="text-right nav-item nav-link">後端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">前端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">ISO開發</a>
+                    <a href="#" class="text-right nav-item nav-link">Android開發</a>
+                    <a href="#" class="text-right nav-item nav-link">人工智慧</a>
+                    <a href="#" class="text-right nav-item nav-link">雲端運算</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-
-
-
-
-
-
-
-    <!-- ----------------------javescript------------------- -->
-    <!-- ----------我的討論頁面切換------------ -->
-    <!-- ----------頁面切換上------------ -->
-
-    <script>
-
-
-        var QT_bn_ts = document.querySelectorAll('.QT_bn_t')
-        var QT_pages = document.querySelectorAll('.QT_page')
-
-        for (var i = 0; i < QT_bn_ts.length; i++) {
-
-            const QT_bn_t = QT_bn_ts[i];
-            const QT_page = QT_pages[i];
-
-            QT_bn_t.onclick = function () {
-                remove_activepage()
-
-                QT_bn_t.classList.add('QT_active')
-                QT_page.classList.add('QT_active')
-            }
-        }
-
-        function remove_activepage() {
-            for (var i = 0; i < QT_bn_ts.length; i++) {
-                const QT_bn_t = QT_bn_ts[i];
-                const QT_page = QT_pages[i];
-
-                QT_bn_t.classList.remove('QT_active')
-                QT_page.classList.remove('QT_active')
-            }
-        }
-
-    </script>
-
-    <!-- ----------頁面切換下------------ -->
-    <script>
-
-        var QT_bn_ds = document.querySelectorAll('.QT_bn_d')
-        var QT_pages = document.querySelectorAll('.QT_page')
-
-        for (var i = 0; i < QT_bn_ds.length; i++) {
-            const pageboxD = QT_bn_ds[i];
-            const QT_page = QT_pages[i];
-
-            pageboxD.onclick = function () {
-                remove_QT_active()
-
-                pageboxD.classList.add('QT_active')
-                QT_page.classList.add('QT_active')
-            }
-        }
-
-        function remove_QT_active() {
-            for (var i = 0; i < QT_bn_ds.length; i++) {
-                const pageboxD = QT_bn_ds[i];
-                const QT_page = QT_pages[i];
-
-                pageboxD.classList.remove('QT_active')
-                QT_page.classList.remove('QT_active')
-            }
-        }
-
-    </script>
 
 
     <!-- ---------------------CDN----------------------- -->
@@ -1088,6 +860,76 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    
+    <!-- -------------- -->
+    <script>
+        
+        // -------------------頁面按鈕上-------------------------
+
+        var pageboxs = document.querySelectorAll('.pagebox') 
+        var pages = document.querySelectorAll('.page') 
+
+
+
+        for (var i = 0; i < pageboxs.length; i++) {
+
+            const pagebox = pageboxs[i];
+            const page = pages[i];
+
+            pagebox.onclick = function () {
+                remove_activepage()
+
+                pagebox.classList.add('activepage')
+                page.classList.add('activepage')
+            }
+        }
+
+        function remove_activepage() {
+            for (var i = 0; i < pageboxs.length; i++) {
+                const pagebox = pageboxs[i];
+                const page = pages[i];
+
+                console.log(pages, page);
+
+                pagebox.classList.remove('activepage')
+                page.classList.remove('activepage')
+            }
+        }
+
+    </script>
+
+    <script>
+
+        // -------------------頁面按鈕下-------------------------
+
+        var pageboxDs = document.querySelectorAll('.pageboxD') 
+        var pages = document.querySelectorAll('.page') 
+
+        for (var i = 0; i < pageboxDs.length; i++) {
+            const pageboxD = pageboxDs[i];
+            const page = pages[i];
+
+            pageboxD.onclick = function () {
+                remove_activepageB()
+
+                pageboxD.classList.add('activepage')
+                page.classList.add('activepage')
+            }
+        }
+        function remove_activepageB() {
+            for (var i = 0; i < pageboxDs.length; i++) {
+                const pageboxD = pageboxDs[i];
+                const page = pages[i];
+                pageboxD.classList.remove('activepage')
+                page.classList.remove('activepage')
+            }
+        }
+
+    </script>
+
 </body>
 
 </html>

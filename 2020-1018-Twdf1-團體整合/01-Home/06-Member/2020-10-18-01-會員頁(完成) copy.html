@@ -4,20 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- --------fontsome圖形---------- -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <!-- -----google字體---- -->
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
 
     <style>
         * {
             box-sizing: border-box;
+
         }
 
         body {
@@ -25,18 +31,14 @@
         }
 
         /* ------------------------------導覽列---------------------------------------- */
-
-        
-
-        /* ------------------------------主要內容區塊----------------------------------- */
         .content {
-            width: 1140px;
+            /* width: 1140px; */
             height: auto;
             background-color: #E0E0E0;
             margin: auto;
             display: flex;
         }
-        
+
         /* ------標題頁面------------- */
         .Task_page {
             background-color: #C9C6C2;
@@ -50,19 +52,21 @@
             justify-content: center;
             align-items: center;
         }
-
         .tk_pag_title h1 {
             margin: 10px;
         }
-
         .tk_pag_title i {
             font-size: 48px;
         }
+
         /* ------分隔頁面------------- */
         .style_hr {
             border: 3px solid black;
         }
+
         /* ------------------主要內容左邊區塊----------------------- */
+
+
 
         .content-l {
             width: 100%;
@@ -75,6 +79,7 @@
             background: -o-radial-gradient(circle, #002f55, #001027);
             background: -moz-radial-gradient(circle, #002f55, #001027);
             background: radial-gradient(circle, #002f55, #001027);
+            
         }
         .bg_effect {
             width: 100%;
@@ -87,7 +92,7 @@
         .personalbox {
             width: 100%;
             height: 200px;
-            padding-top: 10PX;
+            margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -118,6 +123,7 @@
             font-weight: bolder;
             padding-bottom: 20px;
             border-bottom: 5px double rgb(255, 255, 255);
+
         }
 
         .listbox {
@@ -126,6 +132,7 @@
             display: flex;
             flex-direction: column;
             padding-bottom: 20px;
+
         }
 
         .projectbox {
@@ -137,9 +144,12 @@
             text-align: center;
             line-height: 50px;
         }
-        .projectbox:hover{
+
+        .projectbox:hover {
             text-decoration: none;
         }
+
+
 
 
 
@@ -147,220 +157,196 @@
 
         .content-r {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
 
         .project-page {
             width: 100%;
-            height: 100%;
-        }
-
-        /* ------------------------討論卡片區--------------------------------- */
-
-        .page-title {
-            width: 80%;
-            height: 70px;
-            margin: 20px;
-            display: flex;
-            align-items: center;
-            padding-left: 10px;
-        }
-
-        .button-bar {
-            width: 90%;
-            height: 50px;
-            margin: auto;
-            border-bottom: 3px solid black;
-            /* background-color: blue; */
-            display: flex;
-            align-items: center;
-
-        }
-
-        .button {
-            width: 150px;
-            height: 45px;
-            margin: 20px;
-            /* background-color: cadetblue; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .new-work {
-            width: 150px;
-            height: 45px;
-            margin-left: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* background-color: crimson; */
-        }
-
-        .page-button {
-            width: 100%;
-            height: 60px;
-            /* padding-top: 20px; */
-            /* background-color: brown; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
-        
-
-        .QT_page {
-            width: 100%;
+            /* height: calc(100% - 20px); */
+            /* background-color: rgb(163, 184, 163); */
             display: none;
-
         }
 
-        .wordscar-g {
+        .banner {
+            width: 90%;
+            height: auto;
+            /* background-color: darkkhaki; */
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+        }
+
+        .ba-photo {
             width: 100%;
-            /* height: 70%; */
-            /* background-color: rgb(156, 247, 186); */
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-
+            height: 300px;
+            background-color: rgb(33, 44, 13);
+            background-image: url("png/會員封面.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
         }
 
-
-        .questioncarA{
-            width: 90%;
-            height: 200px;
-            background-color: rgb(29, 182, 187);
-            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
-            margin: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .questioncarB{
-            width: 90%;
-            height: 200px;
-            background-color: rgb(163, 187, 29);
-            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
-            margin: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .questioncarC{
-            width: 90%;
-            height: 200px;
-            background-color: rgb(230, 159, 192);
-            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
-            margin: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .qt-l{
-            width: 70%;
-            height: 80%;
-            background-color: rgb(225, 241, 241);
-        }
-        .qt-bar{
-            width: 100%;
-            height: 30%;
-            /* background-color: darkgray; */
-            display: flex;
-            align-items: center;
-        }
-        .ps-photo{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: black;
-            margin: 10px;
-        }
-        .ps-name{
+        .ps-photo {
             width: 150px;
-            height: 30px;
-            margin-left: 10px;
-            border-radius: 5px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 150px;
+            border-radius: 50%;
+            background-color: deeppink;
+            position: absolute;
+            top: 60%;
+            left: 5%;
+            background-image: url("png/會員頭像.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-        .qt-time{
-            width: 100px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
+
+        .introduction {
+            width: 100%;
+            background-color: rgb(152, 189, 89);
+            position: relative;
+        }
+
+        .in_text_main {
+            width: 100%;
+            height: auto;
+            background-color: rgb(255, 255, 255);
             display: flex;
-            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            line-height: 40px;
+            /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+
+        }
+
+
+        /* <!-- 手機板下方列表假錨點-- --> */
+        .anchor_point{
+            height: 50px;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+            .banner {
+                width: 90%;
+                /* background-color: darkkhaki; */
+                margin: auto;
+                margin-top: 20px;
+                position: relative;
+                box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            }
+            .ba-photo {
+            width: 100%;
+            height: 170px;
+        
+        }
+            
+
+            .in_text_main {
+                width: 100%;
+                /* height: 50%; */
+                background-color: white;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                font-size: 18px;
+                letter-spacing: 2px;
+                line-height: 24px;
+                /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+                
+            }
+
+            .ps-photo {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 50%;
+                left: 5%;
+            }
+        }
+
+
+        .shillbox {
+            width: 90%;
+            height: auto;
+            padding: 10px 0px;
+            /* background-color: rgb(211, 63, 13); */
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
             align-items: center;
         }
 
-        .qt-see{
-            width: 70px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .sk-title {
+            /* background-color: yellow; */
+            width: 95%;
+            margin: 10px;
+
         }
-        .qt-love{
-            width: 70px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .qt-category{
-            width: 70px;
-            height: 30px;
-            border-radius: 5px;
-            margin-left: 10px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .qt-title{
+
+
+
+        .sk-content {
             width: 100%;
-            height: 45%;
-            margin-left: 10px;
-            /* background-color: rgb(252, 255, 248); */
+            height: auto;
+            background-color: white;
             display: flex;
-            /* justify-content: center; */
             align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
         }
-        .qt-label{
-            width: 100%;
-            height: 25%;
-            /* background-color: rgb(252, 165, 165); */
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-        }
-        .labelbox{
+
+
+        .skill {
             background-color: teal;
             color: white;
             display: inline;
             margin: 10px;
             padding: 0 10px;
             font-size: 18px;
-            box-shadow: 2px 2px 1px rgba(20%,20%,40%,0.5);
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+
         }
-        .qt-r{
-            width: 25%;
-            height: 80%;
-            background-color: crimson;
+
+
+
+        .experiencebox {
+            width: 90%;
+            height: auto;
+            /* background-color: rgb(226, 165, 145); */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+
+        .ex-content {
+            width: 100%;
+            height: auto;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            padding: 20px;
+            font-size: 18px;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+
+        }
+
+
+
 
 
 
@@ -370,68 +356,20 @@
 
 
         /* ------------------------------頁角-------------------------------------- */
-        .footer {
-            width: 100%;
-            height: 90px;
-            background-color: rgb(231, 21, 49);
-        }
 
-        /* -------頁面切換------------ */
-        .QT_bn_t {
-            width: 34.6px;
-            height: 38px;
-            margin: 10px 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .QT_bn_t:hover{
-            background-color: black;
-            color: white;
-            transition: 1s;
-        }
 
-        .QT_bn_d {
-            width: 34.6px;
-            height: 38px;
-            margin: 10px 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .QT_bn_d:hover{
-            background-color: black;
-            color: white;
-            transition: 1s;
-        }
 
-        
-        .QT_active {
+
+        /* --------開關顯示---- */
+
+        .active_pj_pages {
             display: block;
         }
 
-        .QT_bn_t.QT_active {
-            /* background-color: rgb(214, 30, 30); */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .projectbox.active_pj_pages {
+            background-color: rgb(214, 30, 30);
 
         }
-        .QT_bn_d.QT_active {
-            /* background-color: rgb(214, 30, 30); */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        /* --------設定------- */
 
         .bg-red {
             background-color: red;
@@ -638,7 +576,6 @@
 
 <body>
 
-    <!-- ---------------------導覽列----------------------- -->
     <header>
 
         <!-- ---------------------導覽列----------------------- -->
@@ -677,7 +614,7 @@
                 </a>
                 <a id="StartBtn" class="LogIn" href="">
                     <i class="far fa-user-circle"></i>
-                    <p>會員區</p>
+                    <p>LogOut</p>
                 </a>
             </div>
         </nav>
@@ -735,7 +672,7 @@
                     <li class="nav-item">
                         <a id="StartBtn" class="LogIn" href="">
                             <i class="far fa-user-circle"></i>
-                            <p>會員區</p>
+                            <p>LogOut</p>
                         </a>
                     </li>
                 </ul>
@@ -743,29 +680,31 @@
         </nav>
 
     </header>
-    <!-- ---------------------導覽列----------------------- -->
 
     <!-- ---------------------內容----------------------- -->
+    <main>
+
+        <!-- html頁面內容-- -->
     <section class="Task_page">
-            <!-- 頁面標提-- -->
-            <div class="container ">
-                <div class="row"></div>
-                <div class="tk_pag_title col-md-12">
-                    <i class="far fa-user-circle"></i>
-                    <h1>個人頁面</h1>
-                </div>
+        <!-- html頁面標題-- -->
+        <div class="container ">
+            <div class="row"></div>
+            <div class="tk_pag_title col-md-12">
+                <i class="far fa-user-circle"></i>
+                <h1>個人頁面</h1>
             </div>
-            <!-- 分隔線-- -->
-            <div class="container ">
-                <div class="row"></div>
-                <div class="col-md-12 ">
-                    <hr class="style_hr">
-                </div>
+        </div>
+        <!-- 分隔線-- -->
+        <div class="container ">
+            <div class="row"></div>
+            <div class="col-md-12 ">
+                <hr class="style_hr">
             </div>
-           <!-- 主要內容-- -->
-            <div class="container mt-5">
-                <div class="row">
-                    <!-- 左邊欄位-- -->
+        </div>
+        <!-- 主要內容-- -->
+        <div class="container">
+            <div class="row">
+                <!-- 左邊欄位-- -->
                 <div class="d-none d-md-block col-md-3">
                     <div class="content-l">
                         <div class="bg_effect">
@@ -810,169 +749,101 @@
 
                     </div>
                 </div>
-                    <!-- 右邊欄位-- -->
-                    <div class="col-md-9 col-sm-12">
-                        <div class="content-r">
-                            <div class="project-page">
-                                <div class="page-title">
-                                    <h1>我的討論</h1>
+                <!-- 右邊欄位-- -->
+                <div class="col-md-9">
+                    <div class="content-r">
+                        <div class="project-page active_pj_pages">
+                            <div class="banner">
+                                <div class="ba-photo">
+                                    <div class="ps-photo"></div>
                                 </div>
-                                <div class="button-bar">
-                                    <div class="button">
-                                        <div class="dropdown">
-                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                全部
-                                            </a>
-                
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="button">最新消息</div>
-                                    <div class="button">最多人瀏覽</div>
-                                    <div class="new-work">
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                            新增作品
-                                        </button>
-                
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="page-button">
-                                    <div class="QT_bn_t">1</div>
-                                    <div class="QT_bn_t">2</div>
-                                    <div class="QT_bn_t">3</div>
-                                </div>
-                                <div class="QT_page QT_active">
-                                    <div class="wordscar-g ">
-                                        <div class="questioncarA">
-                                            <div class="qt-l">
-                                                <div class="qt-title">
-                                                    <h2>PHP 上使用 PDO bindParam 問題 </h2>
-                                                </div>
-                                                <div class="qt-bar">
-                                                    <div class="ps-photo"></div>
-                                                    <div class="ps-name">賴小明ilove123456</div>
-                                                    <div class="qt-category">前端</div>
-                                                    <div class="qt-see">瀏覽:6</div>
-                                                    <div class="qt-love">收藏:6</div>
-                                                    <div class="qt-time">2020/10/6</div>
-                
-                
-                                                </div>
-                                               
-                                                <div class="qt-label">
-                                                    <div class="labelbox">css</div>
-                                                    <div class="labelbox">Jacescript</div>
-                                                    <div class="labelbox">前端</div>
-                                                    <div class="labelbox">滾輪</div>
-                
-                                                </div>
-                                            </div>
-                                            <div class="qt-r"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="QT_page">
-                                    <div class="wordscar-g ">
-                                        <div class="questioncarB">
-                                            <div class="qt-l">
-                                                <div class="qt-title">
-                                                    <h2>PHP 上使用 PDO bindParam 問題 </h2>
-                                                </div>
-                                                <div class="qt-bar">
-                                                    <div class="ps-photo"></div>
-                                                    <div class="ps-name">賴小明ilove123456</div>
-                                                    <div class="qt-time">2020/10/6</div>
-                                                    <div class="qt-see">瀏覽:6</div>
-                                                    <div class="qt-love">收藏:6</div>
-                                                </div>
-                                               
-                                                <div class="qt-label">
-                                                    <div class="labelbox">css</div>
-                                                    <div class="labelbox">Jacescript</div>
-                                                    <div class="labelbox">前端</div>
-                                                    <div class="labelbox">滾輪</div>
-                
-                                                </div>
-                                            </div>
-                                            <div class="qt-r"></div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                
-                                <div class="QT_page">
-                                    <div class="wordscar-g ">
-                                        <div class="questioncarC">
-                                            <div class="qt-l">
-                                                <div class="qt-title">
-                                                    <h2>PHP 上使用 PDO bindParam 問題 </h2>
-                                                </div>
-                                                <div class="qt-bar">
-                                                    <div class="ps-photo"></div>
-                                                    <div class="ps-name">賴小明ilove123456</div>
-                                                    <div class="qt-time">2020/10/6</div>
-                                                    <div class="qt-see">瀏覽:6</div>
-                                                    <div class="qt-love">收藏:6</div>
-                                                </div>
-                                               
-                                                <div class="qt-label">
-                                                    <div class="labelbox">css</div>
-                                                    <div class="labelbox">Jacescript</div>
-                                                    <div class="labelbox">前端</div>
-                                                    <div class="labelbox">滾輪</div>
-                
-                                                </div>
-                                            </div>
-                                            <div class="qt-r"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                
-                                <div class="page-button">
-                                    <div class="QT_bn_d">1</div>
-                                    <div class="QT_bn_d">2</div>
-                                    <div class="QT_bn_d">3</div>
+                                <div class="in_text_main">
+                                    吳若權（1962年1月28日－）台灣作家、主持人，也是企業行銷顧問,畢業於政大企業管理學系。曾任IBM行政專員、HP惠普公司企劃專員、飛碟唱片董事長特別助理、東元行銷經理、微軟行銷經理。
+
                                 </div>
                             </div>
-                
+                            <div class="shillbox">
+                                <div class="sk-title">
+                                    <h3>技能</h3>
+                                </div>
+                                <div class="sk-content">
+
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">JaveScipt</div>
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">JaveScipt</div>
+                                    <div class="skill">JaveScipt</div>
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="experiencebox">
+                                <div class="sk-title">
+                                    <h3>經歷</h3>
+                                </div>
+                                <div class="ex-content">
+                                    資深廣告業務 May 2017 ~ July 2018
+                                    <br> 品酷廣告股份有限公司
+                                    <br> 工作內容：與兩人小組共同完成12個廣告專案，創造約2,500萬營業額、協助廣告專案統籌與進度控管、客戶溝通與協調、監督活動執行及問題解決、專案預算控管
+
+                                    <br> 負責客戶：台灣迪士尼、飛躍文創、南山人壽、MeMe直播、ASUS Taiwan、ORIS Taiwan、Honda Taiwan
+
+                                    <br> ★ 2017 冰雪奇緣嘉年華
+
+                                    <br> ・與美國迪士尼動畫團隊合作，100%還原電影場景
+
+                                    <br> ・45天觀展人次100萬，是一般主題肖像展4~5倍﹐追加移展至韓國，受邀擔任施工指導
+
+                                    <br> Experiences 00 02@2x
+                                    <br> 廣告業務 Sept 2015 ~ May 2017
+                                    <br> 九井廣告股份有限公司
+                                    <br> 工作內容：協助活動團隊完成廣告專案，主要負責客戶溝通與聯繫、行銷物規劃與發包製作、協助活動執行與支援
+
+                                    <br> 負責客戶：台灣迪士尼、野獸國、LINE Taiwan、ASUS Taiwan
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="d-block d-md-none container">
+            <div class="row">
+                <div class="col-md-12"></div>
+                <div class="anchor_point"></div>
+            </div>
+        </div>
+        <!-- 手機板下方列表-- -->
+        <div class="d-block d-md-none bs-example">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+                <a href="#" class="navbar-brand">會員區列表</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link active">個人資料</a>
+                        <a href="#" class="nav-item nav-link">我的做品</a>
+                        <a href="#" class="nav-item nav-link">我的討論</a>
+                        <a href="#" class="nav-item nav-link">我的任務</a>
+                        <a href="#" class="nav-item nav-link">喜歡的作品</a>
+                        <a href="#" class="nav-item nav-link " tabinex="-1">追蹤中的帳號</a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="#" class="nav-item nav-link">LogOut</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </section>
-    
 
-    <!-- ---------------------內容----------------------- -->
+    </main>
+
     <!-- ---------------------頁角----------------------- -->
     <footer>
         <div class="FooterFrame container-lg">
@@ -1002,80 +873,9 @@
             </div>
         </div>
     </footer>
-
-    <!-- ---------------------頁角----------------------- -->
-
+    
 
 
-
-
-
-
-
-    <!-- ----------------------javescript------------------- -->
-    <!-- ----------我的討論頁面切換------------ -->
-    <!-- ----------頁面切換上------------ -->
-
-    <script>
-
-
-        var QT_bn_ts = document.querySelectorAll('.QT_bn_t')
-        var QT_pages = document.querySelectorAll('.QT_page')
-
-        for (var i = 0; i < QT_bn_ts.length; i++) {
-
-            const QT_bn_t = QT_bn_ts[i];
-            const QT_page = QT_pages[i];
-
-            QT_bn_t.onclick = function () {
-                remove_activepage()
-
-                QT_bn_t.classList.add('QT_active')
-                QT_page.classList.add('QT_active')
-            }
-        }
-
-        function remove_activepage() {
-            for (var i = 0; i < QT_bn_ts.length; i++) {
-                const QT_bn_t = QT_bn_ts[i];
-                const QT_page = QT_pages[i];
-
-                QT_bn_t.classList.remove('QT_active')
-                QT_page.classList.remove('QT_active')
-            }
-        }
-
-    </script>
-
-    <!-- ----------頁面切換下------------ -->
-    <script>
-
-        var QT_bn_ds = document.querySelectorAll('.QT_bn_d')
-        var QT_pages = document.querySelectorAll('.QT_page')
-
-        for (var i = 0; i < QT_bn_ds.length; i++) {
-            const pageboxD = QT_bn_ds[i];
-            const QT_page = QT_pages[i];
-
-            pageboxD.onclick = function () {
-                remove_QT_active()
-
-                pageboxD.classList.add('QT_active')
-                QT_page.classList.add('QT_active')
-            }
-        }
-
-        function remove_QT_active() {
-            for (var i = 0; i < QT_bn_ds.length; i++) {
-                const pageboxD = QT_bn_ds[i];
-                const QT_page = QT_pages[i];
-
-                pageboxD.classList.remove('QT_active')
-                QT_page.classList.remove('QT_active')
-            }
-        }
-
-    </script>
 
 
     <!-- ---------------------CDN----------------------- -->
@@ -1088,6 +888,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    
 </body>
 
 </html>
