@@ -1672,7 +1672,7 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepBackLine {
     width: 8px;
     margin-left: 97px;
-    height: calc(100% - 112px);
+    height: calc(100% - 132px);
   }
 }
 
