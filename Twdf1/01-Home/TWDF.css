@@ -1926,6 +1926,8 @@ footer .FooterFrame .FooterRow {
 footer .FooterFrame .FooterRow .FooterRowL {
   margin-top: 97px;
   padding-left: 75px;
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 767.98px) {
@@ -1972,6 +1974,20 @@ footer .FooterFrame .FooterRow .FooterRowM {
 footer .FooterFrame .FooterRow .FooterRowR {
   padding-left: 105px;
   margin-top: 122px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .FooterFrame .FooterRow .FooterRowR .FooterRowRLine {
+  width: 100%;
+}
+
+footer .FooterFrame .FooterRow .FooterRowR .FooterRowRLine a {
+  text-decoration: none;
+  color: white;
 }
 
 footer .FooterFrame .CopyrightRow {

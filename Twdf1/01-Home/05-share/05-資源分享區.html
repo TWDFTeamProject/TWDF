@@ -78,21 +78,21 @@
 
         .title:hover {
             /* background-color: lightgrey; */
-            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-image: url("05-pic/hover按鈕效果-01.jpg");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
 
         .menu_item:hover {
-            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-image: url("05-pic/hover按鈕效果-01.jpg");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
 
         .menu_btn:hover {
-            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-image: url("05-pic/hover按鈕效果-01.jpg");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -104,7 +104,7 @@
         }
 
         .clicked {
-            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-image: url("05-pic/hover按鈕效果-01.jpg");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -144,13 +144,15 @@
             width:50px;
             height: 50px;
             background-color: none;
-            background-image: url(/05-pic/top-alignment.png);
+            background-image: url("05-pic/top-alignment.png");
             background-position: center;
             background-size: cover;
             position:fixed;
             right:20px;
             bottom:90px;
+            z-index:900;
         }
+
         @media(max-width:767.98px){
         .content_mainbox {
             display: block;
@@ -163,7 +165,7 @@
         .drop_up_menu {
             width: 100%;
             height: 70px;
-            background-image: url(05-pic/藍色底色背景_工作區域\ 1.jpg);
+            background-image: url("05-pic/藍色底色背景_工作區域\ 1.jpg");
             z-index: 1000;
             position: fixed;
             bottom: 0ch;
@@ -193,11 +195,11 @@
             /*氣泡預設大小*/
             background: rgba(255, 255, 255, 0.336);
             /*給氣泡20%的透明度*/
-            animation: animate 20s linear infinite;
+            animation: animate 10s linear infinite;
             animation-direction: alternate-reverse;
             /* animate = 動畫名稱 */
             /* 25s = 動畫時間25秒 */
-            /* linear = 動畫開始至結束速度一致 */
+            /* linear = 動畫開始至結束速度一致 */   
             /* infinite = 動畫無限次播放 */
             bottom: 0px;
             opacity: 0;
@@ -291,12 +293,17 @@
             }
 
             100% {
-                transform: translateY(-300vh) rotate(720deg);
+                transform: translateY(-70vh) rotate(720deg);
                 /* 氣泡由下往上移動至-1000px，旋轉720度 */
                 opacity: 0;
                 border-radius: 50%;
                 /* 產生圓角 */
             }
+        }
+
+        /* <!-- 手機板下方列表假錨點-- --> */
+        .anchor_point {
+            height: 68px;
         }
 
         /* --------------------------注意事項------------------------------------ */
@@ -314,26 +321,26 @@
     <header>
 
         <!-- ---------------------導覽列----------------------- -->
-        <nav class="d-none d-md-block navbar sticky-top">
-            <div class="TWDFLogo">
+        <nav class="d-none d-md-block navbar">
+            <a class="TWDFLogo" href="../index.html">
                 <img src="Nav-Logo/TWDF-Logo.png" alt="">
-            </div>
+            </a>
             <div class="NavBtns">
-                <a class="NavBtn" href="">
+                <a class="NavBtn" href="../02-Forum/2020-10-19-01-論壇一般版/02-論壇區一般版(完成).html">
                     <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">城市人論壇</p>
                         <p class="NavTextEn">Forum</p>
                     </div>
                 </a>
-                <a class="NavBtn" href="">
+                <a class="NavBtn" href="../03-Portfolio/01-一般/2020-10-18-03作品頁模板完成.html">
                     <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">作品展示</p>
                         <p class="NavTextEn">Portfolios</p>
                     </div>
                 </a>
-                <a class="NavBtn" href="">
+                <a class="NavBtn" href="../04-Task/01-一般/04-任務區一般版.html">
                     <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
                     <div class="NavText">
                         <p class="NavTextCh">案件發佈</p>
@@ -368,7 +375,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav align-items-end">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../02-Forum/2020-10-19-01-論壇一般版/02-論壇區一般版(完成).html">
                             <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
                             <div class="NavText">
                                 <p class="NavTextCh">城市人論壇</p>
@@ -377,7 +384,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../03-Portfolio/01-一般/2020-10-18-03作品頁模板完成.html">
                             <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
                             <div class="NavText">
                                 <p class="NavTextCh">作品展示</p>
@@ -386,7 +393,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../04-Task/01-一般/04-任務區一般版.html">
                             <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
                             <div class="NavText">
                                 <p class="NavTextCh">案件發佈</p>
@@ -395,7 +402,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="">
                             <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
                             <div class="NavText">
                                 <p class="NavTextCh">資源共享</p>
@@ -449,7 +456,7 @@
                         </ul>
                         <div class="title row align-items-center">
                             <div class="title-l col-3">
-                                <img src="05-pic/white_books.png " height=60 width=60>
+                                <img src="./05-pic/white_books.png " height=60 width=60>
                             </div>
                             <div class="ebook title-l col-9 font-weight-bold"><span>學院電子書 </br>Ebooks</span>
                             </div>
@@ -467,7 +474,7 @@
 
                         <div class="title row align-items-center ">
                             <div class="title-l col-3 ">
-                                <img src="05-pic/white_tools.png " height=60 width=60>
+                                <img src="./05-pic/white_tools.png " height=60 width=60>
                             </div>
                             <div id="tools" class="title-l col-9 font-weight-bold"><span>工具套件</br>Tools</span></div>
                         </div>
@@ -482,7 +489,7 @@
 
                         <div class="title row align-items-center ">
                             <div class="title-l col-3">
-                                <img src="05-pic/white_videos.png " height=60 width=60>
+                                <img src="./05-pic/white_videos.png " height=60 width=60>
                             </div>
                             <div id="video" class="title-r col-9 font-weight-bold"><span>相關學習影片 </br>Videos</span>
                             </div>
@@ -500,7 +507,7 @@
 
                         <div class="title row align-items-center ">
                             <div class="title-l col-3">
-                                <img src="05-pic/white_con.png" height=60 width=60>
+                                <img src="./05-pic/white_con.png" height=60 width=60>
                             </div>
                             <div id="forum" class="title-r col-9 font-weight-bold">其他論壇</br>Other Forums</span>
                             </div>
@@ -510,7 +517,7 @@
 
                         <div class="title row align-items-center ">
                             <div class="title-l col-3">
-                                <img src="05-pic/white_info.png " height=60 width=60>
+                                <img src="./05-pic/white_info.png " height=60 width=60>
                             </div>
 
                             <div id="info" class="title-r col-9 font-weight-bold">線上學習資源</hr> Others Infor.</span>
@@ -945,7 +952,7 @@
                             <div class="content_mainbox active pt-5">
                                 <h4>工具套件>程式碼編輯器套件</h4>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/atom.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/atom.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>‍A hackable text editior (Atom) 文字編輯器</h4>
                                         <p>Atom
@@ -954,20 +961,20 @@
                                             平台免費下載、使用。</p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/EmacsIcon.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/EmacsIcon.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>Editor MACroS(Emacs) 巨集編輯器</h4>
                                         <p>Emacs，是一個純文字編輯器家族，具有強大的可延伸性，在程式設計師和其他以技術工作為主的電腦用戶中廣受歡迎。</p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/notepad++.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/notepad++.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>Notepad++ </h4>
                                         <p>Notepad++是自由軟體的純文字編輯器，由侯今吾基於同是開放原始碼的Scintilla文字編輯組件並獨力研發，是一個 Windows
                                             下的文本編輯器，旨在成為大多數 Windows 用戶熟悉的記事本的專業化版本。</p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/logo-sublime-3.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/logo-sublime-3.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>Sublime 2 & 3</h4>
                                         <p>Sublime Text 是許多開發人員日常使用的經典文本編輯器，可用於包括 Windows、Mac、Linux 等多個平台。Sublime
@@ -976,7 +983,7 @@
                                             編程語言： C++、Python</p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/TextMate logo.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/TextMate logo.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>TextMate</h4>
                                         <p>TextMate是OS X下的著名的文本編輯器，與BBedit並稱OS X上的Emacs和Vim。尤其適合程式設計師使用，可定製許多貼心功能。
@@ -984,14 +991,14 @@
                                 </div>
 
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/vim-logo-png.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/vim-logo-png.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>Vim / MacVim</h4>
                                         <p>Vim是從vi發展出來的一個文字編輯器。其代碼補完、編譯及錯誤跳轉等方便編程的功能特別豐富，在程式設計師中被廣泛使用。和Emacs並列成為類Unix系統用戶最喜歡的編輯器。
                                             Vim的第一個版本由布萊姆·米勒在1991年發布。</p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="05-share/05-pic/VSCODE logo.ico" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/VSCODE logo.ico" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>‍Visual Studio Code (VSCode) 程式碼編輯器</h4>
                                         <p>Visual Studio Code是一個由微軟開發，同時支援Windows 、
@@ -1004,7 +1011,7 @@
                                 <h4>工具套件>文字編輯器套件</h4>
 
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/‍Auto close tag.png" height=60 width=100>
+                                    <img class="mr-3" src="./05-pic/‍Auto close tag.png" height=60 width=100>
                                     <span class="text-align-center">
                                         <h4>‍Auto close tag</h4>
                                         <p>在html裡面會有很多語法都是需要頭尾的，‍Auto close tag可以幫助你你只要寫前面他後面就會幫助你自動跳出來
@@ -1012,7 +1019,7 @@
                                         </p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/Bracket Pair Colorizer.png" height=100
+                                    <img class="mr-3" src="./05-pic/Bracket Pair Colorizer.png" height=100
                                         width=100>
                                     <span class="text-align-center">
                                         <h4>Bracket Pair Colorizer</h4>
@@ -1024,7 +1031,7 @@
                                         </p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/GIT.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/GIT.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>‍git（版本控制）</h4>
                                         <p>git是用於Linux核心開發的版本控制工具。與CVS、Subversion一類的集中式版本控制工具不同，它採用了分散式版本庫的作法，不需要伺服器端軟體，就可以運作版本控制，使得原始碼的釋出和交流極其方便。git的速度很快，這對於諸如Linux核心這樣的大專案來說自然很重要。git最為出色的是它的合併追蹤（merge
@@ -1032,7 +1039,7 @@
                                         </p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/HTML Snippets.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/HTML Snippets.png" height=100 width=100>
                                     <span class="HTML Snippets">
                                         <h4>HTML Snippets</h4>
                                         <p>打入關鍵字的時候
@@ -1042,7 +1049,7 @@
                                         </p>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/‍Live Server" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/‍Live Server" height=100 width=100>
                                     <span class="HTML Snippets">
                                         <h4>‍Live Server</h4>
                                         <p>前端有時候改完程式碼都需要儲存過後
@@ -1116,14 +1123,14 @@
                             <div class="content_mainbox pt-5">
                                 <h4>工具套件>開發者常用工具</h4>
                                 <div class="d-flex p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/AWS01.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/AWS01.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <h4>Amazon Web Services (AWS) 雲端運算服務</h4>
                                         <p>運算能力、資料庫儲存、內容交付或其他功能，AWS 都能提供適合的服務協助您建立高度靈活、具備可擴展性和可靠性的精密應用程式</p>
                                 </div>
 
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/Bootstrap.jpg" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/Bootstrap.jpg" height=100 width=100>
                                     <span class="text-align-center">
                                         <a href="https://getbootstrap.com/">
                                             <h4>Bootstrap</h4>
@@ -1136,7 +1143,7 @@
                                     </span>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/CSS Form Code Maker.jpg" height=100
+                                    <img class="mr-3" src="./05-pic/CSS Form Code Maker.jpg" height=100
                                         width=100>
                                     <span class="text-align-center">
                                         <a href="https://www.jotform.com/css-form-generator/">
@@ -1150,7 +1157,7 @@
                                     </span>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/NET Framework.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/NET Framework.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <a href="https://www.microsoft.com/zh-tw/download/details.aspx?id=17718">
                                             <h4> .NET Framework</h4>
@@ -1161,7 +1168,7 @@
                                     </span>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/Github.png" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/Github.png" height=100 width=100>
                                     <span class="text-align-center">
                                         <a href="https://github.com/">
                                             <h4>Github</h4>
@@ -1172,7 +1179,7 @@
                                     </span>
                                 </div>
                                 <div class="d-flex pt-4 p-2">
-                                    <img class="mr-3" src="/05-share/05-pic/jQuery.jpg" height=100 width=100>
+                                    <img class="mr-3" src="./05-pic/jQuery.jpg" height=100 width=100>
                                     <span class="text-align-center">
                                         <a href="https://jquery.com/">
                                             <h4>jQuery</h4>
@@ -1568,7 +1575,7 @@
             <div onclick="topFunction()" id="myBtn" title="Go to top"></div>
         </section>
         <!-- 手機板導覽列 -->
-        <div class=" drop_up_menu d-md-none row">
+        <div class=" drop_up_menu d-md-none">
             <div class="d-flex  col-9">
                 <div class="menu_item align-items-center m-1 ">
                     <img src="05-pic/white_books.png " height=60 width=60>
@@ -1605,13 +1612,13 @@
     <footer>
         <div class="FooterFrame container-lg">
             <div class="FooterRow row row-cols-md-3 mr-auto ml-auto">
-                <div class="col-lg-5 FooterRowL text-center">
+                <a class="col-lg-5 FooterRowL text-center" href="../index.html">
                     <img src="Nav-Logo/TWDF-Logo.png" alt="">
                     <div class="FooterTWDF-Title">
                         程式人論壇 | TWDF
                     </div>
                     <p>Taiwan Web Developer Forum</p>
-                </div>
+                </a>
                 <div class="col-lg-4 FooterRowM text-center">
                     <p>+886 900-31540000</p>
                     <p>+886 900-31540000</p>
@@ -1619,10 +1626,18 @@
                     <p>台中市北區崇德路民眾技藝中心</p>
                 </div>
                 <div class="d-none d-md-block col-lg-3 FooterRowR">
-                    <p>- 論壇討論區</p>
-                    <p>- 成果作品集</p>
-                    <p>- 案件發布區</p>
-                    <p>- 資源共享區</p>
+                    <div class="FooterRowRLine">
+                        <a href="02-Forum/2020-10-19-01-論壇一般版/02-論壇區一般版(完成).html">- 論壇討論區</a>
+                    </div>
+                    <div class="FooterRowRLine">
+                        <a href="03-Portfolio/01-一般/2020-10-18-03作品頁模板完成.html">- 成果作品集</a>
+                    </div>
+                    <div class="FooterRowRLine">
+                        <a href="04-Task/01-一般/04-任務區一般版.html">- 案件發布區</a>
+                    </div>
+                    <div class="FooterRowRLine">
+                        <a href="05-share/05-資源分享區.html">- 資源共享區</a>
+                    </div>
                 </div>
             </div>
             <div class="row CopyrightRow justify-content-center">
@@ -1630,6 +1645,15 @@
             </div>
         </div>
     </footer>
+    <!-- 手機板下方列表 bootsrap-- -->
+    <div class="d-block d-md-none container">
+        <div class="row">
+            <div class="col-md-12"></div>
+            <div class="anchor_point"></div>
+        </div>
+    </div>
+
+
 
     <!-- ---------------------CDN----------------------- -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

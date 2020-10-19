@@ -617,6 +617,7 @@
 
         .pr_w_name {
             text-align: center;
+            background-color: rgb(253, 219, 154);
             padding: 10px;
         }
 
@@ -656,7 +657,11 @@
             background-color: rgb(253, 219, 154);
             box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
             text-align: left;
-
+        }
+        @media(max-width:767.98px) {
+                .pr_w_d_content {
+                padding: 10px 10px;
+            }
         }
 
 
@@ -895,6 +900,7 @@
             position: relative;
             opacity: 0;
         }
+        
 
         .btn-info {
             font-size: 20px;
@@ -953,7 +959,9 @@
         }
 
         /* ---------作品頁1199.98 Rwd--------- */
-        @media(max-width:1199.98px) {}
+        @media(max-width:1199.98px) {
+            
+        }
 
         /* ---------作品頁1199.98 Rwd--------- */
 
@@ -1093,9 +1101,22 @@
                     width: 100%;
                     margin-left: 0%;
                 }
+
+
+                /* 新增卡片卡片內文RWD */
+                .pr_w_d_content {
+                padding: 10px 10px;
+            }
+                .style_form {
+                    height: auto;
+                }
+
             }
 
             /* 互動視窗RWD */
+        }
+        @media(max-width:767.98px) {
+                
         }
 
         /* ---------作品頁767.98 Rwd--------- */
@@ -1268,6 +1289,7 @@
                                 <p>好的設計與作品永遠不嫌多
                                 </p>
                                 <p> 上傳自己的作品，讓更多人看見你</p>
+                                <!-- 新增作品按鈕 -->
                                 <button type="button" class="btn btn-warning add_portfolio_button" data-toggle="modal"
                                     data-target="#add_portfolio_button">Start</button>
                             </div>
@@ -1752,7 +1774,7 @@
                         </button>
                       </div>
                     <!-- 內容 -->
-                    <div class="modal-body" style="border: 10px solid white; ">
+                    <div class="modal-body">
                         <div class="PR_main">
                             <div class="pr_main_l d-none d-lg-block">
                                 <div class="pr_l_side">
@@ -1791,12 +1813,8 @@
                                                     accept="image/gif, image/jpeg, image/png" />
                                                 <i class="fas fa-upload">上傳圖片</i>
                                             </label>
-
-
-
                                             <img class="add_photo_img" id="preview_progressbarTW_img"
                                                 src="./show/upload-icon-02.svg">
-
                                         </form>
                                         <h2 id="ipt_val"></h2>
 
@@ -1834,14 +1852,8 @@
                                         作品說明
                                     </div>
                                     <div class="pr_w_d_content">
-                                        <div class="style_border_tl"></div>
-                                        <div class="style_border_bl"></div>
-                                        <div class="style_border_ml"></div>
-                                        <div class="style_border_tr"></div>
-                                        <div class="style_border_br"></div>
-                                        <div class="style_border_mr"></div>
-                                        <textarea class="add_style_textarea" name="" id="" cols="30"
-                                            rows="10"></textarea>
+                                        <textarea class="add_style_textarea" name="" id="" cols="5"
+                                            rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
