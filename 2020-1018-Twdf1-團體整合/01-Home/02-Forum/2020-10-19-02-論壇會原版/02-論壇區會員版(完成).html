@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
+    <!-- ---------論壇區CSS------- -->
+    <link rel="stylesheet" href="02-forum.css">
+
+    <!-- SubNav -->
+    <style>
+        
+        /* <!-- 手機板下方列表假錨點-- --> */
+        .anchor_point {
+            height: 55px;
+        }
+        @media (max-width: 768px) { 
+            .anchor_point {
+            height: 45px;
+        } }
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <!-- ---------------------導覽列----------------------- -->
+        <nav class="d-none d-md-block navbar">
+            <div class="TWDFLogo">
+                <img src="Nav-Logo/TWDF-Logo.png" alt="">
+            </div>
+            <div class="NavBtns">
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">城市人論壇</p>
+                        <p class="NavTextEn">Forum</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">作品展示</p>
+                        <p class="NavTextEn">Portfolios</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">案件發佈</p>
+                        <p class="NavTextEn">Post Cases</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">資源共享</p>
+                        <p class="NavTextEn">Resource Sharing</p>
+                    </div>
+                </a>
+                <a id="StartBtn" class="LogIn" href="">
+                    <i class="far fa-user-circle"></i>
+                    <p>會員區</p>
+                </a>
+            </div>
+        </nav>
+
+        <!-- -------------------手機導覽列--------------------- -->
+
+        <nav class="d-block d-md-none navbar navbar-dark navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="mr-2" src="Nav-Logo/TWDF-Logo.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="" loading="lazy">
+                程式人
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">城市人論壇</p>
+                                <p class="NavTextEn">Forum</p>
+                            </div><span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">作品展示</p>
+                                <p class="NavTextEn">Portfolios</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">案件發佈</p>
+                                <p class="NavTextEn">Post Cases</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">資源共享</p>
+                                <p class="NavTextEn">Resource Sharing</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="StartBtn" class="LogIn" href="">
+                            <i class="far fa-user-circle"></i>
+                            <p>會員區</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ---------------------內容----------------------- -->
+    <main>
+        <section class="Task_page">
+            <!-- html頁面標題-- -->
+            <div class="container ">
+                <div class="row"></div>
+                <div class="tk_pag_title col-md-12">
+                    <h1>論壇討論區</h1>
+                </div>
+            </div>
+            <!-- 分隔線-- -->
+            <div class="container ">
+                <div class="row"></div>
+                <div class="col-md-12 ">
+                    <hr class="style_hr">
+                </div>
+            </div>
+            <!-- 主要內容-- -->
+            <div class="container ">
+                <div class="row">
+                    <!-- 左邊欄位-- -->
+                    <div class="d-none d-md-block col-md-2">
+                        <div class="content-l">
+                            <div class="bg_effect">
+                                <ul class="circles">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <div class="listbox">
+    
+                                    <div class="listbox_photo">
+                                    </div>
+                                    <div class="all_theme">全部主題</div>
+                                    <a class="projectbox hvr-rectangle-out"
+                                        href="#">
+                                        前端開發
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out"
+                                        href="#">
+                                        後端開發
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out"
+                                        href="#">
+                                        ISO開發
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out"
+                                        href="#">
+                                        Android開發
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out"
+                                        href="#">
+                                        人工智慧
+                                    </a>
+                                    <a class="projectbox hvr-rectangle-out"
+                                        href="#">
+                                        雲端運算
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 中間欄位-- -->
+                    <div class="col-md-7 col-sm-12">
+                        <!-- 搜尋框 -->
+                        <div class="Searchbox ">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                    aria-describedby="button-addon2" style="border-right: none;">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: white; "><i
+                                            class="fas fa-search"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- tag標籤 -->
+                         <div class="taggroup">
+                            熱門搜尋:
+                            <button type="button" class="btn btn-link style_btn">名片製作</button>
+                            <button type="button" class="btn btn-link style_btn">封面插畫</button>
+                            <button type="button" class="btn btn-link style_btn">網頁設計</button>
+                            <button type="button" class="btn btn-link style_btn">Logo設計</button>
+                            <button type="button" class="d-none d-lg-inline  btn btn-link style_btn">RWD</button>
+                        </div>
+                        <!-- banner圖 -->
+                        <div class="tk_banner">
+                            <img class="style_img" src="./img/論壇Banner_工作區域 1.jpg" alt="">
+                        </div>
+                        <!-- 排列順序列-- -->
+                        <div class="Paginationbox">
+                            <button class="arrow_button" type="button" id="show_newtime">
+                                <div id="newtime_t" style="display:block">更新時間<i class="fas fa-sort-up"></i></div>
+                                <div id="newtime_d" style="display:none">更新時間<i class="fas fa-caret-down"></i></div>
+                            </button>
+                            <button class="arrow_button" type="button" id="show_browse">
+                                <div id="browse_t" style="display:block">留言人數<i class="fas fa-sort-up"></i></div>
+                                <div id="browse_d" style="display:none">留言人數<i class="fas fa-caret-down"></i></div>
+                            </button>
+                            <button class="arrow_button" type="button" id="show_favorites">
+                                <div id="favorites_t" style="display:block">收藏人數<i class="fas fa-sort-up"></i></div>
+                                <div id="favorites_d" style="display:none">收藏人數<i class="fas fa-caret-down"></i></div>
+                            </button>
+                        </div>
+                        <!-- 分頁按鈕上-- -->
+                        <div class="page-button">
+                            <div class="Qt_bn_t">1</div>
+                            <div class="Qt_bn_t">2</div>
+                            <div class="Qt_bn_t">3</div>
+                        </div>
+                        <!-- 問題分頁1預設-- -->
+                        <div class="Qt_pag_g Qt_active">
+                            <!-- 問題卡片1-001-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-001">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">22089634</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>C語言 位址*問題</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">C</div>
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:150</div>
+                                        <div class="qt-love">收藏:6</div>
+                                        <div class="qt-time">2020/10/16</div>
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #001
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 問題卡片1-002-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-002">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">ktro12</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>請問如何將輸入對應英文字轉換為數字?</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">#字元</div>
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:222</div>
+                                        <div class="qt-love">收藏:3</div>
+                                        <div class="qt-time">2020/10/15</div>
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #002
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 問題卡片1-003-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-003">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">ektrontek</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>筆電雙螢幕無法同步顯示的問題</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">雙螢幕</div>
+
+
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:225</div>
+                                        <div class="qt-love">收藏:7</div>
+                                        <div class="qt-time">2020/10/5</div>
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #003
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 問題卡片1-004-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-004">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">松松</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>js 把 object value 當新 array 的 key</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">js</div>
+
+
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:281</div>
+                                        <div class="qt-love">收藏:17</div>
+                                        <div class="qt-time">2020/10/15</div>
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #004
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 問題卡片1-005-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-005">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">st474ddr</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>利用primary key防止超賣</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">php</div>
+                                        <div class="qt-skill">mysql</div>
+                                        <div class="qt-skill">超賣</div>
+
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:444</div>
+                                        <div class="qt-love">收藏:25</div>
+                                        <div class="qt-time">2020/10/15</div>
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #005
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 問題卡片1-006-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_1-006">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">wayneup4</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>Fortigate-100D DHCP異常</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">freenas</div>
+                                        <div class="qt-skill">dhcp</div>
+                                        <div class="qt-skill">fortigate</div>
+
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽: 323</div>
+                                        <div class="qt-love">收藏:32</div>
+                                        <div class="qt-time">2020/10/15</div>
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #006
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <!-- 問題分頁2-- -->
+                        <div class="Qt_pag_g">
+                            <!-- 問題卡片2-001-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_2-001">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">YJ</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>LARAVEL 連 MS SQLSERVER</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">laravel</div>
+                                        <div class="qt-skill">mssql</div>
+ 
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:6</div>
+                                        <div class="qt-love">收藏:6</div>
+                                        <!-- <div class="qt-time">2020/10/6</div> -->
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 問題卡片2-002-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_2-002">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">賴小明ilove123456</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>A User
+                                            資料夾已經有群組權限，卻還被系統要求「你當前無權訪問該文件夾，單擊"繼續"獲取永久訪問該文件夾的權限」額外再添加一次使用者權限</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">css</div>
+                                        <div class="qt-skill">JavaScript</div>
+                                        <div class="qt-skill">前端</div>
+                                        <div class="qt-skill">滾輪</div>
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:6</div>
+                                        <div class="qt-love">收藏:6</div>
+                                        <!-- <div class="qt-time">2020/10/6</div> -->
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 問題分頁3-- -->
+                        <div class="Qt_pag_g">
+                            <!-- 問題卡片3-001-- -->
+                            <div class="questioncarA " data-toggle="modal" data-target="#portfolio_pag_3-001">
+                                <div class="qt-l">
+                                    <div class="qt-personal">
+                                        <div class="ps-photo"></div>
+                                        <div class="ps-name">賴小明ilove123456</div>
+    
+                                    </div>
+                                    <div class="qt-title">
+                                        <h5>A User
+                                            資料夾已經有群組權限，卻還被系統要求「你當前無權訪問該文件夾，單擊"繼續"獲取永久訪問該文件夾的權限」額外再添加一次使用者權限</h5>
+                                    </div>
+                                    <div class="qt-skill-G">
+                                        <div class="qt-skill">css</div>
+                                        <div class="qt-skill">JavaScript</div>
+                                        <div class="qt-skill">前端</div>
+                                        <div class="qt-skill">滾輪</div>
+    
+    
+                                    </div>
+                                    <div class="qt-bar">
+                                        <div class="qt-see">瀏覽:6</div>
+                                        <div class="qt-love">收藏:6</div>
+                                        <!-- <div class="qt-time">2020/10/6</div> -->
+                                    </div>
+                                </div>
+                                <div class="qt-r">
+                                    <div class="qt-car-photo">
+                                        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2020/07/06/realtime/8145316.png&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600" alt="">
+                                    </div>
+                                    <div class="qt-buttombar">
+                                        <div id="A_1" class="qt-favorites" onclick="check_A_1();"><i
+                                                class="fas fa-heart"></i>收藏</div>
+                                        <div class="qt-category">
+                                            #1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分頁按鈕下-- -->
+                        <div class="page-button">
+                            <div class="Qt_bn_d">1</div>
+                            <div class="Qt_bn_d">2</div>
+                            <div class="Qt_bn_d">3</div>
+                        </div>
+                    </div>
+                    <!-- 右邊欄位-- -->
+                    <div class="d-none d-md-block col-md-3">
+                        <div class="content-r">
+                            <!-- 我要發問-- -->
+                            <div class="ad_task hvr-rectangle-in">
+                                我要發問
+                            </div>
+                            <!-- 熱門五個問題-- -->
+                            <div class="top_five_problem">
+                                <div class="tf_p_photo">
+                                    <img src="img/電燈-01.png" alt="">
+                                </div>
+                                <div class="tf_p_title">
+                                    <h4>Hot! Five QT</h4>
+                                </div>
+                                <div class="tf_promblem_G">
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            請問 windows 如何像 Linux 使用命令方式查詢某個資料夾底下的刪除紀錄
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            NAS 組 RAID10 壞了一軌
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            iTHelp 程式碼區塊用色建議, 是否可改？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            託管網站要落地架在自家Server上該注意什麼？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            AD的作業系統版本可否降級？
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 前五個答題王-- -->
+                            <div class="top_five_who">
+                                <div class="top_who_photo"></div>
+                                <div class="top_who_title">
+                                    <h5>達人榜(最佳解答)</h5>
+                                </div>
+                                <div class="top_who_man_G">
+                                    <div class="top_man clr_1">
+                                        <div class="top_man_photo">
+                                            <img src="img/08-論壇區-金獎牌.png" alt="">
+                                        </div>
+                                        海綿寶寶 (antijava)
+                                    </div>
+                                    <div class="top_man clr_2">
+                                        <div class="top_man_photo">
+                                            <img src="img/07-論壇區-銀獎牌.png" alt="">
+                                        </div>
+                                        海綿寶寶 (antijava)
+                                    </div>
+                                    <div class="top_man clr_3">
+                                        <div class="top_man_photo">
+                                            <img src="img/08-論壇區-銅獎牌.png" alt="">
+                                        </div>
+                                        通靈亡 (ted59438)
+    
+                                    </div>
+                                    <div class="top_man">
+                                        <div class="top_man_photo">
+                                            <img src="#" alt="">
+                                        </div>
+                                        阿展展展 (eric211924)
+                                    </div>
+                                    <div class="top_man">
+                                        <div class="top_man_photo">
+                                            <img src="#" alt="">
+                                        </div>
+                                        一級屠豬士 (hitomitanaka)
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 廣告1-- -->
+                            <div class="advertising_1">
+                                <img src="img/04-論壇區-廣告1.png" alt="">
+                            </div>
+                            <!-- 廣告2-- -->
+                            <div class="advertising_2">
+                                <img src="img/05-論壇區-廣告2.png" alt="">
+                            </div>
+                            <!-- 廣告3-- -->
+                            <div class="advertising_3">
+                                <img src="img/06-論壇區-廣告3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 互動視窗模組-- -->
+            <main>
+                <!-- 互動視窗模組--編號 1-001 -->
+                <div class="modal fade" id="portfolio_pag_1-001" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1-001_Title"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <!-- 主要內容 -->
+                    <div class="modal-content cr_7">
+                        <!-- 內容 -->
+                        <div class="modal-body" style="border: 10px solid white;">
+                            <section>
+                                ...請自行創造
+                            </section>
+                        </div>
+        
+                    </div>
+                </div>
+                </div>
+                <!-- 互動視窗模組--編號 1-002 -->
+                <div class="modal fade" id="portfolio_pag_1-002" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1-002_Title"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <!-- 主要內容 -->
+                    <div class="modal-content cr_7">
+                        <!-- 內容 -->
+                        <div class="modal-body" style="border: 10px solid white;">
+                            <section>
+                                ...請自行創造
+                            </section>
+                        </div>
+        
+                    </div>
+                </div>
+                </div>
+                <!-- 互動視窗模組--編號 1-004 -->
+                <div class="modal fade" id="portfolio_pag_1-003" tabindex="-1" role="dialog" aria-labelledby="portfolio_pag_1-003_Title"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <!-- 主要內容 -->
+                    <div class="modal-content cr_7">
+                        <!-- 內容 -->
+                        <div class="modal-body" style="border: 10px solid white;">
+                            <section>
+                                ...請自行創造
+                            </section>
+                        </div>
+        
+                    </div>
+                </div>
+                </div>
+            </main>
+            
+        </section>
+
+            <!-- SubNav -->
+    <div class="d-block d-md-none bs-example">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+            <a href="#" class="navbar-brand"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+                <div class="navbar-nav">
+                    <a href="#" class="text-right nav-item nav-link active">Top</a>
+                    <a href="#" class="text-right nav-item nav-link">後端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">前端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">ISO開發</a>
+                    <a href="#" class="text-right nav-item nav-link">Android開發</a>
+                    <a href="#" class="text-right nav-item nav-link">人工智慧</a>
+                    <a href="#" class="text-right nav-item nav-link">雲端運算</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    </main>
+
+    <!-- ---------------------頁角----------------------- -->
+
+    <footer>
+        <div class="FooterFrame container-lg">
+            <div class="FooterRow row row-cols-md-3 mr-auto ml-auto">
+                <div class="col-lg-5 FooterRowL text-center">
+                    <img src="Nav-Logo/TWDF-Logo.png" alt="">
+                    <div class="FooterTWDF-Title">
+                        程式人論壇 | TWDF
+                    </div>
+                    <p>Taiwan Web Developer Forum</p>
+                </div>
+                <div class="col-lg-4 FooterRowM text-center">
+                    <p>+886 900-31540000</p>
+                    <p>+886 900-31540000</p>
+                    <p>TWDF＠gmail.com</p>
+                    <p>台中市北區崇德路民眾技藝中心</p>
+                </div>
+                <div class="d-none d-md-block col-lg-3 FooterRowR">
+                    <p>- 論壇討論區</p>
+                    <p>- 成果作品集</p>
+                    <p>- 案件發布區</p>
+                    <p>- 資源共享區</p>
+                </div>
+            </div>
+            <div class="row CopyrightRow justify-content-center">
+                <p>Copyright © 2020 Taiwan Web Developer Forum</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 手機板下方列表 bootsrap-- -->
+    <div class="d-block d-md-none container">
+        <div class="row">
+            <div class="col-md-12"></div>
+            <div class="anchor_point"></div>
+        </div>
+    </div>
+    <!-- 手機板導覽列 -->
+    <div class="d-block d-md-none bs-example">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+            <a href="#" class="navbar-brand"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+                <div class="navbar-nav">
+                    <a href="#" class="text-right nav-item nav-link active">Top</a>
+                    <a href="#" class="text-right nav-item nav-link">後端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">前端開發</a>
+                    <a href="#" class="text-right nav-item nav-link">ISO開發</a>
+                    <a href="#" class="text-right nav-item nav-link">Android開發</a>
+                    <a href="#" class="text-right nav-item nav-link">人工智慧</a>
+                    <a href="#" class="text-right nav-item nav-link">雲端運算</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- -------------------Sign In---------------------- -->
+    <div class="modal fade" id="member_form_1" tabindex="-1" role="dialog" aria-labelledby="member_form_1Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-1 ">
+                    <h5 class="modal-title" id="member_form_1Label">會員登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-1 ">
+                    <div class="XX_signin_box">
+                        <div class="XX_account">帳號<input type="text"></div>
+                        <div class="XX_password">密碼<input type="text"></div>
+                        <div class="XX_but_bar">
+                            <div class="XX_bar_remember"><input type="checkbox" name="" id=""> 記住我</div>
+                            <div class="XX_bar_forget">忘記密碼</div>
+                            <div class="XX_bar_noaccount">沒有帳號</div>
+                            <div class="XX_bar_new">創建新帳號</div>
+
+                        </div>
+                        <div class="XX_sign_in">登入</div>
+                        <hr class="style_hr_t">
+                        <div class="XX_other_title">
+                            <h5>其他登入方式</h5>
+                        </div>
+                        <div class="XX_other_sign_bar">
+                            <div class="XX_sign_fb"></div>
+                            <div class="XX_sign_google"></div>
+                            <div class="XX_sign_apple"></div>
+                        </div>
+                        <hr class="style_hr_d">
+                    </div>
+                </div>
+                <div class="modal-footer bg-1 ">
+                    <div class="XX_precautions">
+                        <div class="XX_precautions_title">
+                            <h5>注意事項</h5>
+                        </div>
+                        請勿在公共場所登入論壇帳號，避免使用不信任的無線網路、Proxy或VPN，以防帳號被盜取。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS INI -->
+    <script>
+        AOS.init();
+    </script>
+    <!-- --論壇區js---- -->
+    <script src="./02-forum.js"></script>
+
+</body>
+
+</html>
