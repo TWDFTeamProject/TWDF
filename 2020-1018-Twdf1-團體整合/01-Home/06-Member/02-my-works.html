@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- --------fontsome圖形---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- -----google字體---- -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+            background-color: #E0E0E0;
+
+        }
+
+        /* ------------------------------導覽列---------------------------------------- */
+
+
+
+        /* ------------------------------主要內容區塊----------------------------------- */
+
+
+        .content {
+            width: 1140px;
+            height: auto;
+            background-color: #E0E0E0;
+            margin: auto;
+            display: flex;
+        }
+
+
+        /* ------------------主要內容左邊區塊----------------------- */
+
+
+
+        .content-l {
+            width: 20%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            /* border-radius: 20px; */
+            min-height: 100vh;
+            /* background-color: rgba(255, 0, 0, 0.267); */
+            background: -webkit-radial-gradient(circle, #002f55, #001027);
+            background: -o-radial-gradient(circle, #002f55, #001027);
+            background: -moz-radial-gradient(circle, #002f55, #001027);
+            background: radial-gradient(circle, #002f55, #001027);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .personalbox {
+            width: 80%;
+            height: 200px;
+            padding-top: 10PX;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .photobox {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(84, 60, 218);
+            margin: auto;
+            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .namebox {
+            width: 60%;
+            height: 20%;
+            font-size: 30px;
+            letter-spacing: 3px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(221, 241, 255);
+            font-weight: bolder;
+        }
+
+        .listbox {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            border-radius: 20px 0px;
+            flex-direction: column;
+            margin-top: 10PX;
+            opacity: 0.9;
+            /* border-top: 8px double rgb(247, 99, 99);
+            border-bottom: 8px double rgb(247, 99, 99); */
+
+        }
+
+        .projectbox {
+            width: 100%;
+            height: 50px;
+            letter-spacing: 2px;
+            color: white;
+            margin: auto;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bolder;
+        }
+
+        .projectbox:hover {
+            color: white;
+            text-decoration: none;
+            background-image: url(https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/121506371_5129112687114759_8110080774992993768_o.jpg?_nc_cat=111&_nc_sid=0debeb&_nc_ohc=E_Em_c0sa4QAX-QvAWU&_nc_ht=scontent-tpe1-1.xx&oh=f90d1e837277a6a6e0d50b50e27803a3&oe=5FAEF343);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+
+        /* ------------------主要內容右邊區塊----------------------- */
+
+        .content-r {
+            width: 80%;
+            height: 100%;
+        }
+
+        .project-page {
+            width: 100%;
+            height: 100%;
+            /* background-color: rgb(50, 206, 50); */
+        }
+
+        /* ------------------------作品區大版面--------------------------------- */
+
+        .page-title {
+            width: 95%;
+            height: 70px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            box-shadow: -4px -2px 4px 3px rgba(63, 63, 71, 0.5);
+            border: 6px solid rgba(255, 255, 255, 0.5);
+
+
+        }
+
+        .button-bar {
+            width: 90%;
+            height: 50px;
+            margin: auto;
+            border-bottom: 3px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .new-work {
+            width: 150px;
+            height: 45px;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad_work {
+            display: inline;
+            letter-spacing: 3px;
+            padding: 5px 15px;
+            background-color: black;
+            color: rgb(255, 254, 254);
+            border: 0px;
+            border-radius: 5px;
+
+        }
+
+        .ad_work:hover {
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+            background-color: rgb(247, 99, 99);
+            box-shadow: 2px 2px 3px 1px rgba(65, 65, 65, 0.5);
+            transition: 0.5s;
+        }
+
+        .page-button {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .WK_page {
+            width: 100%;
+            height: 135vh;
+            display: none;
+
+        }
+
+        /* ------------------------------頁角-------------------------------------- */
+
+
+        /* -------網路套件----------- */
+        /* ------背景動畫---- */
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            /*氣泡預設大小*/
+            background: rgba(255, 255, 255, 0.336);
+            /*給氣泡20%的透明度*/
+            animation: animate 20s linear infinite;
+            animation-direction: alternate-reverse;
+            /* animate = 動畫名稱 */
+            /* 25s = 動畫時間25秒 */
+            /* linear = 動畫開始至結束速度一致 */
+            /* infinite = 動畫無限次播放 */
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            /* background-color: brown; */
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 8s;
+            animation-duration: 4s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                /* translateY = Y軸位置 */
+                /* rotate = 旋轉角度 */
+                opacity: 1;
+                /* 透明度的參數可設定0.0(透明) ~ 1.0  (不透明) */
+                border-radius: 0;
+                /* 圓角 */
+            }
+
+            100% {
+                transform: translateY(-160vh) rotate(720deg);
+                /* 氣泡由下往上移動至-1000px，旋轉720度 */
+                opacity: 0;
+                border-radius: 50%;
+                /* 產生圓角 */
+            }
+        }
+
+
+        /* ----------------自己寫套件--------------- */
+        /* ------點擊切換Div---------- */
+        .arrow_button {
+            width: 150px;
+            height: 45px;
+            margin: 20px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: none;
+            border: 0px;
+            background-color: unset;
+            /* background-color: yellow; */
+            outline: none;
+        }
+
+        .arrow_button:hover {
+            color: brown;
+        }
+
+        .arrow_button:focus {
+            outline: none;
+        }
+
+        /* ----------------分頁按鈕---------------- */
+        .WK_bn_t {
+            width: 34.6px;
+            height: 38px;
+            margin: 10px 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .WK_bn_t:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+
+        .WK_bn_d {
+            width: 34.6px;
+            height: 38px;
+            margin: 10px 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .WK_bn_d:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+
+        .WK_active {
+            display: block;
+        }
+
+        .WK_bn_t.WK_active {
+            /* background-color: rgb(214, 30, 30); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .WK_bn_d.WK_active {
+            /* background-color: rgb(214, 30, 30); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* ------------作品集模組------------- */
+        /* ------------作品卡片--------------- */
+        .wordscar-g {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .wordscar {
+            width: 30%;
+            height: 300px;
+            padding: 10px;
+            border: 6px solid rgba(255, 255, 255, 0.5);
+            box-shadow: -4px 4px 8px rgba(17, 30, 148, 0.5);
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* ---------卡片中間按鈕---------- */
+        .wordscar::before {
+            content: "點擊觀看";
+            width: 100px;
+            height: 50px;
+            background-color: rgb(126, 110, 115);
+            border: double white;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 40%;
+            right: 30%;
+            opacity: 0;
+        }
+
+        .wordscar:hover::before {
+            background-color: rgb(218, 115, 145);
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+        /* -------作品圖片控制------- */
+
+        .wordscar img {
+            width: 90%;
+            object-fit: cover;
+            border: 4px solid black;
+
+        }
+
+        /* -------作品內容--------- */
+
+        .PR_main {
+            display: flex;
+        }
+
+        .pr_main_l {
+            width: 25%;
+            background-color: rgb(233, 186, 148);
+            border-radius: 20px;
+            margin-left: 10%;
+            box-shadow: 0px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        .pr_l_side {
+            width: 100%;
+            height: auto;
+            /* background-color: rgb(233, 186, 148); */
+            margin: auto;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pr_s_myphoto {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            margin-bottom: 10px;
+
+            border-radius: 50%;
+            background-color: rgb(31, 0, 0);
+        }
+
+        .pr_s_name {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            /* background-color: burlywood; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .pr_s_community {
+            /* width: 80%; */
+            height: 200px;
+            margin: auto;
+            /* background-color: coral; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* align-items: center; */
+        }
+
+        .pr_c_fb {
+
+            border-radius: 50%;
+            color: rgb(50, 50, 173);
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pr_c_ig {
+            margin: 10px 0;
+            font-size: 55px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: -webkit-linear-gradient(225deg, #920162 0, #d4255f 40%, #ec7936 60%, #ffdd9d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pr_c_pinterest {
+
+            border-radius: 50%;
+            color: rgb(221, 51, 39);
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pr_s_skill_G {
+            width: 80%;
+            padding: 10px;
+            height: auto;
+            margin: auto;
+            /* background-color: indianred; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+
+        }
+
+        .pr_s_skill {
+            /* display: inline; */
+            margin: auto;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            background-color: rgb(224, 255, 194);
+        }
+
+        .pr_s_connection {
+            width: 50%;
+            height: 40px;
+            font-size: 18px;
+            border: double white;
+            letter-spacing: 3px;
+            border-radius: 10px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(247, 207, 219);
+        }
+
+        .pr_s_connection:hover {
+            background-color: rgb(223, 54, 104);
+            transition: 1s;
+        }
+
+        .pr_s_favorite {
+            display: inline;
+            margin: auto;
+            padding: 10px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            color: white;
+            cursor: pointer;
+            /* background-color: royalblue; */
+        }
+
+        #pr_1 {
+            color: black;
+        }
+
+        /* ------------------------- */
+
+
+
+
+
+        /* -----------右邊內容---------- */
+
+        .pr_main_r {
+            width: 80%;
+            background-color: rgb(196, 194, 174);
+            /* padding: 10px; */
+
+        }
+
+
+
+        .pr_s_work_img {
+            width: 70%;
+            /* height: 350px; */
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 10px; */
+            /* background-color: rgb(71, 114, 77); */
+            box-shadow: 4px 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        .pr_w_name {
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .pr_w_n_name {
+            display: inline;
+            background-color: yellow;
+
+
+        }
+
+
+        .pr_d_title {
+            width: 100px;
+            height: 30px;
+            font-size: 18px;
+            border-top: 1px dashed;
+            border-bottom: 1px dashed;
+            font-weight: bolder;
+            margin-left: 15%;
+            margin-bottom: 10px;
+            padding-left: 13px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: rgb(253, 219, 154);
+        }
+
+        .pr_w_d_content {
+            width: 70%;
+            height: auto;
+            font-size: 18px;
+            border-top: 1px dashed;
+            border-bottom: 1px dashed;
+            font-weight: bolder;
+            margin-left: 15%;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: rgb(253, 219, 154);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            text-align: left;
+
+        }
+
+
+        /* --------互動視窗基本設定---------------- */
+
+
+        /* -----header間距----- */
+        .modal-header {
+            border-bottom: 0;
+            padding: 1rem 0rem 0rem 1rem;
+            margin-left: 10%;
+
+        }
+
+        /* -----右上角叉叉----- */
+        .close {
+            color: red;
+        }
+
+        /* .close :hover{
+            color: rgb(68, 39, 177);
+        } */
+
+        .modal-header .close {
+            padding: 1rem 2rem;
+            margin: -1rem -1rem -1rem auto;
+        }
+
+        .modal-footer {
+            border-top: 0;
+            padding: 0rem 0rem 1rem 1rem;
+            color: white;
+        }
+
+        .style_hr_t {
+            width: 90%;
+            margin: auto;
+            margin: 20px;
+            background-color: white;
+        }
+
+        .style_hr_d {
+
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .style_hr_t {
+            width: 100%;
+            margin: auto;
+            /* margin-bottom: 20px; */
+            background-color: rgba(70, 0, 0, 0.863);
+        }
+
+        .style_hr_d {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 20px;
+            background-color: rgba(70, 0, 0, 0.863);
+        }
+
+        /* --------------------------------- */
+
+        /* ------------hover------------ */
+
+
+        .pr_w_name_G {
+            width: 40%;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .pr_w_name_G:hover {
+            width: 70%;
+            transition: 3s;
+            background-color: rgb(240, 233, 215);
+            color: rgb(65, 6, 17);
+
+        }
+
+
+        /* ----------框限------------- */
+        .style_border_tl {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            ;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .style_border_ml {
+            width: 3%;
+            height: 80%;
+            background-color: rgb(231, 68, 68);
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+
+        }
+
+        .style_border_bl {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+        }
+
+
+        .style_border_tr {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .style_border_mr {
+            width: 3%;
+            height: 80%;
+            background-color: rgb(231, 68, 68);
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+
+        }
+
+        .style_border_br {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .style_inline {
+            display: inline;
+        }
+
+        /* --------背景顏色------- */
+
+        .bg-1 {
+            background-color: rgba(0, 0, 0, 0.781);
+        }
+
+        .bg-2 {
+            background-color: blue;
+        }
+
+        .bg-3 {
+            background-color: red;
+        }
+
+        .bg-4 {
+            background-color: yellow;
+        }
+
+        .bg-5 {
+            background-color: green;
+        }
+
+        .bg-6 {
+            background-color: rgb(201, 198, 194);
+        }
+
+
+        /* -----------顏色------------- */
+        .cr_0 {
+            color: white;
+        }
+
+        .cr_1 {
+            color: black;
+        }
+
+        .cr_2 {
+            color: red;
+        }
+
+        .cr_3 {
+            color: blue;
+        }
+
+        .cr_4 {
+            color: green;
+        }
+
+        .cr_5 {
+            color: yellow;
+        }
+
+        .cr_6 {
+            color: yellow;
+        }
+
+        .cr_7 {
+            background-color: rgb(196, 194, 174);
+        }
+
+        /* -----------基礎設定---------- */
+        .style_img {
+            width: 100%;
+            border-radius: 50px;
+        }
+
+        .font_style {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        /* --------------------------注意事項------------------------------------ */
+        /* 高度只是暫定可以自行更動 */
+        /* 區塊背景顏色方便辨識 */
+        /* 側邊盒子區塊挑整高度,可以改變盒子內間距 */
+        /* 側邊盒子 xxx可以命名,記得要在創造它的Class */
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ---------------------導覽列----------------------- -->
+    <div class="navbar"></div>
+    <!-- ---------------------內容----------------------- -->
+
+    <div class="content">
+        <div class="content-l">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="personalbox">
+                <div class="photobox"></div>
+                <div class="namebox">賴小明</div>
+            </div>
+            <div class="listbox">
+                <a class="projectbox" href="qwe">
+                    個人資料
+                </a>
+                <a class="projectbox" href="qwe">
+                    我的做品
+                </a>
+                <a class="projectbox" href="qwe">
+                    我的討論
+                </a>
+                <a class="projectbox" href="qwe">
+                    我的任務
+                </a>
+                <a class="projectbox" href="qwe">
+                    喜歡的作品
+                </a>
+                <a class="projectbox" href="qwe">
+                    追蹤中的帳號
+                </a>
+            </div>
+
+        </div>
+        <div class="content-r">
+
+            <div class="project-page">
+                <div class="page-title">
+                    <h1>我的作品區</h1>
+                </div>
+                <div class="button-bar">
+
+                    <button class="arrow_button" type="button" id="show_newtime">
+                        <div id="newtime_t" style="display:block">更新時間 <i class="fas fa-sort-up"></i></div>
+                        <div id="newtime_d" style="display:none">更新時間 <i class="fas fa-caret-down"></i></div>
+                    </button>
+
+                    <button class="arrow_button" type="button" id="show_browse">
+                        <div id="browse_t" style="display:block">留言人數 <i class="fas fa-sort-up"></i></div>
+                        <div id="browse_d" style="display:none">留言人數 <i class="fas fa-caret-down"></i></div>
+                    </button>
+
+                    <button class="arrow_button" type="button" id="show_favorites">
+                        <div id="favorites_t" style="display:block">收藏人數 <i class="fas fa-sort-up"></i></div>
+                        <div id="favorites_d" style="display:none">收藏人數 <i class="fas fa-caret-down"></i></div>
+                    </button>
+                    <div class="new-work">
+                        <!-- Button trigger modal -->
+                        <button class="ad_work" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal">
+                            點擊新增作品
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-button">
+                    <div class="WK_bn_t">1</div>
+                    <div class="WK_bn_t">2</div>
+                    <div class="WK_bn_t">3</div>
+                </div>
+                <div class="WK_page WK_active">
+                    <div class="wordscar-g">
+                        <!-- 作品集模組--按鈕 -->
+                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_ABC">新增作品</div>
+                        <!-- 作品集模組--互動視窗 -->
+                        <div class="modal fade" id="portfolio_pag_ABC" tabindex="-1" role="dialog"
+                            aria-labelledby="portfolio_pag_ABC_Title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <!-- 主要內容 -->
+                                <div class="modal-content cr_7">
+
+                                    <!-- 內容 -->
+                                    <div class="modal-body" style="border: 10px solid white;">
+                                        <div class="PR_main">
+                                            <div class="pr_main_l">
+                                                <div class="pr_l_side">
+                                                    <div class="pr_s_myphoto"></div>
+                                                    <div class="pr_s_name">
+                                                        <h3>Daiel</h3>
+                                                    </div>
+                                                    <div class="pr_s_community">
+                                                        <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                        <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                        </div>
+                                                        <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pr_s_skill_G">
+                                                        <h3>專長</h3>
+                                                        <div class="pr_s_skill">#平面設計</div>
+                                                        <div class="pr_s_skill">#APP製作</div>
+                                                        <div class="pr_s_skill">#影片剪輯</div>
+                                                        <div class="pr_s_skill">#商業娛樂</div>
+
+
+                                                    </div>
+                                                    <div class="pr_s_connection">聯絡報價</div>
+                                                    <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                            class="fas fa-heart"></i>收藏</div>
+                                                </div>
+                                            </div>
+                                            <div class="pr_main_r">
+                                                <div class="pr_r_side">
+                                                    <div class="pr_s_work_img">
+                                                        <img class="style_img"
+                                                            src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <div class="pr_w_name_G">
+                                                        <hr class="style_hr_t">
+                                                        <div class="pr_w_name">
+                                                            <div class="style_border_tl"></div>
+                                                            <div class="style_border_bl"></div>
+                                                            <div class="style_border_ml"></div>
+                                                            <div class="style_border_tr"></div>
+                                                            <div class="style_border_br"></div>
+                                                            <div class="style_border_mr"></div>
+                                                            <h5 class="style_inline">作品名稱：</h5>
+                                                            <input class="add_style_input" type="text">
+                                                        </div>
+                                                        <hr class="style_hr_d">
+                                                    </div>
+                                                    <div class="pr_w_description">
+                                                        <div class="pr_d_title">
+                                                            <div class="style_border_tl"></div>
+                                                            <div class="style_border_bl"></div>
+                                                            <div class="style_border_ml"></div>
+                                                            <div class="style_border_tr"></div>
+                                                            <div class="style_border_br"></div>
+                                                            <div class="style_border_mr"></div>
+                                                            作品說明
+                                                        </div>
+                                                        <div class="pr_w_d_content">
+                                                            <div class="style_border_tl"></div>
+                                                            <div class="style_border_bl"></div>
+                                                            <div class="style_border_ml"></div>
+                                                            <div class="style_border_tr"></div>
+                                                            <div class="style_border_br"></div>
+                                                            <div class="style_border_mr"></div>
+                                                            <textarea class="add_style_textarea" name="" id="" cols="30"
+                                                                rows="10"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 作品集模組--按鈕abc -->
+                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_abc">
+                            <div class="div"></div>
+                            <img class="" src="XXX-1" alt="">
+                            <!-- 作品集模組--互動視窗 -->
+                            <div class="modal fade" id="portfolio_pag_abc" tabindex="-1" role="dialog"
+                                aria-labelledby="portfolio_pag_abc_Title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                    <!-- 主要內容 -->
+                                    <div class="modal-content cr_7">
+
+                                        <!-- 內容 -->
+                                        <div class="modal-body" style="border: 10px solid white;">
+                                            <div class="PR_main">
+                                                <div class="pr_main_l">
+                                                    <div class="pr_l_side">
+                                                        <div class="pr_s_myphoto"></div>
+                                                        <div class="pr_s_name">
+                                                            <h3>賴科榜</h3>
+                                                        </div>
+                                                        <div class="pr_s_community">
+                                                            <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                            <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                            </div>
+                                                            <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pr_s_skill_G">
+                                                            <h3>專長</h3>
+                                                            <div class="pr_s_skill">#平面設計</div>
+                                                            <div class="pr_s_skill">#APP製作</div>
+                                                            <div class="pr_s_skill">#影片剪輯</div>
+                                                            <div class="pr_s_skill">#商業娛樂</div>
+
+
+                                                        </div>
+                                                        <div class="pr_s_connection">聯絡報價</div>
+                                                        <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                                class="fas fa-heart"></i>收藏</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pr_main_r">
+                                                    <div class="pr_r_side">
+                                                        <div class="pr_s_work_img">
+                                                            <img class="style_img" src="XXX-1" alt="" srcset="">
+                                                        </div>
+                                                        <div class="pr_w_name_G">
+                                                            <hr class="style_hr_t">
+                                                            <div class="pr_w_name">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                <h5 class="style_inline font_style">作品名稱：</h5>
+                                                                <h2 class="style_inline font_style">輸入作品名稱</h2>
+                                                            </div>
+                                                            <hr class="style_hr_d">
+                                                        </div>
+                                                        <div class="pr_w_description">
+                                                            <div class="pr_d_title">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                作品說明
+                                                            </div>
+                                                            <div class="pr_w_d_content">
+                                                                <div class="style_border_tl"></div>
+                                                                <div class="style_border_bl"></div>
+                                                                <div class="style_border_ml"></div>
+                                                                <div class="style_border_tr"></div>
+                                                                <div class="style_border_br"></div>
+                                                                <div class="style_border_mr"></div>
+                                                                輸入作品內容
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="WK_page">
+                    <div class="wordscar-g bg-blue">
+                        <div class="wordscar"></div>
+                        <div class="wordscar"></div>
+                        <div class="wordscar"></div>
+
+                    </div>
+                </div>
+                <div class="WK_page">
+                    <div class="wordscar-g bg-green">
+                        <div class="wordscar"></div>
+                        <div class="wordscar"></div>
+                        <div class="wordscar"></div>
+
+                    </div>
+                </div>
+                <div class="page-button">
+                    <div class="WK_bn_d" onclick="page(1)">1</div>
+                    <div class="WK_bn_d">2</div>
+                    <div class="WK_bn_d">3</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ---------------------頁角----------------------- -->
+
+    <div class="footer"></div>
+
+
+
+
+
+
+
+    <!-- ----------------------javescript------------------- -->
+
+    <!-- ---------點擊切換Div-------------- -->
+    <script>
+        //  ------------更新時間切換-------------
+        function show_newtime(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_newtime");
+        sh.onclick = function () {
+            var t = document.getElementById("newtime_t");
+            var d = document.getElementById("newtime_d");
+            show_newtime(t);
+            show_newtime(d);
+            return false;
+        }
+        //  ------------留言人數切換-------------
+        function show_browse(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_browse");
+        sh.onclick = function () {
+            var t = document.getElementById("browse_t");
+            var d = document.getElementById("browse_d");
+            show_browse(t);
+            show_browse(d);
+            return false;
+        }
+        //  ------------收藏人數切換-------------
+        function show_favorites(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_favorites");
+        sh.onclick = function () {
+            var t = document.getElementById("favorites_t");
+            var d = document.getElementById("favorites_d");
+            show_favorites(t);
+            show_favorites(d);
+            return false;
+        }
+    </script>
+
+    <!-- ---------作品頁面切換------------ -->
+    <!-- ----------頁面切換上------------ -->
+    <script>
+        var WK_bn_ts = document.querySelectorAll('.WK_bn_t')
+        var WK_pages = document.querySelectorAll('.WK_page')
+
+        for (var i = 0; i < WK_bn_ts.length; i++) {
+
+            const WK_bn_t = WK_bn_ts[i];
+            const WK_page = WK_pages[i];
+
+            WK_bn_t.onclick = function () {
+                remove_WK_active()
+
+                WK_bn_t.classList.add('WK_active')
+                WK_page.classList.add('WK_active')
+            }
+        }
+
+        function remove_WK_active() {
+            for (var i = 0; i < WK_bn_ts.length; i++) {
+                const WK_bn_t = WK_bn_ts[i];
+                const WK_page = WK_pages[i];
+
+                WK_bn_t.classList.remove('WK_active')
+                WK_page.classList.remove('WK_active')
+            }
+        }
+
+    </script>
+    <!-- ----------頁面切換下------------ -->
+
+    <script>
+        var WK_bn_ds = document.querySelectorAll('.WK_bn_d')
+        var WK_pages = document.querySelectorAll('.WK_page')
+
+        for (var i = 0; i < WK_bn_ds.length; i++) {
+
+            const WK_bn_d = WK_bn_ds[i];
+            const WK_page = WK_pages[i];
+
+            WK_bn_d.onclick = function () {
+                remove_WK_active()
+
+                WK_bn_d.classList.add('WK_active')
+                WK_page.classList.add('WK_active')
+            }
+        }
+
+        function remove_WK_active() {
+            for (var i = 0; i < WK_bn_ds.length; i++) {
+                const WK_bn_d = WK_bn_ds[i];
+                const WK_page = WK_pages[i];
+
+                WK_bn_d.classList.remove('WK_active')
+                WK_page.classList.remove('WK_active')
+            }
+        }
+
+    </script>
+
+
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="/03-程式/01-工作區/html-ex/會園區子頁/統整/JS/我的作品.js"></script>
+</body>
+
+</html>

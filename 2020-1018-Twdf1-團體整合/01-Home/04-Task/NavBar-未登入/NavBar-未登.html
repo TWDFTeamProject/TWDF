@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWDF</title>
+    <!-- TabIcon -->
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Google Font similar Orator Std Slanted  -->
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="TWDF.css">
+
+    <style>
+        /* ------------------- */
+        .Task_page {
+            background-color: rgb(224, 224, 224);
+        }
+        /* @media (max-width: 1200px) {
+            .Task_page{
+                margin-top: 30px;
+            }
+        } */
+
+        .navbar {
+            position: sticky;
+            top: 0%;
+            z-index: 99;
+        }
+
+        .tk_pag_title {
+            text-align: center;
+            margin-top: 20px;
+            letter-spacing: 10px;
+        }
+
+        h2{
+            font-weight: 300;
+        }
+
+        .content-l {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            /* position: relative; */
+            /* background-color: cornflowerblue; */
+        }
+
+        .listbox {
+            width: 100%;
+            height: 600px;
+            margin-top: 10px;
+
+            background-color: rgb(228, 212, 212);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 5%;
+                /* margin-top: 10PX; */
+                /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
+                /* flex-wrap: wrap; */
+                /* justify-content: space-around; */
+        }
+
+        .projectbox {
+            width: 80%;
+            height: 10%;
+            margin: 10px;
+            margin: auto;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            /* margin: auto; */
+        }
+
+        /* ----------中間內容------------ */
+        /* ------搜尋區塊------- */
+        .SearchingPart{
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(242, 242, 242);
+            border: .5px solid rgb(163, 163, 163);
+            padding-left: 28px;
+        }
+        .Searchbox {
+            width: 86%;
+            padding-top: 10px;
+        }
+        .form-control{
+            border-top-right-radius: .3rem !important;
+            border-bottom-right-radius: .3rem !important;
+        }
+        .input-group-append{
+            color: black;
+            text-decoration: unset;
+            width: 18%;
+            margin-left: 12px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: x-large;
+            
+            background-color: rgb(252, 211, 131);
+            border: .2px solid grey;
+            border-radius: .3rem;
+            transition: .2s;
+        }
+        .input-group-append:hover{
+            text-decoration: unset;
+            transform: scale(1.1);
+        }
+
+        /* 關鍵字 */
+        .taggroup {
+            height: 40px;
+            display: flex;
+            align-content: center;
+        }
+
+        .tag_title {
+            height: 40px;
+            background-color: chartreuse;
+        }
+
+        .tk_banner {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* 關鍵字搜尋 */
+        .TypeSearch{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .SearchingBar{
+            display: flex;
+        }
+        .TypySearchingTitle{
+            width:80px;
+            height:30px;
+            line-height: 30px;
+            color: white;
+            background: radial-gradient(circle,rgb(0 , 43, 80),rgb(0, 17, 39));
+            text-align: center;
+            border-radius: 8px;
+            margin: 6px;
+            font-size: large;
+            font-weight: 100;
+            margin-left: 18px;
+        }
+        .SearchingAll{
+            color: black;
+            font-size: large;
+            height:30px;
+            line-height: 30px;
+            margin: 6px;
+            font-weight: 200;
+        }
+        .DecoDoubleLines{
+            height:30px;
+            line-height: 30px;
+            margin: 6px 2px;
+            font-size: large;
+        }
+        .DecoLine{
+            height:30px;
+            line-height: 30px;
+            margin: 6px 2px;
+            font-size: large;
+        }
+        .TypeSearchingBtn{
+            color: black;
+            font-size: large;
+            height:30px;
+            line-height: 30px;
+            margin: 6px;
+            font-weight: 200;
+        }
+
+
+        /* ------排列順序----- */
+        .Paginationbox {
+            width: 100%;
+            height: 60px;
+            border-bottom: 2px solid black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .btn-secondary{
+            background-color: unset;
+            border-color: unset;
+            border: unset;
+            color: black;
+        }
+        .btn-secondary:hover{
+            color: black;
+            background-color: unset;
+        }
+        .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+            color: black;
+            background-color: unset;
+        }
+        .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+            color: black;
+            background-color: unset;
+        }
+        .btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus{
+            box-shadow: unset;
+        }
+        .btn-secondary.focus, .btn-secondary:focus{
+            border-color: unset;
+        }
+        .dropdown-menu{
+            box-sizing: border-box;
+            background-color: unset;
+            border-radius: unset;
+            border: unset;
+        }
+        .dropdown-item{
+            background-color: rgb(201, 198, 194);
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .dropdown-item:first-child{
+            border-top: 1px solid black;
+        }
+
+        .dropdown-item:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .arrow_button {
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 5px;
+            width: 130px;
+            height: 45px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: none;
+            border: 0px;
+            background-color: unset;
+            outline: none;
+        }
+
+        .arrow_button:hover {
+            color: brown;
+        }
+
+        .arrow_button:focus {
+            outline: none;
+        }
+
+        .Paginationbox-smal>i {
+            margin-top: 20px;
+        }
+
+        .underline {
+            border-bottom: black solid 1px;
+            width: 100%;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* ---------頁碼--------- */
+        .WholePageNumber{
+            margin: 20px 0;
+        }
+        .page-link{
+            font-size: medium;
+            padding: .2px;
+            margin-right: 18px;
+            width: 26px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+            border: .6px solid black;
+        }
+        .page-link :active{
+            color: red;
+        }
+
+        /* ---------任務卡片--------- */
+        .taskcarA {
+            width: 100%;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .tk-l {
+            width: 70%;
+            background-color: rgb(252, 224, 133);
+            background-color: whitesmoke;
+            margin-bottom: auto;
+        }
+
+        .tk-title {
+            width: 95%;
+            height: 20%;
+            margin-left: 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            border: 2px solid black;
+            background-color: whitesmoke;
+            background-color: rgb(252, 224, 133);
+            border-radius: 10px;
+        }
+
+        .tk-title h4{
+            margin: 10px;
+        }
+
+        .tk-bar {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            align-items: center;
+        }
+
+        .ps-photo {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 10px;
+        }
+        .ps-photo img{
+            width: 100%;
+        }
+
+        .ps-name {
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .tk-PostTime {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-weight: lighter;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tk-PostTimeDate{
+            margin-right: 6px;
+        }
+        .tk-main {
+            width: 100%;
+            min-height: 200px;
+            padding: 0 10px;
+            font-size: 18px;
+        }
+
+
+        .tk-love {
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-category {
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tk-label {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .labelbox {
+            background-color: teal;
+            color: white;
+            display: inline;
+            margin: 10px;
+            padding: 0 10px;
+            font-size: 18px;
+            box-shadow: 2px 2px 1px rgba(20%, 20%, 40%, 0.5);
+        }
+
+        .tk-r {
+            width: 25%;
+            height: 400px;
+            background-color:rgb(255, 254, 254);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: auto;
+        }
+
+        .tk_list_G{
+            width: 90%;
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+        .tk_list_G p{
+            margin-bottom: 6px;
+            font-size: medium;
+        }
+
+        .tk-see {
+            width: 100%;
+        }
+        .tk-offer{
+            width: 100%;
+        }
+
+        .tk-money {
+            width: 100%;
+        }
+
+        .tk-day {
+            width: 100%;
+        }
+
+        .tk-endday {
+            width: 100%;
+        }
+
+        .tk-buttombar {
+            width: 90%;
+            height: 50px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .tk-favorites {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(255, 175, 175);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .takeit {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+            background: radial-gradient(circle,rgb(0 , 43, 80),rgb(0, 17, 39));;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* --------收藏按鈕---------- */
+        .qt-buttombar {
+            width: 20%;
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right:10px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .qt-favorites {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .takeit {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(255, 73, 73);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    
+        /* -------------右邊區塊-------------- */
+        .content-r {
+            width: 100%;
+            flex-direction: column;
+        }
+        .content-r a:hover{
+            text-decoration: none;
+        }
+
+        .add_task_btn :hover{
+            transition: .2s ease-in-out;
+            transform: scale(1.1);
+        }
+        .ad_task {
+            width: 100%;
+            height: 66px;
+            line-height: 66px;
+            font-weight: 100;
+            margin-bottom: 36px;
+            font-size: x-large;
+            text-align: center;
+            color: rgb(255, 246, 43);
+            background: radial-gradient(circle,rgb(0 , 43, 80),rgb(0, 17, 39));
+        }
+
+        /* ------前五名問題------- */
+        .top_five_problem {
+            width: 100%;
+            margin: 10px auto;
+            background-color: rgb(242, 242, 242);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            padding: 18px 0;
+            margin: 10px auto 0 auto;
+            margin-bottom: 36px;
+        }
+
+        .tf_p_IMG {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+        }
+
+        .tf_p_title {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .tf_promblem_G {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+
+        .tf_promblem {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+        }
+        .tf_p_text{
+            padding-right: 6px;
+            text-align: justify;
+        }
+
+        /* ------前五名答題者------- */
+        .top_five_who {
+            width: 100%;
+            margin: auto;
+            padding: 18px 0;
+            margin-bottom: 36px;
+            background-color: rgb(242, 242, 242);
+        }
+        .advertising {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 36px;
+        }
+        .advertising img{
+            width: 100%;
+        }
+
+        /* ------設定背景--------- */
+
+        .container2{
+            padding-left: unset;
+            padding-right: unset;
+        }
+
+        .style_hr {
+            border: 3px solid black;
+            margin-bottom: 36px;
+        }
+
+        .style_cursor {
+            cursor: unset;
+        }
+
+        .style_img {
+            width: 100%;
+        }
+
+        .style_h {
+            margin: 0;
+        }
+
+        /* ---------四個角------- */
+
+        .style_border_tl {
+            width: 10%;
+            height: 20%;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            /* background-color: black; */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .style_border_tr {
+            width: 10%;
+            height: 20%;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .style_border_bl {
+            width: 10%;
+            height: 20%;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .style_border_br {
+            width: 10%;
+            height: 20%;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+
+        /* -----------手機下方導覽--------- */
+        .drop_up_menu {
+            width: 100%;
+            height: 80px;
+            background: radial-gradient(circle,rgb(0 , 43, 80),rgb(0, 17, 39));;
+            z-index: 1000;
+            position: fixed;
+            bottom: 0ch;
+            color: lightcyan;
+            margin-left: unset;
+            margin-right: unset;
+
+        }
+        .MobileBottomMenuBtn{
+            color: white;
+            width: auto;
+            margin-left: 12px;
+        }
+        .MobileBottomMenuR:last-child{
+            margin-right: 12px;
+        }
+        .MobileBottomMenuBtn img{
+            width: 60px;
+        }
+        .MobileBottomMenuBtn span{
+            font-size: x-large;
+            margin-left: 16px;
+        }
+
+        .menu_btn:hover {
+            background-image: url(05-pic/hover按鈕效果-01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .PostBtn{
+            color: yellow;
+        }
+
+
+        /* -----------任務卡片編號--------- */
+        #B_1{
+            background: rgb(255, 255, 255);  
+        }
+        #B_2{
+            background: rgb(255, 255, 255);  
+        }
+        #B_3{
+            background: rgb(255, 255, 255);  
+        }
+        #B_4{
+            background: rgb(255, 255, 255);  
+        }
+        #B_5{
+            background: rgb(255, 255, 255);  
+        }
+        #B_6{
+            background: rgb(255, 255, 255);  
+        }
+        #B_7{
+            background: rgb(255, 255, 255);  
+        }
+
+        /* --------背景顏色------- */
+
+        .bg-1 {
+            background-color: black;
+        }
+
+        .bg-2 {
+            background-color: blue;
+        }
+
+        .bg-3 {
+            background-color: red;
+        }
+
+        .bg-4 {
+            background-color: yellow;
+        }
+
+        .bg-5 {
+            background-color: green;
+        }
+
+        .bg-6 {
+            background-color: rgb(201, 198, 194);
+        }
+
+
+        /* ---------RWD------ */
+
+        @media (max-width: 1199.98px) {
+
+            .TypySearchingTitle{
+                width:80px;
+                height:30px;
+                line-height: 30px;
+                border-radius: 8px;
+                margin: 6px;
+                font-size: medium;
+                font-weight: 100;
+                margin-left: 0;
+            }
+            .SearchingAll{
+                font-size: medium;
+                height:30px;
+                line-height: 30px;
+                margin: 6px;
+                font-weight: 200;
+            }
+            .DecoDoubleLines{
+                height:30px;
+                line-height: 30px;
+                margin: 6px 2px;
+                font-size: medium;
+            }
+            .DecoLine{
+                height:30px;
+                line-height: 30px;
+                margin: 6px 2px;
+                font-size: medium;
+            }
+            .TypeSearchingBtn{
+                font-size: medium;
+                height:30px;
+                line-height: 30px;
+                margin: 6px;
+                font-weight: 200;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .TypySearchingTitle{
+                width:60px;
+                height:22px;
+                line-height: 22px;
+                border-radius: 8px;
+                margin: 3px;
+                font-size: smaller;
+                font-weight: 100;
+                margin-left: 0;
+            }
+            .SearchingAll{
+                font-size: smaller;
+                height:22px;
+                line-height: 22px;
+                margin: 3px;
+                font-weight: 200;
+            }
+            .DecoDoubleLines{
+                height:22px;
+                line-height: 22px;
+                margin: 3px 1px;
+                font-size: smaller;
+            }
+            .DecoLine{
+                height:22px;
+                line-height: 22px;
+                margin: 3px 1px;
+                font-size: smaller;
+            }
+            .TypeSearchingBtn{
+                font-size: smaller;
+                height:22px;
+                line-height: 22px;
+                margin: 3px;
+                font-weight: 200;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .SearchingPart{
+                padding-left: 6px;
+                min-height: unset;
+                padding-bottom: 6px;
+            }
+            .btn{
+                font-size: x-small;
+                display: flex;
+                align-items: center;
+            }
+            .TypySearchingTitle{
+                width:60px;
+                height:22px;
+                line-height: 22px;
+                border-radius: 8px;
+                margin: 3px;
+                font-size: xx-small;
+                font-weight: 100;
+                margin-left: 0;
+            }
+            .SearchingAll{
+                font-size: xx-small;
+                height:22px;
+                line-height: 22px;
+                margin: 3px;
+                font-weight: 200;
+            }
+            .DecoDoubleLines{
+                height:22px;
+                line-height: 22px;
+                margin: 3px 1px;
+                font-size: xx-small;
+            }
+            .DecoLine{
+                height:22px;
+                line-height: 22px;
+                margin: 3px 1px;
+                font-size: xx-small;
+            }
+            .TypeSearchingBtn{
+                font-size: xx-small;
+                height:22px;
+                line-height: 22px;
+                margin: 3px;
+                font-weight: 200;
+            }
+            .input-group-append{
+                font-size: 18px;
+            }
+            .PaginationSort{
+                display: none;
+            }
+            .tk_list_G{
+                font-size: xx-small;
+            }
+            .col-3{
+                padding-left: unset;
+                padding-right: unset;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <!-- ---------------------導覽列----------------------- -->
+        <nav class="d-none d-md-block navbar sticky-top">
+            <div class="TWDFLogo">
+                <img src="Nav-Logo/TWDF-Logo.png" alt="">
+            </div>
+            <div class="NavBtns">
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">城市人論壇</p>
+                        <p class="NavTextEn">Forum</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">作品展示</p>
+                        <p class="NavTextEn">Portfolios</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">案件發佈</p>
+                        <p class="NavTextEn">Post Cases</p>
+                    </div>
+                </a>
+                <a class="NavBtn" href="">
+                    <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                    <div class="NavText">
+                        <p class="NavTextCh">資源共享</p>
+                        <p class="NavTextEn">Resource Sharing</p>
+                    </div>
+                </a>
+                <a id="StartBtn" class="LogIn" data-toggle="modal" data-target="#member_form_1">
+                    <i class="far fa-user-circle"></i>
+                    <p>Sign In</p>
+                </a>
+            </div>
+        </nav>
+
+        <!-- -------------------手機導覽列--------------------- -->
+        <nav class="d-block d-md-none navbar navbar-dark navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="mr-2" src="Nav-Logo/TWDF-Logo.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="" loading="lazy">
+                程式人
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">城市人論壇</p>
+                                <p class="NavTextEn">Forum</p>
+                            </div><span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/作品展示.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">作品展示</p>
+                                <p class="NavTextEn">Portfolios</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/案件發佈.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">案件發佈</p>
+                                <p class="NavTextEn">Post Cases</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="NavIMG" src="Nav-Logo/資源共享.png" alt="">
+                            <div class="NavText">
+                                <p class="NavTextCh">資源共享</p>
+                                <p class="NavTextEn">Resource Sharing</p>
+                            </div>
+                        </a>
+                    </li>
+                    <a class="nav-login-link  align-items-end" href="#">
+                        <div class="NavText">
+                            <p>會員登入 / 註冊</p>
+                        </div>
+                    </a>
+                </ul>
+
+            </div>
+        </nav>
+
+
+
+    </header>
+
+    <!-- ---------------------內容----------------------- -->
+    <main>
+
+        <section class="Task_page">
+            <!-- html頁面標題-- -->
+            <div class="container container1">
+                <div class="row"></div>
+                <div class="tk_pag_title col-md-12">
+                    <h2>案件發佈</h2>
+                </div>
+            </div>
+            <!-- 分隔線-- -->
+            <div class="container container2">
+                <div class="row"></div>
+                <div class="col-md-12 ">
+                    <hr class="style_hr">
+                </div>
+            </div>
+            <!-- 主要內容-- -->
+            <div class="container-lg container3">
+                <div class="row">
+                    <!-- 左邊欄位-- -->
+                    <div class="col-lg-9 col-xl-10">
+                        <!-- 搜尋框 -->
+                        <div class="SearchingPart">
+                            <div class="Searchbox">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                        aria-describedby="button-addon2">
+                                    <a href="" class="input-group-append">
+                                        <span>搜尋</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- tag標籤 -->
+                            <div class="taggroup">
+                                <div class="btn style_cursor">熱門搜尋</div>
+                                <button type="button" class="btn btn-link">CSS</button>
+                                <button type="button" class="btn btn-link">Vue.js</button>
+                                <button type="button" class="btn btn-link">PHP</button>
+                                <button type="button" class="btn btn-link">Animation</button>
+                                <button type="button" class="btn btn-link">SSL</button>
+                                <button type="button" class="btn btn-link">SEO</button>
+                            </div>
+                            <!-- 類型搜尋 -->
+                            <div class="TypeSearch">
+                                <div class="SearchingBar">
+                                    <div class="TypySearchingTitle">預算金額</div>
+                                    <a class="SearchingAll" href="">全部</a>
+                                    <p class="DecoDoubleLines">||</p>
+                                    <a class="TypeSearchingBtn" href="">5000以下</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">5000~1萬</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1萬~3萬</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">3萬~5萬</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">5萬~10萬</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">以上10萬</a>
+                                </div>
+                                <div class="SearchingBar">
+                                    <div class="TypySearchingTitle">最新發佈</div>
+                                    <a class="SearchingAll" href="">全部</a>
+                                    <p class="DecoDoubleLines">||</p>
+                                    <a class="TypeSearchingBtn" href="">今日最新</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">3日內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1周內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1個月內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">3個月內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">半年內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1年內</a>
+                                </div>
+                                <div class="SearchingBar">
+                                    <div class="TypySearchingTitle">剩餘時間</div>
+                                    <a class="SearchingAll" href="">全部</a>
+                                    <p class="DecoDoubleLines">||</p>
+                                    <a class="TypeSearchingBtn" href="">今日最新</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">3日內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1周內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1個月內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">3個月內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">半年內</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">1年內</a>
+                                </div>
+                                <div class="SearchingBar">
+                                    <div class="TypySearchingTitle">技術類型</div>
+                                    <a class="SearchingAll" href="">全部</a>
+                                    <p class="DecoDoubleLines">||</p>
+                                    <a class="TypeSearchingBtn" href="">前端</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">後端</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">特效</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">RWD</a>
+                                    <div class="DecoLine">|</div>
+                                    <a class="TypeSearchingBtn" href="">設計</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 排列順序列-- -->
+                        <div class="Paginationbox">
+                            <div class="dropdown mr-auto">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    類別
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">全部</a>
+                                  <a class="dropdown-item" href="#">未解決</a>
+                                  <a class="dropdown-item" href="#">已解決</a>
+                                </div>
+                              </div>
+                            <div class="PaginationSort">排序</div>
+                            <button class="arrow_button" type="button" id="show_newtime">
+                                <div id="newtime_t" style="display:none">最高金額<i class="fas fa-sort-up"></i></div>
+                                <div id="newtime_d" style="display:block">最高金額<i class="fas fa-caret-down"></i></div>
+                            </button>
+                            <button class="arrow_button" type="button" id="show_browse">
+                                <div id="browse_t" style="display:none">最新案件<i class="fas fa-sort-up"></i></div>
+                                <div id="browse_d" style="display:block">最新案件<i class="fas fa-caret-down"></i></div>
+                            </button>
+                            <button class="arrow_button" type="button" id="show_favorites">
+                                <div id="favorites_t" style="display:none">最高人氣<i class="fas fa-sort-up"></i></div>
+                                <div id="favorites_d" style="display:block">最高人氣<i class="fas fa-caret-down"></i></div>
+                            </button>
+                        </div>
+
+                        <!-- 上方頁碼 -->
+                        <div class="WholePageNumber d-flex justify-content-end">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="tk_car_G">
+
+<!------------------------- 以下列板型填入資料 ------------------------->
+                            <div class="tk_card">
+                                <div class="taskcarA">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="ps-photo">
+                                                <img src="img/headshot/ddb07b32f5e95bfd27564117f1fbc507.jpg" alt="">
+                                            </div>
+                                            <div class="ps-name">ilove123456</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h5>
+                                            <div class="tk-PostTime">
+                                                <span class="tk-PostTimeDate">2020/10/8</span>
+                                                <span class="tk-PostTimeClock">06:35</span>
+                                            </div>
+                                            <div class="tk-main">
+                                                <br>1.案件說明：協助網站建置
+                                                <br>2.注意事項：
+                                                <br>(一)具備相關能力或實務經驗
+                                                <br>(二)若有作品集可以提供我方參考佳
+                                            </div>
+                                            <div class="tk-UpdateTime">1秒前</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="tk_list_G">
+                                                <div class="tk_list_GViewsOffers">
+                                                    <p class="tk-see">瀏覽人數 : 30</p>
+                                                    <p class="tk-offer">報價人數 : 6</p>
+                                                </div>
+                                                <div class="tk_list_GPriceDateTerm">
+                                                    <p class="tk-money">預算金額 : 5K ~ 10K</p>
+                                                    <p class="tk-day">發布時間 : 2020 / 10 / 19</p>
+                                                    <p class="tk-endday">結案期限 : 2020 / 10 / 31</p>
+                                                </div>
+                                            </div>
+                                            <div class="tk-buttombar">
+                                                <div class="tk-buttombar">
+                                                    <div class="takeit">接案</div>
+                                                    <i id="B_1" class="far fa-heart tk-favorites" onclick="check_B_1();"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tk_card">
+                                <div class="taskcarA">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="ps-photo">
+                                                <img src="img/headshot/ddb07b32f5e95bfd27564117f1fbc507.jpg" alt="">
+                                            </div>
+                                            <div class="ps-name">ilove123456</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h5>
+                                            <div class="tk-PostTime">
+                                                <span class="tk-PostTimeDate">2020/10/8</span>
+                                                <span class="tk-PostTimeClock">06:35</span>
+                                            </div>
+                                            <div class="tk-main">
+                                                <br>1.案件說明：協助網站建置
+                                                <br>2.注意事項：
+                                                <br>(一)具備相關能力或實務經驗
+                                                <br>(二)若有作品集可以提供我方參考佳
+                                            </div>
+                                            <div class="tk-UpdateTime">1秒前</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="tk_list_G">
+                                                <div class="tk_list_GViewsOffers">
+                                                    <p class="tk-see">瀏覽人數 : 30</p>
+                                                    <p class="tk-offer">報價人數 : 6</p>
+                                                </div>
+                                                <div class="tk_list_GPriceDateTerm">
+                                                    <p class="tk-money">預算金額 : 5K ~ 10K</p>
+                                                    <p class="tk-day">發布時間 : 2020 / 10 / 19</p>
+                                                    <p class="tk-endday">結案期限 : 2020 / 10 / 31</p>
+                                                </div>
+                                            </div>
+                                            <div class="tk-buttombar">
+                                                <div class="tk-buttombar">
+                                                    <div class="takeit">接案</div>
+                                                    <i id="B_1" class="far fa-heart tk-favorites" onclick="check_B_1();"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tk_card">
+                                <div class="taskcarA">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="ps-photo">
+                                                <img src="img/headshot/ddb07b32f5e95bfd27564117f1fbc507.jpg" alt="">
+                                            </div>
+                                            <div class="ps-name">ilove123456</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h5>
+                                            <div class="tk-PostTime">
+                                                <span class="tk-PostTimeDate">2020/10/8</span>
+                                                <span class="tk-PostTimeClock">06:35</span>
+                                            </div>
+                                            <div class="tk-main">
+                                                <br>1.案件說明：協助網站建置
+                                                <br>2.注意事項：
+                                                <br>(一)具備相關能力或實務經驗
+                                                <br>(二)若有作品集可以提供我方參考佳
+                                            </div>
+                                            <div class="tk-UpdateTime">1秒前</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="tk_list_G">
+                                                <div class="tk_list_GViewsOffers">
+                                                    <p class="tk-see">瀏覽人數 : 30</p>
+                                                    <p class="tk-offer">報價人數 : 6</p>
+                                                </div>
+                                                <div class="tk_list_GPriceDateTerm">
+                                                    <p class="tk-money">預算金額 : 5K ~ 10K</p>
+                                                    <p class="tk-day">發布時間 : 2020 / 10 / 19</p>
+                                                    <p class="tk-endday">結案期限 : 2020 / 10 / 31</p>
+                                                </div>
+                                            </div>
+                                            <div class="tk-buttombar">
+                                                <div class="tk-buttombar">
+                                                    <div class="takeit">接案</div>
+                                                    <i id="B_1" class="far fa-heart tk-favorites" onclick="check_B_1();"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tk_card">
+                                <div class="taskcarA">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="ps-photo">
+                                                <img src="img/headshot/ddb07b32f5e95bfd27564117f1fbc507.jpg" alt="">
+                                            </div>
+                                            <div class="ps-name">ilove123456</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h5>
+                                            <div class="tk-PostTime">
+                                                <span class="tk-PostTimeDate">2020/10/8</span>
+                                                <span class="tk-PostTimeClock">06:35</span>
+                                            </div>
+                                            <div class="tk-main">
+                                                <br>1.案件說明：協助網站建置
+                                                <br>2.注意事項：
+                                                <br>(一)具備相關能力或實務經驗
+                                                <br>(二)若有作品集可以提供我方參考佳
+                                            </div>
+                                            <div class="tk-UpdateTime">1秒前</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="tk_list_G">
+                                                <div class="tk_list_GViewsOffers">
+                                                    <p class="tk-see">瀏覽人數 : 30</p>
+                                                    <p class="tk-offer">報價人數 : 6</p>
+                                                </div>
+                                                <div class="tk_list_GPriceDateTerm">
+                                                    <p class="tk-money">預算金額 : 5K ~ 10K</p>
+                                                    <p class="tk-day">發布時間 : 2020 / 10 / 19</p>
+                                                    <p class="tk-endday">結案期限 : 2020 / 10 / 31</p>
+                                                </div>
+                                            </div>
+                                            <div class="tk-buttombar">
+                                                <div class="tk-buttombar">
+                                                    <div class="takeit">接案</div>
+                                                    <i id="B_1" class="far fa-heart tk-favorites" onclick="check_B_1();"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tk_card">
+                                <div class="taskcarA">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="ps-photo">
+                                                <img src="img/headshot/ddb07b32f5e95bfd27564117f1fbc507.jpg" alt="">
+                                            </div>
+                                            <div class="ps-name">ilove123456</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h5>
+                                            <div class="tk-PostTime">
+                                                <span class="tk-PostTimeDate">2020/10/8</span>
+                                                <span class="tk-PostTimeClock">06:35</span>
+                                            </div>
+                                            <div class="tk-main">
+                                                <br>1.案件說明：協助網站建置
+                                                <br>2.注意事項：
+                                                <br>(一)具備相關能力或實務經驗
+                                                <br>(二)若有作品集可以提供我方參考佳
+                                            </div>
+                                            <div class="tk-UpdateTime">1秒前</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="tk_list_G">
+                                                <div class="tk_list_GViewsOffers">
+                                                    <p class="tk-see">瀏覽人數 : 30</p>
+                                                    <p class="tk-offer">報價人數 : 6</p>
+                                                </div>
+                                                <div class="tk_list_GPriceDateTerm">
+                                                    <p class="tk-money">預算金額 : 5K ~ 10K</p>
+                                                    <p class="tk-day">發布時間 : 2020 / 10 / 19</p>
+                                                    <p class="tk-endday">結案期限 : 2020 / 10 / 31</p>
+                                                </div>
+                                            </div>
+                                            <div class="tk-buttombar">
+                                                <div class="tk-buttombar">
+                                                    <div class="takeit">接案</div>
+                                                    <i id="B_1" class="far fa-heart tk-favorites" onclick="check_B_1();"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tk_card">
+                                <div class="taskcarA">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="ps-photo">
+                                                <img src="img/headshot/ddb07b32f5e95bfd27564117f1fbc507.jpg" alt="">
+                                            </div>
+                                            <div class="ps-name">ilove123456</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="style_h">ERP邏輯概念 : 涉及工單結案跨月，財務結完帳提交給老闆後，才發現多領料情況</h5>
+                                            <div class="tk-PostTime">
+                                                <span class="tk-PostTimeDate">2020/10/8</span>
+                                                <span class="tk-PostTimeClock">06:35</span>
+                                            </div>
+                                            <div class="tk-main">
+                                                <br>1.案件說明：協助網站建置
+                                                <br>2.注意事項：
+                                                <br>(一)具備相關能力或實務經驗
+                                                <br>(二)若有作品集可以提供我方參考佳
+                                            </div>
+                                            <div class="tk-UpdateTime">1秒前</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="tk_list_G">
+                                                <div class="tk_list_GViewsOffers">
+                                                    <p class="tk-see">瀏覽人數 : 30</p>
+                                                    <p class="tk-offer">報價人數 : 6</p>
+                                                </div>
+                                                <div class="tk_list_GPriceDateTerm">
+                                                    <p class="tk-money">預算金額 : 5K ~ 10K</p>
+                                                    <p class="tk-day">發布時間 : 2020 / 10 / 19</p>
+                                                    <p class="tk-endday">結案期限 : 2020 / 10 / 31</p>
+                                                </div>
+                                            </div>
+                                            <div class="tk-buttombar">
+                                                <div class="tk-buttombar">
+                                                    <div class="takeit">接案</div>
+                                                    <i id="B_1" class="far fa-heart tk-favorites" onclick="check_B_1();"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+     
+
+                            
+
+<!------------------------------- 下方頁碼 ------------------------------->
+                            <div class="WholePageNumber d-flex justify-content-end">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右邊欄位-- -->
+                    <div class="d-none d-md-block col-lg-3 col-xl-2">
+                        <div class="content-r">
+                            <a href="" class="add_task_btn">
+                                <div class="ad_task">
+                                    我要發案
+                                </div>
+                            </a>
+                            <a href=""></a>
+
+                            <div class="top_five_problem">
+                                <div class="tf_p_IMG">
+                                    <img src="img/電燈-01.png" alt="">
+                                </div>
+                                <div class="tf_p_title">
+                                    <h4>Hot! Five QT</h4>
+                                </div>
+                                <div class="tf_promblem_G">
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            請問 windows 如何像 Linux 使用命令方式查詢某個資料夾底下的刪除紀錄
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            NAS 組 RAID10 壞了一軌
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            iTHelp 程式碼區塊用色建議, 是否可改？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            託管網站要落地架在自家Server上該注意什麼？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            AD的作業系統版本可否降級？
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="top_five_who">
+                                <div class="tf_p_IMG">
+                                    <img src="img/02-論壇區-皇冠.png" alt="">
+                                </div>
+                                <div class="tf_p_title">
+                                    <h4>Hot! Five QT</h4>
+                                </div>
+                                <div class="tf_promblem_G">
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            請問 windows 如何像 Linux 使用命令方式查詢某個資料夾底下的刪除紀錄
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            NAS 組 RAID10 壞了一軌
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            iTHelp 程式碼區塊用色建議, 是否可改？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            託管網站要落地架在自家Server上該注意什麼？
+                                        </div>
+                                    </a>
+                                    <a class="tf_promblem" href="http://">
+                                        <div class="tf_p_mark">
+                                            ．
+                                        </div>
+                                        <div class="tf_p_text">
+                                            AD的作業系統版本可否降級？
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="advertising">
+                                <img src="img/04-論壇區-廣告1.png" alt="">
+                            </div>
+                            <div class="advertising">
+                                <img src="img/05-論壇區-廣告2.png" alt="">
+                            </div>
+                            <div class="advertising">
+                                <img src="img/06-論壇區-廣告3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 手機板導覽列 -->
+        <div class="drop_up_menu d-md-none row d-flex justify-content-between">
+            <div class="MobileBottomMenuL d-flex">
+                <a class="MobileBottomMenuBtn d-flex align-items-center">
+                    <img src="img/01-論壇區-零件.png">
+                    <span>主題</span>
+                </a>
+            </div>
+            <div class="MobileBottomMenuR d-flex align-items-center">
+                <a class="MobileBottomMenuBtn">
+                    熱門瀏覽
+                </a>
+                <a class="MobileBottomMenuBtn">
+                    案件金額
+                </a>
+                <a class="MobileBottomMenuBtn PostBtn">
+                    我要發案
+                </a>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- ---------------------頁角----------------------- -->
+
+    <!-- RWD Footer -->
+    <footer>
+        <div class="FooterFrame container-lg">
+            <div class="FooterRow row row-cols-md-3 mr-auto ml-auto">
+                <div class="col-lg-5 FooterRowL text-center">
+                    <img src="Nav-Logo/TWDF-Logo.png" alt="">
+                    <div class="FooterTWDF-Title">
+                        程式人論壇 | TWDF
+                    </div>
+                    <p>Taiwan Web Developer Forum</p>
+                </div>
+                <div class="col-lg-4 FooterRowM text-center">
+                    <p>+886 900-31540000</p>
+                    <p>+886 900-31540000</p>
+                    <p>TWDF＠gmail.com</p>
+                    <p>台中市北區崇德路民眾技藝中心</p>
+                </div>
+                <div class="d-none d-md-block col-lg-3 FooterRowR">
+                    <p>- 論壇討論區</p>
+                    <p>- 成果作品集</p>
+                    <p>- 案件發布區</p>
+                    <p>- 資源共享區</p>
+                </div>
+            </div>
+            <div class="row CopyrightRow justify-content-center">
+                <p>Copyright © 2020 Taiwan Web Developer Forum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- -------------------Sign In---------------------- -->
+    <div class="modal fade" id="member_form_1" tabindex="-1" role="dialog" aria-labelledby="member_form_1Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-1 ">
+                    <h5 class="modal-title" id="member_form_1Label">會員登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-1 ">
+                    <div class="XX_signin_box">
+                        <div class="XX_account">帳號<input type="text"></div>
+                        <div class="XX_password">密碼<input type="text"></div>
+                        <div class="XX_but_bar">
+                            <div class="XX_bar_remember"><input type="checkbox" name="" id=""> 記住我</div>
+                            <div class="XX_bar_forget">忘記密碼</div>
+                            <div class="XX_bar_noaccount">沒有帳號</div>
+                            <div class="XX_bar_new">創建新帳號</div>
+
+                        </div>
+                        <div class="XX_sign_in">登入</div>
+                        <hr class="style_hr_t">
+                        <div class="XX_other_title">
+                            <h5>其他登入方式</h5>
+                        </div>
+                        <div class="XX_other_sign_bar">
+                            <div class="XX_sign_fb"></div>
+                            <div class="XX_sign_google"></div>
+                            <div class="XX_sign_apple"></div>
+                        </div>
+                        <hr class="style_hr_d">
+                    </div>
+                </div>
+                <div class="modal-footer bg-1 ">
+                    <div class="XX_precautions">
+                        <div class="XX_precautions_title">
+                            <h5>注意事項</h5>
+                        </div>
+                        請勿在公共場所登入論壇帳號，避免使用不信任的無線網路、Proxy或VPN，以防帳號被盜取。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS INI -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- ---點擊愛心收藏---- -->
+    <script>
+        // <!-- ---點擊愛心收藏 編號B_1---- -->
+        function check_B_1() {
+            var e = document.getElementById("B_1");
+            var c = window.getComputedStyle(e).backgroundColor;
+            if (c === "rgb(255, 255, 255)") {
+                document.getElementById("B_1").style.background = "rgb(230, 76, 60)";
+            } else {
+                document.getElementById("B_1").style.background = "rgb(255, 255, 255)";
+            }
+        }
+    </script>
+    <!-- ---------點擊切換Div-------------- -->
+    <script>
+        //  ------------更新時間切換-------------
+        function show_newtime(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_newtime");
+        sh.onclick = function () {
+            var t = document.getElementById("newtime_t");
+            var d = document.getElementById("newtime_d");
+            show_newtime(t);
+            show_newtime(d);
+            return false;
+        }
+        //  ------------留言人數切換-------------
+        function show_browse(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_browse");
+        sh.onclick = function () {
+            var t = document.getElementById("browse_t");
+            var d = document.getElementById("browse_d");
+            show_browse(t);
+            show_browse(d);
+            return false;
+        }
+        //  ------------收藏人數切換-------------
+        function show_favorites(obj) {
+            if (obj.style.display == 'block') {
+                obj.style.display = 'none';
+            }
+            else {
+                obj.style.display = 'block';
+            }
+        }
+
+        var sh = document.getElementById("show_favorites");
+        sh.onclick = function () {
+            var t = document.getElementById("favorites_t");
+            var d = document.getElementById("favorites_d");
+            show_favorites(t);
+            show_favorites(d);
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

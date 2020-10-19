@@ -1,0 +1,17 @@
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+
+<!-- 主要內容-- -->
+    <div class="container mt-5">
+        <div class="row">
+        </div>
+    </div>
