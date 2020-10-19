@@ -320,7 +320,7 @@
 
     <header>
 
-        <!-- ---------------------導覽列----------------------- -->
+        <!-- ---------------------電腦版導覽列----------------------- -->
         <nav class="d-none d-md-block navbar">
             <div class="TWDFLogo">
                 <img src="Nav-Logo/TWDF-Logo.png" alt="">
@@ -354,13 +354,13 @@
                         <p class="NavTextEn">Resource Sharing</p>
                     </div>
                 </a>
-                <a id="StartBtn" class="LogIn">
+                <a id="StartBtn" class="LogIn" data-toggle="modal" data-target="#member_form_1">
                     <p>Sign In</p>
                 </a>
             </div>
         </nav>
 
-        <!-- -------------------手機導覽列--------------------- -->
+        <!-- -------------------手機版導覽列--------------------- -->
 
         <nav class="d-block d-md-none navbar navbar-dark navbar-light bg-light">
             <a class="navbar-brand" href="#">
@@ -408,6 +408,11 @@
                                 <p class="NavTextCh">資源共享</p>
                                 <p class="NavTextEn">Resource Sharing</p>
                             </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="StartBtn" class="LogIn" data-toggle="modal" data-target="#member_form_1">
+                            <p>Sing in</p>
                         </a>
                     </li>
                 </ul>
@@ -1642,6 +1647,49 @@
         <div class="row">
             <div class="col-md-12"></div>
             <div class="anchor_point"></div>
+        </div>
+    </div>
+
+    <!-- 互動視窗__會員登入表單 -->
+    <div class="modal fade" id="member_form_1" tabindex="-1" role="dialog" aria-labelledby="member_form_1Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-1 ">
+                    <h5 class="modal-title" id="member_form_1Label">會員登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-1 ">
+                    <div class="XX_signin_box">
+                        <div class="XX_account">帳號<input type="text"></div>
+                        <div class="XX_password">密碼<input type="text"></div>
+                        <div class="XX_but_bar">
+                            <div class="XX_bar_remember"><input type="checkbox" name="" id=""> 記住我</div>
+                            <div class="XX_bar_forget">忘記密碼</div>
+                            <div class="XX_bar_noaccount">沒有帳號</div>
+                            <div class="XX_bar_new">創建新帳號</div>
+                        </div>
+                        <a class="XX_sign_in" href="">登入</a>
+                        <hr class="style_hr_t">
+                        <div class="XX_other_title"><h5>其他登入方式</h5></div>
+                        <div class="XX_other_sign_bar">
+                            <div class="XX_sign_fb"></div>
+                            <div class="XX_sign_google"></div>
+                            <div class="XX_sign_apple"></div>
+                        </div>
+                        <hr class="style_hr_d">
+                    </div>
+                </div>
+                <div class="modal-footer bg-1 ">
+                    <div class="XX_precautions">
+                        <div class="XX_precautions_title"><h5>注意事項</h5></div>
+                        請勿在公共場所登入論壇帳號
+                        <br> 避免使用不信任的無線網路
+                        <br>Proxy或VPN，b 以防帳號被盜取。</div>
+                </div>
+            </div>
         </div>
     </div>
 
