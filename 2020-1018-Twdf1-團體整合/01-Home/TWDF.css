@@ -42,6 +42,12 @@ header .BackgroundIMG img {
   }
 }
 
+@media (max-width: 575.98px) {
+  header .BackgroundIMG img {
+    width: 100%;
+  }
+}
+
 header :nth-child(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -392,6 +398,12 @@ header .banner .content {
   }
 }
 
+@media (max-width: 575.98px) {
+  header .banner .content {
+    width: 100%;
+  }
+}
+
 header .banner .content .ContentTop {
   width: 100%;
   height: 65px;
@@ -541,6 +553,12 @@ header .banner .content .ContentBottom .Searchingbar::placeholder {
     margin-bottom: 6px;
     margin-top: 54px;
     padding-left: 29px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  header .banner .content .ContentBottom .Searchingbar {
+    width: 80%;
   }
 }
 
@@ -702,6 +720,12 @@ main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
   }
 }
 
+@media (max-width: 535px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextTitle {
+    font-size: 24px;
+  }
+}
+
 main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
   font-size: 18px;
 }
@@ -715,6 +739,12 @@ main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
 @media (max-width: 767.98px) {
   main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section1 .OurTeam .OurTeamText .OurTeamTextContent {
+    font-size: xx-small;
   }
 }
 
@@ -792,6 +822,13 @@ main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
     font-size: 18px;
     margin-left: 20px;
     margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TeamMemberImg .col .TeamMemberImgText .TeamMemberImgTextTitle {
+    font-size: 14px;
+    margin-left: 16px;
   }
 }
 
@@ -874,6 +911,18 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG 
   }
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    margin-top: 486px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG {
+    margin-top: 396px;
+  }
+}
+
 @media (max-width: 991.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
     width: 272px;
@@ -883,6 +932,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG 
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
     width: unset;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumIMGS .BackgroundIMG img {
+    width: 100%;
   }
 }
 
@@ -920,6 +975,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
   }
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText {
+    margin-top: 20px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
   font-size: 32px;
   margin-left: 12px;
@@ -939,6 +1000,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForu
   }
 }
 
+@media (max-width: 535px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumTitle {
+    font-size: 24px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
   font-size: 18px;
 }
@@ -952,6 +1019,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForu
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroForum .TWDF-IntroForumText .TWDF-IntroForumContent {
+    font-size: xx-small;
   }
 }
 
@@ -994,6 +1067,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
   max-width: 100%;
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG {
+    width: 524px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
   width: 524px;
 }
@@ -1007,6 +1086,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYou
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
     width: 524px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanIMG .TWDF-IntroYouCanIMGS .BackgroundIMG img {
+    width: 100%;
   }
 }
 
@@ -1049,6 +1134,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
   }
 }
 
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText {
+    margin-top: 406px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
   font-size: 32px;
   margin-left: 12px;
@@ -1071,6 +1162,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYo
   }
 }
 
+@media (max-width: 535px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanTitile {
+    font-size: 24px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
   font-size: 18px;
 }
@@ -1084,6 +1181,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYo
 @media (max-width: 767.98px) {
   main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroYouCan .TWDF-IntroYouCanText .TWDF-IntroYouCanContent {
+    font-size: xx-small;
   }
 }
 
@@ -1142,6 +1245,12 @@ main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartText p {
   }
 }
 
+@media (max-width: 575px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroStart .TWDF-IntroStartText p {
+    font-size: 18px;
+  }
+}
+
 main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
   width: 168px;
   height: 73px;
@@ -1161,6 +1270,15 @@ main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
     width: 106px;
     height: 54px;
     line-height: 54px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .Section1 .TWDF-Intro .TWDF-IntroStart #TWDF-IntroStartBtn {
+    width: 66px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 18px;
   }
 }
 
@@ -1197,9 +1315,21 @@ main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitle {
   font-weight: bold;
 }
 
+@media (max-width: 535px) {
+  main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitle {
+    font-size: 24px;
+  }
+}
+
 main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitleDetails {
   font-size: 17px;
   font-weight: 100;
+}
+
+@media (max-width: 535px) {
+  main .Section2 .ShowCases .ShowCasesText .ShowCasesTitleBlock .ShowCasesTitleDetails {
+    font-size: xx-small;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1243,6 +1373,13 @@ main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-1 {
   }
 }
 
+@media (max-width: 535px) {
+  main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-1 {
+    width: 100%;
+    height: unset;
+  }
+}
+
 main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-2 {
   width: 326px;
   height: 440px;
@@ -1256,6 +1393,13 @@ main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-2 {
     height: 330px;
     -webkit-box-shadow: -15px 13px 0px 0px #094868;
             box-shadow: -15px 13px 0px 0px #094868;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section2 .ShowCases .ShowCasesIMG .col .ShowCasesIMG-2 {
+    width: 100%;
+    height: unset;
   }
 }
 
@@ -1316,9 +1460,21 @@ main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainT
   font-weight: bolder;
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleBlock .TabExplainTitle {
+    font-size: 24px;
+  }
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleBlock .TabExplainTitleDetails {
   font-size: 17px;
   font-weight: bolder;
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainTitleArea .TabExplainTitleBlock .TabExplainTitleDetails {
+    font-size: xx-small;
+  }
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea {
@@ -1348,6 +1504,14 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
   }
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock {
+    width: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:hover .TabExplainBlockIMG .img-display {
   opacity: 0;
 }
@@ -1358,16 +1522,14 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock:
           transform: scale(1.1);
 }
 
-main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .first-child {
-  margin-right: 83px;
-}
-
-main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainblock:nth-child(3) {
-  margin-right: 83px;
-}
-
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG {
   margin-right: 22px;
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG {
+    margin-right: 0;
+  }
 }
 
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG .img-hover {
@@ -1393,6 +1555,21 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
   }
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockIMG img {
+    width: 86px;
+    margin-right: 12px;
+  }
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .first-child {
+  margin-right: 83px;
+}
+
+main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainblock:nth-child(3) {
+  margin-right: 83px;
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockTitle {
   font-size: 24px;
   font-weight: bolder;
@@ -1413,6 +1590,13 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
   }
 }
 
+@media (max-width: 575px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockTitle {
+    font-size: 18px;
+    margin-bottom: 23px;
+  }
+}
+
 main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockDetails {
   width: 323px;
   font-size: 16px;
@@ -1429,6 +1613,13 @@ main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock 
 @media (max-width: 767.98px) {
   main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockDetails {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .TabExplain .TabExplainArea .TabExplainBlock .TabExplainBlockText .TabExplainBlockDetails {
+    width: unset;
+    font-size: xx-small;
   }
 }
 
@@ -1458,6 +1649,12 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea .ToBeAPa
   font-weight: bolder;
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartTitleArea .ToBeAPartTitleBlock .ToBeAPartTitle {
+    font-size: 24px;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep {
   position: relative;
 }
@@ -1475,7 +1672,15 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepBackLine {
     width: 8px;
     margin-left: 97px;
-    height: calc(100% - 112px);
+    height: calc(100% - 132px);
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepBackLine {
+    width: 4px;
+    margin-left: 28px;
+    height: calc(100% - 78px);
   }
 }
 
@@ -1496,6 +1701,9 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
 @media (max-width: 991.98px) {
   main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow {
     margin-left: unset;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
 }
 
@@ -1523,6 +1731,20 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   }
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepNumber {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #c6edff;
+    line-height: 17px;
+    font-size: 12px;
+    margin-right: 20px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    margin-left: 12px;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLinePoint {
   width: 57px;
   height: 57px;
@@ -1536,6 +1758,20 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
     width: 42px;
     height: 42px;
     margin-right: 11px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLinePoint {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLinePoint {
+    display: none;
   }
 }
 
@@ -1561,6 +1797,12 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   }
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepLogo img {
+    width: 26px;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText .ToBeAPartStepTitle {
   font-size: 30px;
   font-weight: bold;
@@ -1571,6 +1813,21 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText .ToBeAPartStepTitle {
     font-size: 26px;
     font-weight: bold;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText .ToBeAPartStepTitle {
+    font-size: 18px;
+    font-weight: bold;
+    width: unset;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepRow .ToBeAPartStepText img {
+    width: 66%;
   }
 }
 
@@ -1591,6 +1848,14 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartSte
   }
 }
 
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartStep .ToBeAPartStepContent .ToBeAPartStepDetails {
+    width: unset;
+    margin-left: 46px;
+    font-size: xx-small;
+  }
+}
+
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
   margin-top: 109px;
   padding-bottom: 244px;
@@ -1604,6 +1869,12 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart {
 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPartGetStartText {
   font-size: 32px;
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart .ToBeAPartGetStartText {
+    font-size: 18px;
+  }
 }
 
 main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn {
@@ -1624,6 +1895,15 @@ main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPar
     width: 166px;
     height: 68px;
     line-height: 68px;
+  }
+}
+
+@media (max-width: 535px) {
+  main .Section3 .Section3Background .ToBeAPartOfTWDF .ToBeAPartGetStart #ToBeAPartGetStartBtn {
+    font-size: 28px;
+    width: 120px;
+    height: 38px;
+    line-height: 38px;
   }
 }
 
@@ -1692,12 +1972,32 @@ footer .FooterFrame .FooterRow .FooterRowM {
 footer .FooterFrame .FooterRow .FooterRowR {
   padding-left: 105px;
   margin-top: 122px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .FooterFrame .FooterRow .FooterRowR .FooterRowRLine {
+  width: 100%;
+}
+
+footer .FooterFrame .FooterRow .FooterRowR .FooterRowRLine a {
+  text-decoration: none;
+  color: white;
 }
 
 footer .FooterFrame .CopyrightRow {
   color: white;
   margin-top: 107px;
   margin-bottom: 55px;
+}
+
+@media (max-width: 535px) {
+  footer .FooterFrame .CopyrightRow {
+    font-size: x-small;
+  }
 }
 
 /* ------------------------------Sign In-------------------------------------- */

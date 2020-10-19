@@ -190,9 +190,9 @@
 
         <!-- ---------------------導覽列----------------------- -->
         <nav class="d-none d-md-block navbar sticky-top">
-            <div class="TWDFLogo">
+            <a class="TWDFLogo" href="">
                 <img src="Nav-Logo/TWDF-Logo.png" alt="">
-            </div>
+            </a>
             <div class="NavBtns">
                 <a class="NavBtn" href="">
                     <img class="NavIMG" src="Nav-Logo//wow.png" alt="">
@@ -429,7 +429,7 @@
                     </div>
                 </div>
 
-                <div class="TWDF-IntroYouCan row flex-sm-column-reverse flex-md-row-reverse">
+                <div class="TWDF-IntroYouCan row flex-column-reverse flex-sm-column-reverse flex-md-row-reverse">
                     <div class="TWDF-IntroYouCanIMG col-12 col-md-6">
                         <!-- <img class="TWDF-IntroIMG2" src="TWDF-Intro/Intro2.png" alt=""> -->
                         <!-- Animation-Background -->
@@ -484,7 +484,9 @@
                     <div class="ShowCasesTitleDeco"></div>
                     <div class="ShowCasesTitleBlock">
                         <div class="ShowCasesTitle">案例展示</div>
-                        <div class="ShowCasesTitleDetails">品牌行銷 | 平面設計 | 程式語言 | logo製作 | ICON設計 | 軟體開發 </div>
+                        <div class="ShowCasesTitleDetails d-none d-sm-inline">品牌行銷 | 平面設計 | 程式語言 | logo製作 | ICON設計 | 軟體開發 </div>
+                        <div class="ShowCasesTitleDetails d-sm-none">品牌行銷 | 平面設計 | 程式語言</div>
+                        <div class="ShowCasesTitleDetails d-sm-none">logo製作 | ICON設計 | 軟體開發 </div>
                     </div>
                 </div>
                 <div class="ShowCasesReadMore row flex-row-reverse">
@@ -736,10 +738,18 @@
                     <p>台中市北區崇德路民眾技藝中心</p>
                 </div>
                 <div class="d-none d-md-block col-lg-3 FooterRowR">
-                    <p>- 論壇討論區</p>
-                    <p>- 成果作品集</p>
-                    <p>- 案件發布區</p>
-                    <p>- 資源共享區</p>
+                    <div class="FooterRowRLine">
+                        <a href="">- 論壇討論區</a>
+                    </div>
+                    <div class="FooterRowRLine">
+                        <a href="">- 成果作品集</a>
+                    </div>
+                    <div class="FooterRowRLine">
+                        <a href="">- 案件發布區</a>
+                    </div>
+                    <div class="FooterRowRLine">
+                        <a href="">- 資源共享區</a>
+                    </div>
                 </div>
             </div>
             <div class="row CopyrightRow justify-content-center">
