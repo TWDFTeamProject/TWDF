@@ -43,32 +43,60 @@
         }
 
 
+        /* ------標題頁面------------- */
+        .Task_page {
+            background-color: #C9C6C2;
+        }
+
+        .tk_pag_title {
+            text-align: center;
+            margin-top: 20px;
+            letter-spacing: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tk_pag_title h1 {
+            margin: 10px;
+        }
+        .tk_pag_title i {
+            font-size: 48px;
+        }
+
+        /* ------分隔頁面------------- */
+        .style_hr {
+            border: 3px solid black;
+        }
+
         /* ------------------主要內容左邊區塊----------------------- */
 
 
 
         .content-l {
-            width: 20%;
+            width: 100%;
+            height: 98%;
             margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 40px;
-            /* border-radius: 20px; */
-            min-height: 100vh;
-            /* background-color: rgba(255, 0, 0, 0.267); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             background: -webkit-radial-gradient(circle, #002f55, #001027);
             background: -o-radial-gradient(circle, #002f55, #001027);
             background: -moz-radial-gradient(circle, #002f55, #001027);
             background: radial-gradient(circle, #002f55, #001027);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            
+        }
+        .bg_effect {
+            width: 100%;
+            height: 95vh;
             position: relative;
+            position: sticky;
+            top: 0%
         }
 
         .personalbox {
-            width: 80%;
+            width: 100%;
             height: 200px;
-            padding-top: 10PX;
+            margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -80,16 +108,16 @@
             border-radius: 50%;
             background-color: rgb(84, 60, 218);
             margin: auto;
-            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-image: url("png/會員頭像.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
 
         .namebox {
-            width: 60%;
+            width: 80%;
             height: 20%;
-            font-size: 30px;
+            font-size: 24px;
             letter-spacing: 3px;
             margin: auto;
             display: flex;
@@ -97,41 +125,32 @@
             justify-content: center;
             color: rgb(221, 241, 255);
             font-weight: bolder;
+            padding-bottom: 20px;
+            border-bottom: 5px double rgb(255, 255, 255);
+
         }
 
         .listbox {
             width: 100%;
-            height: 400px;
+            height: 600px;
             display: flex;
-            border-radius: 20px 0px;
             flex-direction: column;
-            margin-top: 10PX;
-            opacity: 0.9;
-            /* border-top: 8px double rgb(247, 99, 99);
-            border-bottom: 8px double rgb(247, 99, 99); */
+            padding-bottom: 20px;
 
         }
 
         .projectbox {
+            color: white;
             width: 100%;
             height: 50px;
-            letter-spacing: 2px;
-            color: white;
             margin: auto;
             font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bolder;
+            text-align: center;
+            line-height: 50px;
         }
 
         .projectbox:hover {
-            color: white;
             text-decoration: none;
-            background-image: url(https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/121506371_5129112687114759_8110080774992993768_o.jpg?_nc_cat=111&_nc_sid=0debeb&_nc_ohc=E_Em_c0sa4QAX-QvAWU&_nc_ht=scontent-tpe1-1.xx&oh=f90d1e837277a6a6e0d50b50e27803a3&oe=5FAEF343);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
 
@@ -139,7 +158,7 @@
         /* ------------------主要內容右邊區塊----------------------- */
 
         .content-r {
-            width: 80%;
+            width: 100%;
             height: 100%;
         }
 
@@ -220,7 +239,7 @@
 
 
         /* -------網路套件----------- */
-        /* ------背景動畫---- */
+        /* ------背景雪球動畫---- */
         .circles li {
             position: absolute;
             display: block;
@@ -239,14 +258,12 @@
             bottom: 0px;
             opacity: 0;
         }
-
         .circles li:nth-child(1) {
             left: 25%;
             width: 40px;
             height: 40px;
             animation-delay: 0s;
         }
-
         .circles li:nth-child(2) {
             left: 10%;
             width: 20px;
@@ -254,14 +271,12 @@
             animation-delay: 1s;
             animation-duration: 5s;
         }
-
         .circles li:nth-child(3) {
             left: 70%;
             width: 10px;
             height: 10px;
             animation-delay: 3s;
         }
-
         .circles li:nth-child(4) {
             left: 40%;
             width: 40px;
@@ -270,28 +285,24 @@
             animation-duration: 6s;
             /* background-color: brown; */
         }
-
         .circles li:nth-child(5) {
             left: 65%;
             width: 20px;
             height: 20px;
             animation-delay: 0s;
         }
-
         .circles li:nth-child(6) {
             left: 75%;
             width: 30px;
             height: 30px;
             animation-delay: 4s;
         }
-
         .circles li:nth-child(7) {
             left: 35%;
             width: 30px;
             height: 30px;
             animation-delay: 7s;
         }
-
         .circles li:nth-child(8) {
             left: 50%;
             width: 25px;
@@ -299,7 +310,6 @@
             animation-delay: 8s;
             animation-duration: 4s;
         }
-
         .circles li:nth-child(9) {
             left: 20%;
             width: 15px;
@@ -307,7 +317,6 @@
             animation-delay: 2s;
             animation-duration: 7s;
         }
-
         .circles li:nth-child(10) {
             left: 85%;
             width: 25px;
@@ -315,7 +324,6 @@
             animation-delay: 0s;
             animation-duration: 6s;
         }
-
         @keyframes animate {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -335,6 +343,7 @@
                 /* 產生圓角 */
             }
         }
+        /* ------背景雪球動畫---- */
 
 
         /* ----------------自己寫套件--------------- */
@@ -928,324 +937,354 @@
 <body>
 
     <!-- ---------------------導覽列----------------------- -->
-    <div class="navbar"></div>
+
+    <!-- ---------------------導覽列----------------------- -->
+
+    <!-- ---------------------內容----------------------- -->
+    <!-- html頁面內容-- -->
+    <section class="Task_page">
+        <!-- html頁面標題-- -->
+        <div class="container ">
+            <div class="row"></div>
+            <div class="tk_pag_title col-md-12">
+                <i class="far fa-user-circle"></i>
+                <h1>個人頁面</h1>
+            </div>
+        </div>
+        <!-- 分隔線-- -->
+        <div class="container ">
+            <div class="row"></div>
+            <div class="col-md-12 ">
+                <hr class="style_hr">
+            </div>
+        </div>
+        <!-- 主要內容-- -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- 左邊欄位-- -->
+                <div class="d-none d-md-block col-md-3">
+                    <div class="content-l">
+                        <div class="bg_effect">
+                            <ul class="circles">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="listbox">
+                                <div class="personalbox">
+                                    <div class="photobox"></div>
+                                    <div class="namebox">賴小明</div>
+                                </div>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    個人資料
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    我的做品
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    我的討論
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    我的任務
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    喜歡的作品
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    追蹤中的帳號
+                                </a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="content-r">
+
+                        <div class="project-page">
+                            <div class="page-title">
+                                <h1>我的作品區</h1>
+                            </div>
+                            <div class="button-bar">
+            
+                                <button class="arrow_button" type="button" id="show_newtime">
+                                    <div id="newtime_t" style="display:block">更新時間 <i class="fas fa-sort-up"></i></div>
+                                    <div id="newtime_d" style="display:none">更新時間 <i class="fas fa-caret-down"></i></div>
+                                </button>
+            
+                                <button class="arrow_button" type="button" id="show_browse">
+                                    <div id="browse_t" style="display:block">留言人數 <i class="fas fa-sort-up"></i></div>
+                                    <div id="browse_d" style="display:none">留言人數 <i class="fas fa-caret-down"></i></div>
+                                </button>
+            
+                                <button class="arrow_button" type="button" id="show_favorites">
+                                    <div id="favorites_t" style="display:block">收藏人數 <i class="fas fa-sort-up"></i></div>
+                                    <div id="favorites_d" style="display:none">收藏人數 <i class="fas fa-caret-down"></i></div>
+                                </button>
+                                <div class="new-work">
+                                    <!-- Button trigger modal -->
+                                    <button class="ad_work" type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        點擊新增作品
+                                    </button>
+            
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-button">
+                                <div class="WK_bn_t">1</div>
+                                <div class="WK_bn_t">2</div>
+                                <div class="WK_bn_t">3</div>
+                            </div>
+                            <div class="WK_page WK_active">
+                                <div class="wordscar-g">
+                                    <!-- 作品集模組--按鈕 -->
+                                    <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_ABC">新增作品</div>
+                                    <!-- 作品集模組--互動視窗 -->
+                                    <div class="modal fade" id="portfolio_pag_ABC" tabindex="-1" role="dialog"
+                                        aria-labelledby="portfolio_pag_ABC_Title" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                            <!-- 主要內容 -->
+                                            <div class="modal-content cr_7">
+            
+                                                <!-- 內容 -->
+                                                <div class="modal-body" style="border: 10px solid white;">
+                                                    <div class="PR_main">
+                                                        <div class="pr_main_l">
+                                                            <div class="pr_l_side">
+                                                                <div class="pr_s_myphoto"></div>
+                                                                <div class="pr_s_name">
+                                                                    <h3>Daiel</h3>
+                                                                </div>
+                                                                <div class="pr_s_community">
+                                                                    <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                                    <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                                    </div>
+                                                                    <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="pr_s_skill_G">
+                                                                    <h3>專長</h3>
+                                                                    <div class="pr_s_skill">#平面設計</div>
+                                                                    <div class="pr_s_skill">#APP製作</div>
+                                                                    <div class="pr_s_skill">#影片剪輯</div>
+                                                                    <div class="pr_s_skill">#商業娛樂</div>
+            
+            
+                                                                </div>
+                                                                <div class="pr_s_connection">聯絡報價</div>
+                                                                <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                                        class="fas fa-heart"></i>收藏</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pr_main_r">
+                                                            <div class="pr_r_side">
+                                                                <div class="pr_s_work_img">
+                                                                    <img class="style_img"
+                                                                        src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
+                                                                        alt="" srcset="">
+                                                                </div>
+                                                                <div class="pr_w_name_G">
+                                                                    <hr class="style_hr_t">
+                                                                    <div class="pr_w_name">
+                                                                        <div class="style_border_tl"></div>
+                                                                        <div class="style_border_bl"></div>
+                                                                        <div class="style_border_ml"></div>
+                                                                        <div class="style_border_tr"></div>
+                                                                        <div class="style_border_br"></div>
+                                                                        <div class="style_border_mr"></div>
+                                                                        <h5 class="style_inline">作品名稱：</h5>
+                                                                        <input class="add_style_input" type="text">
+                                                                    </div>
+                                                                    <hr class="style_hr_d">
+                                                                </div>
+                                                                <div class="pr_w_description">
+                                                                    <div class="pr_d_title">
+                                                                        <div class="style_border_tl"></div>
+                                                                        <div class="style_border_bl"></div>
+                                                                        <div class="style_border_ml"></div>
+                                                                        <div class="style_border_tr"></div>
+                                                                        <div class="style_border_br"></div>
+                                                                        <div class="style_border_mr"></div>
+                                                                        作品說明
+                                                                    </div>
+                                                                    <div class="pr_w_d_content">
+                                                                        <div class="style_border_tl"></div>
+                                                                        <div class="style_border_bl"></div>
+                                                                        <div class="style_border_ml"></div>
+                                                                        <div class="style_border_tr"></div>
+                                                                        <div class="style_border_br"></div>
+                                                                        <div class="style_border_mr"></div>
+                                                                        <textarea class="add_style_textarea" name="" id="" cols="30"
+                                                                            rows="10"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 作品集模組--按鈕abc -->
+                                    <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_abc">
+                                        <div class="div"></div>
+                                        <img class="" src="XXX-1" alt="">
+                                        <!-- 作品集模組--互動視窗 -->
+                                        <div class="modal fade" id="portfolio_pag_abc" tabindex="-1" role="dialog"
+                                            aria-labelledby="portfolio_pag_abc_Title" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                                <!-- 主要內容 -->
+                                                <div class="modal-content cr_7">
+            
+                                                    <!-- 內容 -->
+                                                    <div class="modal-body" style="border: 10px solid white;">
+                                                        <div class="PR_main">
+                                                            <div class="pr_main_l">
+                                                                <div class="pr_l_side">
+                                                                    <div class="pr_s_myphoto"></div>
+                                                                    <div class="pr_s_name">
+                                                                        <h3>賴科榜</h3>
+                                                                    </div>
+                                                                    <div class="pr_s_community">
+                                                                        <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                                                        <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
+                                                                        </div>
+                                                                        <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pr_s_skill_G">
+                                                                        <h3>專長</h3>
+                                                                        <div class="pr_s_skill">#平面設計</div>
+                                                                        <div class="pr_s_skill">#APP製作</div>
+                                                                        <div class="pr_s_skill">#影片剪輯</div>
+                                                                        <div class="pr_s_skill">#商業娛樂</div>
+            
+            
+                                                                    </div>
+                                                                    <div class="pr_s_connection">聯絡報價</div>
+                                                                    <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                                                            class="fas fa-heart"></i>收藏</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="pr_main_r">
+                                                                <div class="pr_r_side">
+                                                                    <div class="pr_s_work_img">
+                                                                        <img class="style_img" src="XXX-1" alt="" srcset="">
+                                                                    </div>
+                                                                    <div class="pr_w_name_G">
+                                                                        <hr class="style_hr_t">
+                                                                        <div class="pr_w_name">
+                                                                            <div class="style_border_tl"></div>
+                                                                            <div class="style_border_bl"></div>
+                                                                            <div class="style_border_ml"></div>
+                                                                            <div class="style_border_tr"></div>
+                                                                            <div class="style_border_br"></div>
+                                                                            <div class="style_border_mr"></div>
+                                                                            <h5 class="style_inline font_style">作品名稱：</h5>
+                                                                            <h2 class="style_inline font_style">輸入作品名稱</h2>
+                                                                        </div>
+                                                                        <hr class="style_hr_d">
+                                                                    </div>
+                                                                    <div class="pr_w_description">
+                                                                        <div class="pr_d_title">
+                                                                            <div class="style_border_tl"></div>
+                                                                            <div class="style_border_bl"></div>
+                                                                            <div class="style_border_ml"></div>
+                                                                            <div class="style_border_tr"></div>
+                                                                            <div class="style_border_br"></div>
+                                                                            <div class="style_border_mr"></div>
+                                                                            作品說明
+                                                                        </div>
+                                                                        <div class="pr_w_d_content">
+                                                                            <div class="style_border_tl"></div>
+                                                                            <div class="style_border_bl"></div>
+                                                                            <div class="style_border_ml"></div>
+                                                                            <div class="style_border_tr"></div>
+                                                                            <div class="style_border_br"></div>
+                                                                            <div class="style_border_mr"></div>
+                                                                            輸入作品內容
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+            
+                            <div class="WK_page">
+                                <div class="wordscar-g bg-blue">
+                                    <div class="wordscar"></div>
+                                    <div class="wordscar"></div>
+                                    <div class="wordscar"></div>
+            
+                                </div>
+                            </div>
+                            <div class="WK_page">
+                                <div class="wordscar-g bg-green">
+                                    <div class="wordscar"></div>
+                                    <div class="wordscar"></div>
+                                    <div class="wordscar"></div>
+            
+                                </div>
+                            </div>
+                            <div class="page-button">
+                                <div class="WK_bn_d" onclick="page(1)">1</div>
+                                <div class="WK_bn_d">2</div>
+                                <div class="WK_bn_d">3</div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- ---------------------內容----------------------- -->
 
-    <div class="content">
-        <div class="content-l">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="personalbox">
-                <div class="photobox"></div>
-                <div class="namebox">賴小明</div>
-            </div>
-            <div class="listbox">
-                <a class="projectbox" href="qwe">
-                    個人資料
-                </a>
-                <a class="projectbox" href="qwe">
-                    我的做品
-                </a>
-                <a class="projectbox" href="qwe">
-                    我的討論
-                </a>
-                <a class="projectbox" href="qwe">
-                    我的任務
-                </a>
-                <a class="projectbox" href="qwe">
-                    喜歡的作品
-                </a>
-                <a class="projectbox" href="qwe">
-                    追蹤中的帳號
-                </a>
-            </div>
 
-        </div>
-        <div class="content-r">
-
-            <div class="project-page">
-                <div class="page-title">
-                    <h1>我的作品區</h1>
-                </div>
-                <div class="button-bar">
-
-                    <button class="arrow_button" type="button" id="show_newtime">
-                        <div id="newtime_t" style="display:block">更新時間 <i class="fas fa-sort-up"></i></div>
-                        <div id="newtime_d" style="display:none">更新時間 <i class="fas fa-caret-down"></i></div>
-                    </button>
-
-                    <button class="arrow_button" type="button" id="show_browse">
-                        <div id="browse_t" style="display:block">留言人數 <i class="fas fa-sort-up"></i></div>
-                        <div id="browse_d" style="display:none">留言人數 <i class="fas fa-caret-down"></i></div>
-                    </button>
-
-                    <button class="arrow_button" type="button" id="show_favorites">
-                        <div id="favorites_t" style="display:block">收藏人數 <i class="fas fa-sort-up"></i></div>
-                        <div id="favorites_d" style="display:none">收藏人數 <i class="fas fa-caret-down"></i></div>
-                    </button>
-                    <div class="new-work">
-                        <!-- Button trigger modal -->
-                        <button class="ad_work" type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#exampleModal">
-                            點擊新增作品
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-button">
-                    <div class="WK_bn_t">1</div>
-                    <div class="WK_bn_t">2</div>
-                    <div class="WK_bn_t">3</div>
-                </div>
-                <div class="WK_page WK_active">
-                    <div class="wordscar-g">
-                        <!-- 作品集模組--按鈕 -->
-                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_ABC">新增作品</div>
-                        <!-- 作品集模組--互動視窗 -->
-                        <div class="modal fade" id="portfolio_pag_ABC" tabindex="-1" role="dialog"
-                            aria-labelledby="portfolio_pag_ABC_Title" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                                <!-- 主要內容 -->
-                                <div class="modal-content cr_7">
-
-                                    <!-- 內容 -->
-                                    <div class="modal-body" style="border: 10px solid white;">
-                                        <div class="PR_main">
-                                            <div class="pr_main_l">
-                                                <div class="pr_l_side">
-                                                    <div class="pr_s_myphoto"></div>
-                                                    <div class="pr_s_name">
-                                                        <h3>Daiel</h3>
-                                                    </div>
-                                                    <div class="pr_s_community">
-                                                        <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
-                                                        <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
-                                                        </div>
-                                                        <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pr_s_skill_G">
-                                                        <h3>專長</h3>
-                                                        <div class="pr_s_skill">#平面設計</div>
-                                                        <div class="pr_s_skill">#APP製作</div>
-                                                        <div class="pr_s_skill">#影片剪輯</div>
-                                                        <div class="pr_s_skill">#商業娛樂</div>
-
-
-                                                    </div>
-                                                    <div class="pr_s_connection">聯絡報價</div>
-                                                    <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
-                                                            class="fas fa-heart"></i>收藏</div>
-                                                </div>
-                                            </div>
-                                            <div class="pr_main_r">
-                                                <div class="pr_r_side">
-                                                    <div class="pr_s_work_img">
-                                                        <img class="style_img"
-                                                            src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg"
-                                                            alt="" srcset="">
-                                                    </div>
-                                                    <div class="pr_w_name_G">
-                                                        <hr class="style_hr_t">
-                                                        <div class="pr_w_name">
-                                                            <div class="style_border_tl"></div>
-                                                            <div class="style_border_bl"></div>
-                                                            <div class="style_border_ml"></div>
-                                                            <div class="style_border_tr"></div>
-                                                            <div class="style_border_br"></div>
-                                                            <div class="style_border_mr"></div>
-                                                            <h5 class="style_inline">作品名稱：</h5>
-                                                            <input class="add_style_input" type="text">
-                                                        </div>
-                                                        <hr class="style_hr_d">
-                                                    </div>
-                                                    <div class="pr_w_description">
-                                                        <div class="pr_d_title">
-                                                            <div class="style_border_tl"></div>
-                                                            <div class="style_border_bl"></div>
-                                                            <div class="style_border_ml"></div>
-                                                            <div class="style_border_tr"></div>
-                                                            <div class="style_border_br"></div>
-                                                            <div class="style_border_mr"></div>
-                                                            作品說明
-                                                        </div>
-                                                        <div class="pr_w_d_content">
-                                                            <div class="style_border_tl"></div>
-                                                            <div class="style_border_bl"></div>
-                                                            <div class="style_border_ml"></div>
-                                                            <div class="style_border_tr"></div>
-                                                            <div class="style_border_br"></div>
-                                                            <div class="style_border_mr"></div>
-                                                            <textarea class="add_style_textarea" name="" id="" cols="30"
-                                                                rows="10"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 作品集模組--按鈕abc -->
-                        <div class="wordscar" data-toggle="modal" data-target="#portfolio_pag_abc">
-                            <div class="div"></div>
-                            <img class="" src="XXX-1" alt="">
-                            <!-- 作品集模組--互動視窗 -->
-                            <div class="modal fade" id="portfolio_pag_abc" tabindex="-1" role="dialog"
-                                aria-labelledby="portfolio_pag_abc_Title" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                                    <!-- 主要內容 -->
-                                    <div class="modal-content cr_7">
-
-                                        <!-- 內容 -->
-                                        <div class="modal-body" style="border: 10px solid white;">
-                                            <div class="PR_main">
-                                                <div class="pr_main_l">
-                                                    <div class="pr_l_side">
-                                                        <div class="pr_s_myphoto"></div>
-                                                        <div class="pr_s_name">
-                                                            <h3>賴科榜</h3>
-                                                        </div>
-                                                        <div class="pr_s_community">
-                                                            <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
-                                                            <div class="pr_c_ig"><i class="fab fa-instagram-square"></i>
-                                                            </div>
-                                                            <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="pr_s_skill_G">
-                                                            <h3>專長</h3>
-                                                            <div class="pr_s_skill">#平面設計</div>
-                                                            <div class="pr_s_skill">#APP製作</div>
-                                                            <div class="pr_s_skill">#影片剪輯</div>
-                                                            <div class="pr_s_skill">#商業娛樂</div>
-
-
-                                                        </div>
-                                                        <div class="pr_s_connection">聯絡報價</div>
-                                                        <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
-                                                                class="fas fa-heart"></i>收藏</div>
-                                                    </div>
-                                                </div>
-                                                <div class="pr_main_r">
-                                                    <div class="pr_r_side">
-                                                        <div class="pr_s_work_img">
-                                                            <img class="style_img" src="XXX-1" alt="" srcset="">
-                                                        </div>
-                                                        <div class="pr_w_name_G">
-                                                            <hr class="style_hr_t">
-                                                            <div class="pr_w_name">
-                                                                <div class="style_border_tl"></div>
-                                                                <div class="style_border_bl"></div>
-                                                                <div class="style_border_ml"></div>
-                                                                <div class="style_border_tr"></div>
-                                                                <div class="style_border_br"></div>
-                                                                <div class="style_border_mr"></div>
-                                                                <h5 class="style_inline font_style">作品名稱：</h5>
-                                                                <h2 class="style_inline font_style">輸入作品名稱</h2>
-                                                            </div>
-                                                            <hr class="style_hr_d">
-                                                        </div>
-                                                        <div class="pr_w_description">
-                                                            <div class="pr_d_title">
-                                                                <div class="style_border_tl"></div>
-                                                                <div class="style_border_bl"></div>
-                                                                <div class="style_border_ml"></div>
-                                                                <div class="style_border_tr"></div>
-                                                                <div class="style_border_br"></div>
-                                                                <div class="style_border_mr"></div>
-                                                                作品說明
-                                                            </div>
-                                                            <div class="pr_w_d_content">
-                                                                <div class="style_border_tl"></div>
-                                                                <div class="style_border_bl"></div>
-                                                                <div class="style_border_ml"></div>
-                                                                <div class="style_border_tr"></div>
-                                                                <div class="style_border_br"></div>
-                                                                <div class="style_border_mr"></div>
-                                                                輸入作品內容
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="WK_page">
-                    <div class="wordscar-g bg-blue">
-                        <div class="wordscar"></div>
-                        <div class="wordscar"></div>
-                        <div class="wordscar"></div>
-
-                    </div>
-                </div>
-                <div class="WK_page">
-                    <div class="wordscar-g bg-green">
-                        <div class="wordscar"></div>
-                        <div class="wordscar"></div>
-                        <div class="wordscar"></div>
-
-                    </div>
-                </div>
-                <div class="page-button">
-                    <div class="WK_bn_d" onclick="page(1)">1</div>
-                    <div class="WK_bn_d">2</div>
-                    <div class="WK_bn_d">3</div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+    <!-- 主要內容-- -->
+    
     <!-- ---------------------頁角----------------------- -->
 
-    <div class="footer"></div>
-
-
-
-
+    <!-- ---------------------頁角----------------------- -->
 
 
 

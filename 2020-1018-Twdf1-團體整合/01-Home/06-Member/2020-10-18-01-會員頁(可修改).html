@@ -40,14 +40,22 @@
 
         /* ------標題頁面------------- */
         .Task_page {
-            background-color: rgb(201, 198, 194);
-
+            background-color: #C9C6C2;
         }
 
         .tk_pag_title {
             text-align: center;
             margin-top: 20px;
             letter-spacing: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tk_pag_title h1 {
+            margin: 10px;
+        }
+        .tk_pag_title i {
+            font-size: 48px;
         }
 
         /* ------分隔頁面------------- */
@@ -61,24 +69,29 @@
 
         .content-l {
             width: 100%;
+            height: 98%;
             margin-top: 20px;
-            margin-bottom: 20px;
-            /* margin-left: 40px; */
-            border-radius: 20px;
-            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             background: -webkit-radial-gradient(circle, #002f55, #001027);
             background: -o-radial-gradient(circle, #002f55, #001027);
             background: -moz-radial-gradient(circle, #002f55, #001027);
             background: radial-gradient(circle, #002f55, #001027);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            
+        }
+        .bg_effect {
+            width: 100%;
+            height: 95vh;
+            position: relative;
+            position: sticky;
+            top: 0%
         }
 
         .personalbox {
-            width: 80%;
+            width: 100%;
             height: 200px;
-            padding-top: 10PX;
+            margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -90,16 +103,16 @@
             border-radius: 50%;
             background-color: rgb(84, 60, 218);
             margin: auto;
-            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-image: url("png/會員頭像.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
 
         .namebox {
-            width: 60%;
+            width: 80%;
             height: 20%;
-            font-size: 30px;
+            font-size: 24px;
             letter-spacing: 3px;
             margin: auto;
             display: flex;
@@ -107,43 +120,31 @@
             justify-content: center;
             color: rgb(221, 241, 255);
             font-weight: bolder;
+            padding-bottom: 20px;
+            border-bottom: 5px double rgb(255, 255, 255);
+
         }
 
         .listbox {
-            width: 80%;
+            width: 100%;
             height: 600px;
             display: flex;
-            border-radius: 20px 0px;
             flex-direction: column;
-            margin-top: 10PX;
-            opacity: 0.9;
-            border-top: 8px double rgb(247, 99, 99);
-            border-bottom: 8px double rgb(247, 99, 99);
+            padding-bottom: 20px;
 
         }
 
         .projectbox {
-            width: 90%;
-            height: 50px;
-            letter-spacing: 2px;
             color: white;
-            border-radius: 10px;
+            width: 100%;
+            height: 50px;
             margin: auto;
             font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #4a7269;
-            opacity: 0.9;
-            border-bottom: 4px solid rgb(255, 254, 254);
+            text-align: center;
+            line-height: 50px;
         }
 
         .projectbox:hover {
-            transition: 1.5s;
-            background-color: #E07C64;
-            opacity: 1;
-            box-shadow: 0px 4px 6px rgba(223, 223, 248, 0.5);
-            color: rgb(48, 23, 23);
             text-decoration: none;
         }
 
@@ -156,11 +157,6 @@
         .content-r {
             width: 100%;
             height: auto;
-            padding-bottom: 20px;
-            background-color: #E0E0E0;
-            /* display: flex;
-            flex-direction: column; */
-
         }
 
         .project-page {
@@ -186,12 +182,13 @@
             width: 100%;
             height: 300px;
             background-color: rgb(33, 44, 13);
-            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員封面.jpg);
+            background-image: url("png/會員封面.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             position: relative;
         }
+
         .ps-photo {
             width: 150px;
             height: 150px;
@@ -200,7 +197,7 @@
             position: absolute;
             top: 60%;
             left: 5%;
-            background-image: url(/03-程式/01-工作區/html-ex/會園區子頁/統整/png/會員頭像.jpg);
+            background-image: url("png/會員頭像.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -223,11 +220,17 @@
             letter-spacing: 2px;
             line-height: 40px;
             /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
-            
+
         }
 
 
-        
+        /* <!-- 手機板下方列表假錨點-- --> */
+        .anchor_point{
+            height: 60px;
+        }
+
+
+
 
         @media (max-width: 768px) {
             .banner {
@@ -238,20 +241,25 @@
                 position: relative;
                 box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
             }
+            .ba-photo {
+            width: 100%;
+            height: 170px;
+        
+        }
+            
 
             .in_text_main {
-                width: 95%;
+                width: 100%;
                 /* height: 50%; */
                 background-color: white;
                 display: flex;
                 align-items: center;
-                margin: 10px;
                 padding: 10px;
-                font-size: 14px;
+                font-size: 18px;
+                letter-spacing: 2px;
+                line-height: 24px;
                 /* box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5); */
-                position: absolute;
-                top: 20%;
-                left: 1%;
+                
             }
 
             .ps-photo {
@@ -286,12 +294,13 @@
 
 
         .sk-content {
-            width: 95%;
+            width: 100%;
             height: auto;
             background-color: white;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            padding: 10px;
             box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
 
         }
@@ -322,13 +331,13 @@
         }
 
         .ex-content {
-            width: 95%;
+            width: 100%;
             height: auto;
             background-color: white;
             display: flex;
             align-items: center;
             margin: 10px;
-            padding: 10px;
+            padding: 20px;
             font-size: 18px;
             box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
 
@@ -377,6 +386,184 @@
             background-color: yellow;
         }
 
+
+        /* -------網路套件----------- */
+        /* -----網路hover套件------- */
+        /* Rectangle Out */
+        .hvr-rectangle-out {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            /* background: #e1e1e1; */
+            -webkit-transition-property: color;
+            transition-property: color;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-rectangle-out:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: -webkit-radial-gradient(circle, #1AB4B0, #083E62);
+            background: -o-radial-gradient(circle, #1AB4B0, #083E62);
+            background: -moz-radial-gradient(circle, #1AB4B0, #083E62);
+            background: radial-gradient(circle, #1AB4B0, #083E62);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .hvr-rectangle-out:hover,
+        .hvr-rectangle-out:focus,
+        .hvr-rectangle-out:active {
+            color: rgb(63, 0, 0);
+            font-weight: bolder;
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+        .hvr-rectangle-out:hover:before,
+        .hvr-rectangle-out:focus:before,
+        .hvr-rectangle-out:active:before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+
+        /* ------背景雪球動畫---- */
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            /*氣泡預設大小*/
+            background: rgba(255, 255, 255, 0.336);
+            /*給氣泡20%的透明度*/
+            animation: animate 20s linear infinite;
+            animation-direction: alternate-reverse;
+            /* animate = 動畫名稱 */
+            /* 25s = 動畫時間25秒 */
+            /* linear = 動畫開始至結束速度一致 */
+            /* infinite = 動畫無限次播放 */
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            /* background-color: brown; */
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 8s;
+            animation-duration: 4s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                /* translateY = Y軸位置 */
+                /* rotate = 旋轉角度 */
+                opacity: 1;
+                /* 透明度的參數可設定0.0(透明) ~ 1.0  (不透明) */
+                border-radius: 0;
+                /* 圓角 */
+            }
+
+            100% {
+                transform: translateY(-90vh) rotate(720deg);
+                /* 氣泡由下往上移動至-1000px，旋轉720度 */
+                opacity: 0;
+                border-radius: 50%;
+                /* 產生圓角 */
+            }
+        }
+
+        /* ------背景雪球動畫---- */
+
         /* --------------------------注意事項------------------------------------ */
         /* 高度只是暫定可以自行更動 */
         /* 區塊背景顏色方便辨識 */
@@ -390,11 +577,12 @@
 
     <!-- ---------------------內容----------------------- -->
     <!-- html頁面內容-- -->
-    <section>
+    <section class="Task_page">
         <!-- html頁面標題-- -->
         <div class="container ">
             <div class="row"></div>
             <div class="tk_pag_title col-md-12">
+                <i class="far fa-user-circle"></i>
                 <h1>個人頁面</h1>
             </div>
         </div>
@@ -409,32 +597,47 @@
         <div class="container">
             <div class="row">
                 <!-- 左邊欄位-- -->
-                <div class="col-md-3">
+                <div class="d-none d-md-block col-md-3">
                     <div class="content-l">
-                        <div class="personalbox">
-                            <div class="photobox"></div>
-                            <div class="namebox">賴小明</div>
+                        <div class="bg_effect">
+                            <ul class="circles">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="listbox">
+                                <div class="personalbox">
+                                    <div class="photobox"></div>
+                                    <div class="namebox">賴小明</div>
+                                </div>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    個人資料
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    我的做品
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    我的討論
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    我的任務
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    喜歡的作品
+                                </a>
+                                <a class="projectbox hvr-rectangle-out" href="qwe">
+                                    追蹤中的帳號
+                                </a>
+                            </div>
                         </div>
-                        <div class="listbox">
-                            <a class="projectbox" href="qwe">
-                                個人資料
-                            </a>
-                            <a class="projectbox" href="qwe">
-                                我的做品
-                            </a>
-                            <a class="projectbox" href="qwe">
-                                我的討論
-                            </a>
-                            <a class="projectbox" href="qwe">
-                                我的任務
-                            </a>
-                            <a class="projectbox" href="qwe">
-                                喜歡的作品
-                            </a>
-                            <a class="projectbox" href="qwe">
-                                追蹤中的帳號
-                            </a>
-                        </div>
+                        
 
                     </div>
                 </div>
@@ -444,11 +647,11 @@
                         <div class="project-page active_pj_pages">
                             <div class="banner">
                                 <div class="ba-photo">
-                                <div class="ps-photo"></div>
+                                    <div class="ps-photo"></div>
                                 </div>
                                 <div class="in_text_main">
                                     吳若權（1962年1月28日－）台灣作家、主持人，也是企業行銷顧問,畢業於政大企業管理學系。曾任IBM行政專員、HP惠普公司企劃專員、飛碟唱片董事長特別助理、東元行銷經理、微軟行銷經理。
-                                    
+
                                 </div>
                             </div>
                             <div class="shillbox">
@@ -498,6 +701,36 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="d-block d-md-none container">
+            <div class="row">
+                <div class="col-md-12"></div>
+                <div class="anchor_point"></div>
+            </div>
+        </div>
+        <!-- 手機板下方列表-- -->
+        <div class="d-block d-md-none bs-example">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+                <a href="#" class="navbar-brand">會員區列表</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link active">個人資料</a>
+                        <a href="#" class="nav-item nav-link">我的做品</a>
+                        <a href="#" class="nav-item nav-link">我的討論</a>
+                        <a href="#" class="nav-item nav-link">我的任務</a>
+                        <a href="#" class="nav-item nav-link">喜歡的作品</a>
+                        <a href="#" class="nav-item nav-link " tabinex="-1">追蹤中的帳號</a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="#" class="nav-item nav-link">Login</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </section>
 
