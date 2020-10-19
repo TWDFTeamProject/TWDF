@@ -372,6 +372,8 @@ footer .FooterFrame .FooterRow {
 }
 
 footer .FooterFrame .FooterRow .FooterRowL {
+  color: white;
+  text-decoration: none;
   margin-top: 20px;
   padding-left: 75px;
 }

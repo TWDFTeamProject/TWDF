@@ -249,6 +249,8 @@ footer{
             .FooterRowL{
                 margin-top: 20px;
                 padding-left: 75px;
+                text-decoration: none;
+                color: white;
                 @media (max-width: 768px) {
                     // margin-top: 38px;
                     padding-left: 0;
@@ -283,6 +285,15 @@ footer{
             .FooterRowR{
                 margin-top: 20px;
                 padding-left: 105px;
+                display: flex;
+                flex-wrap: wrap;
+                .FooterRowRLine{
+                    width: 100%;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
             }
         }
         .CopyrightRow{
