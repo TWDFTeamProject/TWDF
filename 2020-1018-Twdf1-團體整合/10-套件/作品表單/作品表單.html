@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <style>
+        .add_portfolio_button {
+            display: inline;
+            letter-spacing: 3px;
+            padding: 10px 15px;
+            line-height: 40px;
+            background-color: black;
+            color: rgb(255, 254, 254);
+            border: 0px;
+            border-radius: 5px;
+        }
+        .add_portfolio_button:hover {
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+            background-color: rgb(247, 99, 99);
+            box-shadow: 2px 2px 3px 1px rgba(65, 65, 65, 0.5);
+            transition: 0.5s;
+        }
+        .add_portfolio_button_1 {
+            display: inline;
+            letter-spacing: 3px;
+            padding: 10px 15px;
+            line-height: 40px;
+            background-color: rgb(129, 158, 255);
+            color: rgb(255, 254, 254);
+            border: 0px;
+            border-radius: 5px;
+        }
+
+
+
+
+        /* -------作品內容--------- */
+
+        .PR_main {
+            display: flex;
+        }
+
+        .pr_main_l {
+            width: 25%;
+            background-color: rgb(233, 186, 148);
+            border-radius: 20px;
+            margin-left: 10%;
+            box-shadow: 0px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        .pr_l_side {
+            width: 100%;
+            height: auto;
+            /* background-color: rgb(233, 186, 148); */
+            margin: auto;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pr_s_myphoto {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            margin-bottom: 10px;
+
+            border-radius: 50%;
+            background-color: rgb(31, 0, 0);
+        }
+
+        .pr_s_name {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            /* background-color: burlywood; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .pr_s_community {
+            /* width: 80%; */
+            height: 200px;
+            margin: auto;
+            /* background-color: coral; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* align-items: center; */
+        }
+
+        .pr_c_fb {
+            
+            border-radius: 50%;
+            color: rgb(50, 50, 173);
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pr_c_ig {
+            margin: 10px 0;
+            font-size: 55px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: -webkit-linear-gradient(225deg, #920162 0, #d4255f 40%, #ec7936 60%, #ffdd9d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pr_c_pinterest {
+            
+            border-radius: 50%;
+            color: rgb(221, 51, 39);
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pr_s_skill_G {
+            width: 80%;
+            padding: 10px;
+            height: auto;
+            margin: auto;
+            /* background-color: indianred; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+
+        }
+
+        .pr_s_skill {
+            /* display: inline; */
+            margin: auto;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            background-color: rgb(224, 255, 194);
+        }
+
+        .pr_s_connection {
+            width: 50%;
+            height: 40px;
+            font-size: 18px;
+            border: double white;
+            letter-spacing: 3px;
+            border-radius: 10px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(247, 207, 219);
+        }
+
+        .pr_s_connection:hover {
+            background-color: rgb(223, 54, 104);
+            transition: 1s;
+        }
+
+        .pr_s_favorite {
+            display: inline;
+            margin: auto;
+            padding: 10px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            color: white;
+            cursor: pointer;
+            /* background-color: royalblue; */
+        }
+
+        #pr_1 {
+            color: black;
+        }
+
+
+
+
+
+        /* -----------右邊內容---------- */
+
+        .pr_main_r {
+            width: 80%;
+            background-color: rgb(196, 194, 174);
+            position: relative;
+            /* padding: 10px; */
+
+        }
+
+
+
+        .pr_s_work_img {
+            width: 70%;
+            /* height: 350px; */
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 10px; */
+            /* background-color: rgb(71, 114, 77); */
+            box-shadow: 4px 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+
+        }
+
+        .pr_w_name {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .pr_w_n_name {
+            display: inline;
+            background-color: yellow;
+
+
+        }
+
+
+        .pr_d_title {
+            width: 100px;
+            height: 30px;
+            font-size: 18px;
+            border-top: 1px dashed;
+            border-bottom: 1px dashed;
+            font-weight: bolder;
+            margin-left: 15%;
+            margin-bottom: 10px;
+            padding-left: 13px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: rgb(253, 219, 154);
+        }
+
+        .pr_w_d_content {
+            width: 70%;
+            height: auto;
+            font-size: 18px;
+            border-top: 1px dashed;
+            border-bottom: 1px dashed;
+            font-weight: bolder;
+            margin-left: 15%;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: rgb(253, 219, 154);
+            box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+            text-align: left;
+
+        }
+
+
+        /* --------互動視窗基本設定---------------- */
+
+
+        /* -----header間距----- */
+        .modal-header {
+            border-bottom: 0;
+            padding: 1rem 0rem 0rem 1rem;
+            margin-left: 10%;
+
+        }
+
+        /* -----右上角叉叉----- */
+        .close {
+            color: red;
+        }
+
+        /* .close :hover{
+            color: rgb(68, 39, 177);
+        } */
+
+        .modal-header .close {
+            padding: 1rem 2rem;
+            margin: -1rem -1rem -1rem auto;
+        }
+
+        .modal-footer {
+            border-top: 0;
+            padding: 0rem 0rem 1rem 1rem;
+            color: white;
+        }
+
+        .style_hr_t {
+            width: 90%;
+            margin: auto;
+            margin: 20px;
+            background-color: white;
+        }
+
+        .style_hr_d {
+
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .style_hr_t {
+            width: 100%;
+            margin: auto;
+            /* margin-bottom: 20px; */
+            background-color: rgba(70, 0, 0, 0.863);
+        }
+
+        .style_hr_d {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 20px;
+            background-color: rgba(70, 0, 0, 0.863);
+        }
+
+        /* --------------------------------- */
+
+        /* ------------hover------------ */
+
+
+        .pr_w_name_G {
+            width: 70%;
+            background-color: rgb(240, 233, 215);
+            margin: auto;
+            position: relative;
+
+        }
+
+        /* .pr_w_name_G:hover {
+            width: 70%;
+            transition: 3s;
+            color: rgb(65, 6, 17);
+            background-color: rgb(240, 233, 215);
+        } */
+
+
+        /* ----------框限------------- */
+        .style_border_tl {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            ;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .style_border_ml {
+            width: 3%;
+            height: 80%;
+            background-color: rgb(231, 68, 68);
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+
+        }
+
+        .style_border_bl {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+        }
+
+
+        .style_border_tr {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .style_border_mr {
+            width: 3%;
+            height: 80%;
+            background-color: rgb(231, 68, 68);
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+
+        }
+
+        .style_border_br {
+            width: 3%;
+            height: 10%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .style_inline {
+            display: inline;
+            font-weight:bolder ;
+        }
+
+        /* --------背景顏色------- */
+
+        .bg-1 {
+            background-color: rgba(0, 0, 0, 0.781);
+        }
+
+        .bg-2 {
+            background-color: blue;
+        }
+
+        .bg-3 {
+            background-color: red;
+        }
+
+        .bg-4 {
+            background-color: yellow;
+        }
+
+        .bg-5 {
+            background-color: green;
+        }
+
+        .bg-6 {
+            background-color: rgb(201, 198, 194);
+        }
+
+        /* -----------顏色------------- */
+        .cr_0 {
+            color: white;
+        }
+
+        .cr_1 {
+            color: black;
+        }
+
+        .cr_2 {
+            color: red;
+        }
+
+        .cr_3 {
+            color: blue;
+        }
+
+        .cr_4 {
+            color: green;
+        }
+
+        .cr_5 {
+            color: yellow;
+        }
+
+        .cr_6 {
+            color: yellow;
+        }
+
+        .cr_7 {
+            background-color: rgb(196, 194, 174);
+        }
+
+
+        /* -------------輸入框------------ */
+        .add_style_input{
+            border: 0;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            
+        }
+        .add_style_textarea{
+            width: 100%;
+            border: 0px;
+            border-radius: 10px;
+        }
+
+
+        /* -------圖片上傳CSS--------- */
+
+        
+        
+        .add_photo_img{
+            width: 100%;
+            margin-top: 20px;
+        }
+        .add_style_input{
+
+        }
+        .style_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
+        /* -----------基礎設定---------- */
+        .style_img{
+            width: 100%;
+            border-radius: 50px;
+        }
+        .font_style{
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 作品集模組--新增按鈕 -->
+    <div class="add_portfolio_button" data-toggle="modal" data-target="#add_portfolio_button">新增作品</div>
+
+    <!-- 作品集模組--新增按鈕互動視窗 -->
+    <div class="modal fade" id="add_portfolio_button" tabindex="-1" role="dialog" aria-labelledby="add_portfolio_button_Title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <!-- 主要內容 -->
+            <div class="modal-content cr_7">
+
+                <!-- 內容 -->
+                <div class="modal-body" style="border: 10px solid white;">
+                    <div class="PR_main">
+                        <div class="pr_main_l">
+                            <div class="pr_l_side">
+                                <div class="pr_s_myphoto"></div>
+                                <div class="pr_s_name">
+                                    <h3>Daiel</h3>
+                                </div>
+                                <div class="pr_s_community">
+                                    <div class="pr_c_fb"><i class="fab fa-facebook"></i></div>
+                                    <div class="pr_c_ig"><i class="fab fa-instagram-square"></i></div>
+                                    <div class="pr_c_pinterest"><i class="fab fa-pinterest"></i></div>
+                                </div>
+                                <div class="pr_s_skill_G">
+                                    <h3>專長</h3>
+                                    <div class="pr_s_skill">#平面設計</div>
+                                    <div class="pr_s_skill">#APP製作</div>
+                                    <div class="pr_s_skill">#影片剪輯</div>
+                                    <div class="pr_s_skill">#商業娛樂</div>
+
+
+                                </div>
+                                <div class="pr_s_connection">聯絡報價</div>
+                                <div class="pr_s_favorite" id="pr_1" onclick="check_pr_1();"><i
+                                        class="fas fa-heart"></i>收藏</div>
+                            </div>
+                        </div>
+                        <div class="pr_main_r">
+                            
+                            <div class="pr_r_side">
+                                <div class="pr_s_work_img">
+                                    <!-- -----上傳圖片1------ -->
+                                    <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+                                        <input class="add_style_input" type="file" onchange="add_photo_1(this)" add_photo_1="preview_progressbarTW_img"
+                                            accept="image/gif, image/jpeg, image/png" />
+                                        <img class="add_photo_img" id="preview_progressbarTW_img" src="#" />
+                                    </form>
+
+                                    <h2 id="ipt_val"></h2>
+                                    
+                                    <!-- -----上傳圖片2------ -->
+                                    <!-- <form class="style_form"  action="/somewhere/to/upload" enctype="multipart/form-data">
+                                        <input class="add_style_input" type="file" onchange="add_photo_2(this)" add_photo_2="preview_progressbarTW_img_2"
+                                            accept="image/gif, image/jpeg, image/png" />
+                                        <img class="add_photo_img" id="preview_progressbarTW_img_2" src="#" />
+                                    </form> -->
+                                </div>
+                                <!-- <div class="pr_s_work_img">
+                                    <img class="style_img" src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201912/5E0A3C8A9072F1577729162.jpeg" alt="" srcset=""> -->
+                                </div>
+                                <div class="pr_w_name_G">
+                                    <hr class="style_hr_t">
+                                    <div class="pr_w_name">
+                                        <div class="style_border_tl"></div>
+                                        <div class="style_border_bl"></div>
+                                        <div class="style_border_ml"></div>
+                                        <div class="style_border_tr"></div>
+                                        <div class="style_border_br"></div>
+                                        <div class="style_border_mr"></div>
+                                        <h5 class="style_inline">作品名稱：</h5>
+                                        <input class="add_style_input" type="text">
+                                    </div>
+                                    <hr class="style_hr_d">
+                                </div>
+                                <div class="pr_w_description">
+                                    <div class="pr_d_title">
+                                        <div class="style_border_tl"></div>
+                                        <div class="style_border_bl"></div>
+                                        <div class="style_border_ml"></div>
+                                        <div class="style_border_tr"></div>
+                                        <div class="style_border_br"></div>
+                                        <div class="style_border_mr"></div>
+                                        作品說明
+                                    </div>
+                                    <div class="pr_w_d_content">
+                                        <div class="style_border_tl"></div>
+                                        <div class="style_border_bl"></div>
+                                        <div class="style_border_ml"></div>
+                                        <div class="style_border_tr"></div>
+                                        <div class="style_border_br"></div>
+                                        <div class="style_border_mr"></div>
+                                        <textarea class="add_style_textarea" name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ---------------------CDN----------------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+    <!-- -------------作品點擊收藏模組-------------- -->
+
+    <script>
+        function check_pr_1() {
+            var e = document.getElementById("pr_1");
+            var c = window.getComputedStyle(e).color;
+            if (c === "rgb(0, 0, 0)") {
+                document.getElementById("pr_1").style.color = "rgb(221, 51, 39)";
+            } else {
+                document.getElementById("pr_1").style.color = "rgb(0, 0, 0)";
+            }
+        }
+    </script>
+    <!-- JavaScript 圖片上傳預覽-->
+
+    <script>
+
+        function add_photo_1(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_1 = input.getAttribute("add_photo_1");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_1);
+                    img.setAttribute("src", e.target.result)
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function add_photo_2(input) {
+            if (input.files && input.files[0]) {
+                var add_photo_2 = input.getAttribute("add_photo_2");
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.getElementById(add_photo_2);
+                    img.setAttribute("src", e.target.result)
+
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    </script>
+
+
+    <script>
+        // var ipt = document.querySelector(".add_style_input")
+        // var ipt_val = document.querySelector('#ipt_val')
+        // ipt.onchange = function(){
+        //     var filename =  ipt.value.replace(/^.*?([^\\\/]*)$/, '$1');
+        //     ipt_val.innerHTML = filename
+        // }
+    </script>
+</body>
+
+</html>
