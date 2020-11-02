@@ -23,9 +23,11 @@
         * {
             box-sizing: border-box;
         }
+
         a {
             text-decoration: none;
         }
+
         body {
             margin: 0;
             text-decoration: none;
@@ -33,7 +35,7 @@
 
         /* ------------------------------導覽列---------------------------------------- */
 
-        
+
 
         /* ------------------------------主要內容區塊----------------------------------- */
 
@@ -45,6 +47,7 @@
             margin: auto;
             display: flex;
         }
+
         /* ------標題頁面------------- */
         .Task_page {
             background-color: #C9C6C2;
@@ -66,10 +69,12 @@
         .tk_pag_title i {
             font-size: 48px;
         }
+
         /* ------分隔頁面------------- */
         .style_hr {
             border: 3px solid black;
         }
+
         /* ------------------主要內容左邊區塊----------------------- */
 
         .content-l {
@@ -84,6 +89,7 @@
             background: -moz-radial-gradient(circle, #002f55, #001027);
             background: radial-gradient(circle, #002f55, #001027);
         }
+
         .bg_effect {
             width: 100%;
             height: 95vh;
@@ -145,7 +151,8 @@
             text-align: center;
             line-height: 50px;
         }
-        .projectbox:hover{
+
+        .projectbox:hover {
             text-decoration: none;
         }
 
@@ -489,7 +496,8 @@
             justify-content: center;
             align-items: center;
         }
-        .TK_bn_t:hover{
+
+        .TK_bn_t:hover {
             background-color: black;
             color: white;
             transition: 1s;
@@ -506,13 +514,14 @@
             justify-content: center;
             align-items: center;
         }
-        .TK_bn_d:hover{
+
+        .TK_bn_d:hover {
             background-color: black;
             color: white;
             transition: 1s;
         }
 
-        
+
 
         .TK_active {
             display: block;
@@ -922,11 +931,12 @@
                                 <div class="button-bar">
                                     <div class="button">
                                         <div class="dropdown">
-                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
                                                 類別
                                             </a>
-                
+
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                 <a class="dropdown-item" href="#">全部</a>
                                                 <a class="dropdown-item" href="#">未解決</a>
@@ -938,10 +948,11 @@
                                     <div class="button">最多人瀏覽</div>
                                     <div class="new-work">
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModal">
                                             新增作品
                                         </button>
-                
+
                                         <!-- Modal -->
                                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -949,7 +960,8 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
@@ -959,7 +971,8 @@
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1009,12 +1022,12 @@
                                                         <div class="takeit">接案</div>
                                                     </div>
                                                 </div>
-                
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                
+
                                 <div class="TK_page">
                                     <div class="taskcar-g ">
                                         <div class="taskcarB">
@@ -1051,7 +1064,7 @@
                                         </div>
                                     </div>
                                 </div>
-                
+
                                 <div class="TK_page">
                                     <div class="taskcar-g ">
                                         <div class="taskcarC">
@@ -1088,19 +1101,49 @@
                                         </div>
                                     </div>
                                 </div>
-                
-                
+
+
                                 <div class="page-button">
                                     <div class="TK_bn_d" onclick="page(1)">1</div>
                                     <div class="TK_bn_d">2</div>
                                     <div class="TK_bn_d">3</div>
                                 </div>
                             </div>
-                
+
                         </div>
                     </div>
                 </div>
-                
+
+            </div>
+            <!-- 手機板下方列表 bootsrap-- -->
+            <div class="d-block d-md-none container">
+                <div class="row">
+                    <div class="col-md-12"></div>
+                    <div class="anchor_point"></div>
+                </div>
+            </div>
+            <!-- 手機板導覽列 -->
+            <div class="d-block d-md-none bs-example">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+                    <a href="#" class="navbar-brand"></a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse2">
+                        <div class="navbar-nav">
+                            <a href="./2020-10-18-01-會員頁(完成).html" class="nav-item nav-link active">個人資料</a>
+                            <a href="./2020-10-18-06-我的作品(完成).html" class="nav-item nav-link">我的做品</a>
+                            <a href="./2020-10-18-02-我的討論(完成).html" class="nav-item nav-link">我的討論</a>
+                            <a href="./2020-10-18-04-我的任務(完成).html" class="nav-item nav-link">我的任務</a>
+                            <a href="./2020-10-18-03-喜歡的作品區(完成).html" class="nav-item nav-link">喜歡的作品</a>
+                            <a href="./2020-10-18-06-追蹤帳號(完成).html" class="nav-item nav-link " tabinex="-1">追蹤中的帳號</a>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <a href="../index.html" class="nav-item nav-link">LogOut</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </section>
 
@@ -1135,35 +1178,8 @@
             </div>
         </div>
     </footer>
-    
-    <!-- 手機板下方列表 bootsrap-- -->
-    <div class="d-block d-md-none container">
-        <div class="row">
-            <div class="col-md-12"></div>
-            <div class="anchor_point"></div>
-        </div>
-    </div>
-    <!-- 手機板導覽列 -->
-    <div class="d-block d-md-none bs-example">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
-            <a href="#" class="navbar-brand"></a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse2">
-                <div class="navbar-nav">
-                    <a href="#" class="text-right nav-item nav-link active">Top</a>
-                    <a href="#" class="text-right nav-item nav-link">後端開發</a>
-                    <a href="#" class="text-right nav-item nav-link">前端開發</a>
-                    <a href="#" class="text-right nav-item nav-link">ISO開發</a>
-                    <a href="#" class="text-right nav-item nav-link">Android開發</a>
-                    <a href="#" class="text-right nav-item nav-link">人工智慧</a>
-                    <a href="#" class="text-right nav-item nav-link">雲端運算</a>
-                </div>
-            </div>
-        </nav>
-    </div>
+
 
 
 
@@ -1180,7 +1196,7 @@
     <!-- wow.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-    
+
 </body>
 
 </html>
