@@ -1102,6 +1102,8 @@ a {
     .Paginationbox{
         height: 30px !important;
         margin-bottom: 6px !important;
+        padding-bottom: 10px;
+        margin-top: 10px;
     }
     .page-button{
         height: 30px !important;
@@ -1122,7 +1124,7 @@ a {
     .qt-time,
     .qt-favorites,
     .takeit{
-        font-size: x-small;
+        font-size: 14PX;
     }
 
     #newtime_t,
